@@ -70,9 +70,10 @@ body{
 
 .content{
     overflow: auto;
+    padding-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 /* Page First Slide Starts*/
@@ -92,122 +93,7 @@ body{
     font-size: 1em;
 }
 
-/* Page First Slide Ends*/
 
-
-/* Page Second Slide Starts*/
-
-/* For Merchants Starts Here*/
-.for-merch-img{
-    position: absolute;
-    width: 670px;
-    height: 675px;
-    left: 580px;
-    top: 10.8px;
-    z-index: -2;
-    background: url(ameen-fahmy-525674-unsplash.png);
-    transform: rotate(-1.4deg);
-    overflow: hidden;
-}
-
-.for-merch-text{
-    margin-top: 91px;
-    text-align: left;
-    font-weight: bold;
-    font-size: 2.5em;
-    color: #1860EC;
-    margin-left: 10%;
-}
-
-.merch-det-text{
-    color: #4F4F4F;
-    text-align: left;
-    font-size: 1em;
-    margin-left: 10%;
-}
-/* For Merchants Ends Here*/
-
-
-/* For Banks Starts Here*/
-.for-banks-img{
-    position: absolute;
-    width: 730px;
-    height: 725px;
-    left: 510px;
-    top: -10.8px;
-    z-index: -2;
-    background: url(ameen-fahmy-525674-unsplash.png);
-    transform: rotate(-1.4deg);
-    overflow: hidden;
-}
-
-.for-banks-text{
-    margin-top: 91px;
-    text-align: left;
-    font-weight: bold;
-    font-size: 2.5em;
-    color: #1860EC;
-    margin-left: 10%;
-}
-
-.banks-det-text{
-    color: #4F4F4F;
-    text-align: left;
-    font-size: 1em;
-    margin-left: 10%;
-}
-/* For Banks Ends Here*/
-
-.accordion{
-    width: 35%;
-    margin-top: -5px;
-    margin-left: 9%;
-}
-
-.accordion .btn{
-    width: 100%;
-    text-align: left;
-}
-
-.accordion .btn:hover, .accordion .btn:focus{
-    text-decoration: none;
-}
-
-.accordion .btn:after{
-    content: "\2212";
-    color: #1860EC;
-    font-weight: bold;
-    float: right;
-    margin-top: -2px;
-}
-.accordion .btn.collapsed:after{
-    content: "\002B";
-}
-
-.mb-0 button{
-    color: #1860EC;
-}
-
-.card{
-    border: none;
-    background-color: transparent;
-}
-
-.card-header{
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-}
-
-.card-body{
-    border-top: 1px solid #1860EC;
-}
-
-#pills-tab{
-    margin-left: 50px;
-    margin-right: 0px;
-}
 
 .marchants-nav, .banks-nav{
     background: #FFFFFF;
@@ -242,13 +128,8 @@ body{
     font-weight: 500;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    color: #fff !important;
-    background-color: #175DE5 !important;
-}
 
-
-/* Page Cntent Ends*/
+/* Page Content Ends*/
 
 /* Page Footer Starts */
 
