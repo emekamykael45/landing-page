@@ -1,0 +1,284 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+body{
+    background-image: url("../images/Main-Background.png");
+    background-size: cover;
+    width: 100%;
+    font-family: Noto Sans JP;
+}
+
+/* Navbar Starts*/
+.navbar{
+    margin-top: 30px;
+}
+
+
+.navbar-brand{
+    margin-right: 2.7em;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: -1.6875px;
+}
+
+.navbar .navbar-brand{
+    color: #1875F0;
+}
+
+.nav-item{
+    margin-top: 3px;
+    font-size: 0.9em;
+    
+}
+
+#nav-phone{
+    color: #1875F0;
+    font-weight: 500;
+}
+
+#nav-feat,#nav-pricing{
+    color: #000;
+    font-weight: 500;
+}
+
+#nav-signin{
+    padding: 13px 65px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #00E59E;
+    border-radius: 100px;
+}
+
+.nav-item{
+    margin-right: 40px;
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar .navbar-nav .nav-linked{
+    color: #000;
+    font-weight: 500;
+}
+
+/* Navbar Ends*/
+
+
+/* Page Content Starts*/
+
+.content{
+    overflow: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 45px;
+}
+
+/* Page First Slide Starts*/
+
+.fast-bank-text{
+    margin-top: 80px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #1860EC;
+}
+
+.transfast-text{
+    margin-top: 43px;
+    color: #4F4F4F;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Page First Slide Ends*/
+
+
+/* Page Second Slide Starts*/
+
+/* For Merchants Starts Here*/
+.for-merch-img{
+    position: absolute;
+    width: 670px;
+    height: 675px;
+    left: 580px;
+    top: 10.8px;
+    z-index: -2;
+    background: url(ameen-fahmy-525674-unsplash.png);
+    transform: rotate(-1.4deg);
+    overflow: hidden;
+}
+
+.for-merch-text{
+    margin-top: 91px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #1860EC;
+    margin-left: 10%;
+}
+
+.merch-det-text{
+    color: #4F4F4F;
+    text-align: left;
+    font-size: 1em;
+    margin-left: 10%;
+}
+/* For Merchants Ends Here*/
+
+
+/* For Banks Starts Here*/
+.for-banks-img{
+    position: absolute;
+    width: 730px;
+    height: 725px;
+    left: 510px;
+    top: -10.8px;
+    z-index: -2;
+    background: url(ameen-fahmy-525674-unsplash.png);
+    transform: rotate(-1.4deg);
+    overflow: hidden;
+}
+
+.for-banks-text{
+    margin-top: 91px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #1860EC;
+    margin-left: 10%;
+}
+
+.banks-det-text{
+    color: #4F4F4F;
+    text-align: left;
+    font-size: 1em;
+    margin-left: 10%;
+}
+/* For Banks Ends Here*/
+
+.accordion{
+    width: 35%;
+    margin-top: -5px;
+    margin-left: 9%;
+}
+
+.accordion .btn{
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .btn:hover, .accordion .btn:focus{
+    text-decoration: none;
+}
+
+.accordion .btn:after{
+    content: "\2212";
+    color: #1860EC;
+    font-weight: bold;
+    float: right;
+    margin-top: -2px;
+}
+.accordion .btn.collapsed:after{
+    content: "\002B";
+}
+
+.mb-0 button{
+    color: #1860EC;
+}
+
+.card{
+    border: none;
+    background-color: transparent;
+}
+
+.card-header{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.card-body{
+    border-top: 1px solid #1860EC;
+}
+
+#pills-tab{
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+.marchants-nav, .banks-nav{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    margin-top: 70px;
+    padding: 15px 20px;
+}
+
+.marchants, .banks{
+    display: flex;
+}
+
+.shop-icon img, .bank-icon img{
+    max-width: 74px;
+    max-height: 74px;
+}
+
+.marchants-text, .banks-text{
+    margin-left: 20px;
+}
+
+.marchants-nav p,.banks-nav p{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #1860EC;
+}
+
+.marchants-nav span, .banks-nav span{
+    color: #4F4F4F;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: #fff !important;
+    background-color: #175DE5 !important;
+}
+
+
+/* Page Cntent Ends*/
+
+/* Page Footer Starts */
+
+.footer{
+    background-color: #1875F0;
+    padding: 1.31em 7em;
+    font-size: 0.8em;
+    color: #fff;
+    width: 100%;
+}
+
+#left{
+    text-align: left;
+}
+#left span{
+    margin-right: 3em;
+}
+#left span a{
+    color: #fff;
+}
+
+#right{
+    text-align: right;
+}
+#right span{
+    margin-left: 3em;
+}
+#right span a{
+    color: #fff;
+}
+
+
+/* Page Footer Endss */
