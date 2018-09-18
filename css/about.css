@@ -172,3 +172,47 @@ body{
 
 
 /* Page Footer Endss */
+
+
+
+/* Responsive Page Starts Here*/
+
+@media screen and (max-width: 900px){
+ 
+    .about-img{
+        display: none;
+    }
+    
+    .footer{
+        margin-top: 51px;
+        padding: 1em 3em;
+    }
+    
+    #right{
+        margin-top: -12.4px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px){
+    
+    .about-img{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1200px){
+    
+    .about-img{
+        width: 370px;
+        height: 280px;
+        left: 600px;
+        top: 250px;
+    }
+    
+    .legal,.feed,.fees,.shop{
+        display: none;
+    }
+    
+}

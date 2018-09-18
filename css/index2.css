@@ -72,7 +72,7 @@ body{
     overflow: auto;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 32px;
 }
 
 
@@ -86,6 +86,7 @@ body{
     z-index: -2;
     transform: rotate(-1.4deg);
     overflow: hidden;
+    bottom: 0;
 }
 
 .for-merch-text{
@@ -231,7 +232,7 @@ body{
 
 .footer{
     background-color: #1875F0;
-    padding: 1.31em 7em;
+    padding: 1em 7em;
     font-size: 0.8em;
     color: #fff;
     width: 100%;
@@ -259,3 +260,121 @@ body{
 
 
 /* Page Footer Endss */
+
+
+
+
+/* Responsive Page Starts Here*/
+
+@media screen and (max-width: 900px){
+    
+    .for-merch-text,.for-banks-text{
+        margin-top: 50px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 2.5em;
+        color: #1860EC;
+        margin-left: 7%;
+    }
+    
+    .merch-det-text,.banks-det-text{
+        color: #4F4F4F;
+        text-align: left;
+        font-size: 1em;
+        margin-left: 7%;
+    }
+    
+    .for-merch-img{
+        display: none;
+    }
+    .for-banks-img{
+        display: none;
+    }
+    
+    .accordion{
+        width: 80%;
+        margin-top: -5px;
+        margin-left: 5%;
+    }
+
+    .accordion .btn:after{
+        margin-top: 0px;
+    }  
+    
+    #pills-tab{
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .marchants-nav, .banks-nav{
+        margin-top: 40px;
+        padding: 10px 10px;
+    }
+    
+    .shop-icon img, .bank-icon img{
+        max-width: 54px;
+        max-height: 54px;
+    }
+
+    .marchants-text, .banks-text{
+        margin-left: 10px;
+    }
+
+    .marchants-nav p,.banks-nav p{
+        margin-top: 0px;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        color: #fff !important;
+        background-color: #175DE5 !important;
+    }
+    
+    .footer{
+        margin-top: 51px;
+        padding: 1em 3em;
+    }
+    
+    #right{
+        margin-top: -18.4px;
+    }
+
+@media screen and (max-width: 1000px) {
+    
+    .navbar{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .for-merch-img{
+        display: none;
+    }
+    .for-banks-img{
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .for-merch-img{
+        width: 500px;
+        height: 510px;
+        left: 550px;
+        top: 100.8px;
+    }
+    .for-banks-img{
+        width: 500px;
+        height: 510px;
+        left: 550px;
+        top: 100.8px;
+    }
+    
+    .legal,.feed,.fees,.shop{
+        display: none;
+    }
+    
+}
+
+
+/* Responsive Page Endss Here*/

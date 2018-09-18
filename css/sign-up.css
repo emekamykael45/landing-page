@@ -90,11 +90,12 @@ h1, h2{
 
 .heading--primary{
     font-size: 1.999rem;
-    padding-bottom: 22px;
+    padding-bottom: 0.5em;
+    font-weight: 600;
 }
 
 .heading--secondary{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .box{
@@ -105,7 +106,7 @@ h1, h2{
 }
 
 .box h2{
-    margin: 0 0 40px;
+    margin: 0 0 3em;
     padding: 0;
     font-size: 1rem;
     font-weight: 600;
@@ -115,38 +116,38 @@ h1, h2{
 
 .person-icon{
     position: absolute;
-    top: -10px;
-    left: 18px;
-    width: 23px;
-    height: 23px;
+    top: -0.8em;
+    left: 1em;
+    width: 1.7em;
+    height: 1.7em;
 }
 .shop-icon{
     position: absolute;
-    top: -9px;
-    left: 18px;
-    width: 25px;
-    height: 24px;
+    top: -0.6em;
+    left: 1em;
+    width: 1.7em;
+    height: 1.6em;
 }
 .location-icon{
     position: absolute;
-    top: -9px;
-    left: 21px;
-    width: 19px;
-    height: 25px;
+    top: -0.6em;
+    left: 1.25em;
+    width: 1.25em;
+    height: 1.7em;
 }
 .email-icon{
     position: absolute;
-    top: -7px;
-    left: 19px;
-    width: 25px;
-    height: 19px;
+    top: -0.5em;
+    left: 1.1em;
+    width: 1.7em;
+    height: 1.3em;
 }
 .password-icon{
     position: absolute;
-    top: -10px;
-    left: 22px;
-    width: 19px;
-    height: 25px;
+    top: -0.6em;
+    left: 1.35em;
+    width: 1.3em;
+    height: 1.5em;
 }
 
 .box input{
@@ -160,7 +161,7 @@ h1, h2{
     padding-left: 60px;
     padding-bottom: 8px;
     border: none;
-    font-size: 15px;
+    font-size: 1em;
     border-bottom: 2px solid #D2DAE3;
 }
 
@@ -178,7 +179,7 @@ h1, h2{
     border-bottom: none;
     cursor: pointer;
     width: 100%;
-    padding: 1.2rem 2.5rem;
+    padding: 1rem 2.5rem;
     font-weight: 500;
     color: #fff;
     background: #1860EC;
@@ -217,13 +218,64 @@ h1, h2{
     font-size: 12px;
 }
 
-.box input:focus, .box input:valid{
-    border-bottom: 2px solid #1860EC;
-}
-
 .box input.password:focus, .box input.password:valid{
     border-bottom: none;
 }
 .box input.submit:focus, .box input.submit:valid{
     border-bottom: none;
 }
+
+
+
+
+/* Responsive Page Starts Here*/
+
+@media screen and (max-width: 900px){
+    
+    .signup_thumbnail{
+        display: none;
+    }
+    
+    .signup_form{
+        width: 100%;
+        padding: 4rem;
+    }
+    
+    .box{
+        padding: 100px 3em;
+        font-size: 0.85em;
+    }
+    
+    .person-icon{
+        left: 1.45em;
+    }
+    .shop-icon{
+        left: 1.45em;
+    }
+    .location-icon{
+        left: 1.7em;
+    }
+    .email-icon{
+        left: 1.45em;
+    }
+    .password-icon{
+        left: 1.7em;
+    }
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .signup_thumbnail{
+        padding: 3rem;
+    }
+    
+    .signup_form{
+        padding: 3rem;
+    }
+    
+}
+
+
+/* Responsive Page Ends Here*/

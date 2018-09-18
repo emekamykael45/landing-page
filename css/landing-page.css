@@ -163,3 +163,64 @@ body{
 
 
 /* Page Footer Endss */
+
+
+
+/* Responsive Page Starts Here*/
+
+@media screen and (max-width: 864px){
+    
+    .fast-bank-text{
+        margin-top: 50px;
+        font-size: 2em;
+    }
+    
+    .transfast-text{
+        font-size: 0.95em;
+    }
+    
+    .marchants-nav, .banks-nav{
+        margin-top: 30px;
+    }
+
+    .shop-icon img, .bank-icon img{
+        max-width: 54px;
+        max-height: 54px;
+    }
+
+    .marchants-text, .banks-text{
+        margin-left: 20px;
+    }
+
+    .marchants-nav p,.banks-nav p{
+        margin-top: 5px;
+        margin-bottom: 0px;
+        color: #1860EC;
+    }
+
+    .marchants-nav span, .banks-nav span{
+        color: #4F4F4F;
+        font-size: 0.79em;
+        font-weight: 500;
+    }
+    
+    .footer{
+        margin-top: 51px;
+        padding: 1em 3em;
+    }
+    
+    #right{
+        margin-top: -18.4px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .legal,.feed,.fees,.shop{
+        display: none;
+    }
+    
+}
+/* Responsive Page Ends Here*/
