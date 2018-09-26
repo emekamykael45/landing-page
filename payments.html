@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/merchant-module.css"/>
+    <link rel="stylesheet" href="css/payments.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -70,12 +70,12 @@
               <div class="sidebar-sticky" id="sideMenu">
                     <div class="tab-sect">
                         <p class="head-tag">Main</p>
-                        <a href="merchant-module.html"class="active"><img src="images/overview.png">Overview</a>
+                        <a href="merchant-module.html"><img src="images/overview.png">Overview</a>
                     </div>
 
                     <div class="tab-sect">
                         <p class="head-tag">Payments</p>
-                        <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                        <a href="" class="active"><img src="images/all-pay.png"><span>All Payments</span></a>
                         <a href=""><img src="images/recon-pay.png">Reconciled Payments</a>
                         <a href=""><img src="images/unrecon-pay.png">Un-reconciled Payments</a>
                         <a href=""><img src="images/manu-settle.png">Manual Settlement</a>
@@ -93,6 +93,8 @@
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                
+                <h3>Payments</h3>
                 
                 <div class="col-md-12 info-head">
                     <div class="col-md-3 info-box">
@@ -135,35 +137,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-md-12 info-graph">
-                    <div class="col-md-8 info-chart">
-                        <div id="my-chart"></div>
-                    </div>
-                    <div class="col-md-4 info-stats">
-                        <div class="tab">
-                            <p class="tab-head-tag">Orders</p>
-                            <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="tab-det">Pending Orders: <span class="or-tab-det-one">20</span></p>
-                            <p class="tab-det">Reconciled Orders: <span class="or-tab-det-two">80</span></p>
-                            <p class="tab-det">Total Orders: <span class="or-tab-det-three">100</span></p>
-                        </div>
-                        <div class="tab">
-                            <p class="tab-head-tag">Payments</p>
-                            <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="tab-det">Un-reconciled Payments: <span class="pay-tab-det-one">20</span></p>
-                            <p class="tab-det">Reconciled Payments: <span class="pay-tab-det-two">80</span></p>
-                            <p class="tab-det">Total Payments: <span class="pay-tab-det-three">100</span></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <br />
-                <h3>Payments</h3>
                 
                 <div class="table-responsive-sm">
                     <table class="table" style="border-collapse:collapse;">
@@ -219,7 +192,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Reconciled</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -257,7 +229,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Pending</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -295,7 +266,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Un-reconciled</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -333,7 +303,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Reconciled</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -371,7 +340,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Pending</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -409,7 +377,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Un-reconciled</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -447,7 +414,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Reconciled</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -485,7 +451,6 @@
                                         <i class="fas fa-circle"></i>
                                         <span>Pending</span>
                                     </div>
-                                    <a><i class="fas fa-chevron-down rotate"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -513,11 +478,85 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr data-toggle="collapse" data-target="#demo9" class="accordion-toggle">
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>
+                                    <div class="un-reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Un-reconciled</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="hiddenRow">
+                                    <div class="accordian-body collapse" id="demo9">
+                                        <div class="drop-down-det">
+                                            <div class="inner">
+                                                <p class="first-tag">Paid By</p>
+                                                <p class="payer-name">Ojo Oluwaleke</p>
+                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Order location</p>
+                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Transaction reference</p>
+                                                <p class="trans-ref-det">1234567890</p>
+                                            </div>
+                                            <div class="inner end">
+                                                <p class="first-tag">Time</p>
+                                                <p class="time-det">12:30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-toggle="collapse" data-target="#demo10" class="accordion-toggle">
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Reconciled</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="hiddenRow">
+                                    <div class="accordian-body collapse" id="demo10">
+                                        <div class="drop-down-det">
+                                            <div class="inner">
+                                                <p class="first-tag">Paid By</p>
+                                                <p class="payer-name">Ojo Oluwaleke</p>
+                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Order location</p>
+                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Transaction reference</p>
+                                                <p class="trans-ref-det">1234567890</p>
+                                            </div>
+                                            <div class="inner end">
+                                                <p class="first-tag">Time</p>
+                                                <p class="time-det">12:30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="tab-footer">
                         <div class="left">
-                            Showing <span class="">1</span> to <span class="">8</span> of <span class="">8</span> entries
+                            Showing <span class="">1</span> to <span class="">10</span> of <span class="">500</span> entries
                         </div>
 
                         <div class="right">
@@ -536,98 +575,24 @@
                     </div>
                     
                 </div>
-                
-                
-            </main>
+              </main>
             </div>
         </div>
-
-            
         
-    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript">
-        $.getJSON( 'https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json',
-        function (data) {
-
-            Highcharts.chart('my-chart', {
-                chart: {
-                    zoomType: 'x'
-                },
-                title: {
-                    text: '.'
-                },
-                subtitle: {
-                    text: document.ontouchstart === undefined ?
-                            '' : 'Pinch the chart to zoom in'
-                },
-                xAxis: {
-                    type: 'date'
-                },
-                yAxis: {
-                    title: {
-                        text: ''
-                    }
-                },
-                legend: {
-                    enabled: false
-                },
-                plotOptions: {
-                    area: {
-                        fillColor: {
-                            linearGradient: {
-                                x1: 0,
-                                y1: 0,
-                                x2: 0,
-                                y2: 1
-                            },
-                            stops: [
-                                [0, Highcharts.getOptions().colors[0]],
-                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                            ]
-                        },
-                        marker: {
-                            radius: 2
-                        },
-                        lineWidth: 1,
-                        states: {
-                            hover: {
-                                lineWidth: 1
-                            }
-                        },
-                        threshold: null
-                    }
-                },
-
-                series: [{
-                    type: 'area',
-                    name: 'USD to EUR',
-                    data: data
-                }]
-            });
-        }
-    );
-    </script>
-    
-    <script>
-        $(document).ready(function(){
-          $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-          });
-        });
-    </script>
         
-    <script>
-        $(".rotate").click(function () {
-            $(this).toggleClass("down");
-        })    
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
-
 </html>

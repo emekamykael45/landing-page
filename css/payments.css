@@ -29,7 +29,7 @@ body {
  */
 
 [role="main"] {
-  padding-top: 60px; /* Space for fixed navbar */
+  padding-top: 100px; /* Space for fixed navbar */
 }
 
 /* Navbar Starts Here */
@@ -226,6 +226,7 @@ input:focus, textarea:focus{
     margin-top: 2.5%;
     width: 95%;
     padding: 0;
+    margin-bottom: 5%;
 }
 
 .info-box{
@@ -272,86 +273,6 @@ input:focus, textarea:focus{
     height: 2.8em;
 }
 /*Section 1 Ends Here*/
-
-
-/*Section 2 Starts Here*/
-.info-graph{
-    display: flex;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background: transparent;
-    padding: 0;
-}
-
-.info-chart{
-    width: 100%;
-    margin-right: 5px;
-    padding: 0;
-}
-
-#my-chart{
-    min-width: 310px;
-    height: 300px;
-}
-
-.info-stats{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    height: 300px;
-    width: 100%;
-}
-
-.tab{
-    padding: 10px;
-    height: 49.2%;
-    background: #ffffff;
-    margin-bottom: 5px;
-}
-
-.tab-head-tag{
-    font-family: Segoe UI;
-    line-height: normal;
-    font-size: 1em;
-    color: #262626;
-    text-align: left;
-    margin-top: 8px;
-    margin-bottom: 0;
-}
-
-.progress{
-    margin-top: 5px;
-    background: #FDC203;
-    height: 0.5em;
-    width: 90%;
-}
-.progress-bar{
-    background: #27AE60;
-}
-
-.tab-det{
-    font-family: Segoe UI;
-    line-height: normal;
-    font-size: 1em;
-    font-weight: 500;
-    color: #262626;
-    text-align: left;
-    margin-top: 6px;
-    margin-bottom: 0;
-}
-
-.or-tab-det-one, .pay-tab-det-one{
-    color: #FDC203;
-}
-.or-tab-det-two, .pay-tab-det-two{
-    color: #27AE60;
-}
-.or-tab-det-three, .pay-tab-det-three{
-    color: #1875F0;
-}
-/*Section 2 Ends Here*/
-
 
 /*Section 3 Starts Here*/
 .paym-sub-line{
@@ -484,45 +405,16 @@ input:focus, textarea:focus{
 .accordion-toggle:after{
     position: absolute;
     right: 50px;
-    content: "\";
+    content: "\2212";
     color: #CCCFD4;
     font-weight: bold;
     font-size: 1.85em;
     float: right;
     margin-top: 9px;
+    cursor: pointer;
 }
 .accordion-toggle.collapsed:after{
-    content: "\";
-}
-
-.rotate {
-    -moz-transition: all .5s linear;
-    -webkit-transition: all .5s linear;
-    transition: all .3s linear;
-}
-.rotate.down {
-    -moz-transform:rotate(180deg);
-    -webkit-transform:rotate(180deg);
-    transform:rotate(180deg);
-}
-td .fa-chevron-down{
-    position: absolute;
-    right: 51px;
-    width: 27px;
-    height: 27px;
-    padding-bottom: 10px;
-    padding-top: 4px;
-    padding-left: 5.6px;
-    margin-top: -24.5px;
-    border-radius: 50%;
-    font-size: 1.3em;
-    cursor: pointer;
-    color: #CCCFD4;
-}
-td .fa-chevron-down:hover{
-    background: #CCCFD4;
-    transition: all 0.2s ease-in-out;
-    color: #fff;
+    content: "\002B";
 }
 
 .hiddenRow {
@@ -620,4 +512,3 @@ td .un-reconciled{
 
 /*Section 3 Ends Here*/
 /*Dashboard Ends Here*/
-
