@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/merchant-module.css"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/orders.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -70,7 +71,7 @@
               <div class="sidebar-sticky" id="sideMenu">
                     <div class="tab-sect">
                         <p class="head-tag">Main</p>
-                        <a href="merchant-module.html"class="active"><img src="images/overview.png">Overview</a>
+                        <a href="merchant-module.html"><img src="images/overview.png">Overview</a>
                     </div>
 
                     <div class="tab-sect">
@@ -83,7 +84,7 @@
 
                     <div class="tab-sect">
                         <p class="head-tag">Orders</p>
-                        <a href="orders.html"><img src="images/all-orders.png">All Orders</a>
+                        <a href="orders.html" class="active"><img src="images/all-orders.png">All Orders</a>
                         <a href=""><img src="images/pen-orders.png" class="pen-ord">Pending Orders</a>
                         <a href=""><img src="images/reco-orders.png" class="recon-ord">Reconciled Orders</a>
                     </div>
@@ -94,10 +95,12 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 
+                <h3>Orders</h3>
+                
                 <div class="col-md-12 info-head">
                     <div class="col-md-3 info-box">
                         <div class="info-head-det">
-                            <p class="info-head-tag">Daily Transaction Volume</p>
+                            <p class="info-head-tag">Daily Order Volume</p>
                             <p class="info-head-fig">2,342</p>
                         </div>
                         <div class="info-head-cha">
@@ -107,7 +110,7 @@
 
                     <div class="col-md-3 info-box info-box-2">
                         <div class="info-head-det">
-                            <p class="info-head-tag">Daily Transaction Value</p>
+                            <p class="info-head-tag">Daily Order Value</p>
                             <p class="info-head-fig"><span>&#x20A6;</span>4,000,000</p>
                         </div>
                         <div class="info-head-cha">
@@ -117,7 +120,7 @@
 
                     <div class="col-md-3 info-box">
                         <div class="info-head-det">
-                            <p class="info-head-tag">Total Transaction Volume</p>
+                            <p class="info-head-tag">Total Order Volume</p>
                             <p class="info-head-fig">452,000</p>
                         </div>
                         <div class="info-head-cha">
@@ -127,7 +130,7 @@
 
                     <div class="col-md-3 info-box">
                         <div class="info-head-det">
-                            <p class="info-head-tag">Total Transaction Value</p>
+                            <p class="info-head-tag">Total Order Value</p>
                             <p class="info-head-fig"><span>&#x20A6;</span>64,000,000</p>
                         </div>
                         <div class="info-head-cha">
@@ -135,35 +138,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-md-12 info-graph">
-                    <div class="col-md-8 info-chart">
-                        <div id="my-chart"></div>
-                    </div>
-                    <div class="col-md-4 info-stats">
-                        <div class="tab">
-                            <p class="tab-head-tag">Orders</p>
-                            <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="tab-det">Pending Orders: <span class="or-tab-det-one">20</span></p>
-                            <p class="tab-det">Reconciled Orders: <span class="or-tab-det-two">80</span></p>
-                            <p class="tab-det">Total Orders: <span class="or-tab-det-three">100</span></p>
-                        </div>
-                        <div class="tab">
-                            <p class="tab-head-tag">Payments</p>
-                            <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="tab-det">Un-reconciled Payments: <span class="pay-tab-det-one">20</span></p>
-                            <p class="tab-det">Reconciled Payments: <span class="pay-tab-det-two">80</span></p>
-                            <p class="tab-det">Total Payments: <span class="pay-tab-det-three">100</span></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <br />
-                <h3>Payments</h3>
                 
                 <div class="table-responsive-sm">
                     <table class="table" style="border-collapse:collapse;">
@@ -210,10 +184,10 @@
                         </thead>
                         <tbody id="myTable">
                             <tr>
-                                <th><span class="user-id">VW</span>Apple Mac Book 15”</th>
-                                <td>$73430</td>
-                                <td>012345677</td>
-                                <td>12:30</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="reconciled">
                                         <i class="fas fa-circle"></i>
@@ -250,10 +224,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Grape Mac Book 15”</th>
-                                <td>$09430</td>
-                                <td>1564567890</td>
-                                <td>16:30</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="pending">
                                         <i class="fas fa-circle"></i>
@@ -290,10 +264,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Lemon Mac Book 15”</th>
-                                <td>$27830</td>
-                                <td>343445690</td>
-                                <td>11:20</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="un-reconciled">
                                         <i class="fas fa-circle"></i>
@@ -330,10 +304,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Lollipop Mac Book 15”</th>
-                                <td>$93430</td>
-                                <td>4464567890</td>
-                                <td>19:30</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="reconciled">
                                         <i class="fas fa-circle"></i>
@@ -370,10 +344,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Pear Mac Book 15”</th>
-                                <td>$333430</td>
-                                <td>3464346670</td>
-                                <td>13:30</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="pending">
                                         <i class="fas fa-circle"></i>
@@ -410,10 +384,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Guava Mac Book 15”</th>
-                                <td>$12430</td>
-                                <td>1879675590</td>
-                                <td>21:30</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="un-reconciled">
                                         <i class="fas fa-circle"></i>
@@ -450,10 +424,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Pine Mac Book 15”</th>
-                                <td>$83430</td>
-                                <td>765843890</td>
-                                <td>18:30</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="reconciled">
                                         <i class="fas fa-circle"></i>
@@ -490,10 +464,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Carrot Mac Book 15”</th>
-                                <td>$755430</td>
-                                <td>4536677890</td>
-                                <td>11:30</td>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                                 <td>
                                     <div class="pending">
                                         <i class="fas fa-circle"></i>
@@ -529,11 +503,91 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>
+                                    <div class="un-reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Un-reconciled</span>
+                                    </div>
+                                    <div data-toggle="collapse" data-target="#demo9" class="collapsed accordion-toggle">
+                                        <span class="chevron top"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="hiddenRow">
+                                    <div class="accordian-body collapse" id="demo9">
+                                        <div class="drop-down-det">
+                                            <div class="inner">
+                                                <p class="first-tag">Paid By</p>
+                                                <p class="payer-name">Ojo Oluwaleke</p>
+                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Order location</p>
+                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Transaction reference</p>
+                                                <p class="trans-ref-det">1234567890</p>
+                                            </div>
+                                            <div class="inner end">
+                                                <p class="first-tag">Time</p>
+                                                <p class="time-det">12:30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">VW</span>Matthew</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Reconciled</span>
+                                    </div>
+                                    <div data-toggle="collapse" data-target="#demo10" class="collapsed accordion-toggle">
+                                        <span class="chevron top"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="hiddenRow">
+                                    <div class="accordian-body collapse" id="demo10">
+                                        <div class="drop-down-det">
+                                            <div class="inner">
+                                                <p class="first-tag">Paid By</p>
+                                                <p class="payer-name">Ojo Oluwaleke</p>
+                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Order location</p>
+                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="first-tag">Transaction reference</p>
+                                                <p class="trans-ref-det">1234567890</p>
+                                            </div>
+                                            <div class="inner end">
+                                                <p class="first-tag">Time</p>
+                                                <p class="time-det">12:30</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="tab-footer">
                         <div class="left">
-                            Showing <span class="">1</span> to <span class="">8</span> of <span class="">8</span> entries
+                            Showing <span class="">1</span> to <span class="">10</span> of <span class="">500</span> entries
                         </div>
 
                         <div class="right">
@@ -552,93 +606,24 @@
                     </div>
                     
                 </div>
-                
-                
-            </main>
+              </main>
             </div>
         </div>
-
-            
         
-    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript">
-        $.getJSON( 'https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json',
-        function (data) {
-
-            Highcharts.chart('my-chart', {
-                chart: {
-                    zoomType: 'x'
-                },
-                title: {
-                    text: '.'
-                },
-                subtitle: {
-                    text: document.ontouchstart === undefined ?
-                            '' : 'Pinch the chart to zoom in'
-                },
-                xAxis: {
-                    type: 'date'
-                },
-                yAxis: {
-                    title: {
-                        text: ''
-                    }
-                },
-                legend: {
-                    enabled: false
-                },
-                plotOptions: {
-                    area: {
-                        fillColor: {
-                            linearGradient: {
-                                x1: 0,
-                                y1: 0,
-                                x2: 0,
-                                y2: 1
-                            },
-                            stops: [
-                                [0, Highcharts.getOptions().colors[0]],
-                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                            ]
-                        },
-                        marker: {
-                            radius: 2
-                        },
-                        lineWidth: 1,
-                        states: {
-                            hover: {
-                                lineWidth: 1
-                            }
-                        },
-                        threshold: null
-                    }
-                },
-
-                series: [{
-                    type: 'area',
-                    name: 'USD to EUR',
-                    data: data
-                }]
+        
+        
+        
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
             });
-        }
-    );
-    </script>
-    
-    <script>
-        $(document).ready(function(){
-          $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-          });
-        });
-    </script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        </script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
-
 </html>

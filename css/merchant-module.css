@@ -187,7 +187,7 @@ input:focus, textarea:focus{
     text-decoration: none;
     padding: 10px 15px;
     padding-right: 0px;
-    font-size: 0.85rem;
+    font-size: 0.845rem;
 }
 #sideMenu a.active{
     background: rgb(24,117,240, 0.1);
@@ -483,47 +483,29 @@ input:focus, textarea:focus{
 
 .accordion-toggle:after{
     position: absolute;
-    right: 50px;
-    content: "\";
+    display: inline-block;
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	height: 0.85em;
+    width: 0.85em;
+    right: 53.5px;
     color: #CCCFD4;
-    font-weight: bold;
-    font-size: 1.85em;
-    float: right;
-    margin-top: 9px;
+    margin-top: -13.5px;
+	transform: rotate(-45deg);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    cursor: pointer;
 }
 .accordion-toggle.collapsed:after{
-    content: "\";
-}
-
-.rotate {
-    -moz-transition: all .5s linear;
-    -webkit-transition: all .5s linear;
+    margin-top: -19.5px;
+    transform: rotate(135deg);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
     transition: all .3s linear;
 }
-.rotate.down {
-    -moz-transform:rotate(180deg);
-    -webkit-transform:rotate(180deg);
-    transform:rotate(180deg);
-}
-td .fa-chevron-down{
-    position: absolute;
-    right: 51px;
-    width: 27px;
-    height: 27px;
-    padding-bottom: 10px;
-    padding-top: 4px;
-    padding-left: 5.6px;
-    margin-top: -24.5px;
-    border-radius: 50%;
-    font-size: 1.3em;
-    cursor: pointer;
-    color: #CCCFD4;
-}
-td .fa-chevron-down:hover{
-    background: #CCCFD4;
-    transition: all 0.2s ease-in-out;
-    color: #fff;
-}
+
 
 .hiddenRow {
     padding-top: 0 !important;
@@ -577,7 +559,7 @@ td .fa-chevron-down:hover{
 td .reconciled, td .pending, td .un-reconciled{
     margin-top: -5px;
     margin-bottom: -5px;
-    width: 55%;
+    width: 60%;
     padding: 5px 3px;
     padding-top: 4px;
     border: 1px solid #CCCFD4;
