@@ -103,51 +103,73 @@ h1, h2{
     padding: 100px 130px;
     box-sizing: border-box;
     border: 1px solid rgba(0,0,0,.1);
+    z-index: 1;
 }
 
 .box h2{
-    margin: 0 0 3em;
+    margin: 0 0 0.8em;
     padding: 0;
     font-size: 1rem;
     font-weight: 600;
     color: #1875F0;
     text-align: center;
 }
-
-.person-icon{
-    position: absolute;
-    top: -0.8em;
-    left: 1em;
-    width: 1.7em;
-    height: 1.7em;
+.box .you-need{
+    margin: 0 0 1em;
+    margin-left: -50px;
+    margin-right: -50px;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #414042;
+    text-align: center;
 }
+
+.contact-info{
+    background: none;
+}
+
 .shop-icon{
     position: absolute;
-    top: -0.6em;
+    top: -0.65em;
     left: 1em;
-    width: 1.7em;
-    height: 1.6em;
+    width: 1.5em;
+    height: 1.4em;
 }
 .location-icon{
     position: absolute;
-    top: -0.6em;
-    left: 1.25em;
-    width: 1.25em;
-    height: 1.7em;
+    top: -0.7em;
+    left: 1.2em;
+    width: 1.1em;
+    height: 1.5em;
 }
 .email-icon{
     position: absolute;
     top: -0.5em;
     left: 1.1em;
-    width: 1.7em;
-    height: 1.3em;
+    width: 1.45em;
+    height: 1.1em;
 }
 .password-icon{
     position: absolute;
     top: -0.6em;
-    left: 1.35em;
-    width: 1.3em;
+    left: 1.3em;
+    width: 1.1em;
+    height: 1.3em;
+}
+.bankvec-icon{
+    position: absolute;
+    top: -0.75em;
+    left: 1.1em;
+    width: 1.5em;
     height: 1.5em;
+}
+.otp-icon{
+    position: absolute;
+    top: 1.2em;
+    left: 1.1em;
+    width: 1.4em;
+    height: 1.4em;
 }
 
 .box input{
@@ -165,26 +187,226 @@ h1, h2{
     border-bottom: 2px solid #D2DAE3;
 }
 
-.box input[type="text"], .box input[type="password"]{
+.box input[type="text"], .box input[type="password"], .box input[type="number"]{
     color: #414042;
     background-color: transparent;
 }
 
-.box input.password{
+.box input.password, .box input.number{
     margin-bottom: -10px;
     border-bottom: none;
 }
 
-.box input[type="submit"] {
+.box .alr-hav-an-acc{
+    position: relative;
+    top: -5px;
+    text-align: center;
+    color: #1875F0;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.box .alr-hav-an-acc:hover{
+    text-decoration: none;
+}
+
+#tra-form {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#tra-form fieldset {
+    border: 0 none;
+    border-radius: 0px;
+    box-sizing: border-box;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+    width: 100%;
+}
+
+/*Hide all except first fieldset*/
+#tra-form fieldset:not(:first-of-type) {
+    display: none;
+}
+
+
+/*progressbar*/
+#progressbar {
+    padding-top: 5px;
+    margin-bottom: 10px;
+    width: 120%;
+    margin-left: -10%;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #E0E0E0;
+    position: absolute;
+    left: -50%;
+    top: 7px;
+    z-index: -1; /*put it behind the numbers*/
+    transition: All 0.2s ease-in-out;
+    -webkit-transition: All 0.2s ease-in-out;
+    -moz-transition: All 0.2s ease-in-out;
+    -o-transition: All 0.2s ease-in-out;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 16px;
+    height: 16px;
+    line-height: 25px;
+    display: block;
+    font-size: 0px;
+    color: #fff;
+    background: #E0E0E0;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+    transition: All 0.2s ease-in-out;
+    -webkit-transition: All 0.2s ease-in-out;
+    -moz-transition: All 0.2s ease-in-out;
+    -o-transition: All 0.2s ease-in-out;
+}
+#progressbar li.active:before{
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+    margin: -4px auto 10px auto;
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #1463CC;
+    color: white;
+    transition: All 0.2s ease-in-out;
+    -webkit-transition: All 0.2s ease-in-out;
+    -moz-transition: All 0.2s ease-in-out;
+    -o-transition: All 0.2s ease-in-out;
+}
+
+#tra-form fieldset .fields .enter-otp{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    margin-left: -40px;
+    margin-bottom: -14px;
+    color: #7F8FA4;
+    top: -23px;
+    font-size: 0.8em;
+}
+#tra-form fieldset .fields .veri-field{
+    cursor: default;
+    margin: 0;
+    margin-left: -125px;
+}
+.box input.verify {
+    display: inline-block;
+    width: 6%;
+    height: 28px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.3em;
+    color: #414042;
+    border: 0;
+    border-bottom: 1.5px solid #000;
+    border-radius: 1px 1px 0 0;
+    cursor: text;
+    margin: 0;
+    margin-top: -10px;
+    padding: 0;
+}
+.box input.verify:focus{
+    border-bottom: 1.5px solid #00E59E;
+}
+
+#tra-form .action-button {
     border-bottom: none;
     cursor: pointer;
     width: 100%;
+    margin-top: -5px;
     padding: 1rem 2.5rem;
     font-weight: 500;
     color: #fff;
-    background: #1860EC;
-    border-radius: 6px;
+    background: #00E59E;
+    border-radius: 60px;
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
+}
+
+#tra-form .action-button:hover, #tra-form .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #00E59E;
+}
+
+#tra-form .sec-pg-pre{
+    margin: 0;
+    padding: 0px 5px 7px 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 0px;
+    font-size: 35px;
+    float: left;
+}
+#tra-form .sec-pg-pre-txt{
+    margin: 0 0 0 0px;
+    padding: 0 0 0 8px;
+    width: 75px;
+    height: 40px;
+    line-height: 0px;
+    color: #00E59E;
+    font-size: 16px;
+    font-weight: 600;
+    float: left;
+    background: none;
+    box-shadow: none;
+}
+#tra-form .sec-pg-pre-txt:hover, #tra-form .sec-pg-pre-txt:focus{
+    box-shadow: none;
+}
+
+#tra-form .sec-pg-nxt, #tra-form .sec-pg-sub{
+    width: 50%;
+    float: right;
+}
+
+#tra-form .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+.box fieldset{
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .box .fields{
@@ -195,6 +417,7 @@ h1, h2{
     margin-bottom: 30px;
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
+    position: relative;
 }
 
 .box form div{
@@ -223,6 +446,13 @@ h1, h2{
 }
 .box input.submit:focus, .box input.submit:valid{
     border-bottom: none;
+}
+
+#tra-form .gotodash{
+    position: relative;
+    float: left;
+    display: block;
+    bottom: -400px;
 }
 
 
@@ -279,3 +509,27 @@ h1, h2{
 
 
 /* Responsive Page Ends Here*/
+
+
+
+
+/* Not relevant to this form */
+.dme_link {
+    margin-top: 30px;
+    text-align: center;
+}
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #ee0979;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+
+.dme_link a:hover, .dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
+}

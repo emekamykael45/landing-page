@@ -36,6 +36,7 @@ body{
 #nav-phone{
     color: #1875F0;
     font-weight: 500;
+    cursor: text;
 }
 
 #nav-feat,#nav-pricing{

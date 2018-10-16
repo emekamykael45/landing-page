@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/sign-up.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link rel="stylesheet" href="css/sign-up.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
     
 	<body>
@@ -30,40 +30,249 @@
             </div>
             
             <div class="container_child signup_form box">
-                <h2>Get started with transmonitor<br />by filling this form</h2>
-            <form>
-                <div class="fields">
-                    <div>
-                        <img src="images/merc-prof.png" class="person-icon">
-                        <input type="text" name="" class="name" required>
-                        <label>Name</label>
+                <h2>Welcome  to Transmonitor</h2>
+                <h2 class="you-need">You need accesss to phone number tied to bank account needed for verification</h2>
+            
+            <form id="tra-form">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <fieldset>
+                    <h2 class="contact-info">Contact Information</h2>
+                    <div class="fields">
+                        <div>
+                            <img src="images/Shop.png" class="shop-icon">
+                            <input type="text" name="" class="email" required>
+                            <label>Shop Name</label>
+                        </div>
+                        <div>
+                            <img src="images/Location-Pin.png" class="location-icon">
+                            <input type="text" name="" class="location" required>
+                            <label>Shop Address</label>
+                        </div>
+                        <div>
+                            <img src="images/Mail.png" class="email-icon">
+                            <input type="text" name="" class="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div>
+                            <img src="images/lock.png" class="password-icon">
+                            <input type="password" name="" class="password" required>
+                            <label>Password</label>
+                        </div>
                     </div>
-                    <div>
-                        <img src="images/Shop.png" class="shop-icon">
-                        <input type="text" name="" class="email" required>
-                        <label>Company Name</label>
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <a href="#" class="alr-hav-an-acc">Already have an account? Sign In</a>
+                </fieldset>
+                
+                <fieldset>
+                    <h2 class="contact-info">Account Information</h2>
+                    <div class="fields">
+                        <div>
+                            <img src="images/Bank%20%20Vec.png" class="bankvec-icon">
+                            <input type="text" name="" class="email" required>
+                            <label>Bank Name</label>
+                        </div>
+                        <div>
+                            <img src="images/Bank%20%20Vec.png" class="bankvec-icon">
+                            <input id="txtChar" onkeypress="return isNumberKey(event)" type="text" maxlength="10" name="txtChar" class="number" required>
+                            <label>Bank Account Number</label>
+                        </div>
                     </div>
-                    <div>
-                        <img src="images/Location-Pin.png" class="location-icon">
-                        <input type="text" name="" class="location" required>
-                        <label>Company Address</label>
+                    <input type="button" name="previous" class="previous action-button sec-pg-pre" value="&#x2039;" Previous />
+                    <input type="button" name="previous" class="previous action-button sec-pg-pre-txt" value="Previous" />
+                    <input type="button" name="next" class="next action-button sec-pg-nxt" value="Next" />
+                </fieldset>
+                
+                <fieldset>
+                    <h2 class="contact-info">Account Verification</h2>
+                    <div class="fields">
+                            <img src="images/OTP.png" class="otp-icon">
+                            <h6 class="enter-otp">Enter OTP sent to your mobile number</h6>
+                            <div class="veri-field">
+                            <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
+                            <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
+                            <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
+                            <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
+                        </div>
                     </div>
-                    <div>
-                        <img src="images/Mail.png" class="email-icon">
-                        <input type="text" name="" class="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div>
-                        <img src="images/lock.png" class="password-icon">
-                        <input type="password" name="" class="password" required>
-                        <label>Password</label>
-                    </div>
-                </div>
-                <input type="submit" name="" value="Sign up" class="btn submit">
-                <a href="merchant-module.html">Go to dashboard</a>
+                    <input type="button" name="previous" class="previous action-button sec-pg-pre" value="&#x2039;" />
+                    <input type="button" name="previous" class="previous action-button sec-pg-pre-txt" value="Previous" />
+                    <input type="submit" name="submit" class="submit action-button sec-pg-sub" value="Submit" />
+                </fieldset>
+                <a href="merchant-module.html" class="gotodash">Go to dashboard</a>
             </form>
+                
             </div>
         </div>
+        
+        
+        
+        
+        
+        
+        <!-- On-Boarding Pagination Javascript -->
+        <script>
+            //jQuery time
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var left, opacity, scale; //fieldset properties which we will animate
+            var animating; //flag to prevent quick multi-click glitches
+
+            $(".next").click(function(){
+                if(animating) return false;
+                animating = true;
+
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+
+                //activate next step on progressbar using the index of next_fs
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show(); 
+                //hide the current fieldset with style
+                current_fs.animate({opacity: 0}, {
+                    step: function(now, mx) {
+                        //as the opacity of current_fs reduces to 0 - stored in "now"
+                        //1. scale current_fs down to 80%
+                        scale = 1 - (1 - now) * 0.2;
+                        //2. bring next_fs from the right(50%)
+                        left = (now * 50)+"%";
+                        //3. increase opacity of next_fs to 1 as it moves in
+                        opacity = 1 - now;
+                        current_fs.css({
+                    'transform': 'scale('+scale+')',
+                    'position': 'absolute'
+                  });
+                        next_fs.css({'left': left, 'opacity': opacity});
+                    }, 
+                    duration: 800, 
+                    complete: function(){
+                        current_fs.hide();
+                        animating = false;
+                    }, 
+                    //this comes from the custom easing plugin
+                    easing: 'easeInOutBack'
+                });
+            });
+
+            $(".previous").click(function(){
+                if(animating) return false;
+                animating = true;
+
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+
+                //de-activate current step on progressbar
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+                //show the previous fieldset
+                previous_fs.show(); 
+                //hide the current fieldset with style
+                current_fs.animate({opacity: 0}, {
+                    step: function(now, mx) {
+                        //as the opacity of current_fs reduces to 0 - stored in "now"
+                        //1. scale previous_fs from 80% to 100%
+                        scale = 0.8 + (1 - now) * 0.2;
+                        //2. take current_fs to the right(50%) - from 0%
+                        left = ((1-now) * 50)+"%";
+                        //3. increase opacity of previous_fs to 1 as it moves in
+                        opacity = 1 - now;
+                        current_fs.css({'left': left});
+                        previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+                    }, 
+                    duration: 800, 
+                    complete: function(){
+                        current_fs.hide();
+                        animating = false;
+                    }, 
+                    //this comes from the custom easing plugin
+                    easing: 'easeInOutBack'
+                });
+            });
+
+            $(".submit").click(function(){
+                return false;
+            })
+        </script>
+        
+        <!-- OTP Verification -->
+        <script>
+        
+            $(function() {
+              'use strict';
+
+              var body = $('body');
+
+              function goToNextInput(e) {
+                var key = e.which,
+                  t = $(e.target),
+                  sib = t.next('.verify');
+
+                if (key != 9 && (key < 48 || key > 57)) {
+                  e.preventDefault();
+                  return false;
+                }
+
+                if (key === 9) {
+                  return true;
+                }
+
+                if (!sib || !sib.length) {
+                  sib = body.find('.verify').eq(0);
+                }
+                sib.select().focus();
+              }
+
+              function onKeyDown(e) {
+                var key = e.which;
+
+                if (key === 9 || (key >= 48 && key <= 57)) {
+                  return true;
+                }
+
+                e.preventDefault();
+                return false;
+              }
+
+              function onFocus(e) {
+                $(e.target).select();
+              }
+
+              body.on('keyup', '.verify', goToNextInput);
+              body.on('keydown', '.verify', onKeyDown);
+              body.on('click', '.verify', onFocus);
+
+            })
+            
+        </script>
+        
+        <!-- Bank Account Number Limiting To Be Only Numbers -->
+        <script>
+            function isNumberKey(evt)
+            {
+              var charCode = (evt.which) ? evt.which : event.keyCode;
+              if (charCode != 46 && charCode > 31 
+                && (charCode < 48 || charCode > 57))
+                 return false;
+
+              return true;
+            }
+            
+            <!-- 10-Digits Limit -->
+            var maxLength = 10;
+            $('.number').keyup(function() {
+              var length = $(this).val().length;
+              var length = maxLength-length;
+            });
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 
 </html>

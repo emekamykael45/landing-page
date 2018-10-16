@@ -147,10 +147,33 @@ h1, h2{
     color: #414042;
     background-color: transparent;
 }
-
 .box input.password{
-    margin-bottom: -10px;
+    margin-bottom: -5px;
     border-bottom: none;
+}
+
+.box .fields .for-pass{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    margin-left: 240px;
+    margin-bottom: -14px;
+    color: #7F8FA4;
+    top: -20px;
+    font-size: 0.8em;
+}
+.box .fields .for-pass:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.field-icon {
+    color: #7F8FA4;
+    float: right;
+    margin-right: 15px;
+    margin-top: -18px;
+    position: relative;
+    z-index: 2;
 }
 
 .box input[type="submit"] {
@@ -160,9 +183,20 @@ h1, h2{
     padding: 1rem 2.5rem;
     font-weight: 500;
     color: #fff;
-    background: #1860EC;
-    border-radius: 6px;
+    background: #04B74F;
+    border-radius: 40px;
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
+}
+
+.box .don-hav-an-acc{
+    position: absolute;
+    width: 58%;
+    text-align: center;
+    color: #1875F0;
+    font-size: 0.85em;
+}
+.box .don-hav-an-acc:hover{
+    text-decoration: none;
 }
 
 .box .fields{
