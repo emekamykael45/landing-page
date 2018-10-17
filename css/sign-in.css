@@ -188,14 +188,17 @@ h1, h2{
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
 }
 
-.box .don-hav-an-acc{
+.box .reme-now{
     position: absolute;
     width: 58%;
     text-align: center;
-    color: #1875F0;
+    color: #414042;
     font-size: 0.85em;
 }
-.box .don-hav-an-acc:hover{
+.box .reme-now a{
+    color: #04B74F;
+}
+.box .reme-now a:hover{
     text-decoration: none;
 }
 

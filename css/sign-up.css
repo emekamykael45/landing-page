@@ -197,15 +197,18 @@ h1, h2{
     border-bottom: none;
 }
 
-.box .alr-hav-an-acc{
+.box .reme-now{
     position: relative;
-    top: -5px;
-    text-align: center;
-    color: #1875F0;
-    font-size: 0.9em;
     font-weight: 500;
+    width: 58%;
+    text-align: center;
+    color: #414042;
+    font-size: 0.85em;
 }
-.box .alr-hav-an-acc:hover{
+.box .reme-now a{
+    color: #04B74F;
+}
+.box .reme-now a:hover{
     text-decoration: none;
 }
 
@@ -351,13 +354,13 @@ h1, h2{
     padding: 1rem 2.5rem;
     font-weight: 500;
     color: #fff;
-    background: #00E59E;
+    background: #04B74F;
     border-radius: 60px;
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
 }
 
 #tra-form .action-button:hover, #tra-form .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #00E59E;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #04B74F;
 }
 
 #tra-form .sec-pg-pre{
@@ -375,7 +378,7 @@ h1, h2{
     width: 75px;
     height: 40px;
     line-height: 0px;
-    color: #00E59E;
+    color: #04B74F;
     font-size: 16px;
     font-weight: 600;
     float: left;

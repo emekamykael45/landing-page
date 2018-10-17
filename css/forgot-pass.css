@@ -164,7 +164,7 @@ h1, h2{
     margin-top: -10px;
     font-weight: 500;
     color: #fff;
-    background: #00E59E;
+    background: #04B74F;
     border-radius: 40px;
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
 }
@@ -177,7 +177,7 @@ h1, h2{
     font-size: 0.85em;
 }
 .box .reme-now a{
-    color: #00E59E;
+    color: #04B74F;
 }
 .box .reme-now a:hover{
     text-decoration: none;
