@@ -1,0 +1,263 @@
+body{
+    font: 100% / 1.414 "Noto Sans JP", sans-serif;
+    background: #fff;
+}
+
+a,[type="submit"] {
+    transition: all .25s ease-in;
+}
+
+.signup_container{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1875rem;
+    box-shadow: 0px 0.1875rem 0,4375rem rgba(0, 0, 0, 0.25);
+}
+
+.container_child{
+    width: 50%;
+    height: 100%;
+    color: #fff;
+}
+
+.signup_thumbnail{
+    position: relative;
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: url(../images/signup-sign-in-img.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+.signup_form{
+    position: relative;
+    align-items: center;
+    padding: 8rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%);
+}
+
+.thumbnail_logo, .thumbnail_content{
+    position: relative;
+    z-index: 2;
+}
+
+.thumbnail_logo{
+    align-self: flex-start;
+}
+.thumbnail_logo a{
+    color: #fff;
+}
+.thumbnail_logo a:hover{
+    text-decoration: none;
+}
+
+.logo_shape{
+    fill: #fff;
+}
+
+.logo_text{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    vertical-align: bottom;
+    font-style: italic;
+}
+
+.thumbnail_content{
+    align-self: center;
+    margin-top: -300px;
+    padding-left: 30px;
+}
+
+h1, h2{
+    font-weight: 300;
+    color: #fff;
+}
+
+.heading--primary{
+    font-size: 1.999rem;
+    padding-bottom: 22px;
+}
+
+.heading--secondary{
+    font-size: 1.1rem;
+}
+
+.box{
+    width: 50%;
+    padding: 180px 130px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.box h2{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1875F0;
+    text-align: center;
+}
+
+.box .a-link{
+    margin: 0 0 30px;
+    margin-left: -50px;
+    margin-right: -50px;
+    padding: 0;
+    font-size: 0.81rem;
+    font-weight: 500;
+    color: #414042;
+    text-align: center;
+}
+
+.email-icon{
+    position: absolute;
+    top: -7px;
+    left: 19px;
+    width: 25px;
+    height: 19px;
+}
+
+.box input{
+    padding: 0px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    margin-left: 0px;
+    padding-left: 60px;
+    padding-bottom: 8px;
+    border: none;
+    font-size: 1em;
+    border-bottom: 2px solid #D2DAE3;
+}
+
+.box input[type="text"] {
+    color: #414042;
+    background-color: transparent;
+}
+.box input.email{
+    margin-bottom: -5px;
+    border-bottom: none;
+}
+
+.box input[type="submit"] {
+    border-bottom: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    margin-top: -10px;
+    font-weight: 500;
+    color: #fff;
+    background: #00E59E;
+    border-radius: 40px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.01);
+}
+
+.box .reme-now{
+    position: absolute;
+    width: 58%;
+    text-align: center;
+    color: #414042;
+    font-size: 0.85em;
+}
+.box .reme-now a{
+    color: #00E59E;
+}
+.box .reme-now a:hover{
+    text-decoration: none;
+}
+
+.box .fields{
+    background: #fff;
+    padding: 0px 0px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.01);
+}
+
+.box form div{
+    position: relative;
+}
+
+.box form div label{
+    position: absolute;
+    top: -8px;
+    left: 0;
+    color: #999;
+    transition: .5s;
+    margin-left: 60px;
+    pointer-events: none;
+}
+
+.box input:focus ~ label, .box input:valid ~ label{
+    top: -17px;
+    left: 0;
+    color: #7F8FA4;
+    font-size: 12px;
+}
+
+.box input.email:focus, .box input.email:valid{
+    border-bottom: none;
+}
+.box input.submit:focus, .box input.submit:valid{
+    border-bottom: none;
+}
+
+
+
+/* Responsive Page Starts Here*/
+
+@media screen and (max-width: 900px){
+    
+    .signup_thumbnail{
+        display: none;
+    }
+    
+    .signup_form{
+        width: 100%;
+        padding: 4rem;
+    }
+    
+    .box{
+        padding: 180px 130px;
+        font-size: 0.85em;
+    }
+    
+    .email-icon{
+        left: 1.45em;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .signup_thumbnail{
+        padding: 3rem;
+    }
+    
+    .signup_form{
+        padding: 3rem;
+    }
+    
+}
+
+
+/* Responsive Page Ends Here*/

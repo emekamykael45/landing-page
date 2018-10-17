@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TransMonitor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/forgot-pass2.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+    
+	<body>
+        
+        <div class="signup_container">
+            <div class="container_child signup_thumbnail">
+                
+                <div class="thumbnail_logo">
+                    <h1 class="logo_text"><a href="landing-page.html">TRANSMONITOR</a></h1>
+                </div>
+                
+                <div class="thumbnail_content text-left">
+                    <h1 class="heading--primary">Sign In</h1>
+                    <h2 class="heading--secondary">Our merchant APIs enables store merchants to<br />creates orders on the platform and receive payment<br />notifications once the customer makes payment via<br />bank-transfer.</h2>
+                </div>
+                
+            </div>
+            
+            <div class="container_child signup_form box">
+                <h2>Recover your Password</h2>
+                <h2 class="wel-back">Welcome back! create a new password for your account</h2>
+            <form>
+                <div class="fields">
+                    <div>
+                        <img src="images/lock.png" class="password-icon">
+                        <input id="password" type="password" name="password" class="email" value="" required>
+                        <span toggle="#password" class="fa fa-fw fa-eye field-icon1 toggle-password"></span>
+                        <label>Password</label>
+                    </div>
+                    <div>
+                        <img src="images/lock.png" class="password-icon">
+                        <input id="confirm_password" type="password" name="password" class="password" value="" required>
+                        <span toggle="#confirm_password" class="fa fa-fw fa-eye field-icon2 toggle-password"></span>
+                        <label>Confirm Password</label>
+                    </div>
+                </div>
+                <input type="submit" name="" value="Resend Link" class="btn submit" />
+                <br /><br /><br /><br />
+                <a href="merchant-module.html">Go to dashboard</a>
+            </form>
+            </div>
+        </div>
+        
+        
+        
+        <script>
+            
+            $(".toggle-password").click(function() {
+
+              $(this).toggleClass("fa-eye fa-eye-slash");
+              var input = $($(this).attr("toggle"));
+              if (input.attr("type") == "password") {
+                input.attr("type", "text");
+              } else {
+                input.attr("type", "password");
+              }
+            });
+            
+        </script>
+        
+        <script>
+            
+            var password = document.getElementById("password")
+              , confirm_password = document.getElementById("confirm_password");
+
+            function validatePassword(){
+              if(password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+              } else {
+                confirm_password.setCustomValidity('');
+              }
+            }
+
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+            
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+    </body>
+
+</html>
