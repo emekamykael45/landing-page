@@ -243,55 +243,57 @@ input:focus, textarea:focus{
 
 /*Main Page Starts Here*/
 
-.prof-content {
+.tra-pay-ver{
+    margin-left: 80px;
+}
+
+.tra-pay-content {
     background: #fff;
+    margin: 0px 80px;
     padding: 40px;
+    height: 100%;
 }
 
-.user-prof-img{
-    width: 60px;
-    height: 60px;
+.tra-pay-content .pay-tra-code{
+    text-align: center;
+    color: #EB5757;
+    font-weight: 450;
+    font-size: 1.05em;
+    margin-top: 15px;
+    letter-spacing: 0.3px;
 }
 
-.sect-1{
-    margin-top: 25px;
+.tra-pay-content .check-mark{
+    position: relative;
+    left: 46.5%;
+    width: 4em;
+    margin-top: 10px;
 }
 
-.name, .address, .bank{
-    text-align: left;
-    color: #7F8FA4;
-    margin: 0;
-    padding-bottom: 5px;
+.tra-pay-content .sor-we-hav{
+    text-align: center;
+    color: #4F4F4F;
+    font-weight: 450;
+    font-size: 1em;
+    margin-top: 50px;
+    letter-spacing: 0.3px;
+    margin-bottom: 40px;
 }
 
-.user-prof-name, .user-prof-addr, .user-prof-bank{
-    text-align: left;
+.tra-pay-content a.try-again{
+    position: relative;
+    background: #1875F0;
+    left: 35%;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    padding: 15px 80px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+.tra-pay-content a.try-again:hover{
+    text-decoration: none;
 }
 
-.sect-1 hr{
-    width: 400px;
-    position: absolute;
-    margin: 0;
-    margin-top: 8px;
-}
-
-
-.sec-prof-content{
-    background: #fff;
-    padding-top: 60px;
-    display: flex;
-}
-
-.sect-2{
-    margin-bottom: 25px;
-    margin-left: 20px;
-}
-
-.sect-2 hr{
-    width: 400px;
-    position: absolute;
-    margin: 0;
-    margin-top: 8px;
-}
 
 /*Main Page Ends Here*/

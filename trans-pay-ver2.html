@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/merch-profile.css"/>
+    <link rel="stylesheet" href="css/trans-pay-ver2.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 </head>
     <body>
         <header>
@@ -90,62 +87,31 @@
                         <a href=""><img src="images/reco-orders.png" class="recon-ord">Reconciled Orders</a>
                     </div>
 
-                  <a href="merch-profile.html" class="merc-prof active"><img src="images/merc-prof.png">Merchants Profile</a>
+                  <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png">Merchants Profile</a>
             </div>
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 
-                <h3>Profile</h3>
+                <h3 class="tra-pay-ver">Transfer Payment Verification</h3>
                 <br />
                 
-                <div class="prof-content">
+                <div class="tra-pay-content">
                     
-                    <img src="images/Bank-Icon.png" class="user-prof-img">
+                    <p class="pay-tra-code">Payment Transfer Code Verified</p>
+                    <img src="images/gtbank.png" class="bank-logo">
                     
-                    <div class="sect-1">
-                        <p class="name">Name</p>
-                        <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
-                        <hr />
+                    <img src="images/checkmark.png" class="check-mark">
+                    
+                    <div class="info">
+                        <p>Payer Name:<span class="payer-name-det">Ikenna Njoku</span></p>
+                        <p>Amount:<span class="naira">&#x20A6;<span class="amount-det">20,000</span></span></p>
+                        <p>Time Paid:<span class="time-paid-det">9:00am</span></p>
+                        <p>Medium:<span class="medium-det">Mobile Transfer</span></p>
+                        <p>Reference ID:<span class="ref-id-det">66765676565</span></p>
                     </div>
-                    
-                    <div class="sect-1">
-                        <p class="address">Address</p>
-                        <span class="user-prof-addr">Apple Mac Book 15” 250 SSD 12GB</span>
-                        <hr />
-                    </div>
-                    
-                    <div class="sect-1">
-                        <p class="bank">Bank</p>
-                        <span class="user-prof-bank">Apple Mac Book 15” 250 SSD 12GB</span>
-                        <hr />
-                    </div>
-                    
-                    
-                    <div class="sec-prof-content">
-                        <img src="images/Bank-Icon.png" class="user-prof-img">
-
-                        <div class="sub-sec">
-                            <div class="sect-2">
-                                <p class="name">Contact Details</p>
-                                <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
-                                <hr />
-                            </div>
-
-                            <div class="sect-2">
-                                <p class="name">Ref. No.</p>
-                                <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
-                                <hr />
-                            </div>
-
-                            <div class="sect-2">
-                                <p class="name">Ref. No.</p>
-                                <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
-                                <hr />
-                            </div>
-                        </div>
                         
-                    </div>
+                    <a href="trans-pay-ver-fail.html" class="go-to">Go to failed verification page</a>
                     
                 </div>
                 
@@ -157,43 +123,6 @@
         
         
         
-        
-        <script>
-            $(document).ready(function(){
-              $("#myInput1").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#myTable1 tr").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-            });
-        </script>
-        
-        <script>
-            $(document).ready(function(){
-              $("#myInput2").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#myTable2 tr").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-            });
-        </script>
-        
-        <script>
-            $('#activate').click(function () { 
-                var text = 'Match to payment ✓';
-                // save $(this) so jQuery doesn't have to execute again
-                var $this = $('#activate');
-                if ($this.text() === text) {
-                    $(this).text('Match to payment').toggleClass("label-warning label-danger");
-
-                } else {
-                    $this.text(text).toggleClass("label-danger label-warning");;
-
-                }
-            });
-        </script>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>

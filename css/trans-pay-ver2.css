@@ -243,55 +243,85 @@ input:focus, textarea:focus{
 
 /*Main Page Starts Here*/
 
-.prof-content {
+.tra-pay-ver{
+    margin-left: 80px;
+}
+
+.tra-pay-content {
     background: #fff;
+    margin: 0px 80px;
     padding: 40px;
+    height: 93%;
 }
 
-.user-prof-img{
-    width: 60px;
-    height: 60px;
+.tra-pay-content .pay-tra-code{
+    text-align: center;
+    color: #27AE60;
+    font-weight: 450;
+    font-size: 1.05em;
+    margin-top: 10px;
+    letter-spacing: 0.3px;
 }
 
-.sect-1{
-    margin-top: 25px;
-}
-
-.name, .address, .bank{
-    text-align: left;
-    color: #7F8FA4;
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-.user-prof-name, .user-prof-addr, .user-prof-bank{
-    text-align: left;
-}
-
-.sect-1 hr{
-    width: 400px;
+.tra-pay-content .bank-logo{
     position: absolute;
+    width: 6em;
+    right: 0;
+    margin-right: 22%;
+    margin-top: -30px;
+}
+
+.tra-pay-content .check-mark{
+    position: relative;
+    left: 46.5%;
+    width: 4em;
+    margin-top: 10px;
+}
+
+.tra-pay-content .info{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 36.5%;
+}
+
+.tra-pay-content p{
+    padding: 0;
     margin: 0;
-    margin-top: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.tra-pay-content .ref-id{
+    margin: 0;
 }
 
-
-.sec-prof-content{
-    background: #fff;
-    padding-top: 60px;
-    display: flex;
+.payer-name-det{
+    margin-left: 50px;
+    font-weight: 400;
+}
+.naira{
+    margin-left: 75px;
+    font-weight: 400;
+}
+.amount-det{
+    margin-left: 1px;
+    font-weight: 400;
+}
+.time-paid-det{
+    margin-left: 64px;
+    font-weight: 400;
+}
+.medium-det{
+    margin-left: 73.5px;
+    font-weight: 400;
+}
+.ref-id-det{
+    margin-left: 45px;
+    font-weight: 400;
 }
 
-.sect-2{
-    margin-bottom: 25px;
-    margin-left: 20px;
-}
-
-.sect-2 hr{
-    width: 400px;
+.go-to{
     position: absolute;
-    margin: 0;
-    margin-top: 8px;
+    padding-top: 40px;
 }
 
 /*Main Page Ends Here*/
