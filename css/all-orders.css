@@ -133,40 +133,48 @@ input:focus, textarea:focus{
 
 /*Side Menu Starts Here*/
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-}
-
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}
-
-#sideMenu{
-    position: sticky;
-    background: #ffffff;
-    width: 100%;
+.sidenav {
     height: 100%;
-    position: absolute;
-    bottom: 0;
-    transition: all 0.3s ease-in-out;
+    width: 210px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
     padding-top: 90px;
+    background: #ffffff;
+    transition: 0.1s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    padding-top: 33px;
+    padding-right: 6px;
+    display: none;
+}
+.sidenav .closebtn:hover{
+    padding: 0px;
+    margin: 33px 6px 0px 30px;
+    background-color: #fff;
+}
+
+.open-sidenav{
+    position: sticky;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 2000;
+    top: 3px;
+    left: 10px;
+    margin-top: -57px;
+    margin-bottom: 20px;
+    display: none;
 }
 
 .tab-sect{
@@ -180,8 +188,15 @@ input:focus, textarea:focus{
 .tab-sect p{
     margin-bottom: 10px;
 }
+.tab-sect hr, .sidenav hr{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    height: 2px;
+    background-color: #647787;
+    opacity: 0.2;
+}
 
-#sideMenu .veri-tra-btn{
+.sidenav .veri-tra-btn{
     position: relative;
     background: #27AE60;
     width: 80%;
@@ -195,7 +210,7 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
-#sideMenu .veri-tra-btn:hover{
+.sidenav .veri-tra-btn:hover{
     background: #27AE60;
     padding: 10px 10px 10px 10px;
     font-weight: 700;
@@ -203,7 +218,7 @@ input:focus, textarea:focus{
     transition: all 0.2s ease-in-out;
 }
 
-#sideMenu a{
+.sidenav a{
     display: block;
     color: #647787;
     text-decoration: none;
@@ -212,29 +227,33 @@ input:focus, textarea:focus{
     font-size: 0.845rem;
     transition: all 0.3s ease-in-out;
 }
-#sideMenu a.active{
+.sidenav a.active{
     background: rgb(24,117,240, 0.1);
     border-left: 4px solid #1875F0;
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a.active:hover{
+.sidenav a.active:hover{
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a:hover{
+.sidenav a:hover{
     background: rgb(24,117,240, 0.1);
     transition: all 0.3s ease-in-out;
     padding: 10px 10px 10px 20px;
 }
 
-#sideMenu a img{
+.sidenav a img{
     margin-top: -5px;
     margin-right: 10px;
     width: 24px;
 }
-#sideMenu a .pen-ord, #sideMenu a .recon-ord{
+.sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
     margin-right: 5px;
+}
+
+.sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+    display: none;
 }
 
 /*Side Menu Ends Here*/
@@ -243,7 +262,27 @@ input:focus, textarea:focus{
 
 /*Dashboard Starts Here*/
 
+.main{
+    margin-left: 210px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    padding-top: 60px;
+    padding-left: 25px;
+    width: 83%;
+}
+
+.open-sidenav{
+    position: absolute;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 1;
+}
+
 /*Section 1 Starts Here*/
+
+.orders-head{
+    padding-top: 20px;
+}
+
 .info-head{
     display: flex;
     margin-top: 2.5%;
@@ -323,6 +362,10 @@ input:focus, textarea:focus{
     color: #1875F0;
     font-weight: 500;
     border: none;
+}
+
+.show-entries .out-of{
+    font-size: 1em;
 }
 
 .show-entries .show-out-of{
@@ -546,3 +589,524 @@ td .un-reconciled{
 
 /*Section 3 Ends Here*/
 /*Dashboard Ends Here*/
+
+
+
+
+/* Responsive Page Starts Here*/
+
+@media screen and (max-width: 1255px) {
+    
+    .info-head{
+        width: 96%;
+    }
+    
+    .info-box-2{
+        margin-right: 20px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    #myBtnContainer{
+        margin-left: -50px;
+    }
+
+    .accordion-toggle:after{
+        right: 38.5px;
+    }
+
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 70%;
+        font-size: 0.95em;
+    }
+    .reconciled .fas, .pending .fas, .un-reconciled .fas{
+        font-size: 0.55em;
+    }
+    
+}
+
+
+@media screen and (max-width: 1180px) {
+
+    .info-head-cha{
+        margin-top: 10%;
+        margin-left: 59%;
+    }
+    .info-head-cha img{
+        width: 4.2em;
+        height: 2.7em;
+    }
+    
+    .accordion-toggle:after{
+        right: 26.5px;
+    }
+    
+}
+
+@media screen and (max-width: 1085px) {
+    
+    .info-head-cha{
+        margin-top: 10%;
+        margin-left: 58%;
+    }
+    .info-head-cha img{
+        width: 4em;
+        height: 2.6em;
+    }
+    
+    .accordion-toggle:after{
+        right: 10.5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1045px){
+    
+    #myBtnContainer{
+        margin-left: -60px;
+    }
+    
+    .accordion-toggle:after{
+        right: 0px;
+    }
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 75%;
+        font-size: 0.95em;
+    }
+}
+
+
+@media screen and (max-width: 1008px){
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .sear-pay{
+        margin-top: 2px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
+    .accordion-toggle:after{
+        right: -10px;
+    }
+    
+}
+
+
+@media screen and (max-width: 992px) {
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 80%;
+        font-size: 0.95em;
+    }
+    
+    .accordion-toggle:after{
+        right: -15px;
+    }
+}
+
+
+@media screen and (max-width: 952px){
+    
+    .info-head{
+        display: inline;
+    }
+    
+    .info-box{
+        max-width: 46%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    .info-box-2{
+        left: 55%;
+        margin-top: -75px;
+    }
+    
+    .info-head-cha{
+        margin-top: 3%;
+        right: 30px;
+    }
+    .info-head-cha img{
+        width: 6em;
+        height: 4em;
+    }
+    
+}
+
+
+@media screen and (max-width: 940px){
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 85%;
+        font-size: 0.95em;
+    }
+    
+    .accordion-toggle:after{
+        right: -32px;
+    }
+    
+}
+
+
+@media screen and (max-width: 892px){
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 85%;
+        font-size: 0.95em;
+    }
+    
+    .accordion-toggle:after{
+        right: -32px;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px){
+    
+    .navbar-toggler{
+        display: none;
+    }
+    
+    .navbar .logo{
+        margin-left: 30px;
+    }
+    
+    .navbar-nav{
+        display: none;
+    }
+    
+    .sidenav{
+        width: 0px;
+        padding-top: 75px;
+    }
+    .sidenav a:hover{
+        padding: 10px 0px 10px 15px;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn{
+        display: block;
+    }
+    .sidenav .closebtn:hover{
+        margin: 33px 6px 0px 30px;
+    }
+
+    .open-sidenav{
+        position: sticky;
+        top: 5.5px;
+        font-size: 1.7em;
+        z-index: 2000;
+        display: block;
+        cursor: pointer;
+        color: #647787;
+        width: 23px;
+    }
+    
+    .sidenav .veri-tra-btn{
+        left: 10px;
+    }
+    
+    .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+        display: block;
+    }
+    
+    .main{
+        margin-left: -12px; /* Same as the width of the sidenav */
+        width: 100%;
+    }
+    
+    .table{
+        width: 120%;
+    }
+
+    .accordion-toggle:after{
+        right: 45.5px;
+    }
+    .accordion-toggle.collapsed:after{
+        margin-top: -17.5px;
+    }
+
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 70%;
+        font-size: 0.95em;
+    }
+    .reconciled .fas, .pending .fas, .un-reconciled .fas{
+        font-size: 0.55em;
+    }
+
+}
+
+
+@media screen and (max-width: 727px){
+    
+    .table{
+        width: 130%;
+    }
+    
+}
+
+
+@media screen and (max-width: 672px){
+    
+    .table{
+        width: 140%;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px){
+    
+    .main{
+        margin-left: -12px; /* Same as the width of the sidenav */
+    }
+    
+    .info-head{
+        display: inline;
+        width: 100%;
+        padding: 0px;
+    }
+    
+    .info-box{
+        width: 230px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .info-box-2{
+        position: relative;
+        margin-right: 20px;
+        left: 240px;
+        margin-top: -80px;
+    }
+    
+    .info-graph{
+        display: block;
+        width: 100%;
+    }
+    
+    .info-chart{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #my-chart{
+        height: 300px;
+    }
+    
+    .info-stats{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        height: 140px;
+        width: 100%;
+    }
+
+    .tab{
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .tab-1{
+        margin-right: 10px;
+    }
+    
+    .payments-head{
+        margin-top: -15px;
+        font-size: 1.6em;
+    }
+    
+    .paym-sub-line{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .paym-sub{
+        display: block;
+    }
+
+    .show-entries span{
+        display: inline-flex;
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    .show-entries .show-out-of{
+        margin: 0;
+        padding-left: 3px;
+        padding-right: 4px;
+    }
+    
+    .sear-pay{
+        padding: 0;
+        margin: 0;
+        margin-top: -2px;
+        margin-left: 15px;
+        width: 90%;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 50%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    
+    .table{
+        width: 180%;
+    }
+
+    .accordion-toggle:after{
+        right: 45.5px;
+    }
+    .accordion-toggle.collapsed:after{
+        margin-top: -17.5px;
+    }
+
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 70%;
+        font-size: 0.95em;
+    }
+    .reconciled .fas, .pending .fas, .un-reconciled .fas{
+        font-size: 0.55em;
+    }
+    
+}
+
+@media screen and (max-width: 496px){
+    
+    .info-head-cha{
+        margin-top: 9%;
+        right: 5px;
+    }
+    .info-head-cha img{
+        width: 4em;
+        height: 3em;
+    }
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 80%;
+    }
+    
+}
+
+
+@media screen and (max-width: 477px){
+
+    .info-box-2{
+        left: 220px;
+    }
+    
+    .accordion-toggle:after{
+        right: 37.5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 446px){
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 85%;
+    }
+    
+}
+
+
+@media screen and (max-width: 433px){
+    
+    .info-box{
+        position: relative;
+        max-width: 100% !important;
+        margin-bottom: -10px;
+    }
+    .info-box-2{
+        margin-right: 0px;
+        left: 0px;
+        margin-top: 20px;
+    }
+    
+    .info-stats{
+        display: inline;
+    }
+    
+    .tab-1{
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .table{
+        width: 190%;
+    }
+    
+    .tab-footer .right{
+        position: relative;
+        float: left;
+        margin-top: 10px;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px){
+    
+    .table{
+        width: 210%;
+    }
+
+    .accordion-toggle:after{
+        color: #000;
+    }
+    
+}
+
+
+@media screen and (max-width: 372px){
+    
+    .table{
+        width: 220%;
+    }
+    
+}
+
+@media screen and (max-width: 356px){
+    
+    .table{
+        width: 230%;
+    }
+    
+}
+
+@media screen and (max-width: 343px){
+    
+    .table{
+        width: 250%;
+    }
+    
+}
+
+/* Responsive Page Endss Here*/

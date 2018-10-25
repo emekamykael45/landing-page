@@ -133,40 +133,48 @@ input:focus, textarea:focus{
 
 /*Side Menu Starts Here*/
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-}
-
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}
-
-#sideMenu{
-    position: sticky;
-    background: #ffffff;
-    width: 100%;
+.sidenav {
     height: 100%;
-    position: absolute;
-    bottom: 0;
-    transition: all 0.3s ease-in-out;
+    width: 210px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
     padding-top: 90px;
+    background: #ffffff;
+    transition: 0.1s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    padding-top: 33px;
+    padding-right: 6px;
+    display: none;
+}
+.sidenav .closebtn:hover{
+    padding: 0px;
+    margin: 33px 6px 0px 30px;
+    background-color: #fff;
+}
+
+.open-sidenav{
+    position: sticky;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 2000;
+    top: 3px;
+    left: 10px;
+    margin-top: -57px;
+    margin-bottom: 20px;
+    display: none;
 }
 
 .tab-sect{
@@ -180,8 +188,15 @@ input:focus, textarea:focus{
 .tab-sect p{
     margin-bottom: 10px;
 }
+.tab-sect hr, .sidenav hr{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    height: 2px;
+    background-color: #647787;
+    opacity: 0.2;
+}
 
-#sideMenu .veri-tra-btn{
+.sidenav .veri-tra-btn{
     position: relative;
     background: #27AE60;
     width: 80%;
@@ -195,7 +210,7 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
-#sideMenu .veri-tra-btn:hover{
+.sidenav .veri-tra-btn:hover{
     background: #27AE60;
     padding: 10px 10px 10px 10px;
     font-weight: 700;
@@ -203,7 +218,7 @@ input:focus, textarea:focus{
     transition: all 0.2s ease-in-out;
 }
 
-#sideMenu a{
+.sidenav a{
     display: block;
     color: #647787;
     text-decoration: none;
@@ -212,29 +227,33 @@ input:focus, textarea:focus{
     font-size: 0.845rem;
     transition: all 0.3s ease-in-out;
 }
-#sideMenu a.active{
+.sidenav a.active{
     background: rgb(24,117,240, 0.1);
     border-left: 4px solid #1875F0;
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a.active:hover{
+.sidenav a.active:hover{
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a:hover{
+.sidenav a:hover{
     background: rgb(24,117,240, 0.1);
     transition: all 0.3s ease-in-out;
     padding: 10px 10px 10px 20px;
 }
 
-#sideMenu a img{
+.sidenav a img{
     margin-top: -5px;
     margin-right: 10px;
     width: 24px;
 }
-#sideMenu a .pen-ord, #sideMenu a .recon-ord{
+.sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
     margin-right: 5px;
+}
+
+.sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+    display: none;
 }
 
 /*Side Menu Ends Here*/
@@ -243,61 +262,26 @@ input:focus, textarea:focus{
 
 /*Dashboard Starts Here*/
 
-/*Section 1 Starts Here*/
-.info-head{
-    display: flex;
-    margin-top: 2.5%;
-    width: 95%;
-    padding: 0;
-    margin-bottom: 5%;
+.main{
+    margin-left: 209px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    padding-top: 60px;
+    padding-left: 25px;
+    width: 83%;
 }
 
-.info-box{
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 75px;
-    background: #FFFFFF;
-    border: 1px solid #EEF8FD;
-    box-sizing: border-box;
-    border-radius: 2px;
-    margin-right: 0.6em;
-}
-.info-box-2{
-    margin-right: 2.9em;
-}
-
-.info-head-tag{
-    margin-top: 1.15em;
-    font-family: Segoe UI;
-    line-height: normal;
-    font-size: 0.95em;
-    color: #787C90;
-}
-
-.info-head-fig{
-    margin-top: -0.85em;
-    font-family: Segoe UI;
-    line-height: normal;
-    font-weight: 500;
-    font-size: 1.35em;
-    color: #262626;
-}
-
-.info-head-cha{
+.open-sidenav{
     position: absolute;
-    margin-top: 8%;
-    margin-left: 61%;
-    width: 4.5em;
-    height: 2.8em;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 1;
 }
-.info-head-cha img{
-    width: 4.5em;
-    height: 2.8em;
-}
-/*Section 1 Ends Here*/
 
-/*Section 3 Starts Here*/
+/*Section 1 Starts Here*/
+
+.settlements-head{
+    padding-top: 20px;
+}
 
 .head-sub-tit-one{
     margin: 0;
@@ -313,6 +297,10 @@ input:focus, textarea:focus{
     padding: 0;
     width: 102.5%;
     display: inline-flex;
+}
+
+.column-grid-scnd{
+    margin-right: 20px;
 }
 
 .paym-sub-line{
@@ -369,6 +357,7 @@ input:focus, textarea:focus{
 }
 .table tbody tr th .item-name{
     margin-bottom: 3px;
+    font-size: 0.9em;
 }
 .table tbody tr th .ref-no{
     color: #7F8FA4;
@@ -395,7 +384,7 @@ input:focus, textarea:focus{
     -webkit-transition: all .3s linear;
     transition: all .3s linear;
     cursor: pointer;
-    right: 26px;
+    right: 32px;
     margin-top: -12px;
     cursor: pointer;
 }
@@ -413,7 +402,7 @@ input:focus, textarea:focus{
     -webkit-transition: all .3s linear;
     transition: all .3s linear;
     cursor: pointer;
-    right: 30px;
+    right: 35px;
     margin-top: -14px;
     cursor: pointer;
 }
@@ -492,26 +481,23 @@ td .reconciled{
     border-radius: 30px;
     color: #124DC1;
     font-weight: 400;
-    font-size: 0.85em;
+    font-size: 0.8em;
 }
 td .reconciled:hover{
     background: #D2DAE3;
 }
 
 .match{
-    top: 75px;
-    left: 36px;
     margin-top: -5px;
-    margin-bottom: -5px;
-    padding: 7px 25px;
+    margin-bottom: -15px;
+    padding: 7px 20px;
     padding-top: 7px;
     border: 1px solid #1860EC;
     cursor: pointer;
     border-radius: 30px;
     color: #124DC1;
     font-weight: 400;
-    font-size: 0.85em;
-    z-index: 10;
+    font-size: 0.8em;
 }
 td .match:hover{
     color: #fff;
@@ -529,13 +515,26 @@ td .match.active{
     float: right;
 }
 
-/*Section 3 Ends Here*/
-/*Dashboard Ends Here*/
+/*Section 1 Ends Here*/
 
 
-
+/* Overlay Starts Here*/
 
 #overlay{ /* we set all of the properties for our overlay */
+    margin:0 auto;
+    background:white;
+    min-width: 520px;
+    color:black;
+    padding: 0;;
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    transform: translate(-50%, -50%);
+    z-index:1000;
+    display:none;
+}
+
+#overlay1, #overlay2, #overlay3, #overlay4{ /* we set all of the properties for our overlay */
     margin:0 auto;
     background:white;
     min-width: 520px;
@@ -560,7 +559,7 @@ td .match.active{
     display:none;
 }
 /* use :target to look for a link to the overlay then we find our mask */
-#overlay:target, #overlay:target + #mask{
+#overlay:target, #overlay:target + #mask, #overlay1:target, #overlay1:target + #mask, #overlay2:target, #overlay2:target + #mask, #overlay3:target, #overlay3:target + #mask, #overlay4:target, #overlay4:target + #mask{
     display:block;
     opacity:1;
 }
@@ -574,33 +573,33 @@ td .match.active{
     color: #fff;
 }
 
-#overlay h2{
+#overlay h2, #overlay1 h2, #overlay2 h2, #overlay3 h2, #overlay4 h2{
     font-size: 16px;
     font-weight: 400;
     background: #FAFBFC;
     padding: 13px 20px;
 }
-#overlay .pop-det{
+#overlay .pop-det, #overlay1 .pop-det, #overlay2 .pop-det, #overlay3 .pop-det, #overlay4 .pop-det{
     display: flex;
     padding: 0 20px;
     margin: 0;
     margin-bottom: 30px;
 }
-#overlay .pop-det-left, .pop-det-right{
+#overlay .pop-det-left, .pop-det-right, #overlay1 .pop-det-left, #overlay2 .pop-det-left, #overlay3 .pop-det-left, #overlay4 .pop-det-left{
     padding: 0;
     margin: 0;
 }
-#overlay .pop-sub-head{
+#overlay .pop-sub-head, #overlay1 .pop-sub-head, #overlay2 .pop-sub-head, #overlay3 .pop-sub-head, #overlay4 .pop-sub-head{
     font-weight: 500;
     margin: 0;
     padding-bottom: 5px;
 }
-#overlay p{
+#overlay p, #overlay1 p, #overlay2 p, #overlay3 p, #overlay4 p{
     margin: 0;
     padding-bottom: 3px;
     font-size: 1em;
 }
-#overlay .mat-ordtopay{
+#overlay .mat-ordtopay, #overlay1 .mat-ordtopay, #overlay2 .mat-ordtopay, #overlay3 .mat-ordtopay, #overlay4 .mat-ordtopay{
     float: left;
     position: relative;
     bottom: 15px;
@@ -611,12 +610,12 @@ td .match.active{
     font-weight: bold;
     color: #fff;
 }
-#overlay .mat-ordtopay:hover{
+#overlay .mat-ordtopay:hover, #overlay1 .mat-ordtopay:hover, #overlay2 .mat-ordtopay:hover, #overlay3 .mat-ordtopay:hover, #overlay4 .mat-ordtopay:hover{
     text-decoration: none;
     color: #D2DAE3;
 }
 
-#overlay .dismiss{
+#overlay .dismiss, #overlay1 .dismiss, #overlay2 .dismiss, #overlay3 .dismiss, #overlay4 .dismiss{
     float: right;
     position: relative;
     bottom: 15px;
@@ -629,7 +628,321 @@ td .match.active{
     font-weight: bold;
     color: #1860EC;
 }
-#overlay .dismiss:hover{
+#overlay .dismiss:hover, #overlay1 .dismiss:hover, #overlay2 .dismiss:hover, #overlay3 .dismiss:hover, #overlay4 .dismiss:hover{
     text-decoration: none;
     background: #D2DAE3;
 }
+
+/* Overlay Ends Here*/
+
+/*Dashboard Ends Here*/
+
+
+
+
+/* Responsive Page Starts Here*/
+
+
+@media screen and (max-width: 1160px) {
+
+    .table{
+        width: 110%;
+    }
+    
+    .accordion-toggle-ls:after, .accordion-toggle-rs:after{
+        right: 31.5px;
+        color: #000;
+    }
+    
+}
+
+@media screen and (max-width: 1115px) {
+    
+    .tab-footer .right{
+        position: absolute;
+        float: left;
+        margin-top: 30px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1070px){
+    
+    .table{
+        width: 120%;
+    }
+    
+}
+
+@media screen and (max-width: 1005px){
+    
+    .table{
+        width: 130%;
+    }
+    
+}
+
+@media screen and (max-width: 954px){
+    
+    .table{
+        width: 140%;
+    }
+    
+}
+
+@media screen and (max-width: 895px){
+    
+    .table{
+        width: 145%;
+    }
+    
+}
+
+
+@media screen and (max-width: 860px){
+    
+    .navbar-toggler{
+        display: none;
+    }
+    
+    .navbar .logo{
+        margin-left: 30px;
+    }
+    
+    .navbar-nav{
+        display: none;
+    }
+    
+    .sidenav{
+        width: 0px;
+        padding-top: 75px;
+    }
+    .sidenav a:hover{
+        padding: 10px 0px 10px 15px;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn{
+        display: block;
+    }
+    .sidenav .closebtn:hover{
+        margin: 33px 6px 0px 30px;
+    }
+
+    .open-sidenav{
+        position: sticky;
+        top: 5.5px;
+        font-size: 1.7em;
+        z-index: 2000;
+        display: block;
+        cursor: pointer;
+        color: #647787;
+        width: 23px;
+    }
+    
+    .sidenav .veri-tra-btn{
+        left: 10px;
+    }
+    
+    .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+        display: block;
+    }
+    
+    .main{
+        margin-left: -12px; /* Same as the width of the sidenav */
+        width: 101%;
+    }
+    
+    .column-grid-scnd{
+        margin-right: 0px;
+    }
+    
+    .table{
+        width: 130%;
+    }
+
+    td .reconciled{
+        width: 70%;
+        font-size: 0.95em;
+    }
+    td .match{
+        font-size: 0.95em;
+        padding: 7px 20px;
+        padding-top: 5px;
+    }
+    
+    .tab-footer .page-link{
+        z-index: 0 !important;
+    }
+    
+    #overlay, #overlay1, #overlay2, #overlay3, #overlay4{ /* we set all of the properties for our overlay */
+        left: 0%;
+    }
+
+}
+
+
+@media screen and (max-width: 788px){
+    
+    .table{
+        width: 135%;
+    }
+    
+}
+
+@media screen and (max-width: 767px){
+    
+    .table{
+        width: 140%;
+    }
+    
+}
+
+@media screen and (max-width: 738px){
+    
+    .table{
+        width: 150%;
+    }
+    
+}
+
+@media screen and (max-width: 698px){
+    
+    .table{
+        width: 160%;
+    }
+    
+}
+
+@media screen and (max-width: 677px){
+    
+    .column-grid-scnd{
+        display: inline;
+    }
+    
+    .second-table{
+        margin-top: 90px;
+    }
+    
+    .table{
+        width: 100%;
+    }
+    
+    #overlay, #overlay1, #overlay2, #overlay3, #overlay4{ /* we set all of the properties for our overlay */
+        top: 30%;
+        left: 51%;
+        font-size: 0.9em;
+    }
+    
+    .pop-det-right{
+        margin-left: 5%;
+    }
+}
+
+
+@media screen and (max-width: 540px){
+    
+    .table{
+        width: 110%;
+    }
+    
+    /* Overlay Starts Here*/
+
+    #overlay1, #overlay2, #overlay3, #overlay4{ /* we set all of the properties for our overlay */
+        min-width: 300px;
+        top: 10%;
+        font-size: 0.9em;
+    }
+    
+    #overlay .pop-det, #overlay1 .pop-det, #overlay2 .pop-det, #overlay3 .pop-det, #overlay4 .pop-det{
+        display: inline;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+    #overlay .pop-det-left, .pop-det-right, #overlay1 .pop-det-left, #overlay2 .pop-det-left, #overlay3 .pop-det-left, #overlay4 .pop-det-left{
+        padding: 0px 20px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    
+    #overlay .mat-ordtopay, #overlay1 .mat-ordtopay, #overlay2 .mat-ordtopay, #overlay3 .mat-ordtopay, #overlay4 .mat-ordtopay{
+        margin-top: 15px;
+    }
+
+    #overlay .dismiss, #overlay1 .dismiss, #overlay2 .dismiss, #overlay3 .dismiss, #overlay4 .dismiss{
+        left: -135px;
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    /* Overlay Ends Here*/
+    
+}
+
+@media screen and (max-width: 495px){
+    
+    .table{
+        width: 120%;
+    }
+    
+}
+
+@media screen and (max-width: 459px){
+    
+    .table{
+        width: 130%;
+    }
+    
+}
+
+@media screen and (max-width: 430px){
+    
+    .table{
+        width: 140%;
+    }
+    
+}
+
+@media screen and (max-width: 400px){
+    
+    .table{
+        width: 150%;
+    }
+    
+}
+
+@media screen and (max-width: 379px){
+    
+    .table{
+        width: 160%;
+    }
+    
+}
+
+@media screen and (max-width: 363px){
+    
+    .table{
+        width: 165%;
+    }
+    
+}
+
+@media screen and (max-width: 342px){
+    
+    .table{
+        width: 170%;
+    }
+    
+}
+
+@media screen and (max-width: 330px){
+    
+    .table{
+        width: 175%;
+    }
+    
+}
+
+
+/* Responsive Page Endss Here*/

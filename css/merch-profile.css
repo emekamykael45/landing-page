@@ -133,40 +133,48 @@ input:focus, textarea:focus{
 
 /*Side Menu Starts Here*/
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-}
-
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}
-
-#sideMenu{
-    position: sticky;
-    background: #ffffff;
-    width: 100%;
+.sidenav {
     height: 100%;
-    position: absolute;
-    bottom: 0;
-    transition: all 0.3s ease-in-out;
+    width: 210px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
     padding-top: 90px;
+    background: #ffffff;
+    transition: 0.1s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    padding-top: 33px;
+    padding-right: 6px;
+    display: none;
+}
+.sidenav .closebtn:hover{
+    padding: 0px;
+    margin: 33px 6px 0px 30px;
+    background-color: #fff;
+}
+
+.open-sidenav{
+    position: sticky;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 2000;
+    top: 3px;
+    left: 10px;
+    margin-top: -57px;
+    margin-bottom: 20px;
+    display: none;
 }
 
 .tab-sect{
@@ -180,8 +188,15 @@ input:focus, textarea:focus{
 .tab-sect p{
     margin-bottom: 10px;
 }
+.tab-sect hr, .sidenav hr{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    height: 2px;
+    background-color: #647787;
+    opacity: 0.2;
+}
 
-#sideMenu .veri-tra-btn{
+.sidenav .veri-tra-btn{
     position: relative;
     background: #27AE60;
     width: 80%;
@@ -195,7 +210,7 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
-#sideMenu .veri-tra-btn:hover{
+.sidenav .veri-tra-btn:hover{
     background: #27AE60;
     padding: 10px 10px 10px 10px;
     font-weight: 700;
@@ -203,7 +218,7 @@ input:focus, textarea:focus{
     transition: all 0.2s ease-in-out;
 }
 
-#sideMenu a{
+.sidenav a{
     display: block;
     color: #647787;
     text-decoration: none;
@@ -212,29 +227,33 @@ input:focus, textarea:focus{
     font-size: 0.845rem;
     transition: all 0.3s ease-in-out;
 }
-#sideMenu a.active{
+.sidenav a.active{
     background: rgb(24,117,240, 0.1);
     border-left: 4px solid #1875F0;
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a.active:hover{
+.sidenav a.active:hover{
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a:hover{
+.sidenav a:hover{
     background: rgb(24,117,240, 0.1);
     transition: all 0.3s ease-in-out;
     padding: 10px 10px 10px 20px;
 }
 
-#sideMenu a img{
+.sidenav a img{
     margin-top: -5px;
     margin-right: 10px;
     width: 24px;
 }
-#sideMenu a .pen-ord, #sideMenu a .recon-ord{
+.sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
     margin-right: 5px;
+}
+
+.sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+    display: none;
 }
 
 /*Side Menu Ends Here*/
@@ -242,6 +261,25 @@ input:focus, textarea:focus{
 
 
 /*Main Page Starts Here*/
+
+.main{
+    margin-left: 209px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    padding-top: 60px;
+    padding-left: 25px;
+    width: 83%;
+}
+
+.open-sidenav{
+    position: absolute;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.profile-head{
+    padding-top: 20px;
+}
 
 .prof-content {
     background: #fff;
@@ -295,3 +333,170 @@ input:focus, textarea:focus{
 }
 
 /*Main Page Ends Here*/
+
+
+
+/* Responsive Page Starts Here*/
+
+
+@media screen and (max-width: 1504px) {
+
+    .prof-content {
+        margin: 0px 50px 50px 0px;
+    }
+    
+}
+
+
+@media screen and (max-width: 860px){
+    
+    .navbar-toggler{
+        display: none;
+    }
+    
+    .navbar .logo{
+        margin-left: 30px;
+    }
+    
+    .navbar-nav{
+        display: none;
+    }
+    
+    .sidenav{
+        width: 0px;
+        padding-top: 75px;
+    }
+    .sidenav a:hover{
+        padding: 10px 0px 10px 15px;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn{
+        display: block;
+    }
+    .sidenav .closebtn:hover{
+        margin: 33px 6px 0px 30px;
+    }
+
+    .open-sidenav{
+        position: sticky;
+        top: 5.5px;
+        font-size: 1.7em;
+        z-index: 2000;
+        display: block;
+        cursor: pointer;
+        color: #647787;
+        width: 23px;
+    }
+    
+    .sidenav .veri-tra-btn{
+        left: 10px;
+    }
+    
+    .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+        display: block;
+    }
+    
+    .main{
+        margin-left: -12px; /* Same as the width of the sidenav */
+        width: 100%;
+    }
+    
+    .prof-content{
+        margin: 0px 30px 30px 0px;
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+    
+    .user-prof-img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .sect-1{
+        margin-top: 25px;
+    }
+
+    .name, .address, .bank{
+        text-align: left;
+        color: #7F8FA4;
+        margin: 0;
+        padding-bottom: 5px;
+    }
+
+    .user-prof-name, .user-prof-addr, .user-prof-bank{
+        text-align: left;
+    }
+
+    .sect-1 hr{
+        width: 250px;
+    }
+
+
+    .sec-prof-content{
+        background: #fff;
+        padding-top: 60px;
+        display: flex;
+    }
+
+    .sect-2{
+        margin-bottom: 25px;
+        margin-left: 20px;
+    }
+
+    .sect-2 hr{
+        width: 250px;
+    }
+}
+
+
+@media screen and (max-width: 468px){
+    
+    .sec-prof-content{
+        display: inline;
+    }
+    
+    .sec-prof-content img{
+        margin-bottom: 20px;
+    }
+    
+    .top{
+        margin-bottom: 40px;
+    }
+    
+    .sect-2{
+        margin-left: 0px;
+    }
+    
+}
+
+@media screen and (max-width: 400px){
+    
+    .prof-content{
+        font-size: 0.9em;
+    }
+    
+    .sect-1 hr{
+        width: 210px;
+    }
+    
+    .sect-2 hr{
+        width: 210px;
+    }
+    
+}
+
+@media screen and (max-width: 348px){
+    
+    .prof-content{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+/* Responsive Page Endss Here*/

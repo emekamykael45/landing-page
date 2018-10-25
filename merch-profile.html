@@ -64,94 +64,106 @@
         </nav>
         </header>
         
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-              <div class="sidebar-sticky" id="sideMenu">
-                    <div class="tab-sect">
-                        <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
-                        
-                        <p class="head-tag">Main</p>
-                        <a href="merchant-module.html"><img src="images/overview.png">Overview</a>
-                    </div>
+        <div class="sidenav" id="mySidenav">
 
-                    <div class="tab-sect">
-                        <p class="head-tag">Payments</p>
-                        <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
-                        <a href=""><img src="images/recon-pay.png">Reconciled Payments</a>
-                        <a href=""><img src="images/unrecon-pay.png">Un-reconciled Payments</a>
-                        <a href="settlements.html"><img src="images/manu-settle.png">Manual Settlement</a>
-                    </div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-                    <div class="tab-sect">
-                        <p class="head-tag">Orders</p>
-                        <a href="all-orders.html"><img src="images/all-orders.png">All Orders</a>
-                        <a href=""><img src="images/pen-orders.png" class="pen-ord">Pending Orders</a>
-                        <a href=""><img src="images/reco-orders.png" class="recon-ord">Reconciled Orders</a>
-                    </div>
+                <div class="tab-sect">
+                    <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
+                    <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                    <hr/>
 
-                  <a href="merch-profile.html" class="merc-prof active"><img src="images/merc-prof.png">Merchants Profile</a>
-            </div>
-            </nav>
+                    <p class="head-tag">Main</p>
+                    <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
+                </div>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                
-                <h3>Profile</h3>
-                <br />
-                
-                <div class="prof-content">
-                    
+                <div class="tab-sect">
+                    <p class="head-tag">Payments</p>
+                    <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                    <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
+                    <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
+                    <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
+                </div>
+
+                <div class="tab-sect">
+                    <p class="head-tag">Orders</p>
+                    <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
+                    <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
+                    <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
+                </div>
+
+                <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Merchants Profile</span></a>
+                <hr/>
+
+                <div class="tab-sect tab-resp">
+                    <p class="head-tag other-links">Other Links</p>
+                    <a href=""><span>Support</span></a>
+                    <a href=""><span>FAQ</span></a>
+                </div>
+
+                <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+        </div>
+
+        <div class="main">
+            
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+
+            <h3 class="profile-head">Profile</h3>
+            <br />
+
+            <div class="prof-content">
+
+                <div class="top">
                     <img src="images/Bank-Icon.png" class="user-prof-img">
-                    
+
                     <div class="sect-1">
                         <p class="name">Name</p>
                         <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
                         <hr />
                     </div>
-                    
+
                     <div class="sect-1">
                         <p class="address">Address</p>
                         <span class="user-prof-addr">Apple Mac Book 15” 250 SSD 12GB</span>
                         <hr />
                     </div>
-                    
+
                     <div class="sect-1">
                         <p class="bank">Bank</p>
                         <span class="user-prof-bank">Apple Mac Book 15” 250 SSD 12GB</span>
                         <hr />
                     </div>
-                    
-                    
-                    <div class="sec-prof-content">
-                        <img src="images/Bank-Icon.png" class="user-prof-img">
-
-                        <div class="sub-sec">
-                            <div class="sect-2">
-                                <p class="name">Contact Details</p>
-                                <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
-                                <hr />
-                            </div>
-
-                            <div class="sect-2">
-                                <p class="name">Ref. No.</p>
-                                <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
-                                <hr />
-                            </div>
-
-                            <div class="sect-2">
-                                <p class="name">Ref. No.</p>
-                                <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
-                                <hr />
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
                 </div>
-                
-                
-              </main>
+
+
+                <div class="sec-prof-content">
+                    <img src="images/Bank-Icon.png" class="user-prof-img">
+
+                    <div class="sub-sec">
+                        <div class="sect-2">
+                            <p class="name">Contact Details</p>
+                            <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
+                            <hr />
+                        </div>
+
+                        <div class="sect-2">
+                            <p class="name">Ref. No.</p>
+                            <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
+                            <hr />
+                        </div>
+
+                        <div class="sect-2">
+                            <p class="name">Ref. No.</p>
+                            <span class="user-prof-name">Apple Mac Book 15” 250 SSD 12GB</span>
+                            <hr />
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
         
         
@@ -159,40 +171,17 @@
         
         
         <script>
-            $(document).ready(function(){
-              $("#myInput1").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#myTable1 tr").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-            });
-        </script>
         
-        <script>
-            $(document).ready(function(){
-              $("#myInput2").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#myTable2 tr").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-            });
-        </script>
-        
-        <script>
-            $('#activate').click(function () { 
-                var text = 'Match to payment ✓';
-                // save $(this) so jQuery doesn't have to execute again
-                var $this = $('#activate');
-                if ($this.text() === text) {
-                    $(this).text('Match to payment').toggleClass("label-warning label-danger");
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "212px";
+            }
 
-                } else {
-                    $this.text(text).toggleClass("label-danger label-warning");;
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
 
-                }
-            });
         </script>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

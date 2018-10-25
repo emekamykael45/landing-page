@@ -864,6 +864,10 @@ td .un-reconciled{
         margin-left: 30px;
     }
     
+    .navbar-nav{
+        display: none;
+    }
+    
     .sidenav{
         width: 0px;
         padding-top: 75px;
@@ -903,7 +907,84 @@ td .un-reconciled{
         margin-left: -12px; /* Same as the width of the sidenav */
         width: 100%;
     }
+    
+    .table{
+        width: 120%;
+    }
 
+    .accordion-toggle:after{
+        right: 45.5px;
+    }
+    .accordion-toggle.collapsed:after{
+        margin-top: -17.5px;
+    }
+
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 70%;
+        font-size: 0.95em;
+    }
+    .reconciled .fas, .pending .fas, .un-reconciled .fas{
+        font-size: 0.55em;
+    }
+
+}
+
+
+@media screen and (max-width: 727px){
+    
+    .table{
+        width: 130%;
+    }
+    
+}
+
+
+@media screen and (max-width: 672px){
+    
+    .table{
+        width: 140%;
+    }
+    
+}
+
+
+@media screen and (max-width: 658px){
+    
+    .info-graph{
+        display: block;
+        width: 100%;
+    }
+    
+    .info-chart{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #my-chart{
+        height: 300px;
+    }
+    
+    .info-stats{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        height: 140px;
+        width: 100%;
+    }
+
+    .tab{
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .tab-1{
+        margin-right: 10px;
+    }
+    
+    .table{
+        width: 140%;
+    }
+    
 }
 
 
@@ -931,37 +1012,6 @@ td .un-reconciled{
         margin-top: -80px;
     }
     
-    .info-graph{
-        display: block;
-        width: 100%;
-    }
-    
-    .info-chart{
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    #my-chart{
-        height: 300px;
-    }
-    
-    .info-stats{
-        display: flex;
-        margin: 0;
-        padding: 0;
-        height: 140px;
-        width: 100%;
-    }
-
-    .tab{
-        height: 100%;
-        width: 100%;
-        margin-bottom: 0px;
-    }
-    .tab-1{
-        margin-right: 10px;
-    }
-    
     .payments-head{
         margin-top: -15px;
         font-size: 1.6em;
@@ -1027,157 +1077,117 @@ td .un-reconciled{
     }
     
 }
+
+@media screen and (max-width: 496px){
+    
+    .info-head-cha{
+        margin-top: 9%;
+        right: 5px;
+    }
+    .info-head-cha img{
+        width: 4em;
+        height: 3em;
+    }
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 80%;
+    }
+    
+}
+
+
+@media screen and (max-width: 477px){
+
+    .info-box-2{
+        left: 220px;
+    }
+    
+    .accordion-toggle:after{
+        right: 37.5px;
+    }
+    
+}
+
+
+@media screen and (max-width: 446px){
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 85%;
+    }
+    
+    .tab-footer .right{
+        position: relative;
+        float: left;
+        margin-top: 10px;
+    }
+    
+}
+
+
+@media screen and (max-width: 433px){
+    
+    .info-box{
+        position: relative;
+        max-width: 100% !important;
+        margin-bottom: -10px;
+    }
+    .info-box-2{
+        margin-right: 0px;
+        left: 0px;
+        margin-top: 20px;
+    }
+    
+    .info-stats{
+        display: inline;
+    }
+    
+    .tab-1{
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    
+    .table{
+        width: 190%;
+    }
+    
+}
+
 
 @media screen and (max-width: 400px){
     
-    .info-box{
-        width: 230px;
-        margin-right: 0px;
-        margin-bottom: 5px;
-    }
-    .info-box-2{
-        position: relative;
-        margin-right: 20px;
-        left: 240px;
-        margin-top: -80px;
-    }
-    
-    .info-graph{
-        position: relative;
-    }
-    
-    .info-chart{
-        margin-right: 0px;
-        margin-bottom: 10px;
-    }
-    
-    #my-chart{
-        height: 300px;
-        width: 100px;
-    }
-    
-    .info-stats{
-        display: flex;
-        margin: 0;
-        padding: 0;
-        height: 140px;
-        width: 100%;
-    }
-
-    .tab{
-        height: 100%;
-        width: 100%;
-        margin-bottom: 0px;
-    }
-    .tab-1{
-        margin-right: 10px;
-    }
-    
-    .payments-head{
-        margin-top: -15px;
-        font-size: 1.6em;
-    }
-    
-    .paym-sub-line{
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
-    .paym-sub{
-        display: block;
-    }
-
-    .show-entries span{
-        display: inline-flex;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .show-entries .show-out-of{
-        margin: 0;
-        padding-left: 3px;
-        padding-right: 4px;
-    }
-    
-    .sear-pay{
-        padding: 0;
-        margin: 0;
-        margin-top: -2px;
-        margin-left: 15px;
-        width: 90%;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 50%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-    
     .table{
-        width: 180%;
+        width: 210%;
     }
 
     .accordion-toggle:after{
-        right: 45.5px;
-    }
-    .accordion-toggle.collapsed:after{
-        margin-top: -17.5px;
-    }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 0.95em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
+        color: #000;
     }
     
 }
 
-/* Responsive Page Endss Here*/
 
-
-
-
-
-
-
-
-
-
-/* Responsive Page Starts Here*/
-
-@media only screen and (max-width: 1255px) {
+@media screen and (max-width: 372px){
     
-    
+    .table{
+        width: 220%;
+    }
     
 }
 
-
-@media only screen and (max-width: 992px) {
+@media screen and (max-width: 356px){
     
-    
-    
-}
-
-
-@media screen and (max-width: 768px){
-    
-    
+    .table{
+        width: 230%;
+    }
     
 }
 
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 343px){
     
-    
+    .table{
+        width: 250%;
+    }
     
 }
-
 
 /* Responsive Page Endss Here*/
