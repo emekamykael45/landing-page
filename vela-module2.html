@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TransMonitor | Merchant Module</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/vela-module2.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
+            <a class="navbar-brand logo" href="index.html">TRANSMONITOR</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jakePaul" aria-controls="jakePaul" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="jakePaul">
+                <ul class="navbar-nav mr-auto"> 
+                    <li>
+                        <img src="images/Search.png" class="search-nav-icon">
+                        <input type="text" name="" value="" placeholder="Search...">
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">FAQ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/bell.png" class="notif-nav-icon">
+                            <span class="circle">8</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="appleSauce" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="hello">Hello</span>
+                                <span class="user-name">Oluwaleke Ojo</span>
+                                <div class="user-img">
+                                    <img class="user-dis-pic" src="images/Bank-Icon.png">
+                                </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        </header>
+        
+            <div class="sidenav" id="mySidenav">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <div class="tab-sect">
+                        <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
+                        <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                        <hr/>
+
+                        <p class="head-tag">Main</p>
+                        <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
+                    </div>
+
+                    <div class="tab-sect">
+                        <p class="head-tag">Payments</p>
+                        <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                        <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
+                        <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
+                        <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
+                    </div>
+
+                    <div class="tab-sect">
+                        <p class="head-tag">Orders</p>
+                        <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
+                        <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
+                        <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
+                    </div>
+
+                    <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Merchants Profile</span></a>
+                    <hr/>
+
+                    <div class="tab-sect tab-resp">
+                        <p class="head-tag other-links">Other Links</p>
+                        <a href=""><span>Support</span></a>
+                        <a href=""><span>FAQ</span></a>
+                    </div>
+
+                    <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+            </div>    
+              
+            <div class="main">
+                
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+                
+                <h3 class="orders-head">Merchants</h3>
+                
+                <div class="row paym-sub-line">
+                            <div class="col-md-12 paym-sub">
+                                <div class="col-md-3 show-entries">
+                                    <span>Showing
+                                        <div class="dropdown">
+                                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">10
+                                          <span class="caret"></span></button>
+                                          <ul class="dropdown-menu">
+                                            <li><a href="#">20</a></li>
+                                            <li><a href="#">30</a></li>
+                                            <li><a href="#">40</a></li>
+                                          </ul>
+                                        </div><span class="out-of">out of</span><p class="show-out-of">500</p> payments
+                                    </span>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-4 sear-pay">
+                                    <img src="images/Search.png" class="sear-pay-icon">
+                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                                </div>
+                                <div class="col-md-4">
+                                    <div id="myBtnContainer">
+                                        <span>Show</span>
+                                        <button class="btn active" onclick="filterSelection('all')">All</button>
+                                        <button class="btn" onclick="filterSelection('reconciled')">Reconciled</button>
+                                        <button class="btn" onclick="filterSelection('pending')">Pending</button>
+                                        <button class="btn" onclick="filterSelection('un-reconciled')">Un-reconciled</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                <div class="row tab-section-row" id="myDIV">
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">First Bank of Nigeria</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Fidelity Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">First City Monument Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Guaranty Trust Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Keystone Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Polaris Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Diamond Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Jaiz Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Providus Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">WEMA Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Michael Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 tab-section-col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="head-line">
+                                    <img src="images/first-bank.png">
+                                    <h5 class="card-title">Tochukwu Bank</h5>
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <!-- First Tier Drop Down -->
+                                                <ul>
+                                                    <li><a href="#">Themes</a></li>
+                                                    <li><a href="#">Plugins</a></li>
+                                                    <li><a href="#">Tutorials</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-text-line">
+                                    <div class="line-sect">
+                                        <p class="head-line">Date activated</p>
+                                        <p class="sub-line">25/09/2018</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total transactions</p>
+                                        <p class="sub-line">100,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">Total value</p>
+                                        <p class="sub-line">100,000,000</p>
+                                    </div>
+                                    <div class="line-sect">
+                                        <p class="head-line">API status</p>
+                                        <p class="sub-line operational">Operational</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                
+                <div class="tab-footer">
+                    <div class="left">
+                        Showing <span class="">1</span> to <span class="">8</span> of <span class="">8</span> entries
+                    </div>
+
+                    <div class="right">
+                      <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+                
+            </div>
+        
+        
+        
+        
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myDIV .tab-section-col").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
+        
+        <script>
+        
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "212px";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+
+        </script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
