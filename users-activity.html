@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TransMonitor | Merchant Module</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/users-activity.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+</head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
+            <a class="navbar-brand logo" href="index.html">TRANSMONITOR</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jakePaul" aria-controls="jakePaul" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="jakePaul">
+                <ul class="navbar-nav mr-auto"> 
+                    <li>
+                        <img src="images/Search.png" class="search-nav-icon">
+                        <input type="text" name="" value="" placeholder="Search...">
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">FAQ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/bell.png" class="notif-nav-icon">
+                            <span class="circle">8</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="appleSauce" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="hello">Hello</span>
+                                <span class="user-name">Oluwaleke Ojo</span>
+                                <div class="user-img">
+                                    <img class="user-dis-pic" src="images/Bank-Icon.png">
+                                </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        </header>
+
+            <div class="sidenav" id="mySidenav">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <div class="tab-sect">
+                        <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
+                        <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                        <hr/>
+
+                        <p class="head-tag">Main</p>
+                        <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
+                    </div>
+
+                    <div class="tab-sect">
+                        <p class="head-tag">Payments</p>
+                        <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                        <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
+                        <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
+                        <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
+                    </div>
+
+                    <div class="tab-sect">
+                        <p class="head-tag">Orders</p>
+                        <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
+                        <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
+                        <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
+                    </div>
+
+                    <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Merchants Profile</span></a>
+                    <hr/>
+
+                    <div class="tab-sect tab-resp">
+                        <p class="head-tag other-links">Other Links</p>
+                        <a href=""><span>Support</span></a>
+                        <a href=""><span>FAQ</span></a>
+                    </div>
+
+                    <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+            </div>  
+
+            <div class="main">
+
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+                
+                <h3 class="payments-head">Users Activity</h3>
+                
+                <div class="head-info">
+                    <img src="images/user-img.png">
+                    <div class="head-user-info">
+                        <p class="user-full-name">John Dumebi</p>
+                        <p class="username">Jonathandoe82</p>
+                    </div>
+                    <div class="head-user-activity">
+                        <div class="act-dat-tim">
+                            <p class="active-date">Oct 23, 2018</p>
+                            <p class="active-time">4:00pm</p>
+                        </div>
+                        <p class="user-veri">2025 Verifications</p>
+                    </div>
+                    <button type="button" class="btn reset-user" data-toggle="modal" data-target="#exampleModal">RESET PASSWORD</button>
+                    <button type="submit" class="btn block-user" data-toggle="modal" data-target="#secModal" data-dismiss="modal">BLOCK</button>
+                </div>
+                
+                <!-- Modal Starts-->
+                
+                <!-- Modal 1-->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Reset User Password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <p>What would you like to reset in this user’s Password?</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET PASSWORD</button>
+                          <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Modal 1sub-->
+                <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title pass-res-suc" id="exampleModalLabel">Password Reset Successful</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <p>You have successfully reset this account password to <strong>00000</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Modal 2-->
+                <div class="modal fade" id="secModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <p>Confirm to block <strong><span class="user-id">Jonathandoe82</span></strong> from acessing this account on Transmonitor</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#secModalSub" data-dismiss="modal">CONFIRM</button>
+                          <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Modal 2sub-->
+                <div class="modal fade" id="secModalSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Modal Ends-->
+                
+                <div class="row paym-sub-line">
+                            <div class="col-md-12 paym-sub">
+                                <div class="col-md-3 show-entries">
+                                    <span>Showing
+                                        <div class="box-drop">
+                                            <select>
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>40</option>
+                                                <option>50</option>
+                                            </select>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div><span class="out-of">out of</span><p class="show-out-of">500</p> payments
+                                    </span>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-4 sear-pay">
+                                    <img src="images/Search.png" class="sear-pay-icon">
+                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box">
+                                        <select>
+                                            <option>Date</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                              <th scope="col">Payee Name</th>
+                              <th scope="col">Amount Paid</th>
+                              <th scope="col">Date Paid</th>
+                              <th scope="col">Time</th>
+                              <th scope="col">Medium</th>
+                              <th scope="col">Reference ID</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            <tr>
+                                <th>David Mark</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Lai Muhammed</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Jumoke Adetunji</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Victor Moses</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Obiora Ike</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Aliyu Hamzat</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Michael Azonobi</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>David Michael</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Lamido s. Olakunle</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                            <tr>
+                                <th>Damilola Iyanu</th>
+                                <td>&#x20a6; 20,000</td>
+                                <td>25-10-2018</td>
+                                <td>12:30</td>
+                                <td>Mobile Transfer</td>
+                                <td>676545653676</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-footer">
+                    <div class="left">
+                        Showing <span class="">1</span> to <span class="">10</span> of <span class="">500</span> entries
+                    </div>
+
+                    <div class="right">
+                      <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+
+            </div>
+        
+        
+        
+        
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
+        
+        <script>
+        
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "212px";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+
+        </script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
