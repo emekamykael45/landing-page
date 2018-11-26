@@ -65,14 +65,14 @@
         </header>
 
             <div class="sidenav" id="mySidenav">
-
+                    
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
+                  
                     <div class="tab-sect">
                         <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
                         <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
                         <hr/>
-
+                        
                         <p class="head-tag">Main</p>
                         <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
                     </div>
@@ -80,21 +80,25 @@
                     <div class="tab-sect">
                         <p class="head-tag">Payments</p>
                         <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                        <!--
                         <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
                         <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
+                        -->
                         <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
                     </div>
 
+                    <!--
                     <div class="tab-sect">
                         <p class="head-tag">Orders</p>
                         <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
                         <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
                         <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
                     </div>
-
-                    <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Merchants Profile</span></a>
+                    -->
+                    
+                    <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Settings</span></a>
                     <hr/>
-
+                    
                     <div class="tab-sect tab-resp">
                         <p class="head-tag other-links">Other Links</p>
                         <a href=""><span>Support</span></a>
@@ -102,7 +106,7 @@
                     </div>
 
                     <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
-            </div>  
+            </div>   
 
             <div class="main">
 
@@ -112,17 +116,21 @@
                 <h3 class="payments-head">Users Activity</h3>
                 
                 <div class="head-info">
-                    <img src="images/user-img.png">
-                    <div class="head-user-info">
-                        <p class="user-full-name">John Dumebi</p>
-                        <p class="username">Jonathandoe82</p>
-                    </div>
-                    <div class="head-user-activity">
-                        <div class="act-dat-tim">
-                            <p class="active-date">Oct 23, 2018</p>
-                            <p class="active-time">4:00pm</p>
+                    <div class="head-info-inn">
+                        <div class="head-info-inn-tag">
+                            <img src="images/user-img.png">
+                            <div class="head-user-info">
+                                <p class="user-full-name">John Dumebi</p>
+                                <p class="username">Jonathandoe82</p>
+                            </div>
                         </div>
-                        <p class="user-veri">2025 Verifications</p>
+                        <div class="head-user-activity">
+                            <div class="act-dat-tim">
+                                <p class="active-date">Oct 23, 2018</p>
+                                <p class="active-time">4:00pm</p>
+                            </div>
+                            <p class="user-veri">2025 Verifications</p>
+                        </div>
                     </div>
                     <button type="button" class="btn reset-user" data-toggle="modal" data-target="#exampleModal">RESET PASSWORD</button>
                     <button type="submit" class="btn block-user" data-toggle="modal" data-target="#secModal" data-dismiss="modal">BLOCK</button>
@@ -227,7 +235,7 @@
                                     <img src="images/Search.png" class="sear-pay-icon">
                                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 date-pick">
                                     <div class="box">
                                         <select>
                                             <option>Date</option>

@@ -544,7 +544,28 @@ td .un-reconciled{
 
 /* Responsive Page Starts Here*/
 
-@media screen and (max-width: 1255px) {
+@media (min-width: 1351px) and (max-width: 1450px){
+    .show-entries .out-of{
+        width: 3em;
+    }
+
+    .accordion-toggle:after{
+        right: 65.5px;
+    }
+}
+
+
+@media (min-width: 1256px) and (max-width: 1350px){
+    .show-entries .out-of{
+        width: 3em;
+    }
+
+    .accordion-toggle:after{
+        right: 50.5px;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1255px) {
     
     .show-entries .out-of{
         width: 3em;
@@ -569,41 +590,28 @@ td .un-reconciled{
 }
 
 
-@media screen and (max-width: 1180px) {
+@media (min-width: 1046px) and (max-width: 1180px) {
+    .show-entries .out-of{
+        width: 3em;
+    }
     
+    #myBtnContainer{
+        margin-left: -50px;
+    }
     .accordion-toggle:after{
         right: 26.5px;
     }
     
-}
-
-@media screen and (max-width: 1085px) {
-    
-    .accordion-toggle:after{
-        right: 10.5px;
+    .table{
+        width: 110%;
     }
     
 }
 
-
-@media screen and (max-width: 1045px){
-    
-    #myBtnContainer{
-        margin-left: -60px;
+@media (min-width: 992px) and (max-width: 1045px){
+    .show-entries .out-of{
+        width: 3em;
     }
-    
-    .accordion-toggle:after{
-        right: 0px;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 75%;
-        font-size: 0.95em;
-    }
-}
-
-
-@media screen and (max-width: 1008px){
     
     .paym-sub{
         display: block;
@@ -611,7 +619,7 @@ td .un-reconciled{
     }
     
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 5px;
         margin-left: 15px;
     }
     .sear-pay-icon{
@@ -623,62 +631,149 @@ td .un-reconciled{
     }
     
     #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
+        margin-top: 20px;
+        margin-bottom: 15px;
         margin-left: 0px;
         width: 200%;
     }
     
+    .table{
+        width: 110%;
+    }
+    
     .accordion-toggle:after{
-        right: -10px;
+        right: 0px;
     }
     
 }
 
 
-@media screen and (max-width: 992px) {
+@media (min-width: 953px) and (max-width: 992px){
+    .show-entries .out-of{
+        width: 3em;
+    }
     
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 80%;
-        font-size: 0.95em;
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 20px;
+        margin-bottom: 15px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
+    .table{
+        width: 115%;
     }
     
     .accordion-toggle:after{
-        right: -15px;
+        right: 0px;
     }
-}
-
-
-@media screen and (max-width: 952px){
     
 }
 
 
-@media screen and (max-width: 940px){
+@media (min-width: 901px) and (max-width: 952px){
+    .show-entries .out-of{
+        width: 3em;
+    }
     
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-        font-size: 0.95em;
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 20px;
+        margin-bottom: 15px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
+    .table{
+        width: 125%;
     }
     
     .accordion-toggle:after{
-        right: -32px;
+        right: 0px;
     }
     
 }
 
-
-@media screen and (max-width: 892px){
+@media screen and (max-width: 899px){
+    .show-entries .out-of{
+        width: 3em;
+    }
     
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-        font-size: 0.95em;
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 20px;
+        margin-bottom: 15px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
+    .table{
+        width: 140%;
     }
     
     .accordion-toggle:after{
-        right: -32px;
+        right: 0px;
     }
     
+}
+
+@media (min-width: 769px) and (max-width: 799px){
+    .table{
+        width: 145%;
+    }
+    
+    .accordion-toggle:after{
+        right: 0px;
+    }   
 }
 
 
@@ -737,7 +832,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 120%;
+        width: 110%;
     }
 
     .accordion-toggle:after{
@@ -754,177 +849,49 @@ td .un-reconciled{
     .reconciled .fas, .pending .fas, .un-reconciled .fas{
         font-size: 0.55em;
     }
-
 }
 
 
-@media screen and (max-width: 727px){
-    
+@media screen and (max-width: 700px){
     .table{
         width: 130%;
-    }
-    
+    }   
 }
-
-
-@media screen and (max-width: 672px){
-    
-    .table{
-        width: 140%;
-    }
-    
-}
-
 
 @media screen and (max-width: 600px){
-    
-    .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
-    }
-    
-    .payments-head{
-        margin-top: -15px;
-        font-size: 1.6em;
-    }
-    
-    .paym-sub-line{
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
-    .paym-sub{
-        display: block;
-    }
-
-    .show-entries span{
-        display: inline-flex;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .show-entries .show-out-of{
-        margin: 0;
-        padding-left: 3px;
-        padding-right: 4px;
-    }
-    
-    .sear-pay{
-        padding: 0;
-        margin: 0;
-        margin-top: -2px;
-        margin-left: 15px;
-        width: 90%;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 50%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-    
     .table{
-        width: 180%;
-    }
-
-    .accordion-toggle:after{
-        right: 45.5px;
-    }
-    .accordion-toggle.collapsed:after{
-        margin-top: -17.5px;
-    }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 0.95em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
-    }
-    
+        width: 150%;
+    }   
 }
 
-@media screen and (max-width: 496px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 80%;
-    }
-    
-}
-
-
-@media screen and (max-width: 477px){
-    
-    .accordion-toggle:after{
-        right: 37.5px;
-    }
-    
-}
-
-
-@media screen and (max-width: 446px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-    }
-    
-}
-
-
-@media screen and (max-width: 433px){
-    
+@media screen and (max-width: 500px){
     .table{
         width: 190%;
     }
-    
     .tab-footer .right{
-        position: relative;
         float: left;
-        margin-top: 10px;
+        margin-top: 20px;
     }
-    
 }
-
 
 @media screen and (max-width: 400px){
-    
     .table{
-        width: 210%;
+        width: 260%;
     }
-
-    .accordion-toggle:after{
-        color: #000;
+    .tab-footer .right{
+        float: left;
+        margin-top: 20px;
     }
-    
+    .sear-pay input{
+        width: 80%;
+    }
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 70%;
+    }
 }
 
-
-@media screen and (max-width: 372px){
-    
-    .table{
-        width: 220%;
-    }
-    
-}
-
-@media screen and (max-width: 356px){
-    
-    .table{
-        width: 230%;
-    }
-    
-}
-
-@media screen and (max-width: 343px){
-    
-    .table{
-        width: 250%;
-    }
-    
-}
 
 /* Responsive Page Endss Here*/

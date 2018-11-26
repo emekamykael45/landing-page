@@ -284,26 +284,20 @@ input:focus, textarea:focus{
 }
 
 .info-head{
-    display: flex;
-    margin-top: 2.5%;
-    width: 95%;
-    padding: 0;
-    margin-bottom: 5%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100.9%;
+    margin-left: 0;
 }
 
 .info-box{
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 75px;
     background: #FFFFFF;
     border: 1px solid #EEF8FD;
     box-sizing: border-box;
     border-radius: 2px;
-    margin-right: 0.6em;
-}
-.info-box-2{
-    margin-right: 2.9em;
+    max-width: 97%;
+    margin-right: 10px;
 }
 
 .info-head-tag{
@@ -322,23 +316,11 @@ input:focus, textarea:focus{
     font-size: 1.35em;
     color: #262626;
 }
-
-.info-head-cha{
-    position: absolute;
-    margin-top: 8%;
-    margin-left: 61%;
-    width: 4.5em;
-    height: 2.8em;
-}
-.info-head-cha img{
-    width: 4.5em;
-    height: 2.8em;
-}
 /*Section 1 Ends Here*/
 
 /*Section 3 Starts Here*/
 .paym-sub-line{
-    margin-top: 18px;
+    margin-top: 60px;
     margin-bottom: 10px;
 }
 .paym-sub{
@@ -594,10 +576,10 @@ td .un-reconciled{
 
 /* Responsive Page Starts Here*/
 
-@media screen and (max-width: 1255px) {
+@media (min-width: 1181px) and (max-width: 1255px) {
     
     .info-head{
-        width: 96%;
+        width: 100.9%;
     }
     
     .info-box-2{
@@ -626,64 +608,66 @@ td .un-reconciled{
     
 }
 
-
-@media screen and (max-width: 1180px) {
-
-    .info-head-cha{
-        margin-top: 10%;
-        margin-left: 59%;
-    }
-    .info-head-cha img{
-        width: 4.2em;
-        height: 2.7em;
+@media (min-width: 1086px) and (max-width: 1180px) {
+    .info-head{
+        width: 100.9%;
     }
     
-    .accordion-toggle:after{
-        right: 26.5px;
+    .info-box-2{
+        margin-right: 20px;
     }
     
-}
-
-@media screen and (max-width: 1085px) {
-    
-    .info-head-cha{
-        margin-top: 10%;
-        margin-left: 58%;
+    .show-entries .out-of{
+        width: 3em;
     }
-    .info-head-cha img{
-        width: 4em;
-        height: 2.6em;
-    }
-    
-    .accordion-toggle:after{
-        right: 10.5px;
-    }
-    
-}
-
-
-@media screen and (max-width: 1045px){
     
     #myBtnContainer{
-        margin-left: -60px;
+        margin-left: -50px;
     }
     
     .accordion-toggle:after{
-        right: 0px;
+        right: 20px;
     }
     
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 75%;
-        font-size: 0.95em;
+}
+
+@media (min-width: 1046px) and (max-width: 1085px) {
+    .info-head{
+        grid-template-columns: repeat(2, 1fr);
+        width: 101.7%;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    #myBtnContainer{
+        margin-left: -55px;
+    }
+    
+    .accordion-toggle:after{
+        right: 5.5px;
+    }
+    
+    .table{
+        width: 110%;
     }
 }
 
-
-@media screen and (max-width: 1008px){
+@media (min-width: 1009px) and (max-width: 1045px){
+    .info-head{
+        grid-template-columns: repeat(2, 1fr);
+        width: 101.7%;
+    }
     
     .paym-sub{
         display: block;
         font-size: 1.2em;
+        margin-top: -30px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
     }
     
     .sear-pay{
@@ -706,82 +690,152 @@ td .un-reconciled{
     }
     
     .accordion-toggle:after{
-        right: -10px;
+        right: 0px;
     }
-    
-}
-
-
-@media screen and (max-width: 992px) {
     
     td .reconciled, td .pending, td .un-reconciled{
-        width: 80%;
+        width: 75%;
         font-size: 0.95em;
-    }
-    
-    .accordion-toggle:after{
-        right: -15px;
     }
 }
 
-
-@media screen and (max-width: 952px){
-    
+@media (min-width: 993px) and (max-width: 1008px){
     .info-head{
-        display: inline;
-    }
-    
-    .info-box{
-        max-width: 46%;
-        margin-right: 0;
-        margin-top: 20px;
-    }
-    .info-box-2{
-        left: 55%;
-        margin-top: -75px;
-    }
-    
-    .info-head-cha{
-        margin-top: 3%;
-        right: 30px;
-    }
-    .info-head-cha img{
-        width: 6em;
-        height: 4em;
-    }
-    
-}
-
-
-@media screen and (max-width: 940px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-        font-size: 0.95em;
+        grid-template-columns: repeat(2, 1fr);
+        width: 101.7%;
     }
     
     .accordion-toggle:after{
-        right: -32px;
+        right: 5.5px;
     }
     
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 2px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
+    .table{
+        width: 110%;
+    }
 }
 
 
-@media screen and (max-width: 892px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-        font-size: 0.95em;
+@media (min-width: 953px) and (max-width: 992px) {
+    .info-head{
+        grid-template-columns: repeat(2, 1fr);
+        width: 101.7%;
     }
     
     .accordion-toggle:after{
-        right: -32px;
+        right: 0px;
+    }
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 2px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
+    .table{
+        width: 120%;
+    }
+}
+
+@media (min-width: 819px) and (max-width: 940px){
+    .info-head{
+        grid-template-columns: repeat(2, 1fr);
+        width: 101.7%;
+    }
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 2px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 300%;
+    }
+    
+    .table{
+        width: 130%;
+    }
+    
+    td .reconciled, td .pending, td .un-reconciled{
+        width: 85%;
+        font-size: 1em;
+    }
+    
+    .accordion-toggle:after{
+        right: -30px;
     }
     
 }
 
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 818px){
     
     .navbar-toggler{
         display: none;
@@ -831,152 +885,44 @@ td .un-reconciled{
     }
     
     .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
+        margin-left: -7px; /* Same as the width of the sidenav */
         width: 100%;
     }
-    
-    .table{
-        width: 120%;
-    }
-
-    .accordion-toggle:after{
-        right: 45.5px;
-    }
-    .accordion-toggle.collapsed:after{
-        margin-top: -17.5px;
-    }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 0.95em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
-    }
-
-}
-
-
-@media screen and (max-width: 727px){
-    
-    .table{
-        width: 130%;
-    }
-    
-}
-
-
-@media screen and (max-width: 672px){
-    
-    .table{
-        width: 140%;
-    }
-    
-}
-
-
-@media screen and (max-width: 600px){
-    
-    .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
-    }
-    
     .info-head{
-        display: inline;
-        width: 100%;
-        padding: 0px;
+        grid-template-columns: repeat(2, 1fr);
+        width: 101.7%;
     }
     
-    .info-box{
-        width: 230px;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    .info-box-2{
-        position: relative;
-        margin-right: 20px;
-        left: 240px;
-        margin-top: -80px;
-    }
-    
-    .info-graph{
-        display: block;
-        width: 100%;
-    }
-    
-    .info-chart{
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    #my-chart{
-        height: 300px;
-    }
-    
-    .info-stats{
-        display: flex;
-        margin: 0;
-        padding: 0;
-        height: 140px;
-        width: 100%;
-    }
-
-    .tab{
-        height: 100%;
-        width: 100%;
-        margin-bottom: 0px;
-    }
-    .tab-1{
-        margin-right: 10px;
-    }
-    
-    .payments-head{
-        margin-top: -15px;
-        font-size: 1.6em;
-    }
-    
-    .paym-sub-line{
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
     .paym-sub{
         display: block;
+        font-size: 1.2em;
     }
-
-    .show-entries span{
-        display: inline-flex;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .show-entries .show-out-of{
-        margin: 0;
-        padding-left: 3px;
-        padding-right: 4px;
+    
+    .show-entries .out-of{
+        width: 3em;
     }
     
     .sear-pay{
-        padding: 0;
-        margin: 0;
-        margin-top: -2px;
+        margin-top: 2px;
         margin-left: 15px;
-        width: 90%;
     }
     .sear-pay-icon{
         width: 0.9em;
     }
     
     .sear-pay input{
-        width: 50%;
+        width: 89%;
     }
     
     #myBtnContainer{
         margin-top: 15px;
         margin-bottom: 5px;
+        margin-left: 0px;
+        width: 300%;
     }
     
     .table{
-        width: 180%;
+        width: 100%;
     }
 
     .accordion-toggle:after{
@@ -988,124 +934,155 @@ td .un-reconciled{
 
     td .reconciled, td .pending, td .un-reconciled{
         width: 70%;
-        font-size: 0.95em;
+        font-size: 1em;
     }
     .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
+        font-size: 0.7em;
+    }
+
+}
+
+
+@media (min-width: 700px) and (max-width: 767px){
+    
+    .table{
+        width: 150%;
     }
     
 }
 
-@media screen and (max-width: 496px){
+@media (min-width: 650px) and (max-width: 699px){
     
-    .info-head-cha{
-        margin-top: 9%;
-        right: 5px;
-    }
-    .info-head-cha img{
-        width: 4em;
-        height: 3em;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 80%;
+    .table{
+        width: 160%;
     }
     
 }
 
-
-@media screen and (max-width: 477px){
-
-    .info-box-2{
-        left: 220px;
-    }
+@media (min-width: 600px) and (max-width: 649px){
     
-    .accordion-toggle:after{
-        right: 37.5px;
+    .table{
+        width: 170%;
     }
     
 }
 
-
-@media screen and (max-width: 446px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-    }
-    
-}
-
-
-@media screen and (max-width: 433px){
-    
-    .info-box{
-        position: relative;
-        max-width: 100% !important;
-        margin-bottom: -10px;
-    }
-    .info-box-2{
-        margin-right: 0px;
-        left: 0px;
-        margin-top: 20px;
-    }
-    
-    .info-stats{
-        display: inline;
-    }
-    
-    .tab-1{
-        margin-right: 0px;
-        margin-bottom: 10px;
-    }
+@media (min-width: 550px) and (max-width: 599px){
     
     .table{
         width: 190%;
     }
     
+}
+
+@media (min-width: 500px) and (max-width: 549px){
+    
+    .table{
+        width: 202%;
+    }
+    
+}
+
+@media (min-width: 450px) and (max-width: 499px){
+    
+    .table{
+        width: 226%;
+    }
+    
+}
+
+@media (min-width: 400px) and (max-width: 449px){
+    .info-head{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .sear-pay input{
+        width: 80%;
+    }
+    
+    .table{
+        width: 256%;
+    }
+    
     .tab-footer .right{
-        position: relative;
         float: left;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     
 }
 
-
-@media screen and (max-width: 400px){
+@media (min-width: 350px) and (max-width: 399px){
+    .info-head{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .info-stats{
+        display: inline-block;
+        padding-left: 0px;
+    }
+    .tab-1{
+        margin-right: 0px;
+    }
+    
+    .payments-head{
+        margin-top: 40px;
+    }
+    
+    .sear-pay input{
+        width: 80%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 70%;
+    }
     
     .table{
-        width: 210%;
-    }
-
-    .accordion-toggle:after{
-        color: #000;
+        width: 296%;
     }
     
+    .tab-footer .right{
+        float: left;
+        margin-top: 15px;
+    }
 }
 
-
-@media screen and (max-width: 372px){
-    
-    .table{
-        width: 220%;
+@media (min-width: 300px) and (max-width: 349px){
+    .info-head{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .info-stats{
+        display: inline-block;
+        padding-left: 0px;
+    }
+    .tab-1{
+        margin-right: 0px;
     }
     
-}
-
-@media screen and (max-width: 356px){
-    
-    .table{
-        width: 230%;
+    .payments-head{
+        margin-top: 40px;
     }
     
-}
-
-@media screen and (max-width: 343px){
-    
-    .table{
-        width: 250%;
+    .sear-pay input{
+        width: 80%;
     }
     
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 70%;
+    }
+    
+    .table{
+        width: 356%;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 20px;
+    }
 }
 
 /* Responsive Page Endss Here*/

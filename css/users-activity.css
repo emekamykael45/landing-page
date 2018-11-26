@@ -271,7 +271,7 @@ input:focus, textarea:focus{
     padding: 0px 10px;
     padding-top: 60px;
     padding-left: 25px;
-    width: 83%;
+    margin-right: 10px;
 }
 
 .open-sidenav{
@@ -658,194 +658,138 @@ button:focus {
 
 /* Responsive Page Starts Here*/
 
-@media screen and (max-width: 1255px) {
+@media (min-width: 1201px) and (max-width: 1600px){
     
-    .info-head{
-        width: 96%;
+    .head-info-inn-tag{
+        display: flex;
     }
     
-    .info-box-2{
-        margin-right: 20px;
+    .head-info-inn{
+        display: flex;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 40px;
+    }
+ 
+    .box-drop{
+        width: 40px;
     }
     
     .show-entries .out-of{
-        width: 3em;
+        width: 3.1em;
     }
-    
-    #myBtnContainer{
-        margin-left: -50px;
-    }
-
-    .accordion-toggle:after{
-        right: 38.5px;
-    }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 0.95em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
+    .show-entries{
+        margin-bottom: 10px;
     }
     
 }
 
-
-@media screen and (max-width: 1180px) {
-
-    .info-head-cha{
-        margin-top: 10%;
-        margin-left: 59%;
-    }
-    .info-head-cha img{
-        width: 4.2em;
-        height: 2.7em;
+@media (min-width: 1042px) and (max-width: 1200px){
+    
+    .head-info{
+        display: inline-block;
     }
     
-    .accordion-toggle:after{
-        right: 26.5px;
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-info-inn{
+        display: flex;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 40px;
+    }
+ 
+    .box-drop{
+        width: 40px;
+    }
+    
+    .show-entries .out-of{
+        width: 3.1em;
+    }
+    .show-entries{
+        margin-bottom: 10px;
     }
     
 }
 
-@media screen and (max-width: 1085px) {
-    
-    .info-head-cha{
-        margin-top: 10%;
-        margin-left: 58%;
-    }
-    .info-head-cha img{
-        width: 4em;
-        height: 2.6em;
+@media screen and (max-width: 1041px){
+    .head-info{
+        display: inline-block;
     }
     
-    .accordion-toggle:after{
-        right: 10.5px;
+    .head-info-inn-tag{
+        display: flex;
     }
     
-}
-
-
-@media screen and (max-width: 1045px){
-    
-    #myBtnContainer{
-        margin-left: -60px;
+    .head-info-inn{
+        display: flex;
     }
     
-    .accordion-toggle:after{
-        right: 0px;
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 40px;
     }
     
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 75%;
-        font-size: 0.95em;
+    .show-entries .out-of{
+        width: 3.1em;
     }
-}
-
-
-@media screen and (max-width: 1008px){
-    
-    .paym-sub{
-        display: block;
-        font-size: 1.2em;
+    .show-entries{
+        margin-bottom: 10px;
     }
     
     .sear-pay{
-        margin-top: 2px;
-        margin-left: 15px;
+        margin-bottom: 20px;
     }
-    .sear-pay-icon{
-        width: 0.9em;
+    
+    .box-drop{
+        width: 40px;
+    }
+
+    .date-pick{
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+@media (min-width: 820px) and (max-width: 957px) {
+    .table{
+        width: 130%;
+    }
+    .head-info-inn{
+        display: flex;
+    }
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
     }
     
     .sear-pay input{
-        width: 89%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 200%;
-    }
-    
-    .accordion-toggle:after{
-        right: -10px;
-    }
-    
-}
-
-
-@media screen and (max-width: 992px) {
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 80%;
-        font-size: 0.95em;
-    }
-    
-    .accordion-toggle:after{
-        right: -15px;
+        width: 90%;
     }
 }
 
-
-@media screen and (max-width: 952px){
-    
-    .info-head{
-        display: inline;
-    }
-    
-    .info-box{
-        max-width: 46%;
-        margin-right: 0;
-        margin-top: 20px;
-    }
-    .info-box-2{
-        left: 55%;
-        margin-top: -75px;
-    }
-    
-    .info-head-cha{
-        margin-top: 3%;
-        right: 30px;
-    }
-    .info-head-cha img{
-        width: 6em;
-        height: 4em;
-    }
-    
-}
-
-
-@media screen and (max-width: 940px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-        font-size: 0.95em;
-    }
-    
-    .accordion-toggle:after{
-        right: -32px;
-    }
-    
-}
-
-
-@media screen and (max-width: 892px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-        font-size: 0.95em;
-    }
-    
-    .accordion-toggle:after{
-        right: -32px;
-    }
-    
-}
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 819px){
     
     .navbar-toggler{
         display: none;
@@ -900,276 +844,148 @@ button:focus {
     }
     
     .table{
-        width: 120%;
+        width: 100%;
     }
-
-    .accordion-toggle:after{
-        right: 45.5px;
+    
+    .head-info-inn{
+        display: flex;
     }
-    .accordion-toggle.collapsed:after{
-        margin-top: -17.5px;
+    .head-info-inn-tag{
+        display: flex;
     }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 0.95em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
-    }
-
 }
 
 
-@media screen and (max-width: 727px){
+@media (min-width: 650px) and (max-width: 780px){
+    .head-info-inn{
+        display: flex;
+    }
+    .head-info-inn-tag{
+        display: flex;
+    }
     
+    .table{
+        width: 120%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 649px){
+    .head-info-inn{
+        display: flex;
+    }
+    .head-info-inn-tag{
+        display: flex;
+    }
     .table{
         width: 130%;
     }
     
-}
-
-
-@media screen and (max-width: 672px){
-    
-    .table{
-        width: 140%;
-    }
-    
-}
-
-
-@media screen and (max-width: 600px){
-    
-    .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
-    }
-    
-    .info-head{
-        display: inline;
-        width: 100%;
-        padding: 0px;
-    }
-    
-    .info-box{
-        width: 230px;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    .info-box-2{
-        position: relative;
-        margin-right: 20px;
-        left: 240px;
-        margin-top: -80px;
-    }
-    
-    .info-graph{
-        display: block;
-        width: 100%;
-    }
-    
-    .info-chart{
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    #my-chart{
-        height: 300px;
-    }
-    
-    .info-stats{
-        display: flex;
-        margin: 0;
-        padding: 0;
-        height: 140px;
-        width: 100%;
-    }
-
-    .tab{
-        height: 100%;
-        width: 100%;
-        margin-bottom: 0px;
-    }
-    .tab-1{
-        margin-right: 10px;
-    }
-    
-    .payments-head{
-        margin-top: -15px;
-        font-size: 1.6em;
-    }
-    
-    .paym-sub-line{
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
     .paym-sub{
-        display: block;
-    }
-
-    .show-entries span{
-        display: inline-flex;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .show-entries .show-out-of{
-        margin: 0;
-        padding-left: 3px;
-        padding-right: 4px;
+        display: inline-block;
     }
     
     .sear-pay{
-        padding: 0;
-        margin: 0;
-        margin-top: -2px;
+        margin-top: 5px;
         margin-left: 15px;
-        width: 90%;
     }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 50%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-    
-    .table{
-        width: 180%;
-    }
-
-    .accordion-toggle:after{
-        right: 45.5px;
-    }
-    .accordion-toggle.collapsed:after{
-        margin-top: -17.5px;
-    }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 0.95em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
-    }
-    
 }
 
-@media screen and (max-width: 496px){
-    
-    .info-head-cha{
-        margin-top: 9%;
-        right: 5px;
+@media (min-width: 450px) and (max-width: 549px){
+    .head-info{
+        display: inline-block;
     }
-    .info-head-cha img{
-        width: 4em;
-        height: 3em;
+    .head-info-inn{
+        display: inline-block;
     }
     
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 80%;
+    .head-info-inn-tag{
+        display: flex;
     }
     
-}
-
-
-@media screen and (max-width: 477px){
-
-    .info-box-2{
-        left: 220px;
-    }
-    
-    .accordion-toggle:after{
-        right: 37.5px;
-    }
-    
-}
-
-
-@media screen and (max-width: 446px){
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-    }
-    
-}
-
-
-@media screen and (max-width: 433px){
-    
-    .info-box{
-        position: relative;
-        max-width: 100% !important;
-        margin-bottom: -10px;
-    }
-    .info-box-2{
-        margin-right: 0px;
-        left: 0px;
-        margin-top: 20px;
-    }
-    
-    .info-stats{
-        display: inline;
-    }
-    
-    .tab-1{
-        margin-right: 0px;
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
         margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 20px;
     }
     
     .table{
-        width: 190%;
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
     }
     
     .tab-footer .right{
-        position: relative;
         float: left;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 449px){
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
     
-}
-
-
-@media screen and (max-width: 400px){
-    
-    .table{
-        width: 210%;
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
     }
-
-    .accordion-toggle:after{
-        color: #000;
+    .head-info .block-user{
+        margin-left: 90px;
     }
-    
-}
-
-
-@media screen and (max-width: 372px){
-    
-    .table{
-        width: 220%;
-    }
-    
-}
-
-@media screen and (max-width: 356px){
-    
-    .table{
-        width: 230%;
-    }
-    
-}
-
-@media screen and (max-width: 343px){
     
     .table{
         width: 250%;
     }
     
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
 }
+
 
 /* Responsive Page Endss Here*/

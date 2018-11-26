@@ -61,37 +61,51 @@
         </nav>
         </header>
         
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-              <div class="sidebar-sticky" id="sideMenu">
+        <div class="sidenav" id="mySidenav">
+                    
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  
                     <div class="tab-sect">
                         <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
+                        <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                        <hr/>
                         
                         <p class="head-tag">Main</p>
-                        <a href="merchant-module.html"><img src="images/overview.png">Overview</a>
+                        <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
                     </div>
 
                     <div class="tab-sect">
                         <p class="head-tag">Payments</p>
                         <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
-                        <a href=""><img src="images/recon-pay.png">Reconciled Payments</a>
-                        <a href=""><img src="images/unrecon-pay.png">Un-reconciled Payments</a>
-                        <a href="settlements.html"><img src="images/manu-settle.png">Manual Settlement</a>
+                        <!--
+                        <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
+                        <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
+                        -->
+                        <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
                     </div>
 
+                    <!--
                     <div class="tab-sect">
                         <p class="head-tag">Orders</p>
-                        <a href="all-orders.html"><img src="images/all-orders.png">All Orders</a>
-                        <a href=""><img src="images/pen-orders.png" class="pen-ord">Pending Orders</a>
-                        <a href=""><img src="images/reco-orders.png" class="recon-ord">Reconciled Orders</a>
+                        <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
+                        <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
+                        <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
+                    </div>
+                    -->
+                    
+                    <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Settings</span></a>
+                    <hr/>
+                    
+                    <div class="tab-sect tab-resp">
+                        <p class="head-tag other-links">Other Links</p>
+                        <a href=""><span>Support</span></a>
+                        <a href=""><span>FAQ</span></a>
                     </div>
 
-                  <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png">Merchants Profile</a>
-            </div>
-            </nav>
+                    <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+            </div> 
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 
                 <h3 class="tra-pay-ver">Transfer Payment Verification</h3>
                 <br />
@@ -117,8 +131,6 @@
                 
                 
               </main>
-            </div>
-        </div>
         
         
         

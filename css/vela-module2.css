@@ -263,11 +263,13 @@ input:focus, textarea:focus{
 /*Dashboard Starts Here*/
 
 .main{
+    margin: 0;
+    margin-right: 5px;
     margin-left: 210px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
+    padding: 0px;
     padding-top: 60px;
-    padding-left: 25px;
-    width: 83%;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 .open-sidenav{
@@ -388,14 +390,18 @@ input:focus, textarea:focus{
 /*Section 2 Starts Here*/
 
 .tab-section-row{
-    width: 93%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
     margin-top: 40px;
+    margin-left: 0;
 }
 
 .tab-section-col{
+    width: 95%;
     margin: 0;
     margin-bottom: 20px;
-    margin-right: -10px;
+    margin-right: 20px;
 }
 
 .card-body .head-line{
@@ -520,13 +526,6 @@ input:focus, textarea:focus{
 }
 
 
-
-
-
-
-
-
-
 /*Section 2 Ends Here*/
 
 /*Dashboard Ends Here*/
@@ -537,7 +536,32 @@ input:focus, textarea:focus{
 
 /* Responsive Page Starts Here*/
 
-@media screen and (max-width: 1255px) {
+@media (min-width: 1370px) and (max-width: 1600px) {
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    #myBtnContainer{
+        margin-left: -50px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+    
+}
+
+@media (min-width: 1181px) and (max-width: 1369px) {
     
     .show-entries .out-of{
         width: 3em;
@@ -549,38 +573,34 @@ input:focus, textarea:focus{
     
 }
 
-
-@media screen and (max-width: 1180px) {
-    
-    
-    
-}
-
-@media screen and (max-width: 1085px) {
-    
-    
-    
-}
-
-
-@media screen and (max-width: 1045px){
+@media (min-width: 1040px) and (max-width: 1181px){
+    .show-entries .out-of{
+        width: 3em;
+    }
     
     #myBtnContainer{
         margin-left: -60px;
     }
-    
+
+    .tab-section-col{
+        width: 96%;
+    }
 }
 
 
-@media screen and (max-width: 1008px){
+@media (min-width: 900px) and (max-width: 1039px){
     
     .paym-sub{
         display: block;
         font-size: 1.2em;
     }
     
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 5px;
         margin-left: 15px;
     }
     .sear-pay-icon{
@@ -592,44 +612,69 @@ input:focus, textarea:focus{
     }
     
     #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
+        margin-top: 25px;
+        margin-bottom: 0px;
         margin-left: 0px;
         width: 200%;
     }
-    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
 }
 
+@media (min-width: 820px) and (max-width: 899px){
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 25px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        width: 300%;
+    }
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
 
-@media screen and (max-width: 992px) {
-    
-    
-    
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
 }
 
-
-@media screen and (max-width: 952px){
-    
-    
-    
-}
-
-
-@media screen and (max-width: 940px){
-    
-    
-    
-}
-
-
-@media screen and (max-width: 892px){
-    
-    
-    
-}
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 819px){
     
     .navbar-toggler{
         display: none;
@@ -679,131 +724,94 @@ input:focus, textarea:focus{
     }
     
     .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
+        margin-left: -5px; /* Same as the width of the sidenav */
         width: 100%;
     }
-
-}
-
-
-@media screen and (max-width: 727px){
     
-    
-    
-}
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
 
-
-@media screen and (max-width: 672px){
-    
-    
-    
-}
-
-
-@media screen and (max-width: 600px){
-    
-    .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
     }
     
-    .payments-head{
-        margin-top: -15px;
-        font-size: 1.6em;
-    }
-    
-    .paym-sub-line{
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
     .paym-sub{
         display: block;
+        font-size: 1.2em;
     }
-
-    .show-entries span{
-        display: inline-flex;
-        font-weight: 500;
-        font-size: 0.9em;
-    }
-
-    .show-entries .show-out-of{
-        margin: 0;
-        padding-left: 3px;
-        padding-right: 4px;
+    
+    .show-entries .out-of{
+        width: 3em;
     }
     
     .sear-pay{
-        padding: 0;
-        margin: 0;
-        margin-top: -2px;
+        margin-top: 5px;
         margin-left: 15px;
-        width: 90%;
     }
     .sear-pay-icon{
         width: 0.9em;
     }
     
     .sear-pay input{
-        width: 50%;
+        width: 89%;
     }
     
     #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
+        margin-top: 25px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        width: 300%;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 754px){
+    
+    #myBtnContainer{
+        margin-top: 25px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        width: 300%;
+    }
+    .tab-section-row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tab-section-col{
+        width: 100%;
     }
     
-}
-
-@media screen and (max-width: 496px){
-    
-    
-    
-}
-
-
-@media screen and (max-width: 477px){
-    
-    
-    
+    .tab-footer .right{
+        float: left;
+        margin-top: 15px;
+    }
 }
 
 
-@media screen and (max-width: 446px){
+@media (min-width: 300px) and (max-width: 500px){
     
+    #myBtnContainer{
+        margin-top: 25px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        width: 3000%;
+    }
+    .tab-section-row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tab-section-col{
+        width: 100%;
+    }
     
-    
+    .tab-footer .right{
+        float: left;
+        margin-top: 15px;
+    }
 }
-
-
-@media screen and (max-width: 433px){
-    
-    
-    
-}
-
-
-@media screen and (max-width: 400px){
-    
-    
-    
-}
-
-
-@media screen and (max-width: 372px){
-    
-    
-    
-}
-
-@media screen and (max-width: 356px){
-    
-    
-    
-}
-
-@media screen and (max-width: 343px){
-    
-    
-    
-}
-
-/* Responsive Page Endss Here*/

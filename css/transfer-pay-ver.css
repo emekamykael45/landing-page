@@ -130,43 +130,50 @@ input:focus, textarea:focus{
 
 /* Navbar Ends Here */
 
-
 /*Side Menu Starts Here*/
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-}
-
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}
-
-#sideMenu{
-    position: sticky;
-    background: #ffffff;
-    width: 100%;
+.sidenav {
     height: 100%;
-    position: absolute;
-    bottom: 0;
-    transition: all 0.3s ease-in-out;
+    width: 210px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
     padding-top: 90px;
+    background: #ffffff;
+    transition: 0.1s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    padding-top: 33px;
+    padding-right: 6px;
+    display: none;
+}
+.sidenav .closebtn:hover{
+    padding: 0px;
+    margin: 33px 6px 0px 30px;
+    background-color: #fff;
+}
+
+.open-sidenav{
+    position: sticky;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 2000;
+    top: 3px;
+    left: 10px;
+    margin-top: -57px;
+    margin-bottom: 20px;
+    display: none;
 }
 
 .tab-sect{
@@ -180,8 +187,15 @@ input:focus, textarea:focus{
 .tab-sect p{
     margin-bottom: 10px;
 }
+.tab-sect hr, .sidenav hr{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    height: 2px;
+    background-color: #647787;
+    opacity: 0.2;
+}
 
-#sideMenu .veri-tra-btn{
+.sidenav .veri-tra-btn{
     position: relative;
     background: #27AE60;
     width: 80%;
@@ -195,7 +209,7 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
-#sideMenu .veri-tra-btn:hover{
+.sidenav .veri-tra-btn:hover{
     background: #27AE60;
     padding: 10px 10px 10px 10px;
     font-weight: 700;
@@ -203,7 +217,7 @@ input:focus, textarea:focus{
     transition: all 0.2s ease-in-out;
 }
 
-#sideMenu a{
+.sidenav a{
     display: block;
     color: #647787;
     text-decoration: none;
@@ -212,29 +226,33 @@ input:focus, textarea:focus{
     font-size: 0.845rem;
     transition: all 0.3s ease-in-out;
 }
-#sideMenu a.active{
+.sidenav a.active{
     background: rgb(24,117,240, 0.1);
     border-left: 4px solid #1875F0;
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a.active:hover{
+.sidenav a.active:hover{
     padding: 10px 30px 10px 10px;
 }
-#sideMenu a:hover{
+.sidenav a:hover{
     background: rgb(24,117,240, 0.1);
     transition: all 0.3s ease-in-out;
     padding: 10px 10px 10px 20px;
 }
 
-#sideMenu a img{
+.sidenav a img{
     margin-top: -5px;
     margin-right: 10px;
     width: 24px;
 }
-#sideMenu a .pen-ord, #sideMenu a .recon-ord{
+.sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
     margin-right: 5px;
+}
+
+.sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+    display: none;
 }
 
 /*Side Menu Ends Here*/
@@ -242,6 +260,21 @@ input:focus, textarea:focus{
 
 
 /*Main Page Starts Here*/
+
+.main{
+    margin-left: 209px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    padding-top: 60px;
+    padding-left: 25px;
+    width: 83%;
+}
+
+.open-sidenav{
+    position: absolute;
+    color: #1875F0;
+    font-size: 25px;
+    z-index: 1;
+}
 
 .tra-pay-ver{
     margin-left: 80px;
