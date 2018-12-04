@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TransMonitor | Merchant Module</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/settings.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
+            <a class="navbar-brand logo" href="index.html">TRANSMONITOR</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jakePaul" aria-controls="jakePaul" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="jakePaul">
+                <ul class="navbar-nav mr-auto"> 
+                    <li>
+                        <img src="images/Search.png" class="search-nav-icon">
+                        <input type="text" name="" value="" placeholder="Search...">
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">FAQ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/bell.png" class="notif-nav-icon">
+                            <span class="circle">8</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="appleSauce" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="hello">Hello</span>
+                                <span class="user-name">Oluwaleke Ojo</span>
+                                <div class="user-img">
+                                    <img class="user-dis-pic" src="images/Bank-Icon.png">
+                                </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        </header>
+        
+        <div class="sidenav" id="mySidenav">
+                    
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  
+                    <div class="tab-sect">
+                        <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
+                        <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                        <hr/>
+                        
+                        <p class="head-tag">Main</p>
+                        <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
+                    </div>
+
+                    <div class="tab-sect">
+                        <p class="head-tag">Payments</p>
+                        <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                        <!--
+                        <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
+                        <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
+                        -->
+                        <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
+                    </div>
+
+                    <!--
+                    <div class="tab-sect">
+                        <p class="head-tag">Orders</p>
+                        <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
+                        <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
+                        <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
+                    </div>
+                    -->
+                    
+                    <a href="merch-profile.html" class="merc-prof active"><img src="images/merc-prof.png"><span>Settings</span></a>
+                    <hr/>
+                    
+                    <div class="tab-sect tab-resp">
+                        <p class="head-tag other-links">Other Links</p>
+                        <a href=""><span>Support</span></a>
+                        <a href=""><span>FAQ</span></a>
+                    </div>
+
+                    <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+            </div>   
+
+        <div class="main">
+            
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+
+            <h3 class="profile-head">Settings</h3>
+            <br />
+
+            <div class="prof-content">
+                
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Business Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Bank Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-end" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">API Keys & Webhooks</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="first-tab-fir">
+                            <img id="settings-logo" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
+                            <label for="files" class="upload-txt">Upload</label>
+                            <input id="files" style="visibility: hidden;" type='file' onchange="readURL(this);" />
+                            <a href="" class="edit-prof">Edit Profile</a>
+                        </div>
+                        <hr>
+                        <div class="row first-tab-sec">
+                            <div class="col-md-4">
+                                <form>
+                                    Business Name: <br><input type="text" name="busname" placeholder="Shoprite">
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    Support Email: <br><input type="text" name="supname" placeholder="help@shoprite.com">
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    Phone Number: <br><input type="text" name="phonum" placeholder="08032655767">
+                                </form>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row first-tab-sec">
+                            <div class="col-md-8">
+                                <form>
+                                    Business Address: <br><input type="text" name="busadd" placeholder="Enter Address">
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    Website: <br><input type="text" name="webs" placeholder="Enter Website">
+                                </form>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row first-tab-sec">
+                            <div class="col-md-4">
+                                <form>
+                                    Facebook: <br><input type="text" name="fname" placeholder="Enter Facebook Username">
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    Twitter: <br><input type="text" name="tname" placeholder="Enter Twitter Username">
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <form>
+                                    LinkedIn: <br><input type="text" name="lname" placeholder="Enter Linkedin Username">
+                                </form>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row first-tab-sec">
+                            <div class="col-md-4">
+                                <form>
+                                    Change Password: <br><input type="password" name="password" value="" placeholder="*****">
+                                </form>
+                            </div>
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div id="targetOne" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hideone rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetTwo" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hidetwo rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showtwo add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetThree" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hidethree rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showthree clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetFour" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hidefour rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showfour clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetFive" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hidefive rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showfive clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetSix" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hidesix rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showsix clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetSeven" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hideseven rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showseven clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetEight" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hideeight rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showeight clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetNine" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hidenine rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Shownine clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                        <div id="targetTen" class="tab-wrapper">
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Select Bank: <br>
+                                        <div class="box">
+                                            <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                <option value="AL">Select</option>
+                                                <option value="WY">Zenith Bank Plc</option>
+                                                <option value="WY">United Bank for Africa</option>
+                                                <option value="WY">Fidelity Bank Plc</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="" class="save-det">SAVE DETAILS</a>
+                                </div>
+                            </div>
+                            <button class="Hideten rem-bank-btn">
+                                <i class="fas fa-minus-circle"></i>
+                                <span>Remove Bank Account</span>
+                            </button>
+                            <hr>
+                            <button class="Showten clone add-bank-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                <span>Add a Bank Account</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script>
+            $('.Showone').click(function() {
+                $('#targetTwo').show(0);
+                $('.Showone').hide(0);
+                $('.Hideone').show(0);
+            });
+            $('.Hideone').click(function() {
+                $('#targetOne').hide(0);
+                $('.Showone').show(0);
+                $('.Hideone').hide(0);
+            });
+            
+            $('.Showtwo').click(function() {
+                $('#targetThree').show(0);
+                $('.Showtwo').hide(0);
+                $('.Hidetwo').show(0);
+            });
+            $('.Hidetwo').click(function() {
+                $('#targetTwo').hide(0);
+                $('.Showtwo').show(0);
+                $('.Hidetwo').hide(0);
+            });
+            
+            $('.Showthree').click(function() {
+                $('#targetFour').show(0);
+                $('.Showthree').hide(0);
+                $('.Hidethree').show(0);
+            });
+            $('.Hidethree').click(function() {
+                $('#targetThree').hide(0);
+                $('.Showthree').show(0);
+                $('.Hidethree').hide(0);
+            });
+            
+            $('.Showfour').click(function() {
+                $('#targetFive').show(0);
+                $('.Showfour').hide(0);
+                $('.Hidefour').show(0);
+            });
+            $('.Hidefour').click(function() {
+                $('#targetFour').hide(0);
+                $('.Showfour').show(0);
+                $('.Hidefour').hide(0);
+            });
+            
+            $('.Showfive').click(function() {
+                $('#targetSix').show(0);
+                $('.Showfive').hide(0);
+                $('.Hidefive').show(0);
+            });
+            $('.Hidefive').click(function() {
+                $('#targetFive').hide(0);
+                $('.Showfive').show(0);
+                $('.Hidefive').hide(0);
+            });
+            
+            $('.Showsix').click(function() {
+                $('#targetSeven').show(0);
+                $('.Showsix').hide(0);
+                $('.Hidesix').show(0);
+            });
+            $('.Hidesix').click(function() {
+                $('#targetSix').hide(0);
+                $('.Showsix').show(0);
+                $('.Hidesix').hide(0);
+            });
+            
+            $('.Showseven').click(function() {
+                $('#targetEight').show(0);
+                $('.Showseven').hide(0);
+                $('.Hideseven').show(0);
+            });
+            $('.Hideseven').click(function() {
+                $('#targetSeven').hide(0);
+                $('.Showseven').show(0);
+                $('.Hideseven').hide(0);
+            });
+            
+            $('.Showeight').click(function() {
+                $('#targetNine').show(0);
+                $('.Showeight').hide(0);
+                $('.Hideeight').show(0);
+            });
+            $('.Hideeight').click(function() {
+                $('#targetEight').hide(0);
+                $('.Showeight').show(0);
+                $('.Hideeight').hide(0);
+            });
+            
+            $('.Shownine').click(function() {
+                $('#targetTen').show(0);
+                $('.Shownine').hide(0);
+                $('.Hidenine').show(0);
+            });
+            $('.Hidenine').click(function() {
+                $('#targetNine').hide(0);
+                $('.Shownine').show(0);
+                $('.Hidenine').hide(0);
+            });
+            
+            $('.Showten').click(function() {
+                $('#targetOne').show(0);
+                $('.Showten').hide(0);
+                $('.Hideten').show(0);
+            });
+            $('.Hideten').click(function() {
+                $('#targetTen').hide(0);
+                $('.Showten').show(0);
+                $('.Hideten').hide(0);
+            });
+        </script>
+        
+        <script>
+            // In your Javascript (external .js resource or <script> tag)
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2({
+                    width: 'resolve' // need to override the changed default
+                });
+            });
+        </script>
+        
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#settings-logo')
+                            .attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+        
+        <script>
+        
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "212px";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

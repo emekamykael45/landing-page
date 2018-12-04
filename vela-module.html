@@ -131,14 +131,14 @@
 
                     <div class="col-md-3 info-box">
                         <div class="info-head-det">
-                            <p class="info-head-tag">Total Transaction Volume</p>
+                            <p class="info-head-tag">Transaction Volume Till Date</p>
                             <p class="info-head-fig">452,000</p>
                         </div>
                     </div>
 
                     <div class="col-md-3 info-box">
                         <div class="info-head-det">
-                            <p class="info-head-tag">Total Transaction Value</p>
+                            <p class="info-head-tag">Transaction Value Till Date</p>
                             <p class="info-head-fig"><span>&#x20A6;</span>64,000,000</p>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                 
                 <div class="col-md-12 info-graph">
                     <div class="col-md-8 info-chart">
-                        <div id="my-chart"></div>
+                        <div id="my-chart-val"></div>
                     </div>
                     <div class="col-md-4 info-stats">
                         <div class="tab tab-1">
@@ -570,66 +570,60 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript">
-        $.getJSON( 'https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json',
-        function (data) {
+        $.getJSON('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json', function (data) {
 
-            Highcharts.chart('my-chart', {
-                chart: {
-                    zoomType: 'x'
-                },
+        // Create the chart
+        Highcharts.stockChart('my-chart-val', {
+
+
+            rangeSelector: {
+                selected: 1,
+                inputDateFormat: '%Y-%m-%d'
+            },
+            
+            chart: {
+                spacingTop: 25,
+                spacingLeft: 20
+            },
+
+            title: {
+                text: 'Total Transaction Value',
+                align: 'left',
+                style: {
+                    color: '#1875F0',
+                    fontSize: '1.4em'
+                }
+            },
+            
+            xAxis: {
                 title: {
-                    text: '.'
-                },
-                subtitle: {
-                    text: document.ontouchstart === undefined ?
-                            '' : 'Pinch the chart to zoom in'
-                },
-                xAxis: {
-                    type: 'date'
-                },
-                yAxis: {
-                    title: {
-                        text: ''
-                    }
-                },
-                legend: {
-                    enabled: false
-                },
-                plotOptions: {
-                    area: {
-                        fillColor: {
-                            linearGradient: {
-                                x1: 0,
-                                y1: 0,
-                                x2: 0,
-                                y2: 1
-                            },
-                            stops: [
-                                [0, Highcharts.getOptions().colors[0]],
-                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                            ]
-                        },
-                        marker: {
-                            radius: 2
-                        },
-                        lineWidth: 1,
-                        states: {
-                            hover: {
-                                lineWidth: 1
-                            }
-                        },
-                        threshold: null
-                    }
-                },
+                    text: 'Exchange value'
+                }
+            },
+            
+            scrollbar: {
+                enabled: false
+            },
+            
+            navigator: {
+                enabled: false
+            },
 
-                series: [{
-                    type: 'area',
-                    name: 'USD to EUR',
-                    data: data
-                }]
-            });
-        }
-    );
+            series: [{
+                name: 'Total Value',
+                data: data,
+                marker: {
+                    enabled: true,
+                    radius: 2
+                },
+                shadow: true,
+                tooltip: {
+                    valueDecimals: 2
+                }
+            }]
+        });
+    });
+
     </script>
     
     <script>

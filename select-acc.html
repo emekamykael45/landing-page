@@ -60,30 +60,155 @@
         <div class="main">
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
               Launch demo modal
             </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
+            <!-- Modal 1-->
+            <div class="modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <img src="images/Jumia-logo.png">
+                    <div class="pay-part">
+                        <p class="pay-exac">Pay Exactly</p>
+                        <p class="pay-exac-fig">&#8358;125,005.05</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="sel-bank-acc">Select a bank account to transfer to</p>
+                    <div class="box">
+                        <select>
+                            <option>Pick a bank</option>
+                            <option>Zenith Bank Plc</option>
+                            <option>United Bank for Africa</option>
+                            <option>Fidelity Bank Plc</option>
+                            <option>Diamond Bank Plc</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                   </div>
+                  <div class="modal-footer">
+                      <button type="button" id="next" class="btn action-button">
+                        Next
+                      </button>
+                  </div>
+                    <div class="secured">
+                      <i class="fas fa-lock"></i>
+                      <p>Secured by Transmonitor</p>
+                    </div>
                 </div>
+              </div> 
+            </div>
+            
+            <!-- Modal 2-->
+            <div class="modal" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <img src="images/Jumia-logo.png">
+                    <div class="pay-part">
+                        <p class="pay-exac">Pay Exactly</p>
+                        <p class="pay-exac-fig">&#8358;125,005.05</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="sel-bank-acc">Select a bank account to transfer to</p>
+                    <div class="box">
+                        <select>
+                            <option>Zenith Bank Plc</option>
+                            <option>Pick a bank</option>
+                            <option>United Bank for Africa</option>
+                            <option>Fidelity Bank Plc</option>
+                            <option>Diamond Bank Plc</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <p class="acc-tag">Account Name: <span class="acc-name-det">Jumia Nig LTD</span></p>
+                    <p class="acc-tag">Account Number: <span class="acc-num-det">0099876765</span></p>
+                    <p class="acc-tag">Bank: <span class="acc-bank-det">Zenith Bank</span></p>
+                  </div>
+                  <div class="modal-footer">
+                      <p class="you-can-pay">You can pay via any of your regular means of money transfer<br/>i.e Internet banking, Mobile app of via USSD.</p>
+                      <button type="button" id="next-2" class="btn action-button">
+                        CONFIRM TRANSFER
+                      </button>
+                      <a href="" class="cont-supp">Contact Support</a>
+                  </div>
+                    <div class="secured">
+                      <i class="fas fa-lock"></i>
+                      <p>Secured by Transmonitor</p>
+                    </div>
+                </div>
+              </div> 
+            </div>
+            
+            <!-- Modal 3-->
+            <div class="modal" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="images/crossed.png">
+                      <p class="una-to-conf">Unable to Confirm Transfer</p>
+                      <p class="we-wer-una">We were unable to confirm your payment of 
+                          <span class="pay-exac-fig-s">N125,005.05</span> <br/>as a result of one or more of the following</p>
+                      <br/>
+                      <p class="line-tag"><i class="fas fa-circle"></i>You didn't transfer the exact amount (Kobo Included)</p>
+                      <p class="line-tag"><i class="fas fa-circle"></i>Your Bank has not released the money to us</p>
+                      <p class="line-tag"><i class="fas fa-circle"></i>You were unable to successfuly send the money</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" id="next-3" class="btn action-button">
+                        CONFIRM TRANSFER AGAIN
+                      </button>
+                      <a href="" class="cont-supp">Contact Support</a>
+                  </div>
+                    <div class="secured">
+                      <i class="fas fa-lock"></i>
+                      <p>Secured by Transmonitor</p>
+                    </div>
+                </div>
+              </div> 
+            </div>
+            
+            <!-- Modal 4-->
+            <div class="modal" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="images/checkmark.png">
+                      <p class="mon-tra-suc">Money Transfer Successful</p>
+                      <p class="you-tra-of">Your transfer of 
+                          <span class="pay-exac-fig-s">N125,005.05</span> was successful.
+                      </p>
+                      
+                  </div>
+                  <div class="modal-footer">
+                      <a href="" class="cont-supp">Contact Support</a>
+                  </div>
+                    <div class="secured">
+                      <i class="fas fa-lock"></i>
+                      <p>Secured by Transmonitor</p>
+                    </div>
+                </div>
+              </div> 
+            </div>
 
         </div>
 
@@ -93,6 +218,38 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    
+    <!-- On-Boarding Pagination Javascript -->
+    <script>
+        
+        //set button id on click to hide first modal
+        $("#next").on( "click", function() {
+                $('#myModal1').modal('hide');  
+        });
+        //trigger next modal
+        $("#next").on( "click", function() {
+                $('#myModal2').modal('show');  
+        });
+        
+        //set button id on click to hide 2nd modal
+        $("#next-2").on( "click", function() {
+                $('#myModal2').modal('hide');  
+        });
+        //trigger next modal
+        $("#next-2").on( "click", function() {
+                $('#myModal3').modal('show');  
+        });
+        
+        //set button id on click to hide 2nd modal
+        $("#next-3").on( "click", function() {
+                $('#myModal3').modal('hide');  
+        });
+        //trigger next modal
+        $("#next-3").on( "click", function() {
+                $('#myModal4').modal('show');  
+        });
+        
+    </script>   
         
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     

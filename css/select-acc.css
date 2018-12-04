@@ -128,7 +128,310 @@ input:focus, textarea:focus{
     padding-right: 20px;
 }
 
+/* Modal Starts Here */
+
+.modal{         
+    transition: all 0s ease;
+}
+
+.modal-content{
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 0px;
+    padding-bottom: 200px;
+}
+
+.modal-header{
+    display: flex;
+    border: none !important;
+    padding: 10px 15px !important;
+    border-bottom: 1px solid #E0E0E0 !important;
+}
+
+.modal-header .close{
+    background: #EB5757 !important;
+    opacity: 1;
+    border-radius: 50px !important;
+    line-height: 15px !important;
+    margin-top: -24px !important;
+    margin-right: -30px !important;
+    padding-top: 6px !important;
+    padding-bottom: 11px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #fff;
+}
+
+.modal-header .close span{
+    color: #fff;
+    opacity: 1;
+}
+
+.modal-header img{
+    width: 100px;
+    height: 78px;
+}
+
+.pay-part{
+    position: relative;
+    float: right;
+    left: 210px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pay-exac{
+    font-size: 1em;
+    color: #1875F0;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.pay-exac-fig{
+    font-size: 1.8em;
+    font-weight: 500;
+    margin: 0;
+    color: #4F4F4F;
+}
+
+.modal-body{
+    display: inline-block;
+}
+
+.modal-body .sel-bank-acc{
+    font-weight: 500;
+    color: #4F4F4F;
+    margin-top: 10px;
+    margin-left: 52px;
+    margin-bottom: 10px;
+}
+
+.modal-body p{
+    color: #4F4F4F !important;
+}
+
+.modal-body .acc-tag{
+    color: #4F4F4F;
+    margin-left: 52px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.modal-body .acc-tag span{
+    display: block;
+    margin-top: -23px;
+    margin-left: 150px;
+    font-weight: 500;
+}
+
+.box{
+    position: relative;
+    left: 11%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.box select {
+    background-color: transparent;
+    color: #4F4F4F;
+    font-weight: 500;
+    padding: 14px;
+    padding-right: 200px;
+    border: 1px solid #E0E0E0;
+    font-size: 1em;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+    border-radius: 5px;
+}
+
+.box .fa-chevron-down{
+    z-index: 0;
+    margin-left: -30px;
+    color: #999999;
+}
+
+.modal-footer{
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: -40px;
+    top: -5px;
+    left: 0%;
+    border: none !important;
+}
+
+.modal-footer .action-button{
+    position: relative;
+    padding: 15px 161px;
+    left: 53px;
+    border-radius: 60px;
+    cursor: pointer;
+    color: #fff;
+    background: #1875F0;
+    border: none;
+}
+
+#myModal2 .modal-footer{
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: -200px;
+    top: 0px;
+    left: 0%;
+    border: none !important;
+    background-color: rgba(196, 196, 196, 0.12);
+}
+
+#myModal2 .modal-footer .you-can-pay{
+    text-align: center;
+}
+
+#myModal2 .modal-footer .action-button{
+    position: relative;
+    padding: 15px 120px;
+    left: 40px;
+    border-radius: 60px;
+    cursor: pointer;
+    color: #fff;
+    background: #1875F0;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#myModal3 .modal-header{
+    border: none !important;
+    background: #fff !important;
+}
+
+#myModal3 .modal-body img{
+    width: 80px;
+    margin-top: 50px;
+    margin-left: 40%;
+}
+
+#myModal3 .modal-body .una-to-conf{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #EB5757 !important;
+}
+
+#myModal3 .modal-body .we-wer-una{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.pay-exac-fig-s{
+    font-weight: bolder;
+}
+
+#myModal3 .modal-body .line-tag{
+    display: flex;
+    margin-left: 13%;
+    margin-bottom: 10px;
+}
+
+#myModal3 .modal-body .line-tag i{
+    font-size: 0.4em;
+    margin: 0;
+    padding-top: 9px;
+    margin-right: 10px;
+}
+
+#myModal3 .modal-footer{
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: -200px;
+    top: 0px;
+    left: 0%;
+    border: none !important;
+}
+
+#myModal3 .modal-footer .action-button{
+    position: relative;
+    padding: 15px 93px;
+    left: 49px;
+    border-radius: 60px;
+    cursor: pointer;
+    color: #fff;
+    background: #1875F0;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#myModal4 .modal-header{
+    border: none !important;
+    background: #fff !important;
+}
+
+#myModal4 .modal-body img{
+    width: 80px;
+    margin-top: 50px;
+    margin-left: 40%;
+}
+
+#myModal4 .modal-body .mon-tra-suc{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #27AE60 !important;
+}
+
+#myModal4 .modal-body .you-tra-of{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.pay-exac-fig-s{
+    font-weight: bolder;
+}
+
+#myModal4 .modal-footer{
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: -200px;
+    top: 0px;
+    left: 0%;
+    border: none !important;
+}
+
+.cont-supp{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #1875F0;
+}
+.cont-supp:hover{
+    text-decoration: none;
+}
+
+.secured{
+    position: absolute;
+    display: flex;
+    color: #CCCFD4;
+    bottom: 0;
+    margin-bottom: -45px;
+    margin-left: 32%;
+}
+
+.secured i{
+    font-size: 1.2em;
+    padding-top: 3.5px;
+    margin-right: 10px;
+}
+
 button:focus {
   box-shadow: none !important;
 }
+
+/* Modal Stops Here */
 

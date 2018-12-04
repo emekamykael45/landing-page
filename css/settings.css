@@ -283,54 +283,195 @@ input:focus, textarea:focus{
 
 .prof-content {
     background: #fff;
-    padding: 40px;
+    padding: 30px;
+    margin-bottom: 25px;
 }
 
-.user-prof-img{
-    width: 60px;
-    height: 60px;
+.nav-pills{
+    border-bottom: 1px solid #CAD6E7;
 }
 
-.sect-1{
+.nav-pills .nav-link{
+    font-weight: 500;
+    color: #414042;
+    margin-right: 200px;
+    padding: 8px 10px;
+}
+
+.nav-pills .nav-link-end{
+    margin-right: 0;
+}
+
+.nav-pills .nav-link.active{
+    border-bottom: 2px solid #1860EC;
+    background-color: transparent;
+    color: #1860EC;
+    border-radius: 0;
+}
+
+.tab-pane hr{
+    width: 97%;
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.first-tab-fir img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.first-tab-fir input[type=file]{
+    padding:10px;
+}
+
+.first-tab-fir .upload-txt{
+    border: 1px solid #1860EC;
+    padding: 7px 25px;
+    border-radius: 5px;
+    color: #1860EC;
+    font-weight: 450;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.first-tab-fir .edit-prof{
+    position: relative;
+    float: right;
+    margin-top: 12px;
+    margin-right: 60px;
+    background: #1860EC;
+    color: #fff;
+    border: 1px solid #1860EC;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 450;
+}
+.first-tab-fir .edit-prof:hover{
+    text-decoration: none;
+}
+
+.first-tab-sec input[type=text], .first-tab-sec input[type=password]{
+    padding: 6px 10px;
+    border: 1px solid #CCCFD4;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    width: 90%;
+    color: #414042;
+    font-weight: 400;
+}
+
+.first-tab-sec .col-md-8 input[type=text]{
+    width: 95.4%;
+}
+
+.box{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    width: 95.4%;
+}
+
+/**
+.box select {
+    background-color: transparent;
+    color: #414042;
+    font-weight: 400;
+    padding: 6px 10px;
+    width: 90%;
+    margin-top: 6px;
+    border: 1px solid #CCCFD4;
+    font-size: 1em;
+    -webkit-appearance: button;
+    appearance: button;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+}
+
+.box select option{
+    background-color: #000;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
+    margin: 20px !important;
+    width: 95.4%;
+}
+
+.box .fa-chevron-down{
+    z-index: 0;
+    margin-left: -30px;
+    color: #999999;
+    cursor: pointer;
+}
+
+**/
+
+.save-det{
+    position: absolute;
+    background: #27AE60;
+    color: #fff;
+    border: 1px solid #27AE60;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 450;
     margin-top: 25px;
 }
-
-.name, .address, .bank{
-    text-align: left;
-    color: #7F8FA4;
-    margin: 0;
-    padding-bottom: 5px;
+.save-det:hover{
+    color: #fff;
+    text-decoration: none;
 }
 
-.user-prof-name, .user-prof-addr, .user-prof-bank{
-    text-align: left;
+.save-date.colorized {
+    color: #9FABBB;
+    background: #EAEEF0;
 }
 
-.sect-1 hr{
-    width: 400px;
-    position: absolute;
-    margin: 0;
-    margin-top: 8px;
+button:focus {
+    outline: none;
+}
+
+.rem-bank-btn {
+    margin-top: 15px;
+    color: #EB5757;
+    font-weight: 450;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: none;
+}
+
+.add-bank-btn {
+    color: #1860EC;
+    font-weight: 450;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.tab-wrapper .add-bank-btn{
+    display: block;
+}
+.tab-wrapper2 .add-bank-btn{
+    display: block;
+}
+
+#targetTwo, #targetThree, #targetFour, #targetFive, #targetSix, #targetSeven, #targetEight, #targetNine, #targetTen {
+  display:none;
+}
+
+.Hidetwo, .Hidethree, .Hidefour, .Hidefive, .Hidesix, .Hideseven, .Hideeight, .Hidenine, .Hideten {
+  display:none;
 }
 
 
-.sec-prof-content{
-    background: #fff;
-    padding-top: 60px;
-    display: flex;
-}
+box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
 
-.sect-2{
-    margin-bottom: 25px;
-    margin-left: 20px;
-}
-
-.sect-2 hr{
-    width: 400px;
-    position: absolute;
-    margin: 0;
-    margin-top: 8px;
-}
 
 /*Main Page Ends Here*/
 
@@ -339,164 +480,6 @@ input:focus, textarea:focus{
 /* Responsive Page Starts Here*/
 
 
-@media screen and (max-width: 1504px) {
-
-    .prof-content {
-        margin: 0px 50px 50px 0px;
-    }
-    
-}
-
-
-@media screen and (max-width: 860px){
-    
-    .navbar-toggler{
-        display: none;
-    }
-    
-    .navbar .logo{
-        margin-left: 30px;
-    }
-    
-    .navbar-nav{
-        display: none;
-    }
-    
-    .sidenav{
-        width: 0px;
-        padding-top: 75px;
-    }
-    .sidenav a:hover{
-        padding: 10px 0px 10px 15px;
-    }
-    
-    /* Position and style the close button (top right corner) */
-    .sidenav .closebtn{
-        display: block;
-    }
-    .sidenav .closebtn:hover{
-        margin: 33px 6px 0px 30px;
-    }
-
-    .open-sidenav{
-        position: sticky;
-        top: 5.5px;
-        font-size: 1.7em;
-        z-index: 2000;
-        display: block;
-        cursor: pointer;
-        color: #647787;
-        width: 23px;
-    }
-    
-    .sidenav .veri-tra-btn{
-        left: 10px;
-    }
-    
-    .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
-        display: block;
-    }
-    
-    .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
-        width: 100%;
-    }
-    
-    .prof-content{
-        margin: 0px 30px 30px 0px;
-    }
-
-}
-
-
-@media screen and (max-width: 600px){
-    
-    .user-prof-img{
-        width: 60px;
-        height: 60px;
-    }
-
-    .sect-1{
-        margin-top: 25px;
-    }
-
-    .name, .address, .bank{
-        text-align: left;
-        color: #7F8FA4;
-        margin: 0;
-        padding-bottom: 5px;
-    }
-
-    .user-prof-name, .user-prof-addr, .user-prof-bank{
-        text-align: left;
-    }
-
-    .sect-1 hr{
-        width: 250px;
-    }
-
-
-    .sec-prof-content{
-        background: #fff;
-        padding-top: 60px;
-        display: flex;
-    }
-
-    .sect-2{
-        margin-bottom: 25px;
-        margin-left: 20px;
-    }
-
-    .sect-2 hr{
-        width: 250px;
-    }
-}
-
-
-@media screen and (max-width: 468px){
-    
-    .sec-prof-content{
-        display: inline;
-    }
-    
-    .sec-prof-content img{
-        margin-bottom: 20px;
-    }
-    
-    .top{
-        margin-bottom: 40px;
-    }
-    
-    .sect-2{
-        margin-left: 0px;
-    }
-    
-}
-
-@media screen and (max-width: 400px){
-    
-    .prof-content{
-        font-size: 0.9em;
-    }
-    
-    .sect-1 hr{
-        width: 210px;
-    }
-    
-    .sect-2 hr{
-        width: 210px;
-    }
-    
-}
-
-@media screen and (max-width: 348px){
-    
-    .prof-content{
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-}
 
 
 /* Responsive Page Endss Here*/
