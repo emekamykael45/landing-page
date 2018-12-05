@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="css/vela-module.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 </head>
     <body>
         <header>
@@ -97,7 +95,7 @@
                     </div>
                     -->
                     
-                    <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Settings</span></a>
+                    <a href="settings.html" class="merc-prof"><img src="images/merc-prof.png"><span>Settings</span></a>
                     <hr/>
                     
                     <div class="tab-sect tab-resp">
@@ -181,14 +179,15 @@
                     <div class="col-md-12 paym-sub">
                         <div class="col-md-3 show-entries">
                             <span>Showing
-                                <div class="dropdown">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">10
-                                  <span class="caret"></span></button>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#">20</a></li>
-                                    <li><a href="#">30</a></li>
-                                    <li><a href="#">40</a></li>
-                                  </ul>
+                                <div class="box-drop">
+                                    <select>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                        <option>50</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
                                 </div><span class="out-of">out of</span><p class="show-out-of">500</p> payments
                             </span>
                         </div>
@@ -569,6 +568,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>    
+    
     <script type="text/javascript">
         $.getJSON('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json', function (data) {
 

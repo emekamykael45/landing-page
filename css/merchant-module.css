@@ -200,13 +200,27 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
 .sidenav .veri-tra-btn:hover{
     background: #27AE60;
-    padding: 10px 10px 10px 10px;
-    font-weight: 700;
+    padding: 10px 10px 10px 15px;
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
+.sidenav .veri-tra-btn.active{
+    background: #27AE79;
+    padding: 10px 10px 10px 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidenav .veri-tra-btn.active:hover{
+    padding: 10px 10px 10px 10px;
+}
+
 
 .sidenav a{
     display: block;
@@ -461,8 +475,6 @@ input:focus, textarea:focus{
         margin-right: 15px;
     }
 }
-
-/* Responsive Page Starts Here*/
 
 @media screen and (max-width: 768px){
     

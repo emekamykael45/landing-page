@@ -240,7 +240,7 @@ h1, h2{
     padding-top: 5px;
     margin-bottom: 10px;
     width: 120%;
-    margin-left: -10%;
+    margin-left: -15%;
     overflow: hidden;
     /*CSS counters to number the steps*/
     counter-reset: step;
@@ -405,6 +405,88 @@ h1, h2{
     padding: 10px 5px;
     margin: 10px 5px;
 }
+
+.select-box{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: none;
+    width: 100%;
+    font-weight: 400;
+}
+
+/**
+[class^='select2']{
+    border-radius: 0px !important;
+    border: 1px solid #fff !important;
+}
+
+.select2-container--default {
+    border: 1px solid #fff !important;
+}
+**/
+
+.select-box{
+    position: relative;
+}
+
+.select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    padding: 8px 8px;
+    border: none;
+    color: #414042;
+    background: transparent;
+    width: 84%;
+    top: -8px;
+    margin-left: 43px;
+    margin-bottom: 5px;
+}
+
+ select:focus {
+   outline: 0;
+ }
+
+.box form div .bank-name-lab{
+    top: -18px;
+    left: 0;
+    color: #7F8FA4;
+    font-size: 12px;
+}
+
+.select-box:after {
+    content: '\f078';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #CCCFD4;
+    right: 17px;
+    top: -18px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    border: none;
+    position: absolute;
+    pointer-events: none;
+}
+
+.select option{
+    padding: 20px;
+}
+
+
+button:focus {
+    outline: none !important;
+}
+
+button:active {
+    outline: none !important;
+    border: none !important;
+}
+
+
 
 .box fieldset{
     display: block;

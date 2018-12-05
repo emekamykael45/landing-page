@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/transfer-pay-ver.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 </head>
     <body>
         <header>
@@ -69,12 +68,12 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   
                     <div class="tab-sect">
-                        <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
+                        <a href="transfer-pay-ver.html"class="veri-tra-btn active">GENERATE INVOICE</a>
                         <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
                         <hr/>
                         
                         <p class="head-tag">Main</p>
-                        <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
+                        <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
                     </div>
 
                     <div class="tab-sect">
@@ -96,7 +95,7 @@
                     </div>
                     -->
                     
-                    <a href="merch-profile.html" class="merc-prof"><img src="images/merc-prof.png"><span>Settings</span></a>
+                    <a href="settings.html" class="merc-prof"><img src="images/merc-prof.png"><span>Settings</span></a>
                     <hr/>
                     
                     <div class="tab-sect tab-resp">
@@ -106,91 +105,81 @@
                     </div>
 
                     <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
-            </div>   
+            </div>  
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="main">
                 
-                <h3 class="tra-pay-ver">Transfer Payment Verification</h3>
-                <br />
-                
-                <div class="tra-pay-content">
-                    
-                    <p class="ple-ent-the">Please Enter The Verification Code Given By The<br/>Customer To Verify Transfer Payment</p>
-                    
-                    <form id="tra-form">
-                        <fieldset>
-                            <div class="fields">
-                                <div class="veri-field">
-                                    <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
-                                    <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
-                                    <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
-                                    <input type="tel" name="pincode-1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" tabindex="1" placeholder="·" autocomplete="off" class="verify" />
-                                </div>
-                            </div>
-                            <input type="submit" name="submit" class="submit action-button sec-pg-sub" value="VERIFY THIS CODE" />
-                        </fieldset>
-                    </form>
-                    
-                    <a href="trans-pay-ver1.html" class="go-to">Go to 2nd verification page</a>
-                    
-                </div>
-                
-                
-              </main>
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+            
+            <h3 class="tra-pay-ver">Generate Invoice</h3>
+            <br />
+
+            <div class="tra-pay-content">
+
+                <p class="ple-ent-the">Payment Information</p>
+
+                <form id="tra-form">
+                    Merchant Bank Account <br>
+                    <div class="box">
+                        <select class="js-example-basic-single" name="state" style="width: 100%">
+                            <option value="AL">Select</option>
+                            <option value="WY">Zenith Bank Plc</option>
+                            <option value="WY">United Bank for Africa</option>
+                            <option value="WY">Fidelity Bank Plc</option>
+                        </select>
+                    </div>
+                    <br>
+                    Customer Name <br><input type="text" name="busname" placeholder="Shoprite" required>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            Cost of Purchase <br><input type="text" name="busname" placeholder="Shoprite" required>
+                        </div>
+                        <div class="col-md-6">
+                            Phone Number <br><input type="text" name="busname" placeholder="Shoprite" required>
+                        </div>
+                    </div>
+                    Description <br><textarea name="description" required></textarea>
+                    <br><br>
+                    <input type="submit" name="submit" class="action-button" value="GENERATE INVOICE" />
+                </form>
+
+                <a href="trans-pay-ver1.html" class="go-to">Go to 2nd verification page</a>
+
+            </div>
+                 
+        </div>
         
         
         
         
-        <!-- OTP Verification -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        
+        <script>
+            // In your Javascript (external .js resource or <script> tag)
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2({
+                    width: 'resolve' // need to override the changed default
+                });
+            });
+        </script>
+        
         <script>
         
-            $(function() {
-              'use strict';
+        /* Set the width of the side navigation to 212px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "212px";
+        }
 
-              var body = $('body');
-
-              function goToNextInput(e) {
-                var key = e.which,
-                  t = $(e.target),
-                  sib = t.next('.verify');
-
-                if (key != 9 && (key < 48 || key > 57)) {
-                  e.preventDefault();
-                  return false;
-                }
-
-                if (key === 9) {
-                  return true;
-                }
-
-                if (!sib || !sib.length) {
-                  sib = body.find('.verify').eq(0);
-                }
-                sib.select().focus();
-              }
-
-              function onKeyDown(e) {
-                var key = e.which;
-
-                if (key === 9 || (key >= 48 && key <= 57)) {
-                  return true;
-                }
-
-                e.preventDefault();
-                return false;
-              }
-
-              function onFocus(e) {
-                $(e.target).select();
-              }
-
-              body.on('keyup', '.verify', goToNextInput);
-              body.on('keydown', '.verify', onKeyDown);
-              body.on('click', '.verify', onFocus);
-
-            })
-            
-        </script>
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+    </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>

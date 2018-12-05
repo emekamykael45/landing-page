@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/sign-up.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
     
@@ -73,8 +75,15 @@
                     <div class="fields">
                         <div>
                             <img src="images/Bank%20%20Vec.png" class="bankvec-icon">
-                            <input type="text" name="" class="email" required>
-                            <label>Bank Name</label>
+                            <div class="select-box">
+                                <select style="boxShadow: none;" class="select">
+                                    <option value="GTB">Guaranty Trust Bank</option>
+                                    <option value="ZBP">Zenith Bank Plc</option>
+                                    <option value="UBA">United Bank for Africa</option>
+                                    <option value="FBP">Fidelity Bank Plc</option>
+                                </select>
+                            </div>
+                            <label class="bank-name-lab">Bank Name</label>
                         </div>
                         <div>
                             <img src="images/Bank%20%20Vec.png" class="bankvec-icon">
@@ -270,7 +279,20 @@
             });
         </script>
         
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        
+        <script>
+            // In your Javascript (external .js resource or <script> tag)
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2({
+                    width: 'resolve' // need to override the changed default
+                });
+            });
+        </script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
         
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
