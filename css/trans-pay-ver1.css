@@ -390,71 +390,92 @@ input:focus, textarea:focus{
 }
 
 .tra-pay-content {
-    background: #fff;
-    margin: 0px 80px;
-    padding: 40px;
+    background: transparent;
+    margin: 0px 250px;
+    padding: 0;
     height: 125%;
 }
 
-.tra-pay-content .ple-ent-the{
-    text-align: center;
-    color: #4F4F4F;
-    font-weight: 450;
-    font-size: 1.2em;
-    letter-spacing: 0.3px;
+.content-head{
+    background: rgba(24, 117, 240, 0.1);
+    border-radius: 3px 3px 0 0;
+    padding: 20px 30px;
 }
 
-#tra-form {
-    position: relative;
-    margin-top: 30px;
-    width: 50%;
-    margin-left: 25%;
-    font-weight: 500;
-}
-
-.box{
-    position: relative;
+.invoice{
     margin: 0;
-    padding: 0;
-    margin-top: 5px;
-    width: 100%;
-    font-weight: 400;
+    color: #414042;
+    font-weight: 500;
+    font-size: 1.9em;
+}
+
+.invoice-no{
+    margin: 0;
+    color: #414042;
+    font-weight: 500;
+    font-size: 1.3em;
+    float: right;
+    margin-top: -32px;
+}
+
+.invoice-date{
+    margin: 0;
+    color: #414042;
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-top: -30px;
+}
+
+.content-body{
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+    padding-bottom: 30px;
+}
+
+.body-in{
+     padding: 50px 80px;
+}
+
+.content-body .tag{
+    margin-bottom: 25px;
+    margin-left: 60px;
+}
+
+.content-body .tag p{
+    display: block;
+    font-weight: bold;
+    margin: 0;
+    margin-top: -21px;
+    margin-left: 150px;
+}
+
+.foo-note{
+    background: rgba(235, 87, 87, 0.08);
+    margin-top: -50px;
+    padding-top: 8px;
+    border: 1px solid #EB5757;
+    border-style: dashed;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 25px;
+}
+
+.foo-note p{
+    text-align: center;
+    color: #EB5757;
+    font-weight: 500;
 }
 
 button:focus {
     outline: none;
 }
 
-#tra-form input[type=text]{
-    padding: 6px 10px;
-    border: 1px solid #CCCFD4;
-    border-radius: 3px;
-    font-size: 1em;
-    margin-top: 6px;
-    margin-bottom: 15px;
-    width: 100%;
-    color: #414042;
-    font-weight: 400;
-}
-
-#tra-form textarea{
-    padding: 6px 10px;
-    border: 1px solid #CCCFD4;
-    border-radius: 3px;
-    font-size: 1em;
-    margin-top: 6px;
-    margin-bottom: 15px;
-    width: 100%;
-    color: #414042;
-    font-weight: 400;
-}
-
-#tra-form .action-button {
+.action-button {
     border: none;
     cursor: pointer;
-    width: 100%;
-    margin-top: -20px;
-    padding: 1rem 2.5rem;
+    width: 60%;
+    padding: 1rem 2rem;
+    margin-left: 20%;
     font-weight: 500;
     color: #fff;
     background: #1875F0;
@@ -462,13 +483,9 @@ button:focus {
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
 }
 
-#tra-form .action-button:hover, #tra-form .action-button:focus {
-    
-}
-
 .go-to{
     position: absolute;
-    padding-top: 50px;
+    bottom: 0;
 }
 
 /*Main Page Ends Here*/
