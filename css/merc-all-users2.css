@@ -271,6 +271,7 @@ input:focus, textarea:focus{
     padding: 0px 10px;
     padding-top: 60px;
     padding-left: 25px;
+    margin-right: 20px;
     width: 83%;
 }
 
@@ -390,9 +391,9 @@ button:focus {
 /* Create User & Modal*/
 
 .create-user{
-    position: absolute;
-    top: -60px;
-    left: 255%;
+    position: relative;
+    margin-top: 30px;
+    float: right;
     background: #1875F0;
     padding: 9px 30px;
     border-radius: 30px;
@@ -525,6 +526,9 @@ button:focus {
 
 
 /*Section 2 Starts Here*/
+table{
+    width: 100%;
+}
 
 tbody{
     background: #fff;
@@ -567,134 +571,31 @@ tbody{
     margin-left: 5px;
 }
 
-.drop {
-    position: absolute;
-	margin: 0;
-    margin-top: -8px;
-    right: 40px;
+.dropdown-toggle::after{
+    display: none !important;
 }
 
-.drop ul {
-	padding: 0;
-    margin: 0;
-	list-style: none;
-	position: relative;
-}
-	
-.drop ul li {
-	display:inline-block;
-	background-color: #fff;
-    border: 1px solid #fff;
-}
-
-.drop a {
-	display:block;
-    margin: 3px 0px;
-	padding: 5px;	
-	color:#4c4c4c;
-	font-size: 1em;
-	line-height: 22px;
-	text-decoration:none;
-}
-
-.drop a:hover { 
-	background-color: #F7F8FA; 
-}
-
-/* Hide Dropdowns by Default */
-.drop ul ul {
-	display: none;
-	position: absolute; 
-	top: 40px; /* the height of the main nav */
-    right: 0px;
-}
-	
-/* Display Dropdowns on Hover */
-.drop ul li:hover > ul {
-	display:inherit;
-}
-	
-/* Fisrt Tier Dropdown */
-.drop ul ul li {
-	width:120px;
-	float:none;
-	display:list-item;
-	position: relative;
-    z-index: 1;
-    box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
-}
-
-.card-text-line{
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.line-sect{
-    margin-right: 12px;
-}
-
-.line-sect p{
-    margin: 0;
+td .dropdown button{
+    background: transparent !important;
     padding: 0;
-    font-size: 0.97em;
-    letter-spacing: 0.01px;
+    border: none;
 }
 
-.line-sect .head-line{
-    color: #7F8FA4;
-    font-weight: 500;
-    margin-right: 5px;
-}
-.line-sect .sub-line{
-    color: #414042;
-    font-weight: 500;
+td .dropdown i{
+    color: #4c4c4c;
+    margin-left: 30px;
 }
 
-.card-body hr{
-    position: relative;
-    margin: 0;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-top: 15px;
-}
-
-.card-body .view-act{
-    margin: 0;
+td .dropdown-menu{
     padding: 0;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: -10px;
 }
 
-.card-body .view-act a{
-    color: #1875F0;
-    font-weight: bold;
-}
-.card-body .view-act a:hover{
-    text-decoration: none;
+td .dropdown-item{
+    padding-left: 10px;
+    padding-right: 0px;
 }
 
-.card-body .view-act a i{
-    margin-left: 5px;
-}
-
-/**
-.tab-footer{
-    display: block;
-}
-.tab-footer .left{
-    float: left;
-}
-.tab-footer .right{
-    float: right;
-}
 **/
-
-
-
-
-
-
 
 /*Section 2 Ends Here*/
 
@@ -706,118 +607,30 @@ tbody{
 
 /* Responsive Page Starts Here*/
 
-@media (min-width: 1370px) and (max-width: 1600px) {
-    
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    .tab-section-row{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-    }
-
-    .tab-section-col{
-        width: 96%;
-        margin-right: 0px;
-    }
+@media (min-width: 1370px) and screen {
     
 }
 
 @media (min-width: 1181px) and (max-width: 1369px) {
     
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    .tab-section-row{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-    }
-
-    .tab-section-col{
-        width: 96%;
-        margin-right: 0px;
-    }
 }
 
 
-@media (min-width: 1040px) and (max-width: 1181px){
-    
-    .paym-sub{
-        font-size: 1.2em;
-    }
-    
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    .sear-pay{
-        margin-left: 15px;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    .tab-section-row{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-    }
-
-    .tab-section-col{
-        width: 96%;
-        margin-right: 0px;
+@media (min-width: 1000px) and (max-width: 1085px){
+    .table{
+        width: 107%;
     }
 }
 
-@media (min-width: 820px) and (max-width: 1039px){
-    
-    .paym-sub{
-        display: inline-block;
-        font-size: 1.2em;
+@media (min-width: 900px) and (max-width: 999px){
+    .table{
+        width: 120%;
     }
-    
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    .sear-pay{
-        margin-top: 10px;
-        margin-left: 15px;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    .create-user{
-        margin-top: 40px;
-    }
-    
-    .tab-section-row{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-    }
+}
 
-    .tab-section-col{
-        width: 96%;
-        margin-right: 0px;
+@media (min-width: 820px) and (max-width: 899px){
+    .table{
+        width: 130%;
     }
 }
 
@@ -875,126 +688,96 @@ tbody{
         width: 100%;
     }
     
-    .paym-sub{
-        display: inline-block;
-        font-size: 1.2em;
-    }
-    
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    .sear-pay{
-        margin-top: 10px;
-        margin-left: 15px;
-    }
-    
-    .sear-pay input{
-        width: 50%;
-    }
-    
     .create-user{
-        margin-top: 40px;
-    }
-    
-    .tab-section-row{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-    }
-
-    .tab-section-col{
-        width: 96%;
-        margin-right: 0px;
-    }
-}
-
-
-@media (min-width: 600px) and (max-width: 754px){
-    
-    .tab-section-row{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-    }
-    
-}
-
-@media (min-width: 500px) and (max-width: 599px){
-    
-    .tab-section-row{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        margin-top: 40px;
-        margin-left: 0;
-    }
-    
-    .card-body .head-line{
-        display: inline-flex;
-        margin-right: 220px;
-    }
-    
-    .line-sect .head-line{
-        color: #7F8FA4;
-        font-weight: 500;
-        margin-right: 5px;
-    }
-    
-    .tab-footer .right{
-        float: left;
-        margin-top: 35px;
-    }
-    
-}
-
-@media (min-width: 441px) and (max-width: 500px){
-    
-    .tab-section-row{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
-    .card-body .head-line{
-        display: inline-flex;
-        margin-right: 60px;
-    }
-    
-    .line-sect .head-line{
-        color: #7F8FA4;
-        font-weight: 500;
-        margin-right: 5px;
-    }
-    
-    .tab-footer .right{
-        right: 0;
-        margin-top: -10px;
-    }
-}
-
-@media (min-width: 300px) and (max-width: 440px){
-    
-    .tab-section-row{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
-    .card-body .head-line{
-        display: inline-flex;
-        margin-right: 60px;
-    }
-    
-    .line-sect .head-line{
-        color: #7F8FA4;
-        font-weight: 500;
-        margin-right: 5px;
-    }
-    
-    .tab-footer .right{
-        float: left;
         margin-top: 30px;
+    }
+    
+    .table{
+        width: 120%;
+    }
+}
+
+
+@media (min-width: 685px) and (max-width: 767px){
+    .create-user{
+        margin-top: -40px;
+    }
+    .table{
+        width: 130%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 684px){
+    .create-user{
+        margin-top: -40px;
+    }
+    .table{
+        width: 150%;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 599px){
+    .create-user{
+        margin-top: -40px;
+    }
+    .table{
+        width: 170%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 549px){
+    .create-user{
+        margin-top: -40px;
+    }
+    .table{
+        width: 185%;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 499px){
+    .create-user{
+        margin-top: -40px;
+    }
+    .table{
+        width: 210%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 449px){
+    .create-user{
+        margin-top: -40px;
+    }
+    .table{
+        width: 230%;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 399px){
+    .create-user{
+        margin-top: -40px;
+    }
+    .table{
+        width: 265%;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 399px){
+    .create-user{
+        margin-top: 10px;
+        float: left;
+    }
+    .table{
+        width: 265%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 349px){
+    .create-user{
+        margin-top: 10px;
+        float: left;
+    }
+    .table{
+        width: 310%;
     }
 }
 

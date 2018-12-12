@@ -190,6 +190,11 @@ body{
     margin-right: 0px;
 }
 
+#pills-tab .nav-link.active{
+    background: #175DE5;
+    color: #fff;
+}
+
 .marchants-nav, .banks-nav{
     background: #FFFFFF;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.14);
@@ -207,6 +212,22 @@ body{
     max-height: 74px;
 }
 
+#pills-tab .nav-link.active .shop-icon .img1{
+    content: url(../images/bank-wh-icon.png);
+}
+
+#pills-tab .nav-link .shop-icon .img1{
+    content: url(../images/Bank-Icon.png);
+}
+
+#pills-tab .nav-link.active .bank-icon .img1{
+    content: url(../images/bank-wh-icon.png);
+}
+
+#pills-tab .nav-link .bank-icon .img1{
+    content: url(../images/Bank-Icon.png);
+}
+
 .marchants-text, .banks-text{
     margin-left: 20px;
 }
@@ -217,10 +238,18 @@ body{
     color: #1860EC;
 }
 
+#pills-tab .nav-link.active p{
+    color: #fff;
+}
+
 .marchants-nav span, .banks-nav span{
     color: #4F4F4F;
     font-size: 0.85em;
     font-weight: 500;
+}
+
+#pills-tab .nav-link.active span{
+    color: #fff;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
