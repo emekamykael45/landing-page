@@ -235,3 +235,322 @@ input:focus, textarea:focus{
     margin: 0;
     padding: 20px;
 }
+
+
+
+/*Responsiveness Starts Here*/
+@media screen and (max-width: 1208px){
+    .main{
+        margin-left: 23.2%;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .main{
+        margin-left: 18.2%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .main{
+        margin-left: 15.2%;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .main{
+        margin-left: 13.2%;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .main{
+        margin-left: 11%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer .left{
+        padding-left: 40px;
+    }
+
+    .footer .right{
+        margin-top: -65px;
+        margin-right: 20px;
+    }
+
+    .footer .right p{
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .main{
+        margin-left: 9%;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .main{
+        margin-left: 7%;
+    }
+}
+
+@media screen and (max-width: 690px){
+    .main{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .main{
+        margin-left: 3%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .main{
+        margin-left: 10.7%;
+        width: 500px;
+    }
+    
+    .main .vela-logo{
+        width: 213px;
+        margin-left: 26%;
+    }
+    
+    .checkmark{
+        width: 52px;
+        margin-top: 10px;
+        margin-left: 43%;
+    }
+    
+    .inner-det{
+        margin: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background: #F8F9FA;
+        border-radius: 3px;
+        padding: 20px 25px;
+    }
+}
+
+@media screen and (max-width: 624px){
+    .main{
+        margin-left: 9%;
+    }
+}
+
+@media screen and (max-width: 595px){
+    .main{
+        margin-left: 7%;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .main{
+        margin-left: 6%;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .main{
+        margin-left: 4.5%;
+    }
+}
+
+@media screen and (max-width: 545px){
+    .main{
+        margin-left: 12.7%;
+        width: 400px;
+    }
+    
+    .main .vela-logo{
+        width: 213px;
+        margin-left: 16%;
+    }
+    
+    .checkmark{
+        width: 52px;
+        margin-top: 10px;
+        margin-left: 39%;
+    }
+    
+    .inner-det{
+        margin: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background: #F8F9FA;
+        border-radius: 3px;
+        padding: 20px 25px;
+    }
+    
+    .footer .left{
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .footer .right{
+        margin: 0;
+    }
+
+    .footer .right p{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .main{
+        margin-left: 11%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .main{
+        margin-left: 9%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .main{
+        margin-left: 7%;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .main{
+        margin-left: 5.5%;
+    }
+}
+
+@media screen and (max-width: 447px){
+    .main{
+        margin-left: 12.5%;
+        width: 330px;
+    }
+    
+    .main .vela-logo{
+        width: 170px;
+        margin-left: 16%;
+    }
+    
+    .checkmark{
+        width: 38px;
+        margin-top: 10px;
+        margin-left: 39%;
+    }
+    
+    .acc-created{
+        margin-top: 10px;
+    }
+    
+    .inner-det{
+        margin: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background: #F8F9FA;
+        border-radius: 3px;
+        padding: 20px 25px;
+    }
+    
+    .inner-det p{
+        color: #797777;
+        font-weight: 450;
+        display: inline-block;
+    }
+    .inner-det .text-det{
+        margin-top: 20px;
+        margin-left: -37px;
+    }
+    .inner-det .text-det-2{
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    .login-to-acc{
+        background: #0678D4;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: 450;
+        width: 100%;
+        padding: 8px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .footer .left{
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .footer .right{
+        margin: 0;
+    }
+
+    .footer .right p{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .main{
+        margin-left: 10%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main{
+        margin-left: 8%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 385px){
+    .main{
+        margin-left: 6%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .main{
+        margin-left: 4.5%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 358px){
+    .main{
+        margin-left: 3%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 358px){
+    .main{
+        margin-left: 3%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 345px){
+    .main{
+        margin-left: 2%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .main{
+        margin-left: 1%;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 335px){
+    .main{
+        margin-left: 0;
+        width: 330px;
+    }
+}
