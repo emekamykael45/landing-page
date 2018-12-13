@@ -544,6 +544,11 @@ tbody{
     padding: 18px;
     color: #414042;
 }
+
+.table tbody tr th .blocked-user{
+    color: red;
+}
+
 .table tbody tr td{
     padding: 18px 12px;
     color: #7F8FA4;
