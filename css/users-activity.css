@@ -250,6 +250,17 @@ input:focus, textarea:focus{
     margin-right: 10px;
     width: 24px;
 }
+.sidenav a .settings-img{
+    width: 32px;
+    margin-right: 5px;
+    margin-left: -4px;
+}
+
+.sidenav a.merc-prof:hover{
+    transition: all 0.2s ease-in-out;
+    padding: 10px 10px 6px 20px;
+}
+
 .sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
@@ -285,11 +296,25 @@ input:focus, textarea:focus{
 
 .payments-head{
     padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.go-back{
+    border: 2px solid #1875F0;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: #1875F0;
+}
+.go-back i{
+    margin-right: 10px;
+}
+.go-back:hover{
+    text-decoration: none;
 }
 
 .head-info{
     display: flex;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -313,7 +338,7 @@ input:focus, textarea:focus{
     color: #414042;
 }
 
-.username{
+.phone-number{
     padding: 0;
     margin: 0;
     margin-top: 0px;
@@ -657,6 +682,36 @@ button:focus {
 
 
 /* Responsive Page Starts Here*/
+
+@media screen and (min-width: 1601px){
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-info-inn{
+        display: flex;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 40px;
+    }
+ 
+    .box-drop{
+        width: 40px;
+    }
+    
+    .show-entries .out-of{
+        width: 3.1em;
+    }
+    .show-entries{
+        margin-bottom: 10px;
+    }
+    
+}
 
 @media (min-width: 1201px) and (max-width: 1600px){
     

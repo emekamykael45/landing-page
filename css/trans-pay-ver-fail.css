@@ -212,10 +212,23 @@ input:focus, textarea:focus{
 }
 .sidenav .veri-tra-btn:hover{
     background: #27AE60;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 15px;
     font-weight: 700;
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
+}
+
+.sidenav .veri-tra-btn.active{
+    background: #27AE79;
+    padding: 10px 10px 10px 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidenav .veri-tra-btn.active:hover{
+    padding: 10px 10px 10px 10px;
 }
 
 .sidenav a{
@@ -246,6 +259,20 @@ input:focus, textarea:focus{
     margin-right: 10px;
     width: 24px;
 }
+.sidenav a .settings-img{
+    width: 32px;
+    margin-right: 5px;
+    margin-left: -3px;
+}
+.sidenav a.active.merc-prof{
+    padding: 10px 30px 6px 10px;
+}
+
+.sidenav a.merc-prof:hover{
+    transition: all 0.2s ease-in-out;
+    padding: 10px 10px 6px 20px;
+}
+
 .sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;

@@ -246,6 +246,15 @@ input:focus, textarea:focus{
     margin-right: 10px;
     width: 24px;
 }
+.sidenav a .settings-img{
+    width: 32px;
+    margin-right: 5px;
+    margin-left: -3px;
+}
+.sidenav a.active.merc-prof{
+    padding: 10px 30px 6px 10px;
+}
+
 .sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
@@ -294,7 +303,7 @@ input:focus, textarea:focus{
 .nav-pills .nav-link{
     font-weight: 500;
     color: #414042;
-    margin-right: 200px;
+    margin-right: 150px;
     padding: 8px 10px;
 }
 
@@ -352,7 +361,7 @@ input:focus, textarea:focus{
     text-decoration: none;
 }
 
-.first-tab-sec input[type=text], .first-tab-sec input[type=password]{
+.first-tab-sec input[type=text], .first-tab-sec input[type=password], .first-tab-sec input[type=email]{
     padding: 6px 10px;
     border: 1px solid #CCCFD4;
     border-radius: 3px;
@@ -375,39 +384,6 @@ input:focus, textarea:focus{
     margin-top: 10px;
     width: 95.4%;
 }
-
-/**
-.box select {
-    background-color: transparent;
-    color: #414042;
-    font-weight: 400;
-    padding: 6px 10px;
-    width: 90%;
-    margin-top: 6px;
-    border: 1px solid #CCCFD4;
-    font-size: 1em;
-    -webkit-appearance: button;
-    appearance: button;
-    cursor: pointer;
-    outline: none;
-    border-radius: 3px;
-}
-
-.box select option{
-    background-color: #000;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
-    margin: 20px !important;
-    width: 95.4%;
-}
-
-.box .fa-chevron-down{
-    z-index: 0;
-    margin-left: -30px;
-    color: #999999;
-    cursor: pointer;
-}
-
-**/
 
 .save-det{
     position: absolute;
@@ -470,6 +446,72 @@ button:focus {
 }
 
 
+/*Modal Starts Here*/
+
+.modal-content{
+    border-radius: 0px 0px 5px 5px;
+    border: none;
+}
+
+.modal-header{
+    padding: 10px 15px;
+    background: #FAFBFC;
+    border: none;
+}
+
+.modal-title{
+    font-weight: 600;
+}
+
+.bank-removed-title{
+    color: #27AE60;
+}
+
+.times-btn{
+    margin: 0px;
+    margin-top: -4px;
+}
+
+.modal-body{
+    padding-bottom: 10px;
+}
+
+.remove-bank-name{
+    font-weight: 600;
+}
+
+.modal-footer{
+    padding: 35px 10px;
+    padding-top: 0px;
+    border: none;
+}
+
+.delete-btn{
+    position: relative;
+    left: -29px;
+    padding: 10px 65px;
+    border: 1px solid #1860EC;
+    background: #1860EC;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cancel-btn{
+    position: relative;
+    left: -10px;
+    padding: 10px 65px;
+    border: none;
+    background: none;
+    border: 1px solid #1860EC;
+    border-radius: 5px;
+    color: #1860EC;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Modal Ends Here*/
 
 /*Main Page Ends Here*/
 

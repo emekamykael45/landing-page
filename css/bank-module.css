@@ -246,6 +246,17 @@ input:focus, textarea:focus{
     margin-right: 10px;
     width: 24px;
 }
+.sidenav a .settings-img{
+    width: 32px;
+    margin-right: 5px;
+    margin-left: -3px;
+}
+
+.sidenav a.merc-prof:hover{
+    transition: all 0.2s ease-in-out;
+    padding: 10px 10px 6px 20px;
+}
+
 .sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
@@ -267,7 +278,8 @@ input:focus, textarea:focus{
     padding: 0px 10px;
     padding-top: 60px;
     padding-left: 25px;
-    width: 83%;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .open-sidenav{
@@ -602,7 +614,7 @@ td .un-reconciled{
     }
 
     .accordion-toggle:after{
-        right: 50.5px;
+        right: 58.5px;
     }
 }
 
@@ -617,7 +629,7 @@ td .un-reconciled{
     }
 
     .accordion-toggle:after{
-        right: 38.5px;
+        right: 52.5px;
     }
 
     td .reconciled, td .pending, td .un-reconciled{
@@ -640,18 +652,18 @@ td .un-reconciled{
         margin-left: -50px;
     }
     .accordion-toggle:after{
-        right: 26.5px;
+        right: 60.5px;
     }
     
     .table{
-        width: 110%;
+        width: 130%;
     }
     
 }
 
-@media (min-width: 992px) and (max-width: 1045px){
+@media (min-width: 993px) and (max-width: 1045px){
     .show-entries .out-of{
-        width: 3em;
+        width: 4em;
     }
     
     .paym-sub{
@@ -679,11 +691,12 @@ td .un-reconciled{
     }
     
     .table{
-        width: 110%;
+        width: 120%;
     }
     
     .accordion-toggle:after{
-        right: 0px;
+        right: 60.5px;
+        color: #000;
     }
     
 }
@@ -691,7 +704,7 @@ td .un-reconciled{
 
 @media (min-width: 953px) and (max-width: 992px){
     .show-entries .out-of{
-        width: 3em;
+        width: 4em;
     }
     
     .paym-sub{
@@ -719,58 +732,19 @@ td .un-reconciled{
     }
     
     .table{
-        width: 115%;
+        width: 130%;
     }
     
     .accordion-toggle:after{
-        right: 0px;
+        right: 60.5px;
+        color: #000;
     }
     
 }
-
 
 @media (min-width: 901px) and (max-width: 952px){
     .show-entries .out-of{
-        width: 3em;
-    }
-    
-    .paym-sub{
-        display: block;
-        font-size: 1.2em;
-    }
-    
-    .sear-pay{
-        margin-top: 5px;
-        margin-left: 15px;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 20px;
-        margin-bottom: 15px;
-        margin-left: 0px;
-        width: 200%;
-    }
-    
-    .table{
-        width: 125%;
-    }
-    
-    .accordion-toggle:after{
-        right: 0px;
-    }
-    
-}
-
-@media screen and (max-width: 899px){
-    .show-entries .out-of{
-        width: 3em;
+        width: 4em;
     }
     
     .paym-sub{
@@ -802,7 +776,48 @@ td .un-reconciled{
     }
     
     .accordion-toggle:after{
-        right: 0px;
+        right: 60.5px;
+        color: #000;
+    }
+    
+}
+
+@media screen and (max-width: 899px){
+    .show-entries .out-of{
+        width: 4em;
+    }
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 20px;
+        margin-bottom: 15px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
+    .table{
+        width: 165%;
+    }
+    
+    .accordion-toggle:after{
+        right: 60.5px;
+        color: #000;
     }
     
 }

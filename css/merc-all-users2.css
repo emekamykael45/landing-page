@@ -250,6 +250,17 @@ input:focus, textarea:focus{
     margin-right: 10px;
     width: 24px;
 }
+.sidenav a .settings-img{
+    width: 32px;
+    margin-right: 5px;
+    margin-left: -4px;
+}
+
+.sidenav a.merc-prof:hover{
+    transition: all 0.2s ease-in-out;
+    padding: 10px 10px 6px 20px;
+}
+
 .sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
@@ -272,7 +283,7 @@ input:focus, textarea:focus{
     padding-top: 60px;
     padding-left: 25px;
     margin-right: 20px;
-    width: 83%;
+    margin-bottom: 20px;
 }
 
 .open-sidenav{
@@ -526,7 +537,7 @@ button:focus {
 
 
 /*Section 2 Starts Here*/
-table{
+.table{
     width: 100%;
 }
 
@@ -612,30 +623,25 @@ td .dropdown-item{
 
 /* Responsive Page Starts Here*/
 
-@media (min-width: 1370px) and screen {
+@media screen and (min-width: 1086px) {
     
 }
 
-@media (min-width: 1181px) and (max-width: 1369px) {
-    
-}
-
-
-@media (min-width: 1000px) and (max-width: 1085px){
-    .table{
-        width: 107%;
-    }
-}
-
-@media (min-width: 900px) and (max-width: 999px){
+@media (min-width: 1000px) and (max-width: 1160px){
     .table{
         width: 120%;
     }
 }
 
+@media (min-width: 900px) and (max-width: 999px){
+    .table{
+        width: 140%;
+    }
+}
+
 @media (min-width: 820px) and (max-width: 899px){
     .table{
-        width: 130%;
+        width: 160%;
     }
 }
 
@@ -708,7 +714,7 @@ td .dropdown-item{
         margin-top: -40px;
     }
     .table{
-        width: 130%;
+        width: 140%;
     }
 }
 
@@ -717,7 +723,7 @@ td .dropdown-item{
         margin-top: -40px;
     }
     .table{
-        width: 150%;
+        width: 160%;
     }
 }
 
@@ -726,7 +732,7 @@ td .dropdown-item{
         margin-top: -40px;
     }
     .table{
-        width: 170%;
+        width: 180%;
     }
 }
 
@@ -744,7 +750,7 @@ td .dropdown-item{
         margin-top: -40px;
     }
     .table{
-        width: 210%;
+        width: 220%;
     }
 }
 
@@ -753,16 +759,7 @@ td .dropdown-item{
         margin-top: -40px;
     }
     .table{
-        width: 230%;
-    }
-}
-
-@media (min-width: 350px) and (max-width: 399px){
-    .create-user{
-        margin-top: -40px;
-    }
-    .table{
-        width: 265%;
+        width: 240%;
     }
 }
 
@@ -772,7 +769,7 @@ td .dropdown-item{
         float: left;
     }
     .table{
-        width: 265%;
+        width: 275%;
     }
 }
 
@@ -782,7 +779,7 @@ td .dropdown-item{
         float: left;
     }
     .table{
-        width: 310%;
+        width: 340%;
     }
 }
 

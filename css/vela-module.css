@@ -246,6 +246,17 @@ input:focus, textarea:focus{
     margin-right: 10px;
     width: 24px;
 }
+.sidenav a .settings-img{
+    width: 32px;
+    margin-right: 5px;
+    margin-left: -3px;
+}
+
+.sidenav a.merc-prof:hover{
+    transition: all 0.2s ease-in-out;
+    padding: 10px 10px 6px 20px;
+}
+
 .sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
@@ -901,6 +912,7 @@ td .un-reconciled{
     }
     
     .info-stats{
+        margin-top: 20px;
         display: flex;
         padding-left: 0px;
     }
@@ -962,6 +974,7 @@ td .un-reconciled{
     }
     
     .info-stats{
+        margin-top: 20px;
         display: flex;
         padding-left: 0px;
     }
@@ -1022,6 +1035,7 @@ td .un-reconciled{
     }
     
     .info-stats{
+        margin-top: 20px;
         display: flex;
         padding-left: 0px;
     }
@@ -1144,6 +1158,7 @@ td .un-reconciled{
     }
     
     .info-stats{
+        margin-top: 20px;
         display: flex;
         padding-left: 0px;
     }
