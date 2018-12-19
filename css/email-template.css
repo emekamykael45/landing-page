@@ -8,7 +8,7 @@
 
 body {
     font-size: .875rem;
-    background: transparent;
+    background: #E5E5E5;
 }
 
 
@@ -117,440 +117,249 @@ input:focus, textarea:focus{
     margin: 0;
     padding: 0;
     margin-top: 40px;
-    margin-left: 26.2%;
-    margin-right: 26.2%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 40px;
-    background: #F8F9FA;
+    background: #FFF;
     width: 600px;
 }
 
 .main .transmonitor-logo{
     width: 213px;
-    margin-left: 30%;
+    margin-left: 28%;
 }
 
-.inner{
-    margin-top: 30px;
-    background: #FFFFFF;
-    border-top: 5px solid #0678D4;
-    box-sizing: border-box;
-    border-radius: 3px;
-    padding: 30px;
+.main .email-image{
+    margin-top: -40px;
+    width: 100%;
 }
 
-.checkmark{
-    width: 52px;
-    margin-top: 10px;
-    margin-left: 45%;
+.image-overlay{
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    width: 70%;
+    margin-top: -140px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 25px;
 }
 
-.acc-created{
-    color: #0678D4;
-    font-size: 1.05em;
-    font-weight: 650;
-    text-align: center;
+.welcome-text{
     margin: 0;
-    margin-top: 20px;
+    color:  #1875F0;
+    font-size: 1.6em;
+    font-weight: 640;
+    text-align: center;
+    letter-spacing: 0.1px;
+}
+.tracking-money-text{
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.1px;
+}
+
+.acc-cre-success{
+    color: #000;
+    font-size: 1.4em;
+    text-align: center;
+    letter-spacing: 0.1px;
+    font-weight: 600;
+}
+
+.main hr{
+    width: 20%;
+    height: 1px;
+    background: #E0E0E0;
+    margin-top: -5px;
 }
 
 .hi-smil{
     color: #333333;
     font-weight: 450;
     margin: 0;
-
+    margin-left: 20px;
 }
 
 .your-acc-has{
-    color: #333333;
-    margin: 0;
-}
-
-.inner hr{
-    background: #E0E0E0;
-    margin: 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.log-details{
-    margin: 0;
-    text-align: center;
-    font-weight: 600;
-    color: #333333;
-}
-
-.inner-det{
-    margin: 60px 80px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background: #F8F9FA;
-    border-radius: 3px;
-    padding: 20px 35px;
-}
-
-.inner-det p{
     color: #797777;
-    font-weight: 450;
-}
-.inner-det p .text-det{
-    float: right;
+    margin: 0;
+    margin-left: 20px;
 }
 
-.login-to-acc{
+.complete-setup{
     background: #0678D4;
     border-radius: 3px;
     color: #fff;
     font-weight: 450;
-    width: 100%;
+    width: 40%;
     padding: 8px;
     border: none;
     cursor: pointer;
+    margin: 0 30%;
+    margin-bottom: 15px;
 }
 
-.footer{
-    background: #EBF1F8;
-    margin: 0;
-    margin-left: -40px;
-    margin-right: -40px;
-    margin-top: 20px;
+.icons{
+    margin-top: 40px;
+    border-top: 5px solid #1875F0;
+    border-radius: 2px 2px 0px 0px;
+    padding-top: 25px;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.footer .left{
-    padding-left: 90px;
-}
-
-.footer i{
-    margin-top: 45px;
-    margin-right: 30px;
+.icons i{
+    margin: 0 15px;
     font-size: 1.3em;
     color: rgba(6, 120, 212, 0.7);
 }
 
-.footer .right{
-    padding: 0;
-}
-
-.footer .right p{
-    margin: 0;
-    padding: 20px;
+.copyright, .address{
+    color: #797777;
+    text-align: center;
+    font-weight: 450;
+    font-size: 0.95em;
 }
 
 
 
 /*Responsiveness Starts Here*/
-@media screen and (max-width: 1208px){
+
+@media screen and (min-width: 1209px){
     .main{
-        margin-left: 23.2%;
-    }
-}
-
-@media screen and (max-width: 1050px){
-    .main{
-        margin-left: 18.2%;
-    }
-}
-
-@media screen and (max-width: 900px){
-    .main{
-        margin-left: 15.2%;
-    }
-}
-
-@media screen and (max-width: 830px){
-    .main{
-        margin-left: 13.2%;
-    }
-}
-
-@media screen and (max-width: 780px){
-    .main{
-        margin-left: 11%;
-    }
-}
-
-@media screen and (max-width: 768px){
-    .footer .left{
-        padding-left: 40px;
-    }
-
-    .footer .right{
-        margin-top: -65px;
-        margin-right: 20px;
-    }
-
-    .footer .right p{
-        text-align: right;
-    }
-}
-
-@media screen and (max-width: 750px){
-    .main{
-        margin-left: 9%;
-    }
-}
-
-@media screen and (max-width: 720px){
-    .main{
-        margin-left: 7%;
-    }
-}
-
-@media screen and (max-width: 690px){
-    .main{
-        margin-left: 5%;
-    }
-}
-
-@media screen and (max-width: 660px){
-    .main{
-        margin-left: 3%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 @media screen and (max-width: 640px){
     .main{
-        margin-left: 10.7%;
         width: 500px;
     }
     
-    .main .vela-logo{
+    .main .transmonitor-logo{
         width: 213px;
-        margin-left: 26%;
+        margin-left: 24%;
     }
     
-    .checkmark{
-        width: 52px;
-        margin-top: 10px;
-        margin-left: 43%;
+    .welcome-text{
+        font-size: 1.5em;
     }
-    
-    .inner-det{
-        margin: 0px;
+    .tracking-money-text{
         margin-top: 5px;
-        margin-bottom: 5px;
-        background: #F8F9FA;
-        border-radius: 3px;
-        padding: 20px 25px;
-    }
-}
-
-@media screen and (max-width: 624px){
-    .main{
-        margin-left: 9%;
-    }
-}
-
-@media screen and (max-width: 595px){
-    .main{
-        margin-left: 7%;
-    }
-}
-
-@media screen and (max-width: 575px){
-    .main{
-        margin-left: 6%;
-    }
-}
-
-@media screen and (max-width: 560px){
-    .main{
-        margin-left: 4.5%;
+        margin-bottom: 0px;
+        font-size: 1em;
     }
 }
 
 @media screen and (max-width: 545px){
     .main{
-        margin-left: 12.7%;
         width: 400px;
     }
     
-    .main .vela-logo{
+    .main .transmonitor-logo{
         width: 213px;
         margin-left: 16%;
+        margin-bottom: 20px;
     }
     
-    .checkmark{
-        width: 52px;
-        margin-top: 10px;
-        margin-left: 39%;
+    .image-overlay{
+        margin-top: -130px;
+        margin-bottom: 30px;
+        padding: 10px;
     }
-    
-    .inner-det{
-        margin: 0px;
+
+    .welcome-text{
+        font-size: 1.4em;
+    }
+    .tracking-money-text{
         margin-top: 5px;
-        margin-bottom: 5px;
-        background: #F8F9FA;
-        border-radius: 3px;
-        padding: 20px 25px;
-    }
-    
-    .footer .left{
-        margin-top: -20px;
-        text-align: center;
-    }
-
-    .footer .right{
-        margin: 0;
-    }
-
-    .footer .right p{
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 520px){
-    .main{
-        margin-left: 11%;
-    }
-}
-
-@media screen and (max-width: 500px){
-    .main{
-        margin-left: 9%;
-    }
-}
-
-@media screen and (max-width: 480px){
-    .main{
-        margin-left: 7%;
-    }
-}
-
-@media screen and (max-width: 460px){
-    .main{
-        margin-left: 5.5%;
+        margin-bottom: 0px;
+        font-size: 1em;
     }
 }
 
 @media screen and (max-width: 447px){
     .main{
-        margin-left: 12.5%;
         width: 330px;
     }
     
-    .main .vela-logo{
+    .main .transmonitor-logo{
         width: 170px;
         margin-left: 16%;
+        margin-bottom: 30px;
     }
     
-    .checkmark{
-        width: 38px;
-        margin-top: 10px;
-        margin-left: 39%;
-    }
-    
-    .acc-created{
-        margin-top: 10px;
-    }
-    
-    .inner-det{
-        margin: 0px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        background: #F8F9FA;
-        border-radius: 3px;
-        padding: 20px 25px;
-    }
-    
-    .inner-det p{
-        color: #797777;
-        font-weight: 450;
-        display: inline-block;
-    }
-    .inner-det .text-det{
-        margin-top: 20px;
-        margin-left: -37px;
-    }
-    .inner-det .text-det-2{
-        margin-top: 0;
-        margin-left: 5px;
+    .image-overlay{
+        margin-top: -60px;
+        margin-bottom: 30px;
+        padding: 10px;
+        width: 90%;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
     }
 
-    .login-to-acc{
-        background: #0678D4;
-        border-radius: 3px;
-        color: #fff;
-        font-weight: 450;
-        width: 100%;
-        padding: 8px;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .footer .left{
-        margin-top: -20px;
-        text-align: center;
-    }
-
-    .footer .right{
-        margin: 0;
-    }
-
-    .footer .right p{
-        text-align: center;
+    .complete-setup{
+        margin-left: 8%;
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 420px){
     .main{
-        margin-left: 10%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 400px){
     .main{
-        margin-left: 8%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 385px){
     .main{
-        margin-left: 6%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 370px){
     .main{
-        margin-left: 4.5%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 358px){
     .main{
-        margin-left: 3%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 358px){
     .main{
-        margin-left: 3%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 345px){
     .main{
-        margin-left: 2%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 340px){
     .main{
-        margin-left: 1%;
         width: 330px;
     }
 }
 
 @media screen and (max-width: 335px){
     .main{
-        margin-left: 0;
         width: 330px;
     }
 }
