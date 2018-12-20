@@ -160,6 +160,7 @@ h1, h2{
     margin-bottom: -14px;
     color: #7F8FA4;
     top: -20px;
+    right: 10%;
     font-size: 0.8em;
 }
 .box .fields .for-pass:hover{
@@ -189,8 +190,7 @@ h1, h2{
 }
 
 .box .reme-now{
-    position: absolute;
-    width: 58%;
+    position: relative;
     text-align: center;
     color: #414042;
     font-size: 0.85em;
@@ -244,6 +244,14 @@ h1, h2{
 
 /* Responsive Page Starts Here*/
 
+@media screen and (min-width: 1480px){
+    .text-left{
+        position: relative;
+        margin-top: 40px;
+        margin-left: -100px;
+    }
+}
+    
 @media screen and (max-width: 900px){
     
     .signup_thumbnail{

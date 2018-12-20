@@ -811,8 +811,29 @@ td .un-reconciled{
         font-size: 0.55em;
     }
     
+    .table{
+        width: 100%;
+    }
+    
 }
 
+@media (min-width: 1152px) and (max-width: 1200px){
+    .table{
+        width: 105%;
+    }
+}
+
+@media (min-width: 1076px) and (max-width: 1151px){
+    .table{
+        width: 115%;
+    }
+}
+
+@media (min-width: 1040px) and (max-width: 1075px){
+    .table{
+        width: 120%;
+    }
+}
 
 @media (min-width: 1086px) and (max-width: 1180px) {
     .show-entries .out-of{
@@ -834,8 +855,12 @@ td .un-reconciled{
         width: 101.7%;
     }
     
+    .box-drop{
+        width: 40px;
+    }
+    
     .show-entries .out-of{
-        width: 3em;
+        width: 40px;
     }
     
     #myBtnContainer{
@@ -874,6 +899,14 @@ td .un-reconciled{
         width: 89%;
     }
     
+    .box-drop{
+        width: 50px;
+    }
+    
+    .show-entries .out-of{
+        width: 45px;
+    }
+    
     #myBtnContainer{
         margin-top: 15px;
         margin-bottom: 5px;
@@ -888,6 +921,10 @@ td .un-reconciled{
     td .reconciled, td .pending, td .un-reconciled{
         width: 75%;
         font-size: 0.95em;
+    }
+    
+    .table{
+        width: 125%;
     }
 }
 
@@ -929,8 +966,12 @@ td .un-reconciled{
         font-size: 1.2em;
     }
     
+    .box-drop{
+        width: 50px;
+    }
+    
     .show-entries .out-of{
-        width: 3em;
+        width: 45px;
     }
     
     .sear-pay{
@@ -950,6 +991,10 @@ td .un-reconciled{
         margin-bottom: 5px;
         margin-left: 0px;
         width: 200%;
+    }
+    
+    .table{
+        width: 130%;
     }
 }
 
@@ -991,8 +1036,12 @@ td .un-reconciled{
         font-size: 1.2em;
     }
     
+    .box-drop{
+        width: 50px;
+    }
+    
     .show-entries .out-of{
-        width: 3em;
+        width: 45px;
     }
     
     .sear-pay{
@@ -1015,11 +1064,11 @@ td .un-reconciled{
     }
     
     .table{
-        width: 110%;
+        width: 136%;
     }
 }
 
-@media (min-width: 819px) and (max-width: 940px){
+@media (min-width: 819px) and (max-width: 952px){
     .info-head{
         grid-template-columns: repeat(2, 1fr);
         width: 101.7%;
@@ -1052,8 +1101,12 @@ td .un-reconciled{
         font-size: 1.2em;
     }
     
+    .box-drop{
+        width: 50px;
+    }
+    
     .show-entries .out-of{
-        width: 3em;
+        width: 45px;
     }
     
     .sear-pay{
@@ -1087,7 +1140,9 @@ td .un-reconciled{
     .accordion-toggle:after{
         right: 39px;
     }
-    
+    .table{
+        width: 167%;
+    }
 }
 
 @media screen and (max-width: 818px){
@@ -1175,8 +1230,12 @@ td .un-reconciled{
         font-size: 1.2em;
     }
     
+    .box-drop{
+        width: 50px;
+    }
+    
     .show-entries .out-of{
-        width: 3em;
+        width: 45px;
     }
     
     .sear-pay{
@@ -1199,7 +1258,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 120%;
+        width: 130%;
     }
 
     .accordion-toggle:after{
@@ -1221,17 +1280,15 @@ td .un-reconciled{
 
 
 @media (min-width: 700px) and (max-width: 767px){
-    
     .table{
-        width: 150%;
+        width: 143%;
     }
-    
 }
 
 @media (min-width: 650px) and (max-width: 699px){
     
     .table{
-        width: 160%;
+        width: 156%;
     }
     
 }

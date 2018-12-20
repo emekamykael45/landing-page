@@ -398,16 +398,11 @@ input:focus, textarea:focus{
     z-index: 1;
 }
 
-.tra-pay-ver{
-    margin-left: 80px;
-    margin-top: 35px;
-}
-
 .tra-pay-content {
     background: transparent;
-    margin: 0px 250px;
-    padding: 0;
-    height: 125%;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    padding: 0 200px;
 }
 
 .content-head{
@@ -443,30 +438,32 @@ input:focus, textarea:focus{
 .content-body{
     background: #fff;
     border-radius: 0 0 3px 3px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .body-in{
-     padding: 50px 80px;
+    padding: 50px 80px;
+    display: flex;
+    margin-left: 31.9%;
 }
 
 .content-body .tag{
     margin-bottom: 25px;
-    margin-left: 60px;
+    margin-left: auto;
+    margin-right: 100px;
 }
 
-.content-body .tag p{
-    display: block;
+.content-body .details{
     font-weight: bold;
-    margin: 0;
-    margin-top: -21px;
-    margin-left: 150px;
+    margin-bottom: 25px;
 }
 
 .foo-note{
     background: rgba(235, 87, 87, 0.08);
     margin-top: -50px;
     padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 1px solid #EB5757;
     border-style: dashed;
     border-right: none;
@@ -497,9 +494,24 @@ button:focus {
     box-shadow: 0 5px 10px rgba(0,0,0,.01);
 }
 
+.cancel-btn{
+    position: relative;
+    text-align: center;
+    top: 20px;
+    font-weight: 500;
+    font-size: 1.05em;
+    margin: 0;
+}
+.cancel-btn:hover{
+    text-decoration: none;
+}
+
 .go-to{
     position: absolute;
-    bottom: 0;
+    text-align: center;
+    bottom: -40px;
+    font-weight: 500;
+    font-size: 1.05em;
 }
 
 /*Main Page Ends Here*/
@@ -509,40 +521,113 @@ button:focus {
 
 /*Responsive Page Starts Here*/
 
-@media screen and (max-width: 1000px){
-    
-    #tra-form {
-        position: relative;
-        margin-top: 30px;
-        width: 60%;
-        margin-left: 20%;
-        font-weight: 500;
+@media screen and (max-width: 1940px){
+    .body-in{
+        margin-left: 30%;
     }
-    
 }
 
-@media screen and (max-width: 900px){
-    
-    #tra-form {
-        position: relative;
-        margin-top: 30px;
-        width: 65%;
-        margin-left: 17%;
-        font-weight: 500;
+@media screen and (max-width: 1840px){
+    .body-in{
+        margin-left: 28%;
     }
-    
+}
+
+@media screen and (max-width: 1740px){
+    .body-in{
+        margin-left: 26%;
+    }
+}
+
+@media screen and (max-width: 1640px){
+    .body-in{
+        margin-left: 24%;
+    }
+}
+
+@media screen and (max-width: 1540px){
+    .body-in{
+        margin-left: 22%;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .body-in{
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 1340px){
+    .body-in{
+        margin-left: 16%;
+    }
+}
+
+@media screen and (max-width: 1240px){
+    .body-in{
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 1140px){
+    .body-in{
+        margin-left: 4%;
+    }
+}
+
+@media screen and (max-width: 1092px){
+    .body-in{
+        padding: 50px 32px;
+        margin-left: 11%;
+    }
+}
+
+@media screen and (max-width: 1040px){
+    .tra-pay-content {
+        padding: 0 100px;
+    }
+    .body-in{
+        margin-left: 21%;
+    }
+}
+
+@media screen and (max-width: 1018px){
+    .body-in{
+        margin-left: 19%;
+    }
+}
+
+@media screen and (max-width: 972px){
+    .body-in{
+        margin-left: 16%;
+    }
+}
+
+@media screen and (max-width: 904px){
+    .body-in{
+        margin-left: 14%;
+    }
+}
+
+@media screen and (max-width: 856px){
+    .body-in{
+        margin-left: 12%;
+    }
 }
 
 @media screen and (max-width: 820px){
-    
-    #tra-form {
-        position: relative;
-        margin-top: 30px;
-        width: 75%;
-        margin-left: 12%;
-        font-weight: 500;
+   .body-in{
+        margin-left: 8%;
     }
-    
+}
+
+@media screen and (max-width: 788px){
+    .tra-pay-content {
+        padding: 0 30px;
+    }
+   .body-in{
+        margin-left: 18%;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -596,44 +681,119 @@ button:focus {
     
     .main{
         margin-left: -8px; /* Same as the width of the sidenav */
+        padding-top: 30px;
         width: 100%;
     }
-
+    
+    .body-in{
+        margin-left: 23%;
+    }
 }
 
-@media screen and (max-width: 600px){
-    
-    .tra-pay-ver{
-        margin-left: 10px;
+@media screen and (max-width: 724px){
+    .main{
+        padding-top: 30px;
     }
-
-    .tra-pay-content {
-        background: #fff;
-        margin: 0px 10px;
-        margin-right: 25px;
-        padding: 40px;
-        height: 125%;
+   .body-in{
+        margin-left: 20%;
     }
-    
-    #tra-form {
-        width: 100%;
-        margin-left: 0;
-    }
-    
 }
 
-@media screen and (max-width: 400px){
-    
-    .tra-pay-ver{
-        margin-left: 0px;
+@media screen and (max-width: 664px){
+    .main{
+        padding-top: 30px;
     }
+   .body-in{
+        margin-left: 17%;
+    }
+}
 
-    .tra-pay-content {
-        background: #fff;
-        margin: 0;
-        margin-right: 15px;
-        padding: 40px 15px;
-        height: 125%;
+@media screen and (max-width: 612px){
+    .main{
+        padding-top: 30px;
     }
-    
+   .body-in{
+        margin-left: 14%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .main{
+        padding-top: 30px;
+    }
+    .body-in{
+        margin-left: 12%;
+    } 
+}
+
+@media screen and (max-width: 528px){
+    .main{
+        padding-top: 30px;
+    }
+    .body-in{
+        margin-left: 7%;
+    } 
+}
+
+@media screen and (max-width: 500px){
+    .main{
+        padding-top: 20px;
+    }
+    .tra-pay-content {
+        padding: 0 10px;
+    }
+    .body-in{
+        margin-left: 8%;
+    }
+}
+
+@media screen and (max-width: 444px){
+    .main{
+        padding-top: 20px;
+    }
+    .body-in{
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 416px){
+    .main{
+        padding-top: 20px;
+    }
+    .body-in{
+        margin-left: 6%;
+    }
+    .content-body .tag{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .main{
+        padding-top: 20px;
+    }
+    .body-in{
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 364px){
+    .main{
+        padding-top: 10px;
+    }
+    .body-in{
+        margin-left: 1%;
+        display: inline-block;
+    }
+    .content-body .tag{
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    .content-body .right-side{
+        margin-top: -220px;
+    }
+    .content-body .details{
+        text-align: left;
+        margin-bottom: 40px;
+    }
 }

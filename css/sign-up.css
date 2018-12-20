@@ -545,6 +545,14 @@ button:active {
 
 /* Responsive Page Starts Here*/
 
+@media screen and (min-width: 1380px){
+    .text-left{
+        position: relative;
+        margin-top: 40px;
+        margin-left: -130px;
+    }
+}
+
 @media screen and (max-width: 900px){
     
     .signup_thumbnail{

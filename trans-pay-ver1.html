@@ -125,10 +125,18 @@
                 
                 <div class="content-body">
                     <div class="body-in">
-                        <div class="tag">Payee Name<p class="payee-name">Peter Obianuju</p></div>
-                        <div class="tag">Payee Bank<p class="payee-bank">GT Bank</p></div>
-                        <div class="tag">Merchant Bank<p class="merc-bank">Zenith Bank</p></div>
-                        <div class="tag">Amount to Pay<p class="amo-to-pay">&#x20A6;100,000.05</p></div>
+                        <div class="left-side">
+                            <p class="tag">Payee Name</p>
+                            <p class="tag">Payee Bank</p>
+                            <p class="tag">Merchant Bank</p>
+                            <p class="tag">Amount to Pay</p>
+                        </div>
+                        <div class="right-side">
+                            <p class="details">Peter Obianuju</p>
+                            <p class="details">GT Bank</p>
+                            <p class="details">Zenith Bank</p>
+                            <p class="details">&#x20A6;100,000.05</p>
+                        </div>
                     </div>
                     
                     <br>
@@ -136,9 +144,10 @@
                         <p>Please endeavour the customer pays that exact amount<br>including the KOBO</p>
                     </div>
 
-                    <input type="submit" name="submit" class="action-button" value="CONFIRM TRANSFER" />
-
-                    <a href="trans-pay-ver1.html" class="go-to">Go to 2nd verification page</a>
+                    <button type="button" class="action-button">CONFIRM TRANSFER</button>
+                    <p class="cancel-btn"><a href="transfer-pay-ver.html">Cancel</a></p>
+                    
+                    <p class="go-to"><a href="trans-pay-ver1.html">Go to 2nd verification page</a></p>
                     
                 </div>
 
@@ -162,17 +171,17 @@
         
         <script>
         
-        /* Set the width of the side navigation to 212px */
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "212px";
-        }
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "212px";
+            }
 
-        /* Set the width of the side navigation to 0 */
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
         
-    </script>
+        </script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
         
