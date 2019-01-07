@@ -135,7 +135,7 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
                         <div class="first-tab-fir">
-                            <img id="settings-logo" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
+                            <img id="personal-prof-img" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
                             <label for="files" class="upload-txt">Upload</label>
                             <input id="files" style="visibility: hidden;" type='file' onchange="readURL(this);" />
                             <a href="" class="edit-prof">Edit Profile</a>
@@ -181,7 +181,7 @@
                     </div>
                     <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="first-tab-fir">
-                            <img id="settings-logo" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
+                            <img id="business-prof-img" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
                             <label for="files" class="upload-txt">Upload</label>
                             <input id="files" style="visibility: hidden;" type='file' onchange="readURL(this);" />
                             <a href="" class="edit-prof">Edit Profile</a>
@@ -1324,7 +1324,22 @@
                     var reader = new FileReader();
 
                     reader.onload = function (e) {
-                        $('#settings-logo')
+                        $('#personal-prof-img')
+                            .attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+        
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#business-prof-img')
                             .attr('src', e.target.result);
                     };
 

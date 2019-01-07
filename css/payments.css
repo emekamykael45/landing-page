@@ -955,8 +955,9 @@ td .un-reconciled{
     }
     
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 5px;
         margin-left: 15px;
+        margin-bottom: 15px;
     }
     .sear-pay-icon{
         width: 0.9em;
@@ -1044,6 +1045,9 @@ td .un-reconciled{
 }
 
 @media (min-width: 400px) and (max-width: 449px){
+    .payments-head{
+        padding-top: 0px;
+    }
     .info-head{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1064,6 +1068,9 @@ td .un-reconciled{
 }
 
 @media (min-width: 350px) and (max-width: 399px){
+    .payments-head{
+        padding-top: 0px;
+    }
     .info-head{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1101,6 +1108,9 @@ td .un-reconciled{
 }
 
 @media (min-width: 300px) and (max-width: 349px){
+    .payments-head{
+        padding-top: 0px;
+    }
     .info-head{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1128,7 +1138,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 356%;
+        width: 356% !important;
     }
     
     .tab-footer .right{
