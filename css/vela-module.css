@@ -131,6 +131,22 @@ input:focus, textarea:focus{
 /* Navbar Ends Here */
 
 
+/* Overlay */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+  z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
 /*Side Menu Starts Here*/
 
 .sidenav {
@@ -265,6 +281,9 @@ input:focus, textarea:focus{
 
 .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
     display: none;
+}
+.log-out{
+    margin-bottom: 30px;
 }
 
 /*Side Menu Ends Here*/
@@ -888,8 +907,9 @@ td .un-reconciled{
     }
     
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 10px;
         margin-left: 15px;
+        margin-bottom: 5px;
     }
     .sear-pay-icon{
         width: 0.9em;
@@ -1145,7 +1165,7 @@ td .un-reconciled{
     }
 }
 
-@media screen and (max-width: 818px){
+@media screen and (max-width: 871px){
     
     .navbar-toggler{
         display: none;
@@ -1162,6 +1182,7 @@ td .un-reconciled{
     .sidenav{
         width: 0px;
         padding-top: 75px;
+        z-index: 2001;
     }
     .sidenav a:hover{
         padding: 10px 0px 10px 15px;
@@ -1170,6 +1191,7 @@ td .un-reconciled{
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
+        padding-top: 0px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -1187,7 +1209,9 @@ td .un-reconciled{
     }
     
     .sidenav .veri-tra-btn{
+        width: 80%;
         left: 10px;
+        margin-top: -20px;
     }
     
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{

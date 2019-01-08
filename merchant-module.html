@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TransMonitor | Merchant Module</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>TransMonitor | Merchant Module</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
+    <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/merchant-module.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- Font-Awesome CSS CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/merchant-module.css"/>
+    <!-- Font CSS -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
+    
+    <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
     <body>
         <header>
+            <!-- Navbar Starts Here -->
             <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
             <a class="navbar-brand logo" href="index.html">TRANSMONITOR</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jakePaul" aria-controls="jakePaul" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
             <div class="collapse navbar-collapse" id="jakePaul">
-                <ul class="navbar-nav mr-auto"> 
-                    
-                </ul>
+                <ul class="navbar-nav mr-auto"></ul>
 
                 <ul class="navbar-nav mr-right">
 
@@ -57,11 +64,13 @@
 
             </div>
         </nav>
+            <!-- Navbar Ends Here -->
         </header>
         
-        
+        <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
         <div class="sidenav" id="mySidenav">
 
+            <!-- Click on x in mobile view to close the sidenav -->
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
             <div class="tab-sect">
@@ -76,21 +85,8 @@
             <div class="tab-sect">
                 <p class="head-tag">Payments</p>
                 <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
-                <!--
-                <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
-                <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
-                -->
                 <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
             </div>
-
-            <!--
-            <div class="tab-sect">
-                <p class="head-tag">Orders</p>
-                <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
-                <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
-                <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
-            </div>
-            -->
 
             <a href="merc-all-users2.html"><img src="images/merc-prof.png"><span>User Management</span></a>
 
@@ -105,615 +101,252 @@
 
             <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
         </div>
+        <!-- Sidebar Navigation Ends Here -->
 
+        <!-- Main Page Content Starts Here -->
         <div class="main">
                 
-            <!-- Use any element to open the sidenav -->
+            <!-- Use fa-bar on mobile view to open the sidenav -->
             <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
             
-            <div onclick="closeNav()">
+            <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
                 <div id="overlay"></div>
 
+                <!-- Transaction Info Starts Here -->
                 <div class="row info-head">
-                        <div class="col-md-3 info-box">
-                            <div class="info-head-det">
-                                <p class="info-head-tag">Today's Transaction Volume</p>
-                                <p class="info-head-fig">2,342</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 info-box">
-                            <div class="info-head-det">
-                                <p class="info-head-tag">Today's Transaction Value</p>
-                                <p class="info-head-fig"><span>&#x20A6;</span>4,000,000</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 info-box">
-                            <div class="info-head-det">
-                                <p class="info-head-tag">Transaction Volume Till Date</p>
-                                <p class="info-head-fig">452,000</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 info-box">
-                            <div class="info-head-det">
-                                <p class="info-head-tag">Transaction Value Till Date</p>
-                                <p class="info-head-fig"><span>&#x20A6;</span>64,000,000</p>
-                            </div>
+                    <div class="col-md-3 info-box">
+                        <div class="info-head-det">
+                            <p class="info-head-tag">Today's Transaction Volume</p>
+                            <p class="info-head-fig">2,342</p>
                         </div>
                     </div>
 
-                <div class="col-md-12 info-graph">
-                            <div class="col-md-8 info-chart">
-                                <div id="my-chart-val"></div>
-                                <br/>
-                                <div id="my-chart-vol"></div>
-                            </div>
-                            <div class="col-md-4 info-stats">
-                                <div class="tab tab-1">
-                                    <p class="tab-head-tag">Today's Payments</p>
-                                    <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="tab-det">Un-reconciled Payments: <span class="or-tab-det-one">20</span></p>
-                                    <p class="tab-det">Reconciled Payments: <span class="or-tab-det-two">80</span></p>
-                                    <p class="tab-det">Today's Total Payments: <span class="or-tab-det-three">100</span></p>
-                                </div>
-                                <div class="tab">
-                                    <p class="tab-head-tag">Payments Till Date</p>
-                                    <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="tab-det">Un-reconciled Payments: <span class="pay-tab-det-one">20</span></p>
-                                    <p class="tab-det">Reconciled Payments: <span class="pay-tab-det-two">80</span></p>
-                                    <p class="tab-det">Total Payments: <span class="pay-tab-det-three">100</span></p>
-                                </div>
-                            </div>
+                    <div class="col-md-3 info-box">
+                        <div class="info-head-det">
+                            <p class="info-head-tag">Today's Transaction Value</p>
+                            <p class="info-head-fig"><span>&#x20A6;</span>4,000,000</p>
                         </div>
+                    </div>
 
-                    <!--
-                <br />
-                <h3 class="payments-head">Payments</h3>
-                
-                <div class="row paym-sub-line">
-                            <div class="col-md-12 paym-sub">
-                                <div class="col-md-3 show-entries">
-                                    <span>Showing
-                                        <div class="dropdown">
-                                          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">10
-                                          <span class="caret"></span></button>
-                                          <ul class="dropdown-menu">
-                                            <li><a href="#">20</a></li>
-                                            <li><a href="#">30</a></li>
-                                            <li><a href="#">40</a></li>
-                                          </ul>
-                                        </div><span class="out-of">out of</span><p class="show-out-of">500</p> payments
-                                    </span>
-                                </div>
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-4 sear-pay">
-                                    <img src="images/Search.png" class="sear-pay-icon">
-                                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-                                </div>
-                                <div class="col-md-4">
-                                    <div id="myBtnContainer">
-                                        <span>Show</span>
-                                        <button class="btn active" onclick="filterSelection('all')">All</button>
-                                        <button class="btn" onclick="filterSelection('reconciled')">Reconciled</button>
-                                        <button class="btn" onclick="filterSelection('pending')">Pending</button>
-                                        <button class="btn" onclick="filterSelection('un-reconciled')">Un-reconciled</button>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-md-3 info-box">
+                        <div class="info-head-det">
+                            <p class="info-head-tag">Transaction Volume Till Date</p>
+                            <p class="info-head-fig">452,000</p>
                         </div>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead class="thead-light">
-                            <tr>
-                              <th scope="col">Item Type</th>
-                              <th scope="col">Price</th>
-                              <th scope="col">Transaction No.</th>
-                              <th scope="col">Time</th>
-                              <th scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="myTable">
-                            <tr>
-                                <th><span class="user-id">VW</span>Apple Mac Book 15”</th>
-                                <td>$73430</td>
-                                <td>012345677</td>
-                                <td>12:30</td>
-                                <td>
-                                    <div class="reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Reconciled</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo1" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo1">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span class="user-id">VW</span>Grape Mac Book 15”</th>
-                                <td>$09430</td>
-                                <td>1564567890</td>
-                                <td>16:30</td>
-                                <td>
-                                    <div class="pending">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Pending</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo2" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo2">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span class="user-id">VW</span>Lemon Mac Book 15”</th>
-                                <td>$27830</td>
-                                <td>343445690</td>
-                                <td>11:20</td>
-                                <td>
-                                    <div class="un-reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Un-reconciled</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo3" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo3">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span class="user-id">VW</span>Lollipop Mac Book 15”</th>
-                                <td>$93430</td>
-                                <td>4464567890</td>
-                                <td>19:30</td>
-                                <td>
-                                    <div class="reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Reconciled</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo4" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo4">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span class="user-id">VW</span>Pear Mac Book 15”</th>
-                                <td>$333430</td>
-                                <td>3464346670</td>
-                                <td>13:30</td>
-                                <td>
-                                    <div class="pending">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Pending</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo5" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo5">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span class="user-id">VW</span>Guava Mac Book 15”</th>
-                                <td>$12430</td>
-                                <td>1879675590</td>
-                                <td>21:30</td>
-                                <td>
-                                    <div class="un-reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Un-reconciled</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo6" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo6">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span class="user-id">VW</span>Pine Mac Book 15”</th>
-                                <td>$83430</td>
-                                <td>765843890</td>
-                                <td>18:30</td>
-                                <td>
-                                    <div class="reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Reconciled</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo7" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo7">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><span class="user-id">VW</span>Carrot Mac Book 15”</th>
-                                <td>$755430</td>
-                                <td>4536677890</td>
-                                <td>11:30</td>
-                                <td>
-                                    <div class="pending">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Pending</span>
-                                    </div>
-                                    <div data-toggle="collapse" data-target="#demo8" class="collapsed accordion-toggle">
-                                        <span class="chevron top"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo8">
-                                        <div class="drop-down-det">
-                                            <div class="inner">
-                                                <p class="first-tag">Paid By</p>
-                                                <p class="payer-name">Ojo Oluwaleke</p>
-                                                <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
-                                            </div>
-                                            <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
-                                            </div>
-                                            <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    </div>
+
+                    <div class="col-md-3 info-box">
+                        <div class="info-head-det">
+                            <p class="info-head-tag">Transaction Value Till Date</p>
+                            <p class="info-head-fig"><span>&#x20A6;</span>64,000,000</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-footer">
-                        <div class="left">
-                            Showing <span class="">1</span> to <span class="">8</span> of <span class="">8</span> entries
-                        </div>
+                <!-- Transaction Info Ends Here -->
 
-                        <div class="right">
-                          <ul class="pagination justify-content-end">
-                            <li class="page-item">
-                              <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                              <a class="page-link" href="#">Next</a>
-                            </li>
-                          </ul>
+                <!-- Chart & Stats Starts Here -->
+                <div class="col-md-12 info-graph">
+                    <!-- HighChart Graph Starts Here -->
+                    <div class="col-md-8 info-chart">
+                        <!-- Value Chart -->
+                        <div id="my-chart-val"></div>
+                        <br/>
+                        <!-- Volume Chart -->
+                        <div id="my-chart-vol"></div>
+                    </div>
+                    <!-- HighChart Graph Ends Here -->
+                    
+                    <!-- Stats Starts Here -->
+                    <div class="col-md-4 info-stats">
+                        <div class="tab tab-1">
+                            <p class="tab-head-tag">Today's Payments</p>
+                            <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="tab-det">Un-reconciled Payments: <span class="or-tab-det-one">20</span></p>
+                            <p class="tab-det">Reconciled Payments: <span class="or-tab-det-two">80</span></p>
+                            <p class="tab-det">Today's Total Payments: <span class="or-tab-det-three">100</span></p>
+                        </div>
+                        
+                        <div class="tab">
+                            <p class="tab-head-tag">Payments Till Date</p>
+                            <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="tab-det">Un-reconciled Payments: <span class="pay-tab-det-one">20</span></p>
+                            <p class="tab-det">Reconciled Payments: <span class="pay-tab-det-two">80</span></p>
+                            <p class="tab-det">Total Payments: <span class="pay-tab-det-three">100</span></p>
                         </div>
                     </div>
-                -->
+                    <!-- Stats Ends Here --> 
+                </div>
+                <!-- Chart & Stats Ends Here -->
+
             </div>
                 
         </div>
+        <!-- Main Page Content Ends Here -->
 
             
         
     
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-        
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
     
-    <script type="text/javascript">
-        
-        $.getJSON('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json', function (data) {
+        <!-- JS -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
-        // Create the chart
-        Highcharts.stockChart('my-chart-val', {
+        <!-- HighChart JS CDN -->
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+
+        <!-- Value HighChart JS-->
+        <script type="text/javascript">
+
+            $.getJSON('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json', function (data) {
+
+            // Create the chart
+            Highcharts.stockChart('my-chart-val', {
 
 
-            rangeSelector: {
-                selected: 1,
-                inputDateFormat: '%Y-%m-%d'
-            },
-            
-            chart: {
-                spacingTop: 25,
-                spacingLeft: 20
-            },
-
-            title: {
-                text: 'Total Transaction Value',
-                align: 'left',
-                style: {
-                    color: '#1875F0',
-                    fontSize: '1.4em'
-                }
-            },
-            
-            xAxis: {
-                title: {
-                    text: 'Exchange value'
-                }
-            },
-            
-            scrollbar: {
-                enabled: false
-            },
-            
-            navigator: {
-                enabled: false
-            },
-
-            series: [{
-                name: 'Total Value',
-                data: data,
-                marker: {
-                    enabled: true,
-                    radius: 2
+                rangeSelector: {
+                    selected: 1,
+                    inputDateFormat: '%Y-%m-%d'
                 },
-                shadow: true,
-                tooltip: {
-                    valueDecimals: 2
-                }
-            }]
-        });
-    });
 
-    </script>
-        
-    <script type="text/javascript">
-        
-        $.getJSON('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json', function (data) {
-
-        // Create the chart
-        Highcharts.stockChart('my-chart-vol', {
-
-
-            rangeSelector: {
-                selected: 1,
-                inputDateFormat: '%Y-%m-%d'
-            },
-            
-            chart: {
-                spacingTop: 25,
-                width: null,
-                height: null
-            },
-
-            title: {
-                text: 'Total Transaction Volume',
-                align: 'left',
-                style: {
-                    color: '#1875F0',
-                    fontSize: '1.4em'
-                }
-            },
-            
-            xAxis: {
-                title: {
-                    text: 'Exchange value'
-                }
-            },
-            
-            scrollbar: {
-                enabled: false
-            },
-            
-            navigator: {
-                enabled: false
-            },
-
-            series: [{
-                name: 'Total Volume',
-                data: data,
-                marker: {
-                    enabled: true,
-                    radius: 2
+                chart: {
+                    spacingTop: 25,
+                    spacingLeft: 20
                 },
-                shadow: true,
-                tooltip: {
-                    valueDecimals: 2
-                }
-            }]
+
+                title: {
+                    text: 'Total Transaction Value',
+                    align: 'left',
+                    style: {
+                        color: '#1875F0',
+                        fontSize: '1.4em'
+                    }
+                },
+
+                xAxis: {
+                    title: {
+                        text: 'Exchange value'
+                    }
+                },
+
+                scrollbar: {
+                    enabled: false
+                },
+
+                navigator: {
+                    enabled: false
+                },
+
+                series: [{
+                    name: 'Total Value',
+                    data: data,
+                    marker: {
+                        enabled: true,
+                        radius: 2
+                    },
+                    shadow: true,
+                    tooltip: {
+                        valueDecimals: 2
+                    }
+                }]
+            });
         });
-    });
 
-    </script>
-        
-    <script>
-        
-        /* Set the width of the side navigation to 212px */
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "80%";
-            document.getElementById("overlay").style.display = "block";
-        }
+        </script>
+        <!-- Volume HighChart JS-->
+        <script type="text/javascript">
 
-        /* Set the width of the side navigation to 0 */
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("overlay").style.display = "none";
-        }
-        
-    </script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            $.getJSON('https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json', function (data) {
+
+            // Create the chart
+            Highcharts.stockChart('my-chart-vol', {
+
+
+                rangeSelector: {
+                    selected: 1,
+                    inputDateFormat: '%Y-%m-%d'
+                },
+
+                chart: {
+                    spacingTop: 25,
+                    width: null,
+                    height: null
+                },
+
+                title: {
+                    text: 'Total Transaction Volume',
+                    align: 'left',
+                    style: {
+                        color: '#1875F0',
+                        fontSize: '1.4em'
+                    }
+                },
+
+                xAxis: {
+                    title: {
+                        text: 'Exchange value'
+                    }
+                },
+
+                scrollbar: {
+                    enabled: false
+                },
+
+                navigator: {
+                    enabled: false
+                },
+
+                series: [{
+                    name: 'Total Volume',
+                    data: data,
+                    marker: {
+                        enabled: true,
+                        radius: 2
+                    },
+                    shadow: true,
+                    tooltip: {
+                        valueDecimals: 2
+                    }
+                }]
+            });
+        });
+
+        </script>
+
+        <!-- Side Navigation JS -->
+        <script>
+
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "80%";
+                document.getElementById("overlay").style.display = "block";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+            
+            /* Set the width of the side navigation to 0 & removes Overlay*/
+            function closeOverlay() {
+                if (window.innerWidth < 769) {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("overlay").style.display = "none";
+                }   
+            }
+
+        </script>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     </body>
 
 </html>
