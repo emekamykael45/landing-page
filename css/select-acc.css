@@ -435,3 +435,11 @@ button:focus {
 
 /* Modal Stops Here */
 
+
+
+/*Responsiveness Starts Here*/
+@media screen and (max-width: 1208px){
+    .main{
+        margin-left: 23.2%;
+    }
+}
