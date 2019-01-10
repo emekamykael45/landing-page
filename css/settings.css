@@ -375,12 +375,9 @@ input:focus, textarea:focus{
     width: 95.4%;
 }
 
-.box{
-    position: relative;
-    margin: 0;
-    padding: 0;
+#exampleFormControlSelect1{
     margin-top: 7px;
-    width: 95.4%;
+    width: 90%;
 }
 
 .save-det{
@@ -392,7 +389,7 @@ input:focus, textarea:focus{
     border-radius: 5px;
     font-size: 0.9em;
     font-weight: 450;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 .save-det:hover{
     color: #fff;
