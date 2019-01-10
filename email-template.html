@@ -12,6 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <style>
+        @font-face{
+            font-family: 'CircularStd-Book';
+            font-style: normal;
+            font-weight: normal;
+            src: url("../fonts/CircularStd-Book.woff") format("opentype");
+        }
+        
         *{
             box-sizing: border-box;
         }
@@ -21,6 +28,7 @@
         }
 
         body {
+            font-family: "CircularStd-Book", Arial, sans-serif;
             font-size: .875rem;
             background: #E5E5E5;
         }
@@ -57,24 +65,6 @@
             margin-left: auto;
             margin-right: auto;
             padding: 10px 25px;
-        }
-
-        .welcome-text{
-            margin: 0;
-            color:  #1875F0;
-            font-size: 1.6em;
-            font-weight: 640;
-            text-align: center;
-            letter-spacing: 0.1px;
-        }
-        .tracking-money-text{
-            margin-top: 2px;
-            margin-bottom: 5px;
-            color: #000;
-            font-size: 1em;
-            font-weight: 600;
-            text-align: center;
-            letter-spacing: 0.1px;
         }
 
         .acc-cre-success{
@@ -160,15 +150,6 @@
                 width: 213px;
                 margin-left: 24%;
             }
-
-            .welcome-text{
-                font-size: 1.5em;
-            }
-            .tracking-money-text{
-                margin-top: 5px;
-                margin-bottom: 0px;
-                font-size: 1em;
-            }
         }
 
         @media screen and (max-width: 545px){
@@ -185,15 +166,6 @@
                 margin-top: -130px;
                 margin-bottom: 30px;
                 padding: 10px;
-            }
-
-            .welcome-text{
-                font-size: 1.4em;
-            }
-            .tracking-money-text{
-                margin-top: 5px;
-                margin-bottom: 0px;
-                font-size: 1em;
             }
 
             .hi-smil{
@@ -289,14 +261,8 @@
     <body>
         
         <div class="main">
-            <img src="images/TRANSMONITOR.png" class="transmonitor-logo">
             
-            <img src="images/email-image-2.png" class="email-image">
-            
-            <div class="image-overlay">
-                <p class="welcome-text">Welcome Onboard</p>
-                <p class="tracking-money-text">Tracking Money Transfers has never been easier</p>
-            </div>
+            <img src="images/email-template-head-img.png" class="email-image">
             
             <p class="acc-cre-success">Account created successfully</p>
             <hr>    

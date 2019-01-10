@@ -1,8 +1,16 @@
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
+
 *{
     box-sizing: border-box;
 }
 
 body {
+    font-family: "CircularStd-Book", Arial, sans-serif;
     font-size: .875rem;
     background: #F7F8FA;
 }
@@ -332,7 +340,6 @@ input:focus, textarea:focus{
 
 .info-head-tag{
     margin-top: 1.15em;
-    font-family: Segoe UI;
     line-height: normal;
     font-size: 0.95em;
     color: #787C90;
@@ -340,7 +347,6 @@ input:focus, textarea:focus{
 
 .info-head-fig{
     margin-top: -0.85em;
-    font-family: Segoe UI;
     line-height: normal;
     font-weight: 500;
     font-size: 1.35em;
@@ -386,7 +392,6 @@ input:focus, textarea:focus{
 }
 
 .tab-head-tag{
-    font-family: Segoe UI;
     line-height: normal;
     font-size: 1em;
     color: #262626;
@@ -406,7 +411,6 @@ input:focus, textarea:focus{
 }
 
 .tab-det{
-    font-family: Segoe UI;
     line-height: normal;
     font-size: 1em;
     font-weight: 500;
