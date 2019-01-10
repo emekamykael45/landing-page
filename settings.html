@@ -67,7 +67,7 @@
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   
                     <div class="tab-sect">
-                        <a href="transfer-pay-ver.html"class="veri-tra-btn">VERIFY TRANSFER</a>
+                        <a href="transfer-pay-ver.html"class="veri-tra-btn">GENERATE INVOICE</a>
                         <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
                         <hr/>
                         
@@ -128,79 +128,123 @@
                     <li class="nav-item">
                         <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Bank Details</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-end" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">API Keys & Webhooks</a>
-                    </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
-                        <div class="first-tab-fir">
-                            <img id="personal-prof-img" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
-                            <label for="files" class="upload-txt">Upload</label>
-                            <input id="files" style="visibility: hidden;" type='file' onchange="readURL(this);" />
-                            <a href="" class="edit-prof">Edit Profile</a>
+                        <div class="personal-info-edit">
+                            <div class="first-tab-fir">
+                                <img id="personal-prof-img" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
+                                <label for="files" class="upload-txt">Upload</label>
+                                <input id="files" style="visibility: hidden;" type='file' onchange="readURL(this);" />
+                                <a href="" class="edit-prof">Edit Profile</a>
+                            </div>
+                            <hr>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">First Name:</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter First Name">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Last Name:</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Last Name">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Phone Number:</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Mobile Number">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email:</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-primary change-pass">Change Password</button>
+                                </div>
+                            </div>
                         </div>
-                        <hr>
-                        <div class="row first-tab-sec">
-                            <div class="col-md-4">
-                                <form>
-                                    First Name: <br><input type="text" name="firstname" placeholder="Enter First Name">
-                                </form>
+                        <br>
+                        <div id="passwordedit" class="password-edit">
+                            <div class="row password-div">
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Old Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">New Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Confirm Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <form>
-                                    Last Name: <br><input type="text" name="lastname" placeholder="Enter Last Name">
-                                </form>
+                            <br>
+                            <div class="password-buttons">
+                                <button type="button" class="btn btn-primary save-new-pass">Save New Password</button>
+                                <button type="button" class="btn btn-primary save-new-pass discard-changes">Discard Changes</button>
                             </div>
-                            <div class="col-md-4"></div>
-                        </div>
-                        <br/>
-                        <div class="row first-tab-sec">
-                            <div class="col-md-4">
-                                <form>
-                                    Phone Number: <br><input type="text" name="phonenum" placeholder="Enter Mobile Number">
-                                </form>
-                            </div>
-                            <div class="col-md-4">
-                                <form>
-                                    Email: <br><input type="email" name="email" placeholder="Enter Email">
-                                </form>
-                            </div>
-                            <div class="col-md-4"></div>
-                        </div>
-                        <br/>
-                        <div class="row first-tab-sec">
-                            <div class="col-md-4">
-                                <form>
-                                    Change Password: <br><input type="password" name="password" value="" placeholder="*****">
-                                </form>
-                            </div>
-                            <div class="col-md-4"></div>
-                            <div class="col-md-4"></div>
+                            <br>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                         <div class="first-tab-fir">
-                            <img id="business-prof-img" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Shop+Rite&font-size=0.37" alt="your logo" />
+                            <img id="business-prof-img" src="https://ui-avatars.com/api/?background=b1f9ff&color=1860EC&name=Desk+Rite&font-size=0.37" alt="your logo" />
                             <label for="files" class="upload-txt">Upload</label>
-                            <input id="files" style="visibility: hidden;" type='file' onchange="readURL(this);" />
+                            <input id="files" style="visibility: hidden;" type='file' onchange="changeURL(this);" />
                             <a href="" class="edit-prof">Edit Profile</a>
                         </div>
                         <hr>
                         <div class="row first-tab-sec">
                             <div class="col-md-4">
                                 <form>
-                                    Business Name: <br><input type="text" name="busname" placeholder="Shoprite">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">Business Name:</label>
+                                        <input type="text" class="form-control" id="exampleInputText" placeholder="Shoprite">
+                                    </div>
                                 </form>
                             </div>
                             <div class="col-md-4">
                                 <form>
-                                    Support Email: <br><input type="text" name="supname" placeholder="help@shoprite.com">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">Support Email:</label>
+                                        <input type="email" class="form-control" id="exampleInputText" placeholder="help@shoprite.com">
+                                    </div>
                                 </form>
                             </div>
                             <div class="col-md-4">
                                 <form>
-                                    Phone Number: <br><input type="text" name="phonum" placeholder="08032655767">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">Phone Number:</label>
+                                        <input type="text" class="form-control" id="exampleInputText" placeholder="08032655767">
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -208,12 +252,18 @@
                         <div class="row first-tab-sec">
                             <div class="col-md-8">
                                 <form>
-                                    Business Address: <br><input type="text" name="busadd" placeholder="Enter Address">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">Business Address:</label>
+                                        <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Address">
+                                    </div>
                                 </form>
                             </div>
                             <div class="col-md-4">
                                 <form>
-                                    Website: <br><input type="text" name="webs" placeholder="Enter Website">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">Website:</label>
+                                        <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Website">
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -221,17 +271,26 @@
                         <div class="row first-tab-sec">
                             <div class="col-md-4">
                                 <form>
-                                    Facebook: <br><input type="text" name="fname" placeholder="Enter Facebook Username">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">Facebook:</label>
+                                        <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Facebook Username">
+                                    </div>
                                 </form>
                             </div>
                             <div class="col-md-4">
                                 <form>
-                                    Twitter: <br><input type="text" name="tname" placeholder="Enter Twitter Username">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">Twitter:</label>
+                                        <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Twitter Username">
+                                    </div>
                                 </form>
                             </div>
                             <div class="col-md-4">
                                 <form>
-                                    LinkedIn: <br><input type="text" name="lname" placeholder="Enter Linkedin Username">
+                                    <div class="form-group">
+                                        <label for="exampleInputText">LinkedIn:</label>
+                                        <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Linkedin Username">
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -255,7 +314,10 @@
                                 </div>
                                 <div class="col-md-4">
                                     <form>
-                                        Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Bank Account Name:</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Account Name">
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -1087,7 +1149,6 @@
                             </button>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
                 </div>
 
             </div>
@@ -1319,6 +1380,19 @@
         </script>
         
         <script>
+            $('.change-pass').click(function() {
+                $('#passwordEdit').show(500);
+                $('.personal-info-edit').hide(0);
+                $('.password-edit').show(0);
+            });
+            $('.save-new-pass').click(function() {
+                $('#passwordEdit').hide(500);
+                $('.personal-info-edit').show(0);
+                $('.password-edit').hide(0);
+            });
+        </script>
+        
+        <script>
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
@@ -1334,7 +1408,7 @@
         </script>
         
         <script>
-            function readURL(input) {
+            function changeURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
 

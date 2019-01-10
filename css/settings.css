@@ -1,18 +1,16 @@
-$ashLight: #F7F8FA;
-$blueLight: #1875F0;
-$white: #FFFFFF;
-$ashDark: #EAEEF0;
-$blackLight: #787C90;
-$blackMedium: #414042;
-$blackDark: #262626;
-
-
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 *{
     box-sizing: border-box;
 }
 
 body {
+    font-family: "CircularStd-Book", Arial, sans-serif;
     font-size: .875rem;
     background: #F7F8FA;
 }
@@ -512,6 +510,43 @@ button:focus {
 }
 
 /*Modal Ends Here*/
+
+
+#passwordedit{
+    display: none;
+}
+
+.change-pass{
+    background-color: #EAEEF0;
+    border-radius: 5px;
+    border-color: #EAEEF0;
+    margin-top: 35px;
+    color: #9FABBB;
+}
+.change-pass:hover{
+    background-color: #EAEEF0;
+    color: #000;
+    border-color: #EAEEF0;
+}
+
+.save-new-pass{
+    background-color: #27AE60;
+    border-radius: 5px;
+    border-color: #27AE60;
+    color: #fff;
+}
+.save-new-pass:hover{
+    background-color: #27AE60;
+    color: #f0f0f0;
+    border-color: #27AE60;
+}
+
+.discard-changes{
+    background-color: transparent;
+    color: #27AE60;
+    margin-left: 20px;
+}
+
 
 /*Main Page Ends Here*/
 

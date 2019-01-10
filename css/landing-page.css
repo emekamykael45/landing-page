@@ -1,14 +1,16 @@
-@font-face {
-    font-family: myFirstFont;
-    src: url(sansation_light.woff);
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
 }
 
 body{
+    font-family: "CircularStd-Book", Arial, sans-serif;
     background-image: url("../images/Main-Background.png");
     background-size: cover;
     width: 100%;
     height: 100%;
-    font-family: Noto Sans JP;
 }
 
 /* Navbar Starts*/
