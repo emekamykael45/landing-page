@@ -81,12 +81,12 @@
                 <hr/>
 
                 <p class="head-tag">Main</p>
-                <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
+                <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
             </div>
 
             <div class="tab-sect">
                 <p class="head-tag">Payments</p>
-                <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                <a href="payments.html" class="active"><img src="images/all-pay.png"><span>All Payments</span></a>
                 <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
             </div>
 
@@ -630,6 +630,21 @@
         
         
         
+        
+        <!-- Accordion Table -->
+        <script>
+            $('.change-pass').click(function() {
+                $('#passwordEdit').show(500);
+                $('.personal-info-edit').hide(0);
+                $('.password-edit').show(0);
+            });
+            $('.save-new-pass').click(function() {
+                $('#passwordEdit').hide(500);
+                $('.personal-info-edit').show(0);
+                $('.password-edit').hide(0);
+            });
+        </script>
+        
         <!-- Table Filter JS -->
         <script>
             $(document).ready(function(){
@@ -657,7 +672,7 @@
                 document.getElementById("overlay").style.display = "none";
             }
             
-            /* Set the width of the side navigation to 0 & removes Overlay*/
+            /* Click on overlay to set the width of the side navigation to 0 & removes Overlay*/
             function closeOverlay() {
                 if (window.innerWidth < 769) {
                     document.getElementById("mySidenav").style.width = "0";

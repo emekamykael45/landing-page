@@ -129,6 +129,22 @@ input:focus, textarea:focus{
 /* Navbar Ends Here */
 
 
+/* Overlay */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+  z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
 /*Side Menu Starts Here*/
 
 .sidenav {
@@ -176,7 +192,7 @@ input:focus, textarea:focus{
 }
 
 .tab-sect{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .tab-sect .head-tag{
     padding-left: 15px;
@@ -199,7 +215,7 @@ input:focus, textarea:focus{
     background: #27AE60;
     width: 80%;
     left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     border-radius: 30px;
     color: #fff;
     text-align: center;
@@ -208,13 +224,27 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
 .sidenav .veri-tra-btn:hover{
     background: #27AE60;
-    padding: 10px 10px 10px 10px;
-    font-weight: 700;
+    padding: 10px 10px 10px 15px;
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
+.sidenav .veri-tra-btn.active{
+    background: #27AE79;
+    padding: 10px 10px 10px 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidenav .veri-tra-btn.active:hover{
+    padding: 10px 10px 10px 10px;
+}
+
 
 .sidenav a{
     display: block;
@@ -242,15 +272,21 @@ input:focus, textarea:focus{
 .sidenav a img{
     margin-top: -5px;
     margin-right: 10px;
-    width: 24px;
+    width: 20px;
 }
 .sidenav a .settings-img{
-    width: 32px;
+    width: 28px;
     margin-right: 5px;
     margin-left: -3px;
 }
-.sidenav a.active.merc-prof{
-    padding: 10px 30px 6px 10px;
+
+.sidenav a.merc-prof.active, .sidenav a.merc-prof.active:hover{
+    padding: 10px 30px 7px 10px;
+}
+
+.sidenav a.merc-prof:hover{
+    transition: all 0.2s ease-in-out;
+    padding: 10px 10px 7px 20px;
 }
 
 .sidenav a .pen-ord, .sidenav a .recon-ord{
@@ -262,19 +298,24 @@ input:focus, textarea:focus{
 .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
     display: none;
 }
+.log-out{
+    margin-bottom: 30px;
+}
 
 /*Side Menu Ends Here*/
 
 
 
-/*Main Page Starts Here*/
+/*Dashboard Starts Here*/
 
 .main{
-    margin-left: 209px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
+    margin: 0;
+    margin-right: 10px;
+    margin-left: 210px; /* Same as the width of the sidenav */
+    padding: 0px;
     padding-top: 60px;
-    padding-left: 25px;
-    width: 83%;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 .open-sidenav{
@@ -286,6 +327,7 @@ input:focus, textarea:focus{
 
 .profile-head{
     padding-top: 20px;
+    margin: 0;
 }
 
 .prof-content {
@@ -335,23 +377,23 @@ input:focus, textarea:focus{
 
 .first-tab-fir .upload-txt{
     border: 1px solid #1860EC;
-    padding: 7px 25px;
-    border-radius: 5px;
+    padding: 10px 35px;
+    border-radius: 3px;
     color: #1860EC;
     font-weight: 450;
     margin-left: 60px;
     cursor: pointer;
 }
 
-.first-tab-fir .edit-prof{
+.first-tab-fir .edit-per-prof, .edit-bus-prof{
     position: relative;
     float: right;
     margin-top: 12px;
-    margin-right: 60px;
+    right: 30px;
     background: #1860EC;
     color: #fff;
     border: 1px solid #1860EC;
-    padding: 8px 15px;
+    padding: 10px 35px;
     border-radius: 5px;
     font-weight: 450;
 }
@@ -366,18 +408,22 @@ input:focus, textarea:focus{
     font-size: 1em;
     margin-top: 6px;
     margin-bottom: 15px;
-    width: 90%;
+    width: 100%;
     color: #414042;
     font-weight: 400;
 }
 
 .first-tab-sec .col-md-8 input[type=text]{
-    width: 95.4%;
+    width: 100%;
+}
+
+.bank-acc-name-field{
+    width: 130% !important;
 }
 
 #exampleFormControlSelect1{
-    margin-top: 7px;
-    width: 90%;
+    margin-top: 6px;
+    width: 100%;
 }
 
 .save-det{
@@ -385,11 +431,11 @@ input:focus, textarea:focus{
     background: #27AE60;
     color: #fff;
     border: 1px solid #27AE60;
-    padding: 8px 15px;
+    padding: 10px 35px;
     border-radius: 5px;
     font-size: 0.9em;
     font-weight: 450;
-    margin-top: 35px;
+    margin-top: 32px;
 }
 .save-det:hover{
     color: #fff;
@@ -514,11 +560,13 @@ button:focus {
 }
 
 .change-pass{
-    background-color: #EAEEF0;
+    background: rgba(24, 96, 236, 0.15);
     border-radius: 5px;
-    border-color: #EAEEF0;
-    margin-top: 35px;
-    color: #9FABBB;
+    border-color: rgba(24, 96, 236, 0.15);
+    margin-top: 34px;
+    color: #1860EC;
+    padding: 8px 20px;
+    font-size: 1em;
 }
 .change-pass:hover{
     background-color: #EAEEF0;
@@ -551,7 +599,248 @@ button:focus {
 
 /* Responsive Page Starts Here*/
 
+@media screen and (max-width: 1093px) {
+    #pills-profile-tab{
+        margin-right: 0px;
+    }
+    .nav-pills .nav-link{
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1017px) {
+    .first-tab-fir .edit-per-prof, .edit-bus-prof{
+        margin-top: -57px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1022px) {
+    .first-tab-fir .edit-bus-prof{
+        margin-top: -57px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 982px) {
+    .first-tab-fir .edit-bus-prof{
+        margin-top: -58px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 977px) {
+    .first-tab-fir .edit-per-prof, .edit-bus-prof{
+        margin-top: -58px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 881px) {
+    .navbar-toggler{
+        display: none;
+    }
+    
+    .navbar .logo{
+        margin-left: 30px;
+    }
+    
+    .navbar-nav{
+        display: none;
+    }
+    
+    .sidenav{
+        width: 0px;
+        padding-top: 75px;
+        z-index: 2001;
+    }
+    .sidenav a:hover{
+        padding: 10px 0px 10px 15px;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn{
+        display: block;
+        padding-top: 0px;
+    }
+    .sidenav .closebtn:hover{
+        margin: 33px 6px 0px 30px;
+    }
+
+    .open-sidenav{
+        position: sticky;
+        top: 5.5px;
+        font-size: 1.7em;
+        z-index: 2000;
+        display: block;
+        cursor: pointer;
+        color: #647787;
+        width: 23px;
+    }
+    
+    .sidenav .veri-tra-btn{
+        width: 80%;
+        left: 10px;
+        margin-top: -20px;
+    }
+    
+    .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
+        display: block;
+    }
+    
+    .main{
+        margin-left: 0px; /* Same as the width of the sidenav */
+        margin-right: 5px;
+    }
+    
+    .first-tab-fir .edit-per-prof{
+        margin-top: 12px;
+        margin-right: 20px;
+    }
+    
+    .first-tab-fir .edit-bus-prof{
+        margin-top: 12px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 822px) {
+    .first-tab-fir .edit-per-prof{
+        margin-top: -57px;
+        margin-right: 20px;
+    }
+    
+    .first-tab-fir .edit-bus-prof{
+        margin-top: -57px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #pills-profile .save-det{
+        margin-top: 15px;
+    }
+    
+    #pills-profile .rem-bank-btn{
+        margin-top: 80px;
+        margin-bottom: -80px;
+    }
+    
+    #pills-profile .add-bank-btn{
+        margin-top: -10px;
+    }
+    
+    #pills-profile hr{
+        margin-top: 80px;
+    }
+    
+    .first-tab-fir .edit-bus-prof{
+        margin-top: -58px;
+        margin-right: 20px;
+    }
+    
+    .bank-acc-name-field{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .first-tab-fir .edit-per-prof{
+        margin-top: -57px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    #pills-tab{
+        display: block;
+        padding-bottom: 15px !important;
+    }
+    
+    #pills-tab .nav-item{
+        margin-bottom: 15px;
+    }
+    
+    #pills-tab .nav-item .nav-link{
+        padding-bottom: 10px;
+    }
+    
+    .tab-content{
+        margin-top: -10px;
+        border-top: 1px solid #CAD6E7;
+        padding-top: 30px;
+    }
+    
+    .nav-pills .nav-link{
+        margin-right: 0px;
+        text-align: center;
+        border: 1px solid #4c4c4c;
+        border-radius: 5px;
+    }
+    
+    .nav-pills .nav-link.active{
+        border: 2px solid #1860EC;
+        background-color: transparent;
+        color: #1860EC;
+        border-radius: 5px;
+    }
+    
+    #pills-personal .personal-info-edit hr, #pills-home hr{
+        margin-top: 105px;
+    }
+    
+    .first-tab-fir .edit-per-prof, .first-tab-fir .edit-bus-prof{
+        position: relative;
+        margin-top: 50px;
+        margin-left: 30px;
+        float: left;
+    }
+    
+    #pills-profile .tab-wrapper{
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 661px) {
+    #pills-personal .personal-info-edit hr, #pills-home hr{
+        margin-top: 55px;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    .first-tab-fir .edit-per-prof, .first-tab-fir .edit-bus-prof{
+        position: relative;
+        margin-top: 0px;
+        margin-left: 30px;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .first-tab-fir .edit-per-prof, .first-tab-fir .edit-bus-prof{
+        margin-right: 0px;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .first-tab-fir .upload-txt{
+        position: absolute;
+        margin-left: 0px;
+        margin-top: 90px;
+        left: 50px;
+    }
+    
+    .first-tab-fir .edit-per-prof, .first-tab-fir .edit-bus-prof{
+        margin-top: 70px;
+        margin-right: 0px;
+        float: left;
+    }
+    
+    #pills-personal .personal-info-edit hr, #pills-home hr{
+        margin-top: 120px;
+    }
+}
 
 
-
-/* Responsive Page Endss Here*/
+/* Responsive Page Ends Here*/
