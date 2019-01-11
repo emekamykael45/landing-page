@@ -1,18 +1,16 @@
-$ashLight: #F7F8FA;
-$blueLight: #1875F0;
-$white: #FFFFFF;
-$ashDark: #EAEEF0;
-$blackLight: #787C90;
-$blackMedium: #414042;
-$blackDark: #262626;
-
-
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 *{
     box-sizing: border-box;
 }
 
 body {
+    font-family: "CircularStd-Book", Arial, sans-serif;
     font-size: .875rem;
     background: #F7F8FA;
 }
@@ -131,6 +129,22 @@ input:focus, textarea:focus{
 /* Navbar Ends Here */
 
 
+/* Overlay */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+  z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
 /*Side Menu Starts Here*/
 
 .sidenav {
@@ -178,7 +192,7 @@ input:focus, textarea:focus{
 }
 
 .tab-sect{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .tab-sect .head-tag{
     padding-left: 15px;
@@ -201,7 +215,7 @@ input:focus, textarea:focus{
     background: #27AE60;
     width: 80%;
     left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     border-radius: 30px;
     color: #fff;
     text-align: center;
@@ -210,13 +224,27 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
 .sidenav .veri-tra-btn:hover{
     background: #27AE60;
-    padding: 10px 10px 10px 10px;
-    font-weight: 700;
+    padding: 10px 10px 10px 15px;
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
+.sidenav .veri-tra-btn.active{
+    background: #27AE79;
+    padding: 10px 10px 10px 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidenav .veri-tra-btn.active:hover{
+    padding: 10px 10px 10px 10px;
+}
+
 
 .sidenav a{
     display: block;
@@ -244,10 +272,10 @@ input:focus, textarea:focus{
 .sidenav a img{
     margin-top: -5px;
     margin-right: 10px;
-    width: 24px;
+    width: 20px;
 }
 .sidenav a .settings-img{
-    width: 32px;
+    width: 28px;
     margin-right: 5px;
     margin-left: -3px;
 }
@@ -266,6 +294,9 @@ input:focus, textarea:focus{
 .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
     display: none;
 }
+.log-out{
+    margin-bottom: 30px;
+}
 
 /*Side Menu Ends Here*/
 
@@ -274,11 +305,13 @@ input:focus, textarea:focus{
 /*Dashboard Starts Here*/
 
 .main{
+    margin: 0;
+    margin-right: 10px;
     margin-left: 210px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
+    padding: 0px;
     padding-top: 60px;
-    padding-left: 25px;
-    width: 83%;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 .open-sidenav{
@@ -291,7 +324,7 @@ input:focus, textarea:focus{
 /*Section 1 Starts Here*/
 
 .payments-head{
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .info-head{
@@ -313,15 +346,13 @@ input:focus, textarea:focus{
 
 .info-head-tag{
     margin-top: 1.15em;
-    font-family: Segoe UI;
     line-height: normal;
     font-size: 0.95em;
-    color: #787C90;
+    color: #738493;
 }
 
 .info-head-fig{
     margin-top: -0.85em;
-    font-family: Segoe UI;
     line-height: normal;
     font-weight: 500;
     font-size: 1.35em;
@@ -332,7 +363,7 @@ input:focus, textarea:focus{
 /*Section 3 Starts Here*/
 .paym-sub-line{
     margin-top: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .paym-sub{
     display: flex;
@@ -342,25 +373,11 @@ input:focus, textarea:focus{
 .show-entries span{
     display: inline-flex;
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .box, .box-drop{
   position: relative;
-}
-
-.box select {
-    background-color: transparent;
-    color: #787878;
-    padding: 0px;
-    padding-bottom: 2px;
-    border: none;
-    border-bottom: 1px solid #787878;
-    width: 100px;
-    font-size: 1em;
-    -webkit-appearance: button;
-    appearance: button;
-    outline: none;
 }
 
 .box .fa-chevron-down{
@@ -419,7 +436,7 @@ input:focus, textarea:focus{
     width: 0.9em;
 }
 .sear-pay input{
-    font-size: 0.9em;
+    font-size: 1em;
     padding-bottom: 1px;
     width: 70%;
     border-bottom: 1px solid #787878;
@@ -480,16 +497,22 @@ input:focus, textarea:focus{
 
 .table tbody{
     background: #FFFFFF;
+    border: none !important;
 }
 .table tbody tr{
-    border-color: #CCCFD4;
+    border: none !important;
 }
 
 .table tbody tr th{
     padding: 18px;
+    border: none;
+    border-bottom: 1px solid #eaebed;
+    color: #262626;
 }
 .table tbody tr td{
     padding: 18px 12px;
+    border: none;
+    border-bottom: 1px solid #eaebed;
 }
 
 .table tbody tr th .user-id{
@@ -497,7 +520,7 @@ input:focus, textarea:focus{
     border: 1px solid #7F8FA4;
     color: #fff;
     font-size: 0.8rem;
-    padding: 8px 6px;
+    padding: 10px 6px;
     border-radius: 50%;
     background: #7F8FA4;
 }
@@ -583,7 +606,7 @@ td .reconciled, td .pending, td .un-reconciled{
     width: 55%;
     padding: 5px 3px;
     padding-top: 4px;
-    border: 1px solid #CCCFD4;
+    border: 1px solid #dbdde0;
     border-radius: 30px;
     color: #27AE60;
     font-weight: 400;
@@ -613,6 +636,7 @@ td .un-reconciled{
 
 .tab-footer{
     display: block;
+    margin-top: 8px;
 }
 .tab-footer .left{
     float: left;
@@ -628,6 +652,7 @@ td .un-reconciled{
 
 /* Responsive Page Starts Here*/
 
+
 @media (min-width: 1181px) and (max-width: 1255px) {
     
     .info-head{
@@ -636,6 +661,14 @@ td .un-reconciled{
     
     .info-box-2{
         margin-right: 20px;
+    }
+    
+    .box, .box-drop{
+        width: 45px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -11px;
     }
     
     .show-entries .out-of{
@@ -669,6 +702,14 @@ td .un-reconciled{
         margin-right: 20px;
     }
     
+    .box, .box-drop{
+        width: 45px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -11px;
+    }
+    
     .show-entries .out-of{
         width: 3em;
     }
@@ -678,7 +719,11 @@ td .un-reconciled{
     }
     
     .accordion-toggle:after{
-        right: 20px;
+        right: 55px;
+    }
+    
+    .table{
+        width: 105%;
     }
     
 }
@@ -693,12 +738,21 @@ td .un-reconciled{
         width: 3em;
     }
     
+    .box, .box-drop{
+        width: 45px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -11px;
+    }
+    
     #myBtnContainer{
         margin-left: -55px;
     }
     
     .accordion-toggle:after{
-        right: 5.5px;
+        right: 55.5px;
+        color: #7c7c7c;
     }
     
     .table{
@@ -718,13 +772,22 @@ td .un-reconciled{
         margin-top: -30px;
     }
     
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
+    }
+    
     .show-entries .out-of{
         width: 3em;
     }
     
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 12px;
         margin-left: 15px;
+        margin-bottom: 5px;
     }
     .sear-pay-icon{
         width: 0.9em;
@@ -742,7 +805,8 @@ td .un-reconciled{
     }
     
     .accordion-toggle:after{
-        right: 0px;
+        right: 50px;
+        color: #7c7c7c;
     }
     
     td .reconciled, td .pending, td .un-reconciled{
@@ -758,12 +822,22 @@ td .un-reconciled{
     }
     
     .accordion-toggle:after{
-        right: 5.5px;
+        right: 50px;
+        color: #7c7c7c;
     }
     
     .paym-sub{
         display: block;
         font-size: 1.2em;
+        margin-top: -20px;
+    }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
     }
     
     .show-entries .out-of{
@@ -771,8 +845,9 @@ td .un-reconciled{
     }
     
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 12px;
         margin-left: 15px;
+        margin-bottom: 5px;
     }
     .sear-pay-icon{
         width: 0.9em;
@@ -790,7 +865,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 110%;
+        width: 117%;
     }
 }
 
@@ -802,12 +877,22 @@ td .un-reconciled{
     }
     
     .accordion-toggle:after{
-        right: 0px;
+        right: 50px;
+        color: #7c7c7c;
     }
     
     .paym-sub{
         display: block;
         font-size: 1.2em;
+        margin-top: -20px;
+    }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
     }
     
     .show-entries .out-of{
@@ -815,8 +900,9 @@ td .un-reconciled{
     }
     
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 12px;
         margin-left: 15px;
+        margin-bottom: 5px;
     }
     .sear-pay-icon{
         width: 0.9em;
@@ -834,11 +920,11 @@ td .un-reconciled{
     }
     
     .table{
-        width: 120%;
+        width: 123%;
     }
 }
 
-@media (min-width: 819px) and (max-width: 940px){
+@media (min-width: 819px) and (max-width: 952px){
     .info-head{
         grid-template-columns: repeat(2, 1fr);
         width: 101.7%;
@@ -847,6 +933,15 @@ td .un-reconciled{
     .paym-sub{
         display: block;
         font-size: 1.2em;
+        margin-top: -20px;
+    }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
     }
     
     .show-entries .out-of{
@@ -854,15 +949,17 @@ td .un-reconciled{
     }
     
     .sear-pay{
-        margin-top: 2px;
+        margin-top: 12px;
         margin-left: 15px;
+        margin-bottom: 5px;
     }
     .sear-pay-icon{
-        width: 0.9em;
+        width: 1em;
     }
     
     .sear-pay input{
         width: 89%;
+        font-size: 1.1em;
     }
     
     #myBtnContainer{
@@ -882,12 +979,13 @@ td .un-reconciled{
     }
     
     .accordion-toggle:after{
-        right: -30px;
+        right: 50px;
+        color: #7c7c7c;
     }
     
 }
 
-@media screen and (max-width: 818px){
+@media screen and (max-width: 874px){
     
     .navbar-toggler{
         display: none;
@@ -904,6 +1002,7 @@ td .un-reconciled{
     .sidenav{
         width: 0px;
         padding-top: 75px;
+        z-index: 2001;
     }
     .sidenav a:hover{
         padding: 10px 0px 10px 15px;
@@ -912,6 +1011,7 @@ td .un-reconciled{
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
+        padding-top: 0px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -929,7 +1029,9 @@ td .un-reconciled{
     }
     
     .sidenav .veri-tra-btn{
+        width: 80%;
         left: 10px;
+        margin-top: -20px;
     }
     
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
@@ -937,9 +1039,10 @@ td .un-reconciled{
     }
     
     .main{
-        margin-left: -7px; /* Same as the width of the sidenav */
-        width: 100%;
+        margin-left: 0px; /* Same as the width of the sidenav */
+        margin-right: 5px;
     }
+    
     .info-head{
         grid-template-columns: repeat(2, 1fr);
         width: 101.7%;
@@ -950,14 +1053,22 @@ td .un-reconciled{
         font-size: 1.2em;
     }
     
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
+    }
+    
     .show-entries .out-of{
         width: 3em;
     }
     
     .sear-pay{
-        margin-top: 5px;
+        margin-top: 12px;
         margin-left: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
     .sear-pay-icon{
         width: 0.9em;
@@ -980,6 +1091,7 @@ td .un-reconciled{
 
     .accordion-toggle:after{
         right: 45.5px;
+        color: #7c7c7c;
     }
     .accordion-toggle.collapsed:after{
         margin-top: -17.5px;
@@ -1045,9 +1157,14 @@ td .un-reconciled{
 }
 
 @media (min-width: 400px) and (max-width: 449px){
-    .payments-head{
-        padding-top: 0px;
+    .main{
+        padding-right: 0px;
     }
+    
+    .payments-head{
+        padding-top: 20px;
+    }
+    
     .info-head{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1068,22 +1185,25 @@ td .un-reconciled{
 }
 
 @media (min-width: 350px) and (max-width: 399px){
-    .payments-head{
-        padding-top: 0px;
+    .main{
+        padding-right: 0px;
     }
+    
     .info-head{
         grid-template-columns: repeat(1, 1fr);
     }
+    
     .info-stats{
         display: inline-block;
         padding-left: 0px;
     }
+    
     .tab-1{
         margin-right: 0px;
     }
     
     .payments-head{
-        margin-top: 40px;
+        margin-top: 20px;
     }
     
     .sear-pay input{
@@ -1108,22 +1228,25 @@ td .un-reconciled{
 }
 
 @media (min-width: 300px) and (max-width: 349px){
-    .payments-head{
-        padding-top: 0px;
+    .main{
+        padding-right: 0px;
     }
+    
     .info-head{
         grid-template-columns: repeat(1, 1fr);
     }
+    
     .info-stats{
         display: inline-block;
         padding-left: 0px;
     }
+    
     .tab-1{
         margin-right: 0px;
     }
     
     .payments-head{
-        margin-top: 40px;
+        margin-top: 20px;
     }
     
     .sear-pay input{
