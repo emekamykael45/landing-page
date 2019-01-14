@@ -16,6 +16,8 @@ body{
 /* Navbar Starts*/
 .navbar{
     margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 
@@ -34,13 +36,15 @@ body{
 .nav-item{
     margin-top: 3px;
     font-size: 0.9em;
-    
 }
 
 #nav-phone{
     color: #1875F0;
     font-weight: 500;
     cursor: text;
+}
+#nav-phone i{
+    margin-right: 5px;
 }
 
 #nav-feat,#nav-pricing{
@@ -85,8 +89,8 @@ body{
 .for-merch-img{
     position: absolute;
     width: 670px;
-    height: 675px;
-    left: 580px;
+    height: 670px;
+    right: 10px;
     top: 10.8px;
     z-index: -2;
     transform: rotate(-1.4deg);
@@ -117,7 +121,7 @@ body{
     position: absolute;
     width: 730px;
     height: 690px;
-    left: 510px;
+    right: 10px;
     top: -10.8px;
     z-index: -2;
     transform: rotate(-1.4deg);
@@ -144,7 +148,7 @@ body{
 .accordion{
     width: 35%;
     margin-top: -5px;
-    margin-left: 9%;
+    margin-left: 9.4%;
 }
 
 .accordion .btn{
@@ -185,6 +189,10 @@ body{
 
 .card-body{
     border-top: 1px solid #1860EC;
+}
+
+.justify-content-center{
+    margin-left: 40px !important;
 }
 
 #pills-tab{
@@ -265,8 +273,10 @@ body{
 /* Page Footer Starts */
 
 .footer{
+    position: fixed;
+    bottom: 0;
     background-color: #1875F0;
-    padding: 1em 7em;
+    padding: 1.31em 7em;
     font-size: 0.8em;
     color: #fff;
     width: 100%;
@@ -301,38 +311,44 @@ body{
 /* Responsive Page Starts Here*/
 
 
-@media screen and (max-width: 1256px){
-    
+@media screen and (min-width: 1256px){
     .for-merch-img{
         width: 600px;
         height: 610px;
-        left: 550px;
+        right: 150px;
         top: 56.8px;
     }
     .for-banks-img{
         width: 600px;
         height: 610px;
-        left: 550px;
+        right: 150px;
         top: 56.8px;
+    }
+    .accordion{
+        width: 25%;
     }
     
 }
 
-@media screen and (max-width: 1160px){
-    
+@media screen and (max-width: 1306px){
     .for-merch-img{
         width: 600px;
         height: 610px;
-        left: 480px;
+        right: 50px;
         top: 56.8px;
     }
     .for-banks-img{
         width: 600px;
         height: 610px;
-        left: 480px;
+        right: 50px;
         top: 56.8px;
     }
-    
+}
+
+@media screen and (max-width: 1100px) {
+    .legal,.feed,.fees,.shop{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1095px){
@@ -354,6 +370,10 @@ body{
 
 
 @media screen and (max-width: 1024px){
+    .navbar{
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
     
     .for-merch-img{
         width: 550px;
@@ -368,6 +388,12 @@ body{
         top: 75.8px;
     }
     
+}
+
+@media screen and (max-width: 991px){
+    #nav-signin{
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 960px){
@@ -413,9 +439,9 @@ body{
     }
     
     .accordion{
-        width: 80%;
+        width: 50%;
         margin-top: -5px;
-        margin-left: 5%;
+        margin-left: 5.5%;
     }
 
     .accordion .btn:after{
@@ -429,7 +455,7 @@ body{
 
     .marchants-nav, .banks-nav{
         margin-top: 40px;
-        padding: 10px 10px;
+        padding: 15px 15px;
     }
     
     .shop-icon img, .bank-icon img{
@@ -450,30 +476,44 @@ body{
         background-color: #175DE5 !important;
     }
     
+    #right{
+        margin-top: -0px;
+    }   
+}
+
+@media screen and (max-width: 864px){
     .footer{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         margin-bottom: 0px;
         padding: 1em 3em;
     }
     
     #right{
-        margin-top: -0px;
+        margin-top: 0px;
     }
-    
 }
 
+@media screen and (max-width: 779px){
+    .footer{
+        position: relative;
+        bottom: 0;
+    }
+}
 
 @media screen and (max-width: 768px){
-    
     #right{
         margin-top: -18px;
     }
     
+    .accordion{
+        width: 60%;
+        margin-top: -5px;
+        margin-left: 5.5%;
+    }
 }
 
 @media screen and (max-width: 753px){
-    
     .footer{
         position: relative;
     }
@@ -481,35 +521,108 @@ body{
     #right{
         margin-top: -18px;
     }
-    
-}
-
-
-@media screen and (max-width: 1000px) {
-    
-    .navbar{
-        margin-left: -10px;
-        margin-right: -10px;
-    }
-    
-}
-
-
-@media screen and (max-width: 1200px) {
-    
-    .legal,.feed,.fees,.shop{
-        display: none;
-    }
-    
 }
 
 @media screen and (max-width: 707px){
+    .footer{
+        position: relative;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .accordion{
+        width: 80%;
+        margin-left: 4.5%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .justify-content-center{
+        margin-left: 5px !important;
+    }
+
+    .marchants-nav, .banks-nav{
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .navbar{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
     
     .footer{
         position: relative;
         bottom: 0;
     }
     
+    #left{
+        text-align: center;
+        margin-bottom: 40px;
+        margin-left: 30px;
+    }
+
+    #right{
+        text-align: center;
+        margin-right: 50px;
+    }
+    #right span{
+        margin-left: 3em;
+    }
+    #right span a{
+        color: #fff;
+    }   
+}
+
+@media screen and (max-width: 400px){
+    .justify-content-center{
+        margin-left: 13px !important;
+    }
+
+    .marchants-nav, .banks-nav{
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 344px){
+    .marchants, .banks{
+        display: block;
+    }
+
+    .marchants-text, .banks-text{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    
+    #right{
+        margin-right: 13% !important;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .navbar-brand{
+        font-size: 1.4em;
+        margin-right: 0px;
+    }
+    
+    #right {
+        margin-right: 10% !important;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #right {
+        margin-right: 6% !important;
+    }
+}
+
+@media screen and (max-width: 310px){
+    #right {
+        text-align: left;
+        margin-right: 2% !important;
+    }
 }
 
 
