@@ -1229,7 +1229,7 @@ td .un-reconciled{
 
 @media (min-width: 300px) and (max-width: 349px){
     .main{
-        padding-right: 0px;
+        padding-right: 10px;
     }
     
     .info-head{
@@ -1261,7 +1261,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 356% !important;
+        width: 305% !important;
     }
     
     .tab-footer .right{

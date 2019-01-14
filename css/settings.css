@@ -824,6 +824,11 @@ button:focus {
 }
 
 @media screen and (max-width: 350px) {
+    .discard-changes{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    
     .first-tab-fir .upload-txt{
         position: absolute;
         margin-left: 0px;
