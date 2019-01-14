@@ -587,6 +587,14 @@ body{
 }
 
 @media screen and (max-width: 344px){
+    .justify-content-center{
+        margin-left: 3px !important;
+    }
+    
+    .marchants-nav, .banks-nav{
+        width: 116%;
+    }
+    
     .marchants, .banks{
         display: block;
     }
