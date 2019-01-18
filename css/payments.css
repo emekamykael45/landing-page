@@ -525,6 +525,14 @@ input:focus, textarea:focus{
     background: #7F8FA4;
 }
 
+.accordion button{
+    display: block;
+    margin: 0px;
+    margin-bottom: -5px;
+    background-color: transparent;
+    border: none;
+}
+
 .accordion-toggle:after{
     position: absolute;
     display: inline-block;
@@ -556,14 +564,31 @@ input:focus, textarea:focus{
     padding-bottom: 0 !important;
     background: #FAFBFC;
 }
+
+.accordian-body{
+    background: #FAFBFC;
+    margin: 0px;
+    padding-left: 50px;
+}
+
+.accordian-body-one{
+    display: block;
+    background: #FAFBFC;
+    margin: 0px;
+    margin-top: 23px;
+    margin-left: -56em;
+    margin-right: -12px;
+    padding-left: 92px;
+    margin-bottom: -18px;
+}
+
 .accordian-body .drop-down-det{
     margin: 0;
-    margin-left: 50px;
     display: inline-flex;
 }
 .inner{
     display: inline;
-    padding: 0px 30px 0px 0px;
+    padding: 5px 30px 5px 0px;
     margin-right: 30px;
     border-right: 1px solid #CCCFD4;
     color: #414042;
@@ -691,6 +716,12 @@ td .un-reconciled{
         font-size: 0.55em;
     }
     
+}
+
+@media (min-width: 1148px) and (max-width: 1300px) {
+    .accordian-body-one{
+        
+    }
 }
 
 @media (min-width: 1086px) and (max-width: 1180px) {
