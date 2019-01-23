@@ -457,6 +457,7 @@ input:focus, textarea:focus{
     margin-right: 15px;
     color: #414042;
     font-weight: 500;
+    border-right: 1px solid #ccc;
 }
 .inner-right{
     border: none;
@@ -477,6 +478,12 @@ input:focus, textarea:focus{
     margin: 0;
     margin-bottom: 3px;
 }
+
+.bank-account-name, .bank-account-num{
+    margin: 0;
+    margin-bottom: 3px;
+}
+
 .inner .payer-num{
     margin: 0;
     margin-bottom: 14px;
