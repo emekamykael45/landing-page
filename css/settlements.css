@@ -545,21 +545,105 @@ td .match.active{
 /*Section 1 Ends Here*/
 
 
+/* Modal Starts Here*/
+
+.modal-content{
+    border-radius: 0px 0px 5px 5px;
+}
+
+.modal-header{
+    background: #FAFBFC;
+    padding: 8px 25px;
+}
+.modal-header .close{
+    display: none;
+}
+
+.modal-title{
+    font-size: 16px;
+    font-weight: 400;
+    background: #FAFBFC;
+}
+
+.modal-body{
+    padding: 25px 25px !important;
+}
+
+.pop-det{
+    display: flex !important;
+}
+
+.match-right-detail-center{
+    margin-top: 80px;
+    padding: 0px;
+}
+
+.pop-sub-head{
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.modal p{
+    margin: 0;
+    padding-bottom: 3px;
+    font-size: 1em;
+}
+
+.mat-ordtopay{
+    float: left;
+    position: relative;
+    bottom: 15px;
+    margin: 0px;
+    padding: 15px 30px;
+    background: #1860EC;
+    text-transform: uppercase;
+    border-radius: 5px !important;
+    font-weight: bold;
+    color: #fff !important;
+    left: -38px;
+}
+.mat-ordtopay:hover{
+    text-decoration: none;
+    color: #D2DAE3 !important;
+}
+
+.modal-footer{
+    border-top: none;
+    padding: 0px;
+    padding-bottom: 30px;
+}
+
+.modal-footer a{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.dismiss{
+    float: right;
+    position: relative;
+    bottom: 15px;
+    left: -10px;
+    margin: 0 20px;
+    padding: 14px 50px;
+    border: 1px solid #1860EC;
+    border-radius: 5px !important;
+    font-size: 1em;
+    font-weight: bold;
+    color: #1860EC !important;
+}
+.dismiss:hover{
+    text-decoration: none;
+    background: #D2DAE3;
+}
+
+/* Modal Starts Here*/
+
+
+
+
 /* Overlay Starts Here*/
 
-#overlay{ /* we set all of the properties for our overlay */
-    margin:0 auto;
-    background:white;
-    min-width: 520px;
-    color:black;
-    padding: 0;;
-    position: absolute;
-    top: 40%;
-    left: -20%;
-    transform: translate(-50%, -50%);
-    z-index:1000;
-    display:none;
-}
 
 #overlay1, #overlay2, #overlay3, #overlay4{ /* we set all of the properties for our overlay */
     margin:0 auto;
@@ -575,96 +659,7 @@ td .match.active{
     display:none;
 }
 
-#mask{ /* create are mask */
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(0,0,0,0.6);
-    z-index:500;
-    width:100%;
-    height:100%;
-    display:none;
-}
-/* use :target to look for a link to the overlay then we find our mask */
-#overlay:target, #overlay:target + #mask, #overlay1:target, #overlay1:target + #mask, #overlay2:target, #overlay2:target + #mask, #overlay3:target, #overlay3:target + #mask, #overlay4:target, #overlay4:target + #mask{
-    display:block;
-    opacity:1;
-}
-#open-overlay{ /* open the overlay */
-    color: #1860EC;
-    text-decoration:none;
-    display:inline-block;
-}
-#open-overlay:hover{
-    background: #1860EC;
-    color: #fff;
-}
 
-#overlay h2, #overlay1 h2, #overlay2 h2, #overlay3 h2, #overlay4 h2{
-    font-size: 16px;
-    font-weight: 400;
-    background: #FAFBFC;
-    padding: 13px 20px;
-}
-#overlay .pop-det, #overlay1 .pop-det, #overlay2 .pop-det, #overlay3 .pop-det, #overlay4 .pop-det{
-    display: flex;
-    padding: 0 20px;
-    margin: 0;
-    margin-bottom: 30px;
-}
-#overlay .pop-det-left, .pop-det-right, #overlay1 .pop-det-left, #overlay2 .pop-det-left, #overlay3 .pop-det-left, #overlay4 .pop-det-left{
-    padding: 0;
-    margin: 0;
-}
-
-.match-right-detail-center{
-    margin-top: 60px;
-    margin-left: 10px;
-}
-
-#overlay .pop-sub-head, #overlay1 .pop-sub-head, #overlay2 .pop-sub-head, #overlay3 .pop-sub-head, #overlay4 .pop-sub-head{
-    font-weight: 500;
-    margin: 0;
-    padding-bottom: 5px;
-}
-#overlay p, #overlay1 p, #overlay2 p, #overlay3 p, #overlay4 p{
-    margin: 0;
-    padding-bottom: 3px;
-    font-size: 1em;
-}
-#overlay .mat-ordtopay, #overlay1 .mat-ordtopay, #overlay2 .mat-ordtopay, #overlay3 .mat-ordtopay, #overlay4 .mat-ordtopay{
-    float: left;
-    position: relative;
-    bottom: 15px;
-    margin: 0 20px;
-    padding: 10px 20px;
-    background: #1860EC;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-}
-#overlay .mat-ordtopay:hover, #overlay1 .mat-ordtopay:hover, #overlay2 .mat-ordtopay:hover, #overlay3 .mat-ordtopay:hover, #overlay4 .mat-ordtopay:hover{
-    text-decoration: none;
-    color: #D2DAE3;
-}
-
-#overlay .dismiss, #overlay1 .dismiss, #overlay2 .dismiss, #overlay3 .dismiss, #overlay4 .dismiss{
-    float: right;
-    position: relative;
-    bottom: 15px;
-    right: 0px;
-    margin: 0 20px;
-    padding: 9px 50px;
-    border: 1px solid #1860EC;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
-    color: #1860EC;
-}
-#overlay .dismiss:hover, #overlay1 .dismiss:hover, #overlay2 .dismiss:hover, #overlay3 .dismiss:hover, #overlay4 .dismiss:hover{
-    text-decoration: none;
-    background: #D2DAE3;
-}
 
 /* Overlay Ends Here*/
 
@@ -870,6 +865,15 @@ td .match.active{
         width: 140%;
     }
     
+    .match-right-detail-center{
+        margin-top: 30px;
+        padding-left: 15px;
+    }
+    
+    .pop-det-right{
+        margin-top: 20px;
+    }
+    
 }
 
 @media screen and (max-width: 738px){
@@ -902,14 +906,13 @@ td .match.active{
         width: 100%;
     }
     
-    #overlay, #overlay1, #overlay2, #overlay3, #overlay4{ /* we set all of the properties for our overlay */
-        top: 30%;
-        left: 51%;
-        font-size: 0.9em;
+    .match-right-detail-center{
+        margin-top: 30px;
+        padding-left: 15px;
     }
     
     .pop-det-right{
-        margin-left: 5%;
+        margin-top: 20px;
     }
 }
 
@@ -921,6 +924,58 @@ td .match.active{
     
 }
 
+@media screen and (max-width: 575px){
+    .modal{
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: -30px;
+    }
+
+    .dismiss{
+        padding: 11px 30px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: -30px;
+    }
+
+    .dismiss{
+        padding: 11px 30px;
+    }
+    
+}
+
+@media screen and (max-width: 555px){
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: -25px;
+    }
+
+    .dismiss{
+        padding: 11px 30px;
+    }
+    
+}
+
+@media screen and (max-width: 545px){
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: -18px;
+    }
+
+    .dismiss{
+        padding: 11px 30px;
+    }
+    
+}
+
 
 @media screen and (max-width: 540px){
     
@@ -928,45 +983,67 @@ td .match.active{
         width: 130%;
     }
     
-    /* Overlay Starts Here*/
-
-    #overlay1, #overlay2, #overlay3, #overlay4{ /* we set all of the properties for our overlay */
-        min-width: 300px;
-        top: 10%;
-        font-size: 0.9em;
-    }
-    
-    #overlay .pop-det, #overlay1 .pop-det, #overlay2 .pop-det, #overlay3 .pop-det, #overlay4 .pop-det{
-        display: inline;
-        padding: 0px;
-        margin-bottom: 30px;
-    }
-    #overlay .pop-det-left, .pop-det-right, #overlay1 .pop-det-left, #overlay2 .pop-det-left, #overlay3 .pop-det-left, #overlay4 .pop-det-left{
-        padding: 0px 20px;
-        margin: 0;
-        margin-bottom: 10px;
-    }
-    
-    #overlay .mat-ordtopay, #overlay1 .mat-ordtopay, #overlay2 .mat-ordtopay, #overlay3 .mat-ordtopay, #overlay4 .mat-ordtopay{
-        margin-top: 15px;
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: -15px;
     }
 
-    #overlay .dismiss, #overlay1 .dismiss, #overlay2 .dismiss, #overlay3 .dismiss, #overlay4 .dismiss{
-        left: -135px;
-        margin: 0px;
-        margin-top: 10px;
+    .dismiss{
+        padding: 11px 30px;
     }
-
-    /* Overlay Ends Here*/
     
 }
 
+@media screen and (max-width: 530px){
+    .modal-footer{
+        position: relative;
+        left: 15px;
+        display: inline-block !important;
+    }
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: -5px;
+    }
+
+    .dismiss{
+        padding: 11px 30px;
+    }
+}
+
 @media screen and (max-width: 499px){
-    
     .table{
         width: 150%;
     }
     
+    .modal-footer{
+        display: inline-block !important;
+        margin-bottom: 50px;
+    }
+    
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: 10px;
+    }
+
+    .dismiss{
+        position: relative;
+        padding: 11px 30px;
+        top: 50px !important;
+        right: 235px !important;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .modal-footer{
+        padding-right: 10px;
+    }
+    
+    .dismiss{
+        position: relative;
+        padding: 11px 30px;
+        top: 0px !important;
+        margin-left: 5px !important;
+    }
 }
 
 @media screen and (max-width: 459px){
@@ -999,6 +1076,23 @@ td .match.active{
         width: 190%;
     }
     
+    .modal-footer{
+        left: 8px;
+        padding-right: 0px;
+    }
+    
+    .mat-ordtopay{
+        padding: 12px 20px;
+        left: 10px;
+        font-size: 0.85em;
+    }
+    
+    .dismiss{
+        position: relative;
+        padding: 10px 30px;
+        top: 0px !important;
+        margin-left: 5px !important;
+    }
 }
 
 @media screen and (max-width: 363px){
@@ -1029,6 +1123,30 @@ td .match.active{
     
     .table{
         width: 240%;
+    }
+    
+    .modal{
+        width: 90%;
+        margin-left: 15px;
+        z-index: 2000;
+    }
+    
+    .modal-footer{
+        left: 8px;
+        padding-right: 0px;
+    }
+    
+    .mat-ordtopay{
+        padding: 10px;
+        left: 10px;
+        font-size: 0.85em;
+    }
+    
+    .dismiss{
+        position: relative;
+        padding: 8px 20px;
+        top: -20px !important;
+        margin-left: 5px !important;
     }
     
 }
