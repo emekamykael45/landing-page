@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>TransMonitor | Merchant Module</title>
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- Font-Awesome CSS CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!-- DataTable CSS CDN -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/invoice-history.css"/>
+    
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>  
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
+            <a class="navbar-brand logo" href="index.html">TRANSMONITOR</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jakePaul" aria-controls="jakePaul" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="jakePaul">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">FAQ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/bell.png" class="notif-nav-icon">
+                            <span class="circle">8</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="appleSauce" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="hello">Hello</span>
+                                <span class="user-name">Oluwaleke Ojo</span>
+                                <div class="user-img">
+                                    <img class="user-dis-pic" src="images/Bank-Icon.png">
+                                </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        </header>
+        
+        <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
+        <div class="sidenav" id="mySidenav">
+
+            <!-- Click on x in mobile view to close the sidenav -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="tab-sect">
+                <a href="transfer-pay-ver.html"class="veri-tra-btn">GENERATE INVOICE</a>
+                <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                <hr/>
+
+                <p class="head-tag">Main</p>
+                <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
+            </div>
+
+            <div class="tab-sect">
+                <p class="head-tag">Payments</p>
+                <a href="payments.html" class="active"><img src="images/all-pay.png"><span>All Payments</span></a>
+                <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
+            </div>
+
+            <div class="tab-sect">
+                <p class="head-tag">Others</p>
+                <a href="merc-all-users2.html"><img src="images/merc-prof.png"><span>User Management</span></a>
+
+                <a href="settings.html" class="merc-prof"><img src="images/settings.png" class="settings-img"><span>Settings</span></a>
+            </div>
+
+            <hr>
+            <div class="tab-sect tab-resp">
+                <p class="head-tag other-links">Other Links</p>
+                <a href=""><span>Support</span></a>
+                <a href=""><span>FAQ</span></a>
+            </div>
+
+            <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+        </div>
+        <!-- Sidebar Navigation Ends Here -->
+        
+
+        <!-- Main Page Content Starts Here -->
+        <div class="main">
+                
+            <!-- Use fa-bar on mobile view to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+            
+            <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
+                <div id="overlay"></div>
+
+                <h3 class="payments-head">Invoice History</h3>
+                
+                <!-- Transaction Info Starts Here -->
+                <div class="row info-head">
+                    <div class="col-md-3 info-box">
+                        <div class="info-head-det">
+                            <p class="info-head-tag">Total Invoice Created</p>
+                            <p class="info-head-fig">100</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 info-box">
+                        <div class="info-head-det">
+                            <p class="info-head-tag">Total Invoice Confirmed</p>
+                            <p class="info-head-fig"><span>&#x20A6;</span>80</p>
+                        </div>
+                        <p class="confirmed-percentage">80%</p>
+                    </div>
+
+                    <div class="col-md-3 info-box">
+                        <div class="info-head-det">
+                            <p class="info-head-tag">Total Invoice Pending</p>
+                            <p class="info-head-fig">20</p>
+                        </div>
+                        <p class="pending-percentage">20%</p>
+                    </div>
+                    
+                </div>
+                <!-- Transaction Info Ends Here -->
+                
+                <div class="row paym-sub-line">
+                    <div class="col-md-12 paym-sub">
+                        <div class="col-md-3 show-entries">
+                            <span>Showing
+                                <div class="box-drop">
+                                    <select>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                        <option>50</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div><span class="out-of">out of</span><p class="show-out-of">500</p> payments
+                            </span>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-4 sear-pay">
+                            <img src="images/Search.png" class="sear-pay-icon">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                        </div>
+                        <div class="col-md-4">
+                            <!--
+                            <div id="myBtnContainer">
+                                <span>Show</span>
+                                <button class="btn active" onclick="filterSelection('all')">All</button>
+                                <button class="btn" onclick="filterSelection('reconciled')">Reconciled</button>
+                                <button class="btn" onclick="filterSelection('pending')">Pending</button>
+                                <button class="btn" onclick="filterSelection('un-reconciled')">Un-reconciled</button>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                              <th scope="col">Paid By</th>
+                              <th scope="col">Amount</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Invoice ID</th>
+                              <th scope="col">Merchant Bank</th>
+                              <th scope="col">Time</th>
+                              <th scope="col">Status</th>
+                              <th scope="col" class="sta">Sta</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            <tr>
+                                <th><span class="user-id">AW</span>Ambode Wuraola</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">AB</span>Ambode Babatunde-Olu</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="pending">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Pending</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">AB</span>Ambode Babatunde-Olu</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">VW</span>Vela Matthew</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">AB</span>Ambode Babatunde-Olu</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="pending">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Pending</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">VW</span>Vela Matthew</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">AB</span>Ambode Babatunde-Olu</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">VW</span>Vela Matthew</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="pending">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Pending</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">AB</span>Ambode Babatunde-Olu</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="user-id">VW</span>Vela Matthew</th>
+                                <td>250,000</td>
+                                <td>18-01-2019</td>
+                                <td>645372</td>
+                                <td class="bank-name">Guaranty Trust Bank</td>
+                                <td>02:22pm</td>
+                                <td>
+                                    <div class="reconciled">
+                                        <i class="fas fa-circle"></i>
+                                        <span>Confirmed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href=""><i class="fas fa-chevron-right"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-footer">
+                <div class="left">
+                    Showing <span class="">1</span> to <span class="">10</span> of <span class="">500</span> entries
+                </div>
+
+                <div class="right">
+                  <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                      <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>    
+            </div>
+
+        </div>
+        <!-- Main Page Content Stops Here -->
+        
+        
+        
+        
+        
+        
+        <!-- Accordion Table -->
+        <script>
+            $('.change-pass').click(function() {
+                $('#passwordEdit').show(500);
+                $('.personal-info-edit').hide(0);
+                $('.password-edit').show(0);
+            });
+            $('.save-new-pass').click(function() {
+                $('#passwordEdit').hide(500);
+                $('.personal-info-edit').show(0);
+                $('.password-edit').hide(0);
+            });
+        </script>
+        
+        <!-- Table Filter JS -->
+        <script>
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
+        
+        <!-- Side Navigation JS -->
+        <script>
+
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "70%";
+                document.getElementById("overlay").style.display = "block";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+            
+            /* Click on overlay to set the width of the side navigation to 0 & removes Overlay*/
+            function closeOverlay() {
+                if (window.innerWidth < 769) {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("overlay").style.display = "none";
+                }   
+            }
+
+        </script>
+        
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+</html>
