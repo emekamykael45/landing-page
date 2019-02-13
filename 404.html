@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/merchant-module.css"/>
+    <link rel="stylesheet" href="css/404.css"/>
+    <!-- Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -76,6 +78,7 @@
                 <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
                 <hr/>
 
+                <br>
                 <p class="head-tag">Main</p>
                 <a href="merchant-module.html"class="active"><img src="images/overview.png"><span>Overview</span></a>
             </div>
@@ -110,75 +113,18 @@
             <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
                 <div id="overlay"></div>
 
-                <!-- Transaction Info Starts Here -->
-                <div class="row info-head">
-                    <div class="col-md-3 info-box">
-                        <div class="info-head-det">
-                            <p class="info-head-tag">Today's Transaction Volume</p>
-                            <p class="info-head-fig">2,342</p>
-                        </div>
-                    </div>
+                <!-- 404 Page Starts Here -->
+                <div class="main-content">
 
-                    <div class="col-md-3 info-box">
-                        <div class="info-head-det">
-                            <p class="info-head-tag">Today's Transaction Value</p>
-                            <p class="info-head-fig"><span>&#x20A6;</span>4,000,000</p>
-                        </div>
-                    </div>
+                    <img src="images/404-image.png">
+                    <p class="opps-text">Opps! You Seem Lost in Nowhere</p>
+                    <p class="lets-help-text">Lets help you get back to the road</p>
 
-                    <div class="col-md-3 info-box">
-                        <div class="info-head-det">
-                            <p class="info-head-tag">Transaction Volume Till Date</p>
-                            <p class="info-head-fig">452,000</p>
-                        </div>
-                    </div>
+                    <p><a href="merchant-module.html" class="back-to-overview">BACK TO OVERVIEW</a></p>
 
-                    <div class="col-md-3 info-box">
-                        <div class="info-head-det">
-                            <p class="info-head-tag">Transaction Value Till Date</p>
-                            <p class="info-head-fig"><span>&#x20A6;</span>64,000,000</p>
-                        </div>
-                    </div>
                 </div>
-                <!-- Transaction Info Ends Here -->
 
-                <!-- Chart & Stats Starts Here -->
-                <div class="col-md-12 info-graph">
-                    <!-- HighChart Graph Starts Here -->
-                    <div class="col-md-8 info-chart">
-                        <!-- Value Chart -->
-                        <div id="my-chart-val"></div>
-                        <br/>
-                        <!-- Volume Chart -->
-                        <div id="my-chart-vol"></div>
-                    </div>
-                    <!-- HighChart Graph Ends Here -->
-                    
-                    <!-- Stats Starts Here -->
-                    <div class="col-md-4 info-stats">
-                        <div class="tab tab-1">
-                            <p class="tab-head-tag">Today's Payments</p>
-                            <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="tab-det">Un-reconciled Payments: <span class="or-tab-det-one">20</span></p>
-                            <p class="tab-det">Reconciled Payments: <span class="or-tab-det-two">80</span></p>
-                            <p class="tab-det">Today's Total Payments: <span class="or-tab-det-three">100</span></p>
-                        </div>
-                        
-                        <div class="tab">
-                            <p class="tab-head-tag">Payments Till Date</p>
-                            <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p class="tab-det">Un-reconciled Payments: <span class="pay-tab-det-one">20</span></p>
-                            <p class="tab-det">Reconciled Payments: <span class="pay-tab-det-two">80</span></p>
-                            <p class="tab-det">Total Payments: <span class="pay-tab-det-three">100</span></p>
-                        </div>
-                    </div>
-                    <!-- Stats Ends Here --> 
-                </div>
-                <!-- Chart & Stats Ends Here -->
+                <!-- 404 Page Ends Here -->
 
             </div>
                 
