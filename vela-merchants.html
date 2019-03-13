@@ -17,7 +17,7 @@
     <!-- DataTable CSS CDN -->
     <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/payments.css"/>
+    <link rel="stylesheet" href="css/vela-merchants.css"/>
     
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -72,7 +72,6 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
                 <div class="tab-sect">
-                    <a href="transfer-pay-ver.html"class="veri-tra-btn">GENERATE INVOICE</a>
                     <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
                     <hr/>
 
@@ -81,16 +80,11 @@
                 </div>
 
                 <div class="tab-sect">
-                    <p class="head-tag">Payments</p>
-                    <a href="payments.html" class="active"><img src="images/all-pay.png"><span>All Payments</span></a>
-                    <a href="invoice-history.html"><img src="images/invoice.png"><span>Invoice History</span></a>
-                    <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
-                </div>
-
-                <div class="tab-sect">
                     <p class="head-tag">Others</p>
-                    <a href="merc-all-users2.html" ><img src="images/merc-prof.png"><span>User Management</span></a>
-
+                    <a href="vela-banks.html"><img src="images/Bank  Vec.png"><span>Banks</span></a>
+                    <a href="vela-merchants.html" class="active"><img src="images/shop vec.png"><span>Merchants</span></a>
+                    <br>
+                    <a href="merc-all-users2.html"><img src="images/merc-prof.png"><span>User Management</span></a>
                     <a href="settings.html" class="merc-prof"><img src="images/settings.png" class="settings-img"><span>Settings</span></a>
                 </div>
 
@@ -112,8 +106,6 @@
 
                 <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
                     <div id="overlay"></div>
-
-                <h3 class="payments-head">Payments</h3>
                 
                 <!-- Transaction Info Starts Here -->
                 <div class="row info-head">
@@ -146,6 +138,8 @@
                     </div>
                 </div>
                 <!-- Transaction Info Ends Here -->
+
+                <h3 class="payments-head">Merchants</h3>
                 
                 <div class="row paym-sub-line">
                     <div class="col-md-12 paym-sub">
@@ -160,14 +154,14 @@
                                         <option>50</option>
                                     </select>
                                     <i class="fas fa-chevron-down"></i>
-                                </div><span class="out-of">out of</span><p class="show-out-of">500</p> payments
+                                </div><span class="out-of">out of</span><p class="show-out-of">500</p> merchants
                             </span>
                         </div>
                         <div class="col-md-1">
                         </div>
                         <div class="col-md-4 sear-pay">
                             <img src="images/Search.png" class="sear-pay-icon">
-                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search merchants..">
                         </div>
                         <div class="col-md-4">
                             <!--
@@ -187,24 +181,23 @@
                     <table class="table">
                         <thead class="thead-light">
                             <tr>
-                              <th scope="col">Item Type</th>
-                              <th scope="col">Price</th>
-                              <th scope="col">Transaction No.</th>
-                              <th scope="col">Time</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Location</th>
                               <th scope="col">Status</th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Last Active</th>
+                              <th scope="col">Reconcilation Success Rate</th>
                             </tr>
                         </thead>
                         <tbody id="myTable">
                             <tr>
-                                <th><span class="user-id">VW</span>Hello</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><img src="images/merchant vec.png" class="merc-table-img">Shoprite Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Reconciled</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo1" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -215,36 +208,38 @@
                                     <div class="accordian-body collapse" id="demo1">
                                         <div class="drop-down-det">
                                             <div class="inner">
-                                                <p class="first-tag">Paid By</p>
+                                                <p class="first-tag">Contact Person</p>
                                                 <p class="payer-name">Ojo Oluwaleke</p>
                                                 <p class="payer-num"><i class="fas fa-phone fa-rotate-90"></i>08067710761</p>
                                             </div>
                                             <div class="inner">
-                                                <p class="first-tag">Order location</p>
-                                                <p class="order-loca-det">The Nike Store, Ikeja City Mall, Alausa Ikeja</p>
+                                                <p class="first-tag">Description</p>
+                                                <p class="order-loca-det">Daily needs shopping complex part of a big chain.</p>
                                             </div>
                                             <div class="inner">
-                                                <p class="first-tag">Transaction reference</p>
-                                                <p class="trans-ref-det">1234567890</p>
+                                                <p class="first-tag">Date Activated</p>
+                                                <p class="trans-ref-det">22/09/2018</p>
                                             </div>
                                             <div class="inner end">
-                                                <p class="first-tag">Time</p>
-                                                <p class="time-det">12:30</p>
+                                                <p class="first-tag">Last Active</p>
+                                                <p class="time-det">22/09/2018</p>
                                             </div>
+                                            <!--
+                                            <a href="" class="edit-link"><i class="fas fa-cog"></i> Edit</a>
+                                            -->
+                                            <a href="merchant-module.html" class="view-as-merch-link">View as Merchant</a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Addis Abbaba</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="pending">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Pending</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo2" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -276,15 +271,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="un-reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Un-reconciled</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo3" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -316,15 +309,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Reconciled</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo4" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -356,15 +347,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="pending">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Pending</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo5" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -396,15 +385,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="un-reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Un-reconciled</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo6" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -436,15 +423,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Reconciled</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo7" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -476,15 +461,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="pending">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Pending</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo8" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -516,15 +499,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="un-reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Un-reconciled</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo9" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>
@@ -556,15 +537,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th><span class="user-id">VW</span>Matthew</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th><span class="user-id">VW</span>Shopright Mall</th>
+                                <td>Apapa</td>
+                                <td>Active</td>
+                                <td>Merchant</td>
+                                <td>22/09/2018</td>
                                 <td>
-                                    <div class="reconciled">
-                                        <i class="fas fa-circle"></i>
-                                        <span>Reconciled</span>
-                                    </div>
+                                    89%
                                     <div data-toggle="collapse" data-target="#demo10" class="collapsed accordion-toggle">
                                         <span class="chevron top"></span>
                                     </div>

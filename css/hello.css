@@ -1,5 +1,9 @@
-/*custom font*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 /*basic reset*/
 * {
@@ -14,7 +18,7 @@ html {
 }
 
 body {
-    font-family: montserrat, arial, verdana;
+    font-family: "CircularStd-Book", Arial, sans-serif;
     background: transparent;
 }
 

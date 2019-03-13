@@ -1,3 +1,11 @@
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
+
+
 *{
     box-sizing: border-box;
 }
@@ -9,6 +17,7 @@
 body {
     font-size: .875rem;
     background: transparent;
+    font-family: "CircularStd-Book", Arial, sans-serif;
 }
 
 

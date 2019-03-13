@@ -124,25 +124,25 @@ input:focus, textarea:focus{
 .user-img img{
     width: 35px;
     height: 35px;
+    margin-left: 7px;
 }
 
 /* Navbar Ends Here */
 
 /* Overlay */
 #overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.55); /* Black background with opacity */
-  z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
 }
-
 
 /*Side Menu Starts Here*/
 
@@ -200,6 +200,7 @@ input:focus, textarea:focus{
 }
 .tab-sect p{
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 .tab-sect hr, .sidenav hr{
     margin-top: 0px;
@@ -298,7 +299,6 @@ input:focus, textarea:focus{
 }
 
 /*Side Menu Ends Here*/
-
 
 
 /*Dashboard Starts Here*/
@@ -537,7 +537,8 @@ input:focus, textarea:focus{
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
-        padding-top: 0px;
+        padding-top: 3px;
+        padding-right: 18px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -555,10 +556,20 @@ input:focus, textarea:focus{
     }
     
     .sidenav .veri-tra-btn{
-        width: 80%;
         left: 10px;
-        margin-top: -20px;
+        width: 215px;
+        margin-bottom: 20px;
+        margin-top: -10px;
     }
+
+    .sidenav .tab-sect{
+        margin-bottom: 30px;
+    }
+
+    .sidenav .tab-sect .head-tag{
+        margin-top: 20px;
+    }
+    
     
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
         display: block;

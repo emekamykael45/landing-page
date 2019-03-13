@@ -1,7 +1,14 @@
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
+
 body{
     margin: 0;
     padding: 0;
-    font-family: Noto Sans JP;
+    font-family: "CircularStd-Book", Arial, sans-serif;
     background: url(../images/signup-sign-in-img.png);
     background-repeat: no-repeat;
     background-size: cover;

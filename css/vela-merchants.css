@@ -132,18 +132,19 @@ input:focus, textarea:focus{
 
 /* Overlay */
 #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
-    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+  z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
+
 
 /*Side Menu Starts Here*/
 
@@ -192,12 +193,13 @@ input:focus, textarea:focus{
 }
 
 .tab-sect{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 .tab-sect .head-tag{
     padding-left: 15px;
     font-size: 0.9rem;
     color: #647787;
+    margin-top: 0px;
 }
 .tab-sect p{
     margin-bottom: 10px;
@@ -302,7 +304,6 @@ input:focus, textarea:focus{
 /*Side Menu Ends Here*/
 
 
-
 /*Dashboard Starts Here*/
 
 .main{
@@ -325,7 +326,7 @@ input:focus, textarea:focus{
 /*Section 1 Starts Here*/
 
 .payments-head{
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .info-head{
@@ -359,29 +360,11 @@ input:focus, textarea:focus{
     font-size: 1.35em;
     color: #262626;
 }
-
-.confirmed-percentage{
-    position: absolute;
-    margin: 0;
-    font-size: 1.8em;
-    margin-top: -48px;
-    right: 15px;
-    color: #27AE60;
-}
-
-.pending-percentage{
-    position: absolute;
-    margin: 0;
-    font-size: 1.8em;
-    margin-top: -48px;
-    right: 15px;
-    color: #EBC315;
-}
 /*Section 1 Ends Here*/
 
 /*Section 3 Starts Here*/
 .paym-sub-line{
-    margin-top: 60px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 .paym-sub{
@@ -508,10 +491,6 @@ input:focus, textarea:focus{
 .table thead{
     background-color: #EAEEF0;
 }
-.table thead .sta{
-    color: #EAEEF0;
-}
-
 .table thead tr th{
     padding: 5px 12px;
     color: #7F8FA4;
@@ -528,16 +507,21 @@ input:focus, textarea:focus{
 
 .table tbody tr th{
     padding: 18px;
-    padding-right: 0px;
-    width: 250px;
     border: none;
     border-bottom: 1px solid #eaebed;
     color: #262626;
-    font-weight: 200;
+    font-weight: 300 ;
 }
+
+.table tbody tr th .merc-table-img{
+    width: 40px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-right: 15px;
+}
+
 .table tbody tr td{
     padding: 18px 12px;
-    padding-right: 0px;
     border: none;
     border-bottom: 1px solid #eaebed;
     color: #7F8FA4;
@@ -545,61 +529,142 @@ input:focus, textarea:focus{
 }
 
 .table tbody tr th .user-id{
-    margin-right: 15px;
+    margin-right: 9px;
     border: 1px solid #7F8FA4;
     color: #fff;
     font-size: 0.8rem;
     padding: 10px 6px;
     border-radius: 50%;
     background: #7F8FA4;
+    
 }
 
-.table .bank-name{
-    width: 180px;
-}
-
-#myTable .fa-chevron-right{
-    position: absolute;
-    margin-top: -5px;
-    right: 42px;
-    background: #1875F0;
-    padding: 8px 11px;
-    color: #FFFFFF;
-    border-radius: 50%;
-}
-
-td .reconciled, td .pending, td .un-reconciled{
-    margin-top: -5px;
+.accordion button{
+    display: block;
+    margin: 0px;
     margin-bottom: -5px;
-    width: 85%;
-    padding: 5px 3px;
-    padding-top: 4px;
-    border: 1px solid #dbdde0;
-    border-radius: 30px;
-    color: #27AE60;
-    font-weight: 400;
-}
-.reconciled .fas, .pending .fas, .un-reconciled .fas{
-    font-size: 0.65em;
-    padding-right: 2px;
-    padding-left: 3px;
-    padding-top: 0;
-    padding-bottom: 0;
-    color: #27AE60;
+    background-color: transparent;
+    border: none;
 }
 
-td .pending{
-    color: #EBC315;
+.accordion-toggle:after{
+    position: absolute;
+    display: inline-block;
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	height: 0.85em;
+    width: 0.85em;
+    right: 53.5px;
+    color: #CCCFD4;
+    margin-top: -13.5px;
+	transform: rotate(-45deg);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    cursor: pointer;
 }
-.pending .fas{
-    color: #EBC315;
+.accordion-toggle.collapsed:after{
+    margin-top: -19.5px;
+    transform: rotate(135deg);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
 }
 
-td .un-reconciled{
-    color: #7F8FA4;
+
+.hiddenRow {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: #FAFBFC;
 }
-.un-reconciled .fas{
+
+.accordian-body{
+    background: #FAFBFC;
+    margin: 0px;
+    padding-left: 61px;
+}
+
+.accordian-body-one{
+    display: block;
+    background: #FAFBFC;
+    margin: 0px;
+    margin-top: 23px;
+    margin-left: -56em;
+    margin-right: -12px;
+    padding-left: 92px;
+    margin-bottom: -18px;
+}
+
+.accordian-body .drop-down-det{
+    margin: 0;
+    display: inline-flex;
+}
+.inner{
+    display: inline;
+    padding: 5px 20px 5px 0px;
+    margin-right: 20px;
+    border-right: 1px solid #CCCFD4;
+    color: #414042;
+    font-weight: 500;
+}
+.end{
+    border-right: none;
+}
+
+.inner .first-tag{
+    margin-top: 12px;
+    margin-bottom: 3px;
     color: #7F8FA4;
+    font-weight: 500;
+}
+
+.inner .payer-name{
+    margin: 0;
+    margin-bottom: 3px;
+}
+.inner .payer-num{
+    margin: 0;
+    margin-bottom: 14px;
+    color: #1875F0;
+    font-weight: 500;
+}
+.inner .payer-num i{
+    color: #1875F0;
+    margin-right: 5px;
+}
+
+.inner .order-loca-det{
+    margin: 0;
+    width: 220px;
+}
+
+.edit-link{
+    color: #414042;
+    height: 15px;
+    margin-top: 40.5px;
+    margin-left: 10px;
+}
+
+.edit-link:hover{
+    color: #7F8FA4;
+    text-decoration: none;
+}
+
+.view-as-merch-link{
+    color: #414042;
+    border: 1px solid #414042;
+    border-radius: 20px;
+    height: 35px;
+    padding: 7px 10px !important;
+    margin-top: 31px;
+    margin-left: 17px;
+}
+
+.view-as-merch-link:hover{
+    color: #7F8FA4;
+    text-decoration: none;
+    border: 1px solid #7F8FA4;
 }
 
 .tab-footer{
@@ -647,14 +712,24 @@ td .un-reconciled{
         margin-left: -50px;
     }
 
+    .accordion-toggle:after{
+        right: 38.5px;
+    }
+
     td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
+        width: 70%;
         font-size: 0.95em;
     }
     .reconciled .fas, .pending .fas, .un-reconciled .fas{
         font-size: 0.55em;
     }
     
+}
+
+@media (min-width: 1148px) and (max-width: 1300px) {
+    .accordian-body-one{
+        
+    }
 }
 
 @media (min-width: 1086px) and (max-width: 1180px) {
@@ -687,12 +762,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 120%;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
-        font-size: 0.95em;
+        width: 105%;
     }
     
 }
@@ -725,12 +795,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 120%;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
-        font-size: 0.95em;
+        width: 110%;
     }
 }
 
@@ -783,12 +848,8 @@ td .un-reconciled{
         color: #7c7c7c;
     }
     
-    .table{
-        width: 130%;
-    }
-    
     td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
+        width: 75%;
         font-size: 0.95em;
     }
 }
@@ -843,12 +904,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 130%;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
-        font-size: 0.95em;
+        width: 117%;
     }
 }
 
@@ -903,12 +959,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 140%;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
-        font-size: 0.95em;
+        width: 123%;
     }
 }
 
@@ -958,12 +1009,12 @@ td .un-reconciled{
     }
     
     .table{
-        width: 140%;
+        width: 130%;
     }
     
     td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
-        font-size: 0.95em;
+        width: 85%;
+        font-size: 1em;
     }
     
     .accordion-toggle:after{
@@ -1031,6 +1082,7 @@ td .un-reconciled{
         margin-top: 20px;
     }
     
+    
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
         display: block;
     }
@@ -1083,14 +1135,21 @@ td .un-reconciled{
     }
     
     .table{
-        width: 140%;
+        width: 100%;
     }
-    
+
+    .accordion-toggle:after{
+        right: 45.5px;
+        color: #7c7c7c;
+    }
+    .accordion-toggle.collapsed:after{
+        margin-top: -17.5px;
+    }
+
     td .reconciled, td .pending, td .un-reconciled{
-        width: 90%;
-        font-size: 0.95em;
+        width: 70%;
+        font-size: 1em;
     }
-    
     .reconciled .fas, .pending .fas, .un-reconciled .fas{
         font-size: 0.7em;
     }
@@ -1117,7 +1176,7 @@ td .un-reconciled{
 @media (min-width: 600px) and (max-width: 649px){
     
     .table{
-        width: 180%;
+        width: 170%;
     }
     
 }
@@ -1133,7 +1192,7 @@ td .un-reconciled{
 @media (min-width: 500px) and (max-width: 549px){
     
     .table{
-        width: 220%;
+        width: 202%;
     }
     
 }
@@ -1141,7 +1200,7 @@ td .un-reconciled{
 @media (min-width: 450px) and (max-width: 499px){
     
     .table{
-        width: 240%;
+        width: 226%;
     }
     
 }
@@ -1164,7 +1223,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 270%;
+        width: 256%;
     }
     
     .tab-footer .right{
@@ -1208,7 +1267,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 300%;
+        width: 296%;
     }
     
     .tab-footer .right{
@@ -1251,7 +1310,7 @@ td .un-reconciled{
     }
     
     .table{
-        width: 400% !important;
+        width: 305% !important;
     }
     
     .tab-footer .right{

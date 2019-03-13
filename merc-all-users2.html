@@ -112,396 +112,401 @@
                 
                 <!-- Use any element to open the sidenav -->
                 <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+
+                <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
+                    <div id="overlay"></div>
                 
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3 class="orders-head">Users</h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3 class="orders-head">Users</h3>
+                        </div>
+                        <div class="col-md-6"></div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn create-user" data-toggle="modal" data-target="#exampleModal">CREATE USER</button>
+                        </div>
                     </div>
-                    <div class="col-md-6"></div>
-                    <div class="col-md-3">
-                        <button type="button" class="btn create-user" data-toggle="modal" data-target="#exampleModal">CREATE USER</button>
+                    <br>
+                    
+                    <!-- Modal -->
+                    
+                    <!-- Modal 1-->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Create New User</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="left-side">
+                                    <input type="text" name="" class="first-name" placeholder="First Name" required>
+                                    <p>Default Username: <strong>USER0180</strong></p>
+                                </div>
+                                <div class="right-side">
+                                    <input type="text" name="" class="last-name" placeholder="Last Name" required>
+                                    <p>Default Password: <strong>00000</strong></p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalTwo" data-dismiss="modal">CREATE USER</button>
+                            <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                        </div>
+                        </div>
                     </div>
-                </div>
-                <br>
-                
-                <!-- Modal -->
-                
-                <!-- Modal 1-->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create New User</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                          <form>
-                              <div class="left-side">
-                                  <input type="text" name="" class="first-name" placeholder="First Name" required>
-                                  <p>Default Username: <strong>USER0180</strong></p>
-                              </div>
-                              <div class="right-side">
-                                  <input type="text" name="" class="last-name" placeholder="Last Name" required>
-                                  <p>Default Password: <strong>00000</strong></p>
-                              </div>
-                          </form>
-                      </div>
-                      <div class="modal-footer">
-                          <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalTwo" data-dismiss="modal">CREATE USER</button>
-                          <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
-                      </div>
                     </div>
-                  </div>
-                </div>
-                
-                <!-- Modal 2-->
-                <div class="modal fade" id="modalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">New User Created</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
+                    
+                    <!-- Modal 2-->
+                    <div class="modal fade" id="modalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New User Created</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                
-                
-                <div class="table-responsive">
-                    <table id="example" class="table">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Staff Name</th>
-                            <th>Mobile Number</th>
-                            <th>Date Registered</th>
-                            <th>All Verifications</th>
-                            <th class="tab-none">Activity</th>
-                            <th class="tab-none">See</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img"><span class="blocked-user">Dino Mark</span>
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                                <!--
-                                <div class="drop">
-                                    <ul>
-                                        <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                                            <ul>
-                                                <li><a href="#">Reset User</a></li>
-                                                <li><a href="#">Block User</a></li>
-                                            </ul>        
-                                        </li>
-                                    </ul>
-                                </div>
-                                -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Ben Idaho
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">30000</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Jumoke Adetunji
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">2000</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td class="number">200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td>200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <img src="images/user-img.png" class="table-user-img">Dino Mark
-                            </th>
-                            <td>08099876765</td>
-                            <td>25-10-2018</td>
-                            <td>200</td>
-                            <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                            <td>
-                                <!-- Default dropleft button -->
-                                <div class="dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Reset User</a>
-                                    <a class="dropdown-item" href="#">Block User</a>
-                                  </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    </div>
+                    
+                    
+                    <div class="table-responsive">
+                        <table id="example" class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Staff Name</th>
+                                <th>Mobile Number</th>
+                                <th>Date Registered</th>
+                                <th>All Verifications</th>
+                                <th class="tab-none">Activity</th>
+                                <th class="tab-none">See</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img"><span class="blocked-user">Dino Mark</span>
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                    <!--
+                                    <div class="drop">
+                                        <ul>
+                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                                <ul>
+                                                    <li><a href="#">Reset User</a></li>
+                                                    <li><a href="#">Block User</a></li>
+                                                </ul>        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Ben Idaho
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">30000</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Jumoke Adetunji
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">2000</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td class="number">200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td>200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
+                                </th>
+                                <td>08099876765</td>
+                                <td>25-10-2018</td>
+                                <td>200</td>
+                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td>
+                                    <!-- Default dropleft button -->
+                                    <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reset User</a>
+                                        <a class="dropdown-item" href="#">Block User</a>
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
                 </div>
                     
             </div>
@@ -523,16 +528,27 @@
             //# sourceMappingURL=popper.min.js.map
         </script>
         
+        <!-- Side Navigation JS -->
         <script>
-        
+
             /* Set the width of the side navigation to 212px */
             function openNav() {
-                document.getElementById("mySidenav").style.width = "212px";
+                document.getElementById("mySidenav").style.width = "80%";
+                document.getElementById("overlay").style.display = "block";
             }
 
             /* Set the width of the side navigation to 0 */
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+            
+            /* Set the width of the side navigation to 0 & removes Overlay*/
+            function closeOverlay() {
+                if (window.innerWidth < 769) {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("overlay").style.display = "none";
+                }   
             }
 
         </script>

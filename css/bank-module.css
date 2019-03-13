@@ -1,18 +1,16 @@
-$ashLight: #F7F8FA;
-$blueLight: #1875F0;
-$white: #FFFFFF;
-$ashDark: #EAEEF0;
-$blackLight: #787C90;
-$blackMedium: #414042;
-$blackDark: #262626;
-
-
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 *{
     box-sizing: border-box;
 }
 
 body {
+    font-family: "CircularStd-Book", Arial, sans-serif;
     font-size: .875rem;
     background: #F7F8FA;
 }
@@ -126,9 +124,25 @@ input:focus, textarea:focus{
 .user-img img{
     width: 35px;
     height: 35px;
+    margin-left: 7px;
 }
 
 /* Navbar Ends Here */
+
+/* Overlay */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
 
 
 /*Side Menu Starts Here*/
@@ -187,6 +201,7 @@ input:focus, textarea:focus{
 }
 .tab-sect p{
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 .tab-sect hr, .sidenav hr{
     margin-top: 0px;
@@ -210,13 +225,27 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
 .sidenav .veri-tra-btn:hover{
     background: #27AE60;
-    padding: 10px 10px 10px 10px;
-    font-weight: 700;
+    padding: 10px 10px 10px 15px;
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
+.sidenav .veri-tra-btn.active{
+    background: #27AE79;
+    padding: 10px 10px 10px 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidenav .veri-tra-btn.active:hover{
+    padding: 10px 10px 10px 10px;
+}
+
 
 .sidenav a{
     display: block;
@@ -265,6 +294,9 @@ input:focus, textarea:focus{
 
 .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
     display: none;
+}
+.log-out{
+    margin-bottom: 30px;
 }
 
 /*Side Menu Ends Here*/
@@ -833,7 +865,7 @@ td .un-reconciled{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 819px){
     
     .navbar-toggler{
         display: none;
@@ -850,6 +882,7 @@ td .un-reconciled{
     .sidenav{
         width: 0px;
         padding-top: 75px;
+        z-index: 2001;
     }
     .sidenav a:hover{
         padding: 10px 0px 10px 15px;
@@ -858,6 +891,8 @@ td .un-reconciled{
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
+        padding-top: 3px;
+        padding-right: 18px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -876,6 +911,17 @@ td .un-reconciled{
     
     .sidenav .veri-tra-btn{
         left: 10px;
+        width: 215px;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+
+    .sidenav .tab-sect{
+        margin-bottom: 30px;
+    }
+
+    .sidenav .tab-sect .head-tag{
+        margin-top: 20px;
     }
     
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{

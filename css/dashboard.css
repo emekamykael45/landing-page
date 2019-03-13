@@ -1,5 +1,13 @@
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
+
 body {
   font-size: .875rem;
+  font-family: "CircularStd-Book", Arial, sans-serif;
 }
 
 .feather {

@@ -1,18 +1,16 @@
-$ashLight: #F7F8FA;
-$blueLight: #1875F0;
-$white: #FFFFFF;
-$ashDark: #EAEEF0;
-$blackLight: #787C90;
-$blackMedium: #414042;
-$blackDark: #262626;
-
-
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 *{
     box-sizing: border-box;
 }
 
 body {
+    font-family: "CircularStd-Book", Arial, sans-serif;
     font-size: .875rem;
     background: #F7F8FA;
 }
@@ -126,26 +124,25 @@ input:focus, textarea:focus{
 .user-img img{
     width: 35px;
     height: 35px;
+    margin-left: 7px;
 }
 
 /* Navbar Ends Here */
 
-
 /* Overlay */
 #overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.55); /* Black background with opacity */
-  z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
 }
-
 
 /*Side Menu Starts Here*/
 
@@ -194,15 +191,17 @@ input:focus, textarea:focus{
 }
 
 .tab-sect{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 .tab-sect .head-tag{
     padding-left: 15px;
     font-size: 0.9rem;
     color: #647787;
+    margin-top: 0px;
 }
 .tab-sect p{
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 .tab-sect hr, .sidenav hr{
     margin-top: 0px;
@@ -226,13 +225,27 @@ input:focus, textarea:focus{
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
 .sidenav .veri-tra-btn:hover{
     background: #27AE60;
-    padding: 10px 10px 10px 10px;
-    font-weight: 700;
+    padding: 10px 10px 10px 15px;
     letter-spacing: 0.3px;
     transition: all 0.2s ease-in-out;
 }
+
+.sidenav .veri-tra-btn.active{
+    background: #27AE79;
+    padding: 10px 10px 10px 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidenav .veri-tra-btn.active:hover{
+    padding: 10px 10px 10px 10px;
+}
+
 
 .sidenav a{
     display: block;
@@ -289,13 +302,12 @@ input:focus, textarea:focus{
 /*Side Menu Ends Here*/
 
 
-
 /*Dashboard Starts Here*/
 
 /*Section 1 Starts Here*/
 .main{
     margin: 0;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-left: 210px; /* Same as the width of the sidenav */
     padding: 0px;
     padding-top: 60px;
@@ -329,7 +341,6 @@ input:focus, textarea:focus{
 
 .info-head-tag{
     margin-top: 1.15em;
-    font-family: Segoe UI;
     line-height: normal;
     font-size: 0.95em;
     color: #787C90;
@@ -337,13 +348,12 @@ input:focus, textarea:focus{
 
 .info-head-fig{
     margin-top: -0.85em;
-    font-family: Segoe UI;
     line-height: normal;
     font-weight: 500;
     font-size: 1.35em;
     color: #262626;
 }
-/*Section 1 Ends Here*/
+
 
 
 /*Section 2 Starts Here*/
@@ -366,13 +376,46 @@ input:focus, textarea:focus{
     height: 300px;
 }
 
-
 .info-stats{
     margin: 0;
     padding: 0;
     padding-left: 25px;
     height: 300px;
     max-width: 100%;
+}
+
+.figure-stats{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.figure-stats .fig{
+    background: #fff;
+    padding: 25px 10px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.figure-stats .fig-one{
+    margin-right: 8px;
+}
+
+.figure-stats .fig img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.figure-stats .fig .total-merch-text{
+    color: #787c90;
+    font-size: 0.9em;
+    margin: 0;
+    margin-bottom: -2px;
+}
+
+.figure-stats .fig .total-merch-fig{
+    font-size: 1.5em;
+    margin: 0;
 }
 
 .tab{
@@ -383,19 +426,9 @@ input:focus, textarea:focus{
     margin-bottom: 15px;
 }
 
-.sub-main-tab{
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    height: 300px;
-    width: 100%;
-}
-
 .tab-head-tag{
-    font-family: Segoe UI;
     line-height: normal;
     font-size: 1em;
-    font-weight: 500;
     color: #262626;
     text-align: left;
     margin-top: 8px;
@@ -413,552 +446,57 @@ input:focus, textarea:focus{
 }
 
 .tab-det{
-    font-family: Segoe UI;
     line-height: normal;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 500;
     color: #262626;
     text-align: left;
     margin-top: 6px;
     margin-bottom: 0;
 }
 
-.or-tab-det-one{
+.or-tab-det-one, .pay-tab-det-one{
     color: #FDC203;
-    font-weight: 500;
 }
-.or-tab-det-two{
-    color: #27AE60;
-    font-weight: 500;
-}
-.or-tab-det-three{
-    color: #124DC1;
-    font-weight: 500;
-}
-
-.tab-in{
-    padding: 10px;
-    height: 49.2%;
-    background: #ffffff;
-    margin-bottom: 5px;
-    width: 50%;
-    margin-right: 5px;
-}
-.tab-in-right{
-    margin-right: 0;
-}
-
-.tab-in img{
-    width: 40px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.tab-det-in{
-    margin: 0;
-    padding: 0;
-    font-size: 0.9em;
-}
-
-.tab-merc-fig, .tab-bank-fig{
-    font-weight: 600;
-    font-size: 1.3em;
-}
-
-/*Section 2 Ends Here*/
-
-
-/*Section 3 Starts Here*/
-.paym-sub-line{
-    margin-top: 18px;
-    margin-bottom: 10px;
-}
-.paym-sub{
-    display: flex;
-    padding: 0;
-}
-
-.show-entries span{
-    display: inline-flex;
-    font-weight: 500;
-    font-size: 0.9em;
-}
-
-.box, .box-drop{
-  position: relative;
-}
-
-.box select {
-    background-color: transparent;
-    color: #787878;
-    padding: 0px;
-    padding-bottom: 2px;
-    border: none;
-    border-bottom: 1px solid #787878;
-    width: 100px;
-    font-size: 1em;
-    -webkit-appearance: button;
-    appearance: button;
-    outline: none;
-}
-
-.box .fa-chevron-down{
-    position: relative;
-    z-index: -1;
-    margin-left: -20px;
-    color: #CCCFD4;
-}
-
-.box-drop select{
-    background-color: transparent;
-    border: none;
-    margin: 0px 5px;
-    margin-top: -1px;
-    margin-right: -8px;
-    color: #1875F0;
-    font-size: 1.1em;
-    font-weight: 500;
-    width: 35px;
-    -webkit-appearance: button;
-    appearance: button;
-    outline: none;
-}
-
-.box-drop .fa-chevron-down{
-    position: relative;
-    z-index: -1;
-    margin-left: -12px;
-    margin-right: 5px;
-    color: #CCCFD4;
-    font-size: 0.9em;
-}
-
-.box-drop option{
-    color: 4c4c4c !important;
-}
-
-.show-entries .out-of{
-    font-size: 1em;
-}
-
-.show-entries .show-out-of{
-    margin: 0;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-.show-entries .dropdown button:hover{
-    background-color: #F7F8FA;
-}
-
-.sear-pay{
-    padding: 0;
-    margin-top: -5px;
-}
-.sear-pay-icon{
-    width: 0.9em;
-}
-.sear-pay input{
-    font-size: 0.9em;
-    padding-bottom: 1px;
-    width: 70%;
-    border-bottom: 1px solid #787878;
-}
-
-/* For Table Filter Tabs Starts Here */
-/* The "show" class is added to the filtered elements */
-.container {
-    overflow: hidden;
-}
-
-.show {
-    display: block;
-}
-
-#myBtnContainer{
-    margin-top: -10px;
-}
-#myBtnContainer span{
-    font-size: 0.8em;
-    font-weight: 500;
-}
-/* Style the buttons */
-.btn {
-  border: 1px solid #CED0DA;
-  border-left: 0;
-  border-radius: 0;
-  margin-right: -5px;
-  outline: none;
-  padding: 5px 10px;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 0.9em;
-}
-
-/* Add a light grey background on mouse-over */
-.btn:hover {
-  background-color: #ddd;
-}
-
-/* Add a dark background to the active button */
-.btn.active {
-  background-color: #1875F0;
-  color: white;
-  border: 1px solid #1875F0;
-}
-
-/* For Table Filter Tabs Stops Here */
-
-.table thead{
-    background-color: #EAEEF0;
-}
-.table thead tr th{
-    padding: 5px 12px;
-    color: #7F8FA4;
-    font-weight: 500;
-}
-
-.table tbody{
-    background: #FFFFFF;
-}
-.table tbody tr{
-    border-color: #CCCFD4;
-}
-
-.table tbody tr th{
-    padding: 18px;
-}
-.table tbody tr td{
-    padding: 18px 12px;
-}
-
-.table tbody tr th .user-id{
-    margin-right: 9px;
-    border: 1px solid #7F8FA4;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 8px 6px;
-    border-radius: 50%;
-    background: #7F8FA4;
-}
-
-.table tbody tr th .merc-icon{
-    position: relative;
-    width: 40px;
-    margin-right: 10px;
-    margin-top: -12px;
-    margin-bottom: -10px;
-    margin-left: -5px;
-}
-
-.accordion-toggle:after{
-    position: absolute;
-    display: inline-block;
-	border-style: solid;
-	border-width: 0.25em 0.25em 0 0;
-	content: '';
-	height: 0.85em;
-    width: 0.85em;
-    right: 53.5px;
-    color: #CCCFD4;
-    margin-top: -13.5px;
-	transform: rotate(-45deg);
-    -moz-transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-    cursor: pointer;
-}
-.accordion-toggle.collapsed:after{
-    margin-top: -19.5px;
-    transform: rotate(135deg);
-    -moz-transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-}
-
-
-.hiddenRow {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    background: #FAFBFC;
-}
-.accordian-body .drop-down-det{
-    margin: 0;
-    margin-left: 50px;
-    display: inline-flex;
-}
-.inner{
-    display: inline;
-    padding: 0px 30px 0px 0px;
-    margin-right: 30px;
-    border-right: 1px solid #CCCFD4;
-    color: #414042;
-    font-weight: 500;
-}
-.end{
-    display: inline-flex;
-    border-right: none;
-    padding-right: 0px;
-}
-
-.end .edit, .view-as-merc{
-    margin-top: 33px;
-    color: #000;
-}
-.end .view-as-merc a{
-    margin-left: 30px;
-    border: 1px solid #7F8FA4;
-    border-radius: 50px;
-    padding: 8px 15px;
-}
-.end a{
-    color: #000;
-}
-.end a:hover{
-    text-decoration: none;
-}
-
-.end .view-as-merc a:hover{
-    background-color: #7F8FA4;
-    color: #fff;
-}
-
-.inner .first-tag{
-    margin-top: 12px;
-    margin-bottom: 3px;
-    color: #7F8FA4;
-    font-weight: 500;
-}
-
-.inner .payer-name{
-    margin: 0;
-    margin-bottom: 3px;
-}
-.inner .payer-num{
-    margin: 0;
-    margin-bottom: 14px;
-    color: #1875F0;
-    font-weight: 500;
-}
-.inner .payer-num i{
-    color: #1875F0;
-    margin-right: 5px;
-}
-
-.inner .order-loca-det{
-    margin: 0;
-    width: 250px;
-}
-
-td .reconciled, td .pending, td .un-reconciled{
-    margin-top: -5px;
-    margin-bottom: -5px;
-    width: 60%;
-    padding: 5px 3px;
-    padding-top: 4px;
-    border: 1px solid #CCCFD4;
-    border-radius: 30px;
-    color: #27AE60;
-    font-weight: 400;
-}
-.reconciled .fas, .pending .fas, .un-reconciled .fas{
-    font-size: 0.65em;
-    padding-right: 2px;
-    padding-left: 3px;
-    padding-top: 0;
-    padding-bottom: 0;
+.or-tab-det-two, .pay-tab-det-two{
     color: #27AE60;
 }
-
-td .pending{
-    color: #EBC315;
-}
-.pending .fas{
-    color: #EBC315;
+.or-tab-det-three, .pay-tab-det-three{
+    color: #1875F0;
 }
 
-td .un-reconciled{
-    color: #7F8FA4;
-}
-.un-reconciled .fas{
-    color: #7F8FA4;
-}
 
-.tab-footer{
-    display: block;
-}
-.tab-footer .left{
-    float: left;
-}
-.tab-footer .right{
-    float: right;
+
+@media screen and (max-width: 1400px){
+    .info-head{
+        width: 101%;
+    }
 }
 
-/*Section 3 Ends Here*/
-/*Dashboard Ends Here*/
-
-
-/* Responsive Page Starts Here*/
-
-
-@media (min-width: 1181px) and (max-width: 1255px) {
-    
+@media screen and (max-width: 1299px){
     .info-head{
         width: 100.9%;
     }
-    
-    .info-box-2{
-        margin-right: 20px;
-    }
-    
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    #myBtnContainer{
-        margin-left: -50px;
-    }
-
-    .accordion-toggle:after{
-        right: 38.5px;
-    }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 0.95em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.55em;
-    }
-    
-    .table{
-        width: 100%;
-    }
-    
 }
-
-@media (min-width: 1152px) and (max-width: 1200px){
-    .table{
-        width: 105%;
+@media screen and (max-width: 1199px){
+    .info-head{
+        width: 100.9%;
     }
 }
-
-@media (min-width: 1076px) and (max-width: 1151px){
-    .table{
-        width: 115%;
-    }
-}
-
-@media (min-width: 1040px) and (max-width: 1075px){
-    .table{
-        width: 120%;
-    }
-}
-
-@media (min-width: 1086px) and (max-width: 1180px) {
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    #myBtnContainer{
-        margin-left: -50px;
-    }
-    .accordion-toggle:after{
-        right: 38.5px;
-    }
-    
-}
-
-@media (min-width: 1046px) and (max-width: 1085px) {
+@media screen and (max-width: 1099px){
     .info-head{
         grid-template-columns: repeat(2, 1fr);
         width: 101.7%;
     }
-    
-    .box-drop{
-        width: 40px;
-    }
-    
-    .show-entries .out-of{
-        width: 40px;
-    }
-    
-    #myBtnContainer{
-        margin-left: -66px;
-    }
-    
-    .accordion-toggle:after{
-        right: 38.5px;
-    }    
 }
-
-@media (min-width: 1009px) and (max-width: 1045px){
+@media screen and (max-width: 1040px){
     .info-head{
         grid-template-columns: repeat(2, 1fr);
-        width: 101.7%;
+        width: 102%;
     }
-    
-    .paym-sub{
-        display: block;
-        font-size: 1.2em;
+    .info-box{
+        margin-bottom: 10px;
     }
-    
-    .show-entries .out-of{
-        width: 3em;
-    }
-    
-    .sear-pay{
-        margin-top: 10px;
-        margin-left: 15px;
-        margin-bottom: 5px;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    .box-drop{
-        width: 50px;
-    }
-    
-    .show-entries .out-of{
-        width: 45px;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 200%;
-    }
-    
-    .accordion-toggle:after{
-        right: 38.5px;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 75%;
-        font-size: 0.95em;
-    }
-    
-    .table{
-        width: 125%;
-    }
-}
-
-
-@media (min-width: 993px) and (max-width: 1008px){
-    .info-head{
-        grid-template-columns: repeat(2, 1fr);
-        width: 101.7%;
-    }
-    
-    .accordion-toggle:after{
-        right: 38.5px;
-    }
-    
     .info-graph{
         display: inline-block;
         width: 100%;
@@ -967,205 +505,48 @@ td .un-reconciled{
         background: transparent;
         padding: 0;
     }
-    
-    .info-stats{
-        margin-top: 20px;
-        display: flex;
-        padding-left: 0px;
-    }
-    .tab-1{
-        margin-right: 5px;
-    }
 
-    .payments-head{
-        margin-top: -130px;
-    }
-    
-    .paym-sub{
-        display: block;
-        font-size: 1.2em;
-    }
-    
-    .box-drop{
-        width: 50px;
-    }
-    
-    .show-entries .out-of{
-        width: 45px;
-    }
-    
-    .sear-pay{
-        margin-top: 2px;
-        margin-left: 15px;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 200%;
-    }
-    
-    .table{
-        width: 130%;
-    }
-}
-
-
-@media (min-width: 953px) and (max-width: 992px) {
-    .info-head{
-        grid-template-columns: repeat(2, 1fr);
-        width: 101.7%;
-    }
-    
-    .accordion-toggle:after{
-        right: 38.5px;
-    }
-    
-    .info-graph{
-        display: inline-block;
+    .info-chart{
         width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        background: transparent;
         padding: 0;
     }
-    
+
+    #my-chart{
+        min-width: 310px;
+        height: 300px;
+    }
+
     .info-stats{
-        margin-top: 20px;
-        display: flex;
+        display: inline-block;
         padding-left: 0px;
+        margin-top: 30px;
     }
+
     .tab-1{
-        margin-right: 5px;
-    }
-    
-    .payments-head{
-        margin-top: -130px;
-    }
-    
-    .paym-sub{
-        display: block;
-        font-size: 1.2em;
-    }
-    
-    .box-drop{
-        width: 50px;
-    }
-    
-    .show-entries .out-of{
-        width: 45px;
-    }
-    
-    .sear-pay{
-        margin-top: 2px;
-        margin-left: 15px;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 200%;
-    }
-    
-    .table{
-        width: 136%;
+        margin-right: 15px;
     }
 }
-
-@media (min-width: 819px) and (max-width: 952px){
+@media screen and (max-width: 899px){
     .info-head{
         grid-template-columns: repeat(2, 1fr);
-        width: 101.7%;
+        width: 102%;
     }
-    
+    .info-box{
+        margin-bottom: 10px;
+    }
     .info-graph{
         display: inline-block;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        background: transparent;
-        padding: 0;
     }
-    
     .info-stats{
-        margin-top: 20px;
-        display: flex;
+        display: inline-block;
         padding-left: 0px;
     }
     .tab-1{
-        margin-right: 5px;
-    }
-    
-    .payments-head{
-        margin-top: -130px;
-    }
-    
-    .paym-sub{
-        display: block;
-        font-size: 1.2em;
-    }
-    
-    .box-drop{
-        width: 50px;
-    }
-    
-    .show-entries .out-of{
-        width: 45px;
-    }
-    
-    .sear-pay{
-        margin-top: 2px;
-        margin-left: 15px;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 300%;
-    }
-    
-    .table{
-        width: 130%;
-    }
-    
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 85%;
-        font-size: 1em;
-    }
-    
-    .accordion-toggle:after{
-        right: 39px;
-    }
-    .table{
-        width: 167%;
+        margin-right: 15px;
     }
 }
 
-@media screen and (max-width: 871px){
+@media screen and (max-width: 768px){
     
     .navbar-toggler{
         display: none;
@@ -1191,7 +572,8 @@ td .un-reconciled{
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
-        padding-top: 0px;
+        padding-top: 3px;
+        padding-right: 18px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -1209,266 +591,53 @@ td .un-reconciled{
     }
     
     .sidenav .veri-tra-btn{
-        width: 80%;
         left: 10px;
-        margin-top: -20px;
+        width: 215px;
+        margin-bottom: 20px;
+        margin-top: -10px;
     }
+
+    .sidenav .tab-sect{
+        margin-bottom: 30px;
+    }
+
+    .sidenav .tab-sect .head-tag{
+        margin-top: 20px;
+    }
+    
     
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
         display: block;
     }
     
     .main{
-        margin-left: -7px; /* Same as the width of the sidenav */
+        margin-left: -8px; /* Same as the width of the sidenav */
         width: 100%;
     }
     .info-head{
         grid-template-columns: repeat(2, 1fr);
-        width: 101.7%;
+        width: 102%;
     }
-    
+    .info-box{
+        margin-bottom: 10px;
+    }
     .info-graph{
         display: inline-block;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        background: transparent;
-        padding: 0;
-    }
-    
-    .info-stats{
-        margin-top: 20px;
-        display: flex;
-        padding-left: 0px;
-    }
-    .tab-1{
-        margin-right: 5px;
-    }
-    
-    .payments-head{
-        margin-top: -130px;
-    }
-    
-    .paym-sub{
-        display: block;
-        font-size: 1.2em;
-    }
-    
-    .box-drop{
-        width: 50px;
-    }
-    
-    .show-entries .out-of{
-        width: 45px;
-    }
-    
-    .sear-pay{
-        margin-top: 2px;
-        margin-left: 15px;
-    }
-    .sear-pay-icon{
-        width: 0.9em;
-    }
-    
-    .sear-pay input{
-        width: 89%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 300%;
-    }
-    
-    .table{
-        width: 130%;
-    }
-
-    .accordion-toggle:after{
-        right: 45.5px;
-    }
-    .accordion-toggle.collapsed:after{
-        margin-top: -17.5px;
-    }
-
-    td .reconciled, td .pending, td .un-reconciled{
-        width: 70%;
-        font-size: 1em;
-    }
-    .reconciled .fas, .pending .fas, .un-reconciled .fas{
-        font-size: 0.7em;
     }
 
 }
 
-
-@media (min-width: 700px) and (max-width: 767px){
-    .table{
-        width: 143%;
-    }
-}
-
-@media (min-width: 650px) and (max-width: 699px){
-    
-    .table{
-        width: 156%;
-    }
-    
-}
-
-@media (min-width: 600px) and (max-width: 649px){
-    
-    .table{
-        width: 170%;
-    }
-    
-}
-
-@media (min-width: 550px) and (max-width: 599px){
-    
-    .table{
-        width: 190%;
-    }
-    
-}
-
-@media (min-width: 500px) and (max-width: 549px){
+@media screen and (max-width: 450px){
     .info-stats{
         display: inline-block;
         padding-left: 0px;
     }
-    .tab-1{
-        margin-right: 0px;
-    }
-    
-    .payments-head{
-        margin-top: 40px;
-    }
-    
-    .table{
-        width: 202%;
-    }
-    
 }
 
-@media (min-width: 450px) and (max-width: 499px){
-    .info-stats{
-        display: inline-block;
-        padding-left: 0px;
-    }
-    .tab-1{
-        margin-right: 0px;
-    }
-    
-    .payments-head{
-        margin-top: 40px;
-    }
-    
-    .table{
-        width: 226%;
-    }
-    
-}
-
-@media (min-width: 400px) and (max-width: 449px){
+@media screen and (max-width: 430px){
     .info-head{
         grid-template-columns: repeat(1, 1fr);
-    }
-    .info-stats{
-        display: inline-block;
-        padding-left: 0px;
-    }
-    .tab-1{
-        margin-right: 0px;
-    }
-    
-    .payments-head{
-        margin-top: 40px;
-    }
-    
-    .table{
-        width: 256%;
-    }
-    
-    .tab-footer .right{
-        float: left;
-        margin-top: 15px;
-    }
-    
-}
-
-@media (min-width: 350px) and (max-width: 399px){
-    .info-head{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .info-stats{
-        display: inline-block;
-        padding-left: 0px;
-    }
-    .tab-1{
-        margin-right: 0px;
-    }
-    
-    .payments-head{
-        margin-top: 40px;
-    }
-    
-    .sear-pay input{
-        width: 80%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 70%;
-    }
-    
-    .table{
-        width: 296%;
-    }
-    
-    .tab-footer .right{
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-@media (min-width: 300px) and (max-width: 349px){
-    .info-head{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .info-stats{
-        display: inline-block;
-        padding-left: 0px;
-    }
-    .tab-1{
-        margin-right: 0px;
-    }
-    
-    .payments-head{
-        margin-top: 40px;
-    }
-    
-    .sear-pay input{
-        width: 80%;
-    }
-    
-    #myBtnContainer{
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: 0px;
-        width: 70%;
-    }
-    
-    .table{
-        width: 356%;
-    }
-    
-    .tab-footer .right{
-        float: left;
-        margin-top: 20px;
+        width: 102%;
     }
 }
 

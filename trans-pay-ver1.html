@@ -63,56 +63,54 @@
         </nav>
         </header>
         
+        <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
         <div class="sidenav" id="mySidenav">
-                    
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  
-                    <div class="tab-sect">
-                        <a href="transfer-pay-ver.html"class="veri-tra-btn active">GENERATE INVOICE</a>
-                        <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
-                        <hr/>
-                        
-                        <p class="head-tag">Main</p>
-                        <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
-                    </div>
 
-                    <div class="tab-sect">
-                        <p class="head-tag">Payments</p>
-                        <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
-                        <!--
-                        <a href=""><img src="images/recon-pay.png"><span>Reconciled Payments</span></a>
-                        <a href=""><img src="images/unrecon-pay.png"><span>Un-reconciled Payments</span></a>
-                        -->
-                        <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
-                    </div>
+            <!-- Click on x in mobile view to close the sidenav -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-                    <!--
-                    <div class="tab-sect">
-                        <p class="head-tag">Orders</p>
-                        <a href="all-orders.html"><img src="images/all-orders.png"><span>All Orders</span></a>
-                        <a href=""><img src="images/pen-orders.png" class="pen-ord"><span>Pending Orders</span></a>
-                        <a href=""><img src="images/reco-orders.png" class="recon-ord"><span>Reconciled Orders</span></a>
-                    </div>
-                    -->
-                    
-                    <a href="merc-all-users2.html"><img src="images/merc-prof.png"><span>User Management</span></a>
-                    
-                    <a href="settings.html" class="merc-prof"><img src="images/settings.png" class="settings-img"><span>Settings</span></a>
-                    <hr/>
-                    
-                    <div class="tab-sect tab-resp">
-                        <p class="head-tag other-links">Other Links</p>
-                        <a href=""><span>Support</span></a>
-                        <a href=""><span>FAQ</span></a>
-                    </div>
+            <div class="tab-sect">
+                <a href="transfer-pay-ver.html"class="veri-tra-btn">GENERATE INVOICE</a>
+                <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                <hr/>
 
-                    <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
-            </div>  
+                <p class="head-tag">Main</p>
+                <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
+            </div>
 
+            <div class="tab-sect">
+                <p class="head-tag">Payments</p>
+                <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                <a href="payments.html"><img src="images/invoice.png"><span>Invoice History</span></a>
+                <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
+            </div>
+
+            <div class="tab-sect">
+                <p class="head-tag">Others</p>
+                <a href="merc-all-users2.html" class="active"><img src="images/merc-prof.png"><span>User Management</span></a>
+
+                <a href="settings.html" class="merc-prof"><img src="images/settings.png" class="settings-img"><span>Settings</span></a>
+            </div>
+
+            <hr>
+            <div class="tab-sect tab-resp">
+                <p class="head-tag other-links">Other Links</p>
+                <a href=""><span>Support</span></a>
+                <a href=""><span>FAQ</span></a>
+            </div>
+
+            <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+        </div>
+        <!-- Sidebar Navigation Ends Here -->  
+        
         <div class="main">
-                
+            
             <!-- Use any element to open the sidenav -->
             <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+
+            <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
+                <div id="overlay"></div>
+            
             
             <br><br><br>
             <div class="tra-pay-content">
@@ -169,18 +167,29 @@
             });
         </script>
         
+        <!-- Side Navigation JS -->
         <script>
-        
+
             /* Set the width of the side navigation to 212px */
             function openNav() {
-                document.getElementById("mySidenav").style.width = "212px";
+                document.getElementById("mySidenav").style.width = "80%";
+                document.getElementById("overlay").style.display = "block";
             }
 
             /* Set the width of the side navigation to 0 */
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("overlay").style.display = "none";
             }
-        
+            
+            /* Set the width of the side navigation to 0 & removes Overlay*/
+            function closeOverlay() {
+                if (window.innerWidth < 769) {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("overlay").style.display = "none";
+                }   
+            }
+
         </script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>

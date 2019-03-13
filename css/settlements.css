@@ -1,11 +1,9 @@
-$ashLight: #F7F8FA;
-$blueLight: #1875F0;
-$white: #FFFFFF;
-$ashDark: #EAEEF0;
-$blackLight: #787C90;
-$blackMedium: #414042;
-$blackDark: #262626;
-
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 
 *{
@@ -15,6 +13,7 @@ $blackDark: #262626;
 body {
     font-size: .875rem;
     background: #F7F8FA;
+    font-family: "CircularStd-Book", Arial, sans-serif;
 }
 
 .feather {
@@ -126,6 +125,7 @@ input:focus, textarea:focus{
 .user-img img{
     width: 35px;
     height: 35px;
+    margin-left: 7px;
 }
 
 /* Navbar Ends Here */
@@ -374,6 +374,7 @@ input:focus, textarea:focus{
     margin-bottom: 3px;
     font-size: 0.9em;
     width: 250px;
+    font-weight: 300;
 }
 .table tbody tr th .ref-no{
     color: #7F8FA4;
@@ -384,6 +385,8 @@ input:focus, textarea:focus{
 .table tbody tr td{
     padding: 18px 20px;
     padding-left: 0;
+    color: #7F8FA4;
+    font-size: 0.9em;
 }
 
 .table-date{

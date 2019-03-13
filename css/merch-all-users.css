@@ -1,11 +1,9 @@
-$ashLight: #F7F8FA;
-$blueLight: #1875F0;
-$white: #FFFFFF;
-$ashDark: #EAEEF0;
-$blackLight: #787C90;
-$blackMedium: #414042;
-$blackDark: #262626;
-
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 
 *{
@@ -15,6 +13,7 @@ $blackDark: #262626;
 body {
     font-size: .875rem;
     background: #F7F8FA;
+    font-family: "CircularStd-Book", Arial, sans-serif;
 }
 
 .feather {
@@ -126,9 +125,28 @@ input:focus, textarea:focus{
 .user-img img{
     width: 35px;
     height: 35px;
+    margin-left: 7px;
 }
 
 /* Navbar Ends Here */
+
+
+/* Navbar Ends Here */
+/* Overlay */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
 
 
 /*Side Menu Starts Here*/
@@ -246,6 +264,17 @@ input:focus, textarea:focus{
     margin-right: 10px;
     width: 24px;
 }
+.sidenav a .settings-img{
+    width: 32px;
+    margin-right: 5px;
+    margin-left: -4px;
+}
+
+.sidenav a.merc-prof:hover{
+    transition: all 0.2s ease-in-out;
+    padding: 10px 10px 6px 20px;
+}
+
 .sidenav a .pen-ord, .sidenav a .recon-ord{
     width: 29px;
     height: 26px;
@@ -672,11 +701,13 @@ input:focus, textarea:focus{
     text-align: center;
     margin-top: 10px;
     margin-bottom: -10px;
+    font-size: 0.8em;
 }
 
 .card-body .view-act a{
     color: #1875F0;
     font-weight: bold;
+   
 }
 .card-body .view-act a:hover{
     text-decoration: none;
@@ -755,6 +786,141 @@ input:focus, textarea:focus{
     }
 }
 
+@media screen and (max-width: 1354px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 300px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+        margin-right: 290px !important;
+    }
+}
+
+@media screen and (max-width: 1350px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 300px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+        margin-right: 290px !important;
+    }
+}
+
+
+@media screen and (max-width: 1346px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 0px !important;
+    }
+    .modal-content {
+        width: 120%;        
+    }
+    .modal-footer{
+        margin-right: 10px !important;
+    }
+}
+
+
+
+@media screen and (max-width: 1322px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 0px !important;
+    }
+    .modal-content {
+        width: 120%;        
+    }
+    .modal-footer{
+        margin-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 1310px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 310px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+        margin-right: 320px !important;
+    }
+}
+
+
+@media screen and (max-width: 1262px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 320px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+        margin-right: 320px !important;
+    }
+}
+
+@media screen and (max-width: 1210px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 330px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+        margin-right: 320px !important;
+    }
+}
+
 
 @media (min-width: 1040px) and (max-width: 1181px){
     
@@ -788,6 +954,70 @@ input:focus, textarea:focus{
     .tab-section-col{
         width: 96%;
         margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1158px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 330px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+       margin-left: 90px !important;
+    }
+}
+
+@media screen and (max-width: 1150px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 340px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+       margin-right: 340px !important;
+    }
+}
+
+@media screen and (max-width: 1098px){
+    .modal-header .close {
+        margin-right: 350px !important;
+    }
+}
+
+@media screen and (max-width: 1050px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 350px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: 350px !important;
     }
 }
 
@@ -829,6 +1059,120 @@ input:focus, textarea:focus{
     }
 }
 
+
+@media screen and (max-width: 1034px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 360px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: 360px !important;
+    }
+}
+
+@media screen and (max-width: 996px){
+
+    .modal{
+        width: 50%;
+        margin-left: -80px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 370px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: 370px !important;
+    }
+}
+
+@media screen and (max-width: 972px){
+
+    .modal-header .close {
+        margin-right: 380px !important;
+    }
+
+    
+}
+
+@media screen and (max-width: 908px){
+
+    .modal-header .close {
+        margin-right: 370px !important;
+    }
+
+    
+}
+
+@media screen and (max-width: 868px){
+
+    .modal-header .close {
+        margin-right: 360px !important;
+    }
+
+    .modal-footer{
+        margin-left: 430px !important;
+    }
+
+    
+}
+
+@media screen and (max-width: 848px){
+
+    .modal{
+        width: 50%;
+        margin-left: -70px !important;
+    }
+
+    .modal-header .close {
+        margin-right: 350px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-left: 440px !important;
+    }
+}
+
+@media screen and (max-width: 834px){
+
+    .modal{
+        width: 80%;
+        margin-left: -260px !important;
+    }
+
+    
+
+    .modal-header .close {
+        margin-right: 770px !important;
+    }
+
+    .modal-content {
+        width: 280%;        
+    }
+    .modal-footer{
+       margin-right: 760px !important;
+    }
+}
+    
+
 @media screen and (max-width: 819px){
     
     .navbar-toggler{
@@ -846,6 +1190,7 @@ input:focus, textarea:focus{
     .sidenav{
         width: 0px;
         padding-top: 75px;
+        z-index: 2001;
     }
     .sidenav a:hover{
         padding: 10px 0px 10px 15px;
@@ -854,6 +1199,8 @@ input:focus, textarea:focus{
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
+        padding-top: 3px;
+        padding-right: 18px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -872,8 +1219,18 @@ input:focus, textarea:focus{
     
     .sidenav .veri-tra-btn{
         left: 10px;
+        width: 215px;
+        margin-bottom: 20px;
+        margin-top: -10px;
     }
-    
+
+    .sidenav .tab-sect{
+        margin-bottom: 30px;
+    }
+
+    .sidenav .tab-sect .head-tag{
+        margin-top: 20px;
+    }
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
         display: block;
     }
@@ -882,6 +1239,20 @@ input:focus, textarea:focus{
         margin-left: -12px; /* Same as the width of the sidenav */
         width: 100%;
     }
+    
+    .table{
+        width: 100%;
+    }
+    
+    .head-info-inn{
+        display: flex;
+    }
+    .head-info-inn-tag{
+        display: flex;
+    }
+
+   
+    
     
     .paym-sub{
         display: inline-block;
@@ -898,7 +1269,7 @@ input:focus, textarea:focus{
     }
     
     .sear-pay input{
-        width: 50%;
+        width: 89%;
     }
     
     .create-user{
@@ -917,6 +1288,157 @@ input:focus, textarea:focus{
         width: 96%;
         margin-right: 0px;
     }
+
+    .modal{
+        width: 80%;
+        margin-left: -260px !important;
+    }
+
+    
+
+    .modal-header .close {
+        margin-right: 310px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+    .modal-footer{
+       margin-right: 320px !important;
+    }
+}
+
+@media screen and (max-width: 815px){
+
+    .modal{
+        width: 80%;
+        margin-left: -230px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 310px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 320px !important;
+    }
+
+}
+
+@media screen and (max-width: 793px){
+    
+    .paym-sub{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    .create-user{
+        margin-top: 40px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+
+    .modal{
+        width: 80%;
+        margin-left: -230px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 320px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 320px !important;
+    }
+}
+
+@media screen and (max-width: 789px){
+    
+    .paym-sub{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    .create-user{
+        margin-top: 40px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+    .modal{
+        width: 80%;
+        margin-left: -210px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 320px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 320px !important;
+    }
 }
 
 
@@ -931,6 +1453,338 @@ input:focus, textarea:focus{
     }
     
 }
+
+@media screen and (max-width: 753px){
+    
+    .paym-sub{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    .create-user{
+        margin-top: 40px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+
+    .modal{
+        width: 80%;
+        margin-left: -210px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 330px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 340px !important;
+    }
+}
+
+@media screen and (max-width: 723px){
+    
+    .paym-sub{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    .create-user{
+        margin-top: 40px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+
+    .modal{
+        width: 80%;
+        margin-left: -200px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 350px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 350px !important;
+    }
+}
+
+@media screen and (max-width: 716px){
+
+    .modal{
+        margin-left: -230px !important;
+    }
+}
+
+@media screen and (max-width: 712px){
+
+    .modal{
+        margin-left: -200px !important;
+    }
+}
+
+@media screen and (max-width: 697px){
+
+    .modal{
+        margin-left: -190px !important;
+    }
+}
+
+@media screen and (max-width: 694px){
+
+    .modal{
+        width: 80%;
+        margin-left: -180px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 370px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 360px !important;
+    }
+    
+}
+
+@media screen and (max-width: 687px){
+
+    .modal{
+        margin-left: -180px !important;
+    }
+}
+
+@media screen and (max-width: 657px){
+    
+    .paym-sub{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    .create-user{
+        margin-top: 40px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+
+    .modal{
+        width: 80%;
+        margin-left: -170px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 370px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 370px !important;
+    }
+}
+
+@media screen and (max-width: 635px){
+    
+    .paym-sub{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    .create-user{
+        margin-top: 40px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+
+    .modal{
+        width: 80%;
+        margin-left: -160px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 370px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 390px !important;
+    }
+}
+
+@media screen and (max-width: 613px){
+    
+    .paym-sub{
+        display: inline-block;
+        font-size: 1.2em;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    .create-user{
+        margin-top: 40px;
+    }
+    
+    .tab-section-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .tab-section-col{
+        width: 96%;
+        margin-right: 0px;
+    }
+
+    .modal{
+        width: 80%;
+        margin-left: -150px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 380px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 390px !important;
+    }
+}
+
+
 
 @media (min-width: 500px) and (max-width: 599px){
     
@@ -957,8 +1811,290 @@ input:focus, textarea:focus{
         float: left;
         margin-top: 35px;
     }
+
+    .modal{
+        margin-left: -190px !important;
+    }
     
 }
+
+@media screen and (max-width:594px){
+    .modal{
+        width: 80%;
+        margin-left: -140px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 370px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+    margin-right: 390px !important;
+    }
+    
+}
+
+@media screen and (max-width: 576px){
+    
+        .modal{
+            width: 80%;
+            margin-left: -135px !important;
+        }
+    
+    
+        .modal-header .close {
+            margin-right: 370px !important;
+        }
+    
+        .modal-content {
+            width: 180%;        
+        }
+    
+    .modal-footer{
+        margin-right: 390px !important;
+    }
+    
+    
+}
+
+@media screen and (max-width: 575px){
+    .modal{
+        width: 80%;
+        margin-left: -135px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 340px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+        margin-right: 390px !important;
+    }
+}
+
+@media screen and (max-width: 564px){
+    .modal{
+        width: 80%;
+        margin-left: -135px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 325px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: -50px !important;
+    }
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 480px !important;
+    }
+}
+
+@media screen and (max-width: 554px){
+    .modal{
+        width: 80%;
+        margin-left: -130px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 320px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: -50px !important;
+    }
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 480px !important;
+    }
+}
+
+@media screen and (max-width: 545px){
+    .modal{
+        width: 80%;
+        margin-left: -135px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 320px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: -50px !important;
+    }
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 480px !important;
+    }
+}
+
+
+
+@media screen and (max-width: 541px){
+    .modal{
+        width: 80%;
+        margin-left: -135px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 310px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: -50px !important;
+    }
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 480px !important;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .modal{
+        width: 80%;
+        margin-left: -135px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 310px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: -50px !important;
+    }
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 480px !important;
+    }
+}
+
+@media screen and (max-width: 526px){
+    .modal{
+        width: 80%;
+        margin-left: -130px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 310px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: -90px !important;
+    }
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 480px !important;
+    }
+}
+
+
+@media screen and (max-width: 515px){
+    .modal{
+        width: 80%;
+        margin-left: -130px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: 300px !important;
+    }
+
+    .modal-content {
+        width: 180%;        
+    }
+
+    .modal-footer{
+       margin-right: -100px !important;
+    }
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 480px !important;
+    }
+}
+
 
 @media (min-width: 441px) and (max-width: 500px){
     
@@ -981,7 +2117,100 @@ input:focus, textarea:focus{
         right: 0;
         margin-top: -10px;
     }
+
+    
 }
+
+@media screen and (max-width: 497px){
+    .modal{
+        width: 80%;
+        margin-left: -110px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -20px !important;
+    }
+
+    .modal-content {
+        width: 95%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 180px !important;
+    }
+}
+
+@media screen and (max-width: 486px){
+    .modal{
+        width: 80%;
+        margin-left: -105px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -15px !important;
+    }
+
+    .modal-content {
+        width: 95%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 180px !important;
+    }
+}
+
+
+@media screen and (max-width: 474px){
+    .modal{
+        width: 80%;
+        margin-left: -110px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -20px !important;
+    }
+
+    .modal-content {
+        width: 95%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -210px !important;
+    }
+
+    .btn-dismiss{
+        margin-top: 90px !important;
+        margin-right: 180px !important;
+    }
+
+    .modal-footer{
+        margin-left: 50px !important;
+    }
+}
+
+
 
 @media (min-width: 300px) and (max-width: 440px){
     
@@ -1006,4 +2235,401 @@ input:focus, textarea:focus{
     }
 }
 
+
+@media screen and (max-width: 430px){
+    .modal{
+        width: 80%;
+        margin-left: -110px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -20px !important;
+    }
+
+    .modal-content {
+        width: 95%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 240px !important;
+    }
+
+    .modal-footer{
+        margin-left: 420px !important;
+    }
+}
+
+
+
+@media screen and (max-width: 426px){
+    .modal{
+        width: 80%;
+        margin-left: -90px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -20px !important;
+    }
+
+    .modal-content {
+        width: 95%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 389px !important;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .modal{
+        width: 80%;
+        margin-left: -90px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -20px !important;
+    }
+
+    .modal-content {
+        width: 95%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 389px !important;
+    }
+}
+
+@media screen and (max-width: 402px){
+    .modal-content {
+        width: 100%;        
+    }
+}
+
+
+
+
+@media screen and (max-width: 382px){
+    .modal{
+        width: 80%;
+        margin-left: -90px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -20px !important;
+    }
+
+    .modal-content {
+        width: 100%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 380px !important;
+    }
+}
+
+@media screen and (max-width: 381px){
+    .modal{
+        width: 80%;
+        margin-left: -90px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -15px !important;
+    }
+
+    .modal-content {
+        width: 105%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 380px !important;
+    }
+}
+
+
+@media screen and (max-width: 366px){
+    .modal{
+        width: 80%;
+        margin-left: -90px !important;
+    }
+
+
+    .modal-header .close {
+        margin-right: -15px !important;
+    }
+
+    .modal-content {
+        width: 105%;        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 380px !important;
+    }
+}
+
+@media screen and (max-width: 365px){
+    .modal{
+        width: 90%;
+        margin-left: -110px !important;
+    }
+
+   
+
+
+    .modal-header .close {
+        margin-right: -13px !important;
+    }
+
+    .modal-content {
+        width: 105%;        
+    }
+
+    .modal form{
+        width: 90%;
+        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 380px !important;
+    }
+}
+
+@media screen and (max-width: 355px){
+    .modal{
+        width: 90%;
+        margin-left: -110px !important;
+    }
+
+   
+
+
+    .modal-header .close {
+        margin-right: -13px !important;
+    }
+
+    .modal-content {
+        width: 105%;        
+    }
+
+    .modal form{
+        width: 90%;
+        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 380px !important;
+    }
+}
+
+
+@media screen and (max-width: 354px){
+    .modal{
+        width: 90%;
+        margin-left: -110px !important;
+    }
+
+   
+
+
+    .modal-header .close {
+        margin-right: 3px !important;
+    }
+
+    .modal-content {
+        width: 110%;        
+    }
+
+    .modal form{
+        width: 90%;
+        
+    }
+
+    
+
+    .btn-cre-user{
+        margin-top: -50px;
+        margin-right: -420px !important;
+        padding: 10px 45px;
+    }
+
+    .btn-dismiss{
+        margin-top: 80px !important;
+        margin-left: 239px !important;
+    }
+
+    .modal-footer{
+        margin-left: 380px !important;
+    }
+}
+
+
+@media screen and (max-width: 353px){
+    .modal{
+        width: 90%;
+        margin-left: -105px !important;
+    }
+}
+
+@media screen and (max-width: 339px){
+    .modal-content {
+        width: 115%;        
+    }
+
+    .modal-header .close {
+        margin-right: 15px !important;
+    }
+
+    .modal form{
+        width: 90%;
+        
+    }
+}    
+
+@media screen and (max-width: 325px){
+
+    .modal{
+        margin-left: -100px !important;
+    }
+
+
+    .modal-content {
+        width: 115%;        
+    }
+
+    .modal-header .close {
+        margin-right: 15px !important;
+    }
+
+    .modal form{
+        width: 90%;
+        
+    }
+} 
+
+@media screen and (max-width: 324px){
+
+    .modal{
+        margin-left: -100px !important;
+    }
+
+
+    .modal-content {
+        width: 105%;        
+    }
+
+    .modal-header .close {
+        margin-right: 15px !important;
+    }
+
+    .modal form{
+        width: 70%;
+        margin: 0 auto;
+        
+    }
+} 
 /* Responsive Page Endss Here*/

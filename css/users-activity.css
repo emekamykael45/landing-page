@@ -1,11 +1,9 @@
-$ashLight: #F7F8FA;
-$blueLight: #1875F0;
-$white: #FFFFFF;
-$ashDark: #EAEEF0;
-$blackLight: #787C90;
-$blackMedium: #414042;
-$blackDark: #262626;
-
+@font-face{
+    font-family: 'CircularStd-Book';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/CircularStd-Book.woff") format("opentype");
+}
 
 
 *{
@@ -19,6 +17,7 @@ $blackDark: #262626;
 body {
     font-size: .875rem;
     background: #F7F8FA;
+    font-family: "CircularStd-Book", Arial, sans-serif;
 }
 
 .feather {
@@ -130,9 +129,25 @@ input:focus, textarea:focus{
 .user-img img{
     width: 35px;
     height: 35px;
+    margin-left: 7px;
 }
 
 /* Navbar Ends Here */
+/* Overlay */
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
 
 
 /*Side Menu Starts Here*/
@@ -304,6 +319,7 @@ input:focus, textarea:focus{
     border-radius: 30px;
     padding: 5px 10px;
     color: #1875F0;
+   
 }
 .go-back i{
     margin-right: 10px;
@@ -334,7 +350,7 @@ input:focus, textarea:focus{
     margin: 0;
     margin-left: 20px;
     font-size: 1.4em;
-    font-weight: 600;
+    font-weight: 300;
     color: #414042;
 }
 
@@ -647,7 +663,7 @@ button:focus {
 .table thead tr th{
     padding: 5px 12px;
     color: #7F8FA4;
-    font-weight: 500;
+    font-weight: 100;
 }
 
 .table tbody{
@@ -660,10 +676,13 @@ button:focus {
 .table tbody tr th{
     padding: 18px;
     color: #414042;
+    font-weight: 100;
+    font-size: 0.9em;
 }
 .table tbody tr td{
     padding: 18px 12px;
     color: #7F8FA4;
+    font-size: 0.9em;
 }
 
 .tab-footer{
@@ -743,10 +762,27 @@ button:focus {
     
 }
 
-@media (min-width: 1042px) and (max-width: 1200px){
+@media screen and (max-width: 1268px){
+    .modal {
+        position: absolute !important;
+        width: 130% !important;
+        left: -20% !important;
+    }
+
+    .modal-content {
+        width: 130% !important;
+    }
+}
+
+
+@media screen and (max-width: 1200px){
     
     .head-info{
         display: inline-block;
+    }
+
+    .head-info button {
+        margin-top: 0px !important;
     }
     
     .head-info-inn-tag{
@@ -755,6 +791,9 @@ button:focus {
     
     .head-info-inn{
         display: flex;
+        margin-top: -30px;
+        margin-left: -95px;
+        margin-bottom: 15px;
     }
     
     .head-info .reset-user, .head-info .block-user{
@@ -774,8 +813,15 @@ button:focus {
     .show-entries{
         margin-bottom: 10px;
     }
+
+    .modal {
+        position: absolute !important;
+        width: 130% !important;
+        left: -22% !important;
+    }
     
 }
+
 
 @media screen and (max-width: 1041px){
     .head-info{
@@ -818,8 +864,17 @@ button:focus {
     
 }
 
+@media screen and (max-width: 1000px){
 
-@media (min-width: 820px) and (max-width: 957px) {
+    .modal {
+        position: absolute !important;
+        width: 130% !important;
+        left: -23% !important;
+    }
+
+}
+
+@media screen and (max-width: 957px) {
     .table{
         width: 130%;
     }
@@ -842,6 +897,12 @@ button:focus {
     .sear-pay input{
         width: 90%;
     }
+
+    .modal {
+        position: absolute !important;
+        width: 130% !important;
+        left: -24% !important;
+    }
 }
 
 @media screen and (max-width: 819px){
@@ -861,6 +922,7 @@ button:focus {
     .sidenav{
         width: 0px;
         padding-top: 75px;
+        z-index: 2001;
     }
     .sidenav a:hover{
         padding: 10px 0px 10px 15px;
@@ -869,6 +931,8 @@ button:focus {
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
+        padding-top: 3px;
+        padding-right: 18px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -887,8 +951,18 @@ button:focus {
     
     .sidenav .veri-tra-btn{
         left: 10px;
+        width: 215px;
+        margin-bottom: 20px;
+        margin-top: -10px;
     }
-    
+
+    .sidenav .tab-sect{
+        margin-bottom: 30px;
+    }
+
+    .sidenav .tab-sect .head-tag{
+        margin-top: 20px;
+    }
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
         display: block;
     }
@@ -908,10 +982,17 @@ button:focus {
     .head-info-inn-tag{
         display: flex;
     }
+
+    .modal {
+        position: absolute !important;
+        width: 130% !important;
+        left: -25% !important;
+    }
+
 }
 
 
-@media (min-width: 650px) and (max-width: 780px){
+@media screen and (max-width: 780px){
     .head-info-inn{
         display: flex;
     }
@@ -933,7 +1014,21 @@ button:focus {
     }
 }
 
-@media (min-width: 550px) and (max-width: 649px){
+@media screen and (max-width: 720px){
+
+    .modal {
+        position: absolute !important;
+        width: 100% !important;
+        left: 0% !important;
+    }
+
+    .modal-content {
+        width: 100% !important;
+    }
+
+}
+
+@media screen and (max-width: 649px){
     .head-info-inn{
         display: flex;
     }
@@ -954,9 +1049,25 @@ button:focus {
     }
 }
 
-@media (min-width: 450px) and (max-width: 549px){
+@media screen and (max-width: 575px){
+
+    .modal {
+        position: absolute !important;
+        width: 95% !important;
+        left: 5% !important;
+    }
+
+    .modal-content {
+        width: 95% !important;
+    }
+
+}
+
+@media screen and (max-width: 549px){
     .head-info{
         display: inline-block;
+        margin-left: 100px;
+        margin-top: 70px;
     }
     .head-info-inn{
         display: inline-block;
@@ -1000,7 +1111,400 @@ button:focus {
     }
 }
 
-@media (min-width: 300px) and (max-width: 449px){
+@media screen and (max-width: 527px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 70px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 20px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 519px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 70px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 12px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 515px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 70px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 12px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+
+    .modal-footer{
+        width: 102%;
+    }
+}
+
+
+
+@media screen and (max-width: 512px){
+    .head-info .block-user{
+        margin-left: 12px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 511px){
+    .head-info .block-user{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 508px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 70px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 20px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 505px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 70px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: 90px;
+    }
+    .head-info .block-user{
+        margin-left: 20px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+
+    .modal {
+        position: absolute !important;
+        width: 95% !important;
+        left: 5% !important;
+    }
+
+    .modal-content {
+        width: 95% !important;
+    }
+}
+
+@media screen and (max-width: 509px){
+    .head-info{
+        margin-top: 90px;
+        margin-bottom: 50px !important;   
+    }
+
+    .main .go-back {
+        position: absolute;
+    }
+
+    .head-info-inn{
+        margin-left: -90px;  
+    }
+
+    .head-info .block-user, .head-info .reset-user {
+       position: absolute;
+       margin-left: -8px;
+     
+    }
+
+    .head-info .block-user{
+        margin-left: 180px;
+    }
+
+    
+}
+
+@media screen and (max-width: 501px){
+    .head-info{
+        margin-top: 90px;
+        margin-bottom: 50px !important;   
+    }
+
+    .main .go-back {
+        position: absolute;
+    }
+
+    .head-info-inn{
+        margin-left: -90px;  
+    }
+
+    .head-info .block-user, .head-info .reset-user {
+       position: absolute;
+       margin-left: -8px;
+     
+    }
+
+    .head-info .block-user{
+        margin-left: 180px;
+    }
+
+    
+}
+
+@media screen and (max-width: 489px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-left: 180px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 5px;
+    }
+
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 100px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 30px !important;
+    }
+
+}
+
+@media screen and (max-width: 449px){
     .head-info-inn{
         display: inline-block;
     }
@@ -1016,11 +1520,27 @@ button:focus {
         margin-bottom: 10px;
     }
     
-    .head-info .reset-user, .head-info .block-user{
-        margin-left: 90px;
+    .head-info{
+        margin-top: 90px;
+        margin-bottom: 50px !important;   
     }
+
+    .main .go-back {
+        position: absolute;
+    }
+
+    .head-info-inn{
+        margin-left: -90px;  
+    }
+
+    .head-info .block-user, .head-info .reset-user {
+       position: absolute;
+       margin-left: -8px;
+     
+    }
+
     .head-info .block-user{
-        margin-left: 90px;
+        margin-left: 180px;
     }
     
     .table{
@@ -1042,5 +1562,550 @@ button:focus {
     }
 }
 
+@media screen and (max-width: 418px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-left: 180px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 5px;
+    }
 
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 90px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 30px !important;
+    }
+
+}
+
+@media screen and (max-width: 414px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-left: 180px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 5px;
+    }
+
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 70px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 30px !important;
+    }
+
+}
+
+@media screen and (max-width: 411px){
+    .head-info{
+        margin-top: 90px;
+        margin-bottom: 100px !important;   
+    }
+    
+    .main .go-back {
+        position: absolute;
+    }
+    
+    .head-info-inn{
+        margin-left: -90px;  
+    }
+    
+    .head-info .block-user, .head-info .reset-user {
+       position: absolute;
+       margin-left: -8px;
+     
+    }
+    
+    .head-info .block-user{
+        margin-top: 55px !important;
+        margin-left: -10px; 
+    }
+    
+}
+
+@media screen and (max-width: 406px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-left: -5px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 0px;
+    }
+
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 60px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 30px !important;
+    }
+
+}
+
+@media screen and (max-width: 402px){
+
+    .head-info{
+        margin-top: 90px;
+        margin-bottom: 100px !important;   
+    }
+    
+    .main .go-back {
+        position: absolute;
+    }
+    
+    .head-info-inn{
+        margin-left: -90px;  
+    }
+    
+    .head-info .block-user, .head-info .reset-user {
+       position: absolute;
+       margin-left: -8px;
+     
+    }
+    
+    .head-info .block-user{
+        margin-top: 55px !important;
+        margin-left: -10px; 
+    }
+}
+
+@media screen and (max-width: 375px){
+    .head-info{
+        margin-top: 90px;
+        margin-bottom: 100px !important;   
+    }
+    
+    .main .go-back {
+        position: absolute;
+    }
+    
+    .head-info-inn{
+        margin-left: -90px;  
+    }
+    
+    .head-info .block-user, .head-info .reset-user {
+       position: absolute;
+       margin-left: -8px;
+     
+    }
+    
+    .head-info .block-user{
+        margin-top: 60px !important;
+        margin-left: -10px; 
+    }
+    
+}
+
+@media screen and (max-width: 362px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-top: 55px !important;
+        margin-left: -5px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 0px;
+    }
+
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 50px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 30px !important;
+    }
+
+}
+
+@media screen and (max-width: 338px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-left: -5px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 0px;
+    }
+
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 35px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 20px !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 322px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-left: -5px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 0px;
+    }
+
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 30px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 20px !important;
+    }
+
+}
+
+
+@media screen and (max-width: 310px){
+    .head-info{
+        display: inline-block;
+        margin-left: 100px;
+        margin-top: 90px;
+    }
+    .head-info-inn{
+        display: inline-block;
+    }
+    
+    .head-info-inn-tag{
+        display: flex;
+    }
+    
+    .head-user-activity{
+        display: block;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+    }
+    
+    .head-info .reset-user, .head-info .block-user{
+        margin-left: -5px;
+    }
+    .head-info .block-user{
+        margin-left: -5px;
+    }
+    
+    .table{
+        width: 160%;
+    }
+    
+    .paym-sub{
+        display: inline-block;
+    }
+    
+    .sear-pay{
+        margin-top: 5px;
+        margin-left: 15px;
+    }
+    
+    .tab-footer .right{
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .modal{
+        margin-left: 0px;
+    }
+
+  
+    .modal-footer{
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 18px;  
+    }
+
+    
+    .btn-dismiss{
+        margin-top: 30px;
+        margin-left: 20px !important;
+    }
+
+}
 /* Responsive Page Endss Here*/

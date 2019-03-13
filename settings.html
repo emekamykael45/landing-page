@@ -58,54 +58,53 @@
         </nav>
         </header>
         
-        <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
-        <div class="sidenav" id="mySidenav">
+         <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
+         <div class="sidenav" id="mySidenav">
 
-            <!-- Click on x in mobile view to close the sidenav -->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <!-- Click on x in mobile view to close the sidenav -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-            <div class="tab-sect">
-                <a href="transfer-pay-ver.html"class="veri-tra-btn">GENERATE INVOICE</a>
-                <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
-                <hr/>
+                <div class="tab-sect">
+                    <a href="transfer-pay-ver.html"class="veri-tra-btn">GENERATE INVOICE</a>
+                    <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                    <hr/>
 
-                <p class="head-tag">Main</p>
-                <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
+                    <p class="head-tag">Main</p>
+                    <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
+                </div>
+
+                <div class="tab-sect">
+                    <p class="head-tag">Payments</p>
+                    <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                    <a href="payments.html"><img src="images/invoice.png"><span>Invoice History</span></a>
+                    <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
+                </div>
+
+                <div class="tab-sect">
+                    <p class="head-tag">Others</p>
+                    <a href="merc-all-users2.html"><img src="images/merc-prof.png"><span>User Management</span></a>
+
+                    <a href="settings.html" class="merc-prof active"><img src="images/settings.png" class="settings-img"><span>Settings</span></a>
+                </div>
+
+                <hr>
+                <div class="tab-sect tab-resp">
+                    <p class="head-tag other-links">Other Links</p>
+                    <a href=""><span>Support</span></a>
+                    <a href=""><span>FAQ</span></a>
+                </div>
+
+                <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
             </div>
-
-            <div class="tab-sect">
-                <p class="head-tag">Payments</p>
-                <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
-                <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
-            </div>
-
-            <div class="tab-sect">
-                <p class="head-tag">Others</p>
-                <a href="merc-all-users2.html"><img src="images/merc-prof.png"><span>User Management</span></a>
-
-                <a href="settings.html" class="merc-prof active"><img src="images/settings.png" class="settings-img"><span>Settings</span></a>
-            </div>
-
-            <hr>
-            <div class="tab-sect tab-resp">
-                <p class="head-tag other-links">Other Links</p>
-                <a href=""><span>Support</span></a>
-                <a href=""><span>FAQ</span></a>
-            </div>
-
-            <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
-        </div>
-        <!-- Sidebar Navigation Ends Here -->   
-
-        <!-- Main Page Content Starts Here -->
-        <div class="main">
-                
-            <!-- Use fa-bar on mobile view to open the sidenav -->
-            <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+            <!-- Sidebar Navigation Ends Here -->  
             
-            <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
+            <div class="main">
                 
-                <div id="overlay"></div>
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+
+                <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
+                    <div id="overlay"></div>
 
                 <h3 class="profile-head">Settings</h3>
                 <br>

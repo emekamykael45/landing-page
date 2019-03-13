@@ -124,6 +124,7 @@ input:focus, textarea:focus{
 .user-img img{
     width: 35px;
     height: 35px;
+    margin-left: 7px;
 }
 
 /* Navbar Ends Here */
@@ -679,10 +680,20 @@ button:focus {
     }
     
     .sidenav .veri-tra-btn{
-        width: 80%;
         left: 10px;
-        margin-top: -20px;
+        width: 215px;
+        margin-bottom: 20px;
+        margin-top: -10px;
     }
+
+    .sidenav .tab-sect{
+        margin-bottom: 30px;
+    }
+
+    .sidenav .tab-sect .head-tag{
+        margin-top: 20px;
+    }
+    
     
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
         display: block;

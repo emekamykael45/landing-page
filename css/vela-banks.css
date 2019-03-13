@@ -19,13 +19,19 @@ body {
     background: #F7F8FA;
 }
 
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
 
 /*
  * Content
  */
 
 [role="main"] {
-    padding-top: 100px; /* Space for fixed navbar */
+  padding-top: 100px; /* Space for fixed navbar */
 }
 
 /* Navbar Starts Here */
@@ -92,7 +98,6 @@ input:focus, textarea:focus{
 }
 .mr-right li #notification{
     color: #fff !important;
-    margin-right: 20px;
 }
 
 .user-info{
@@ -104,7 +109,7 @@ input:focus, textarea:focus{
 .hello{
     position: absolute;
     top: 2px;
-    left: 77px;
+    left: 8px;
     font-size: 0.7rem;
 }
 .user-name{
@@ -128,19 +133,20 @@ input:focus, textarea:focus{
 
 /* Navbar Ends Here */
 
+
 /* Overlay */
 #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.55); /* Black background with opacity */
-    z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.55); /* Black background with opacity */
+  z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
 
 
@@ -191,12 +197,13 @@ input:focus, textarea:focus{
 }
 
 .tab-sect{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 .tab-sect .head-tag{
     padding-left: 15px;
     font-size: 0.9rem;
     color: #647787;
+    margin-top: 0px;
 }
 .tab-sect p{
     margin-bottom: 10px;
@@ -301,16 +308,16 @@ input:focus, textarea:focus{
 /*Side Menu Ends Here*/
 
 
-
 /*Dashboard Starts Here*/
 
 .main{
+    margin: 0;
+    margin-right: 10px;
     margin-left: 210px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
+    padding: 0px;
     padding-top: 60px;
-    padding-left: 25px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 .open-sidenav{
@@ -322,34 +329,30 @@ input:focus, textarea:focus{
 
 /*Section 1 Starts Here*/
 
-.orders-head{
-    margin-top: 30px;
+.payments-head{
+    padding-top: 35px;
 }
 
-button:focus {
-  box-shadow: none !important;
+/*Section 1 Ends Here*/
+
+/*Section 3 Starts Here*/
+.paym-sub-line{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.paym-sub{
+    display: flex;
+    padding: 0;
 }
 
-.tab-none{
-    color: transparent!important;
+.show-entries span{
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 1em;
 }
 
 .box, .box-drop{
   position: relative;
-}
-
-.box select {
-    background-color: transparent;
-    color: #787878;
-    padding: 0px;
-    padding-bottom: 2px;
-    border: none;
-    border-bottom: 1px solid #787878;
-    width: 100px;
-    font-size: 1em;
-    -webkit-appearance: button;
-    appearance: button;
-    outline: none;
 }
 
 .box .fa-chevron-down{
@@ -372,6 +375,7 @@ button:focus {
     -webkit-appearance: button;
     appearance: button;
     outline: none;
+    cursor: pointer;
 }
 
 .box-drop .fa-chevron-down{
@@ -385,18 +389,6 @@ button:focus {
 
 .box-drop option{
     color: 4c4c4c !important;
-}
-
-.btn-primary {
-  border: 1px solid #CED0DA;
-  border-left: 0;
-  border-radius: 0;
-  margin-right: -5px;
-  outline: none;
-  padding: 5px 10px;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 0.9em;
 }
 
 .show-entries .out-of{
@@ -420,281 +412,324 @@ button:focus {
     width: 0.9em;
 }
 .sear-pay input{
-    font-size: 0.9em;
+    font-size: 1em;
     padding-bottom: 1px;
     width: 70%;
     border-bottom: 1px solid #787878;
 }
 
-/* Create User & Modal*/
-
-.create-user{
-    position: relative;
-    margin-top: 30px;
-    float: right;
-    background: #1875F0;
-    padding: 9px 30px;
-    border-radius: 30px;
-    color: #fff;
-    font-weight: 650;
-    font-size: 1em;
+.banks-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 97%;
+    margin-top: 40px;
+    margin-left: 0;
 }
 
-.create-user:hover{
-    text-decoration: none;
-    color: #f1f1f1;
+.bank-tab{
+    background: #fff;
+    padding: 20px;
 }
 
-.modal{
-    top: 80px;
-    width: 35%;
-    left: 33%;
+.bank-tab .tab-head{
+    display: inline-flex;
 }
 
-.modal-content{
-    border-radius: 0px 0px 5px 5px;
-    border: none;
-}
-
-.modal-header{
-    border: none;
-    background: #FAFBFC;
-    padding: 10px 15px;
-}
-
-.modal-title{
-    color: #262626;
-    font-weight: 500;
-    font-size: 1.1em;
-}
-
-.modal-body{
-    display: flex;
-}
-
-.modal-body form{
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.modal-body .left-side, .right-side{
-    display: inline;
-    padding: 0;
-    margin: 0;
-    margin-top: 10px;
+.bank-tab .tab-head img{
+    width: 45px;
+    height: 45px;
     margin-right: 20px;
 }
 
-.modal-body .left-side p, .right-side p{
-    color: #7F8FA4;
+.bank-tab .tab-head p{
+    margin-top: 15px;
 }
 
-.modal-body .right-side{
-    margin-right: 0px;
-}
-
-.first-name, .last-name{
-    margin-bottom: 10px;
-    padding: 0px !important;
-    padding-bottom: 2px !important;
-    width: 90%;
-    border-bottom: 1px solid #787878 !important;
-}
-.last-name{
-    width: 105%;
-}
-
-.modal-footer{
+.bank-tab .dropdown{
     position: relative;
-    margin-top: -20px;
-    margin-bottom: 15px;
-    top: -5px;
-    left: -5%;
-    border: none;
+    margin-top: -50px;
+    margin-bottom: 30px;
+    margin-left: 97%;
 }
 
-.btn-cre-user{
-    background: #1860EC;
-    border-radius: 5px;
-    padding: 10px 70px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.03em;
-}
-.btn-dismiss{
-    position: relative;
-    right: -20px;
-    background: #fff;
-    border: 1px solid #1860EC;
-    padding: 10px 40px;
-    color: #1860EC;
-    font-weight: 500;
-    font-size: 1.03em;
-}
-
-#modalTwo .modal-content{
-    border-radius: 5px;
-}
-
-#modalTwo .modal-header{
-    border: none;
-    background: #fff;
-    padding: 20px 25px;
-    border-radius: 5px;
-}
-
-#modalTwo .modal-header .modal-title{
-    color: #27AE60;
-}
-
-#modalTwo .modal-header .close{
-    background: rgba(196, 196, 196, 0.12);
-    border-radius: 50px;
-    line-height: 15px;
-    margin-top: -12px;
-    padding-top: 14px;
-    padding-bottom: 19px;
-}
-
-/* Modal Stops Here */
-
-/*Section 1 Ends Here*/
-
-
-
-/*Section 2 Starts Here*/
-.table{
-    width: 100%;
-}
-
-tbody{
-    background: #fff;
-}
-
-.table thead tr th{
-    padding: 5px 12px;
-    color: #7F8FA4;
-   
-}
-
-.table tbody tr th{
-    padding: 18px;
-    color: #414042;
-    font-size: 0.9em;
-    font-weight: 100;
-}
-
-.table tbody tr th .blocked-user{
-    color: red;
-}
-
-.table tbody tr td{
-    padding: 18px 12px;
-    color: #7F8FA4;
-}
-
-.table tbody tr td.number{
-    text-align: right;
-    padding-right: 42px;
-}
-
-.table-user-img{
-    position: relative;
-    width: 40px;
-    border-radius: 100%;
-    margin: 0;
-    margin-right: 15px;
-    margin-bottom: -8px;
-    margin-top: -10px;
-}
-
-.view-act{
-    font-weight: bold;
-    font-size: 0.8em;
-}
-.view-act:hover{
-    text-decoration: none;
-    color: #4c4c4c;
-}
-
-.fa-chevron-right{
-    margin-left: 5px;
-}
-
-.dropdown-toggle::after{
+.banks-row .dropdown-toggle::after{
     display: none !important;
 }
 
-td .dropdown button{
+.banks-row .dropdown button{
     background: transparent !important;
     padding: 0;
     border: none;
 }
 
-td .dropdown i{
+.banks-row .dropdown i{
     color: #4c4c4c;
-    margin-left: 30px;
+    margin-left: 0px;
+    padding: 0 5px;
 }
 
-td .dropdown-menu{
+.banks-row .dropdown-menu{
     padding: 0;
+    margin-left: -140px;
 }
 
-td .dropdown-item{
+.banks-row .dropdown-item{
     padding-left: 10px;
     padding-right: 0px;
 }
 
-/*Section 2 Ends Here*/
+.tab-foot{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 105%;
+    margin-top: 15px;
+}
 
-/*Dashboard Ends Here*/
+.tab-foot .tab-info-end{
+    margin-right: 0px !important;
+}
 
+.tab-foot .head-tag{
+    color: #7F8FA4;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.tab-foot .detail{
+    color: #414042;
+    margin: 0;
+}
+
+.tab-foot .operational-text{
+    color: #27AE60;
+}
+
+.tab-footer .left{
+    margin-top: 30px;
+}
+
+.tab-footer .right{
+    margin-top: -25px;
+}
 
 
 
 
 /* Responsive Page Starts Here*/
 
-@media screen and (max-width: 2660px){
-    .table tbody tr td.number{
-        width: 150px !important;
+@media screen and (min-width: 1555px) {
+
+    .banks-row{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1255px) {
+    
+    .box, .box-drop{
+        width: 45px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -11px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+}
+
+@media screen and (max-width: 1180px) {
+    
+    .box, .box-drop{
+        width: 45px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -11px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+
+}
+
+@media screen and (max-width: 1096px) {
+    .banks-row{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
-@media screen and (max-width: 1252px){
-    .modal{
-        width: 50%;
-        left: 25%;
+@media screen and (max-width: 1085px) {
+    
+    .box, .box-drop{
+        width: 45px;
     }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -11px;
+    }
+
 }
 
-@media (min-width: 1000px) and (max-width: 1160px){
+@media screen and (max-width: 1045px){
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+        margin-top: 0px;
+    }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 12px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+
+}
+
+@media (min-width: 993px) and (max-width: 1008px){
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+        margin-top: 0px;
+    }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 12px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+
+}
+
+
+@media (min-width: 953px) and (max-width: 992px) {
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+        margin-top: 0px;
+    }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 12px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+    
+    #myBtnContainer{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        width: 200%;
+    }
+    
     .table{
-        width: 120%;
+        width: 123%;
     }
 }
 
-@media (min-width: 900px) and (max-width: 999px){
-    .table{
-        width: 140%;
+@media (min-width: 819px) and (max-width: 952px){
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+        margin-top: 0px;
     }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 12px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    .sear-pay-icon{
+        width: 1em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+        font-size: 1.1em;
+    }
+    
 }
 
-@media (min-width: 820px) and (max-width: 899px){
-    .table{
-        width: 160%;
-    }
-}
-
-@media screen and (max-width: 876px){
-    .modal{
-        width: 80%;
-        left: 10%;
-    }
-}
-
-@media screen and (max-width: 819px){
+@media screen and (max-width: 874px){
     
     .navbar-toggler{
         display: none;
@@ -720,8 +755,7 @@ td .dropdown-item{
     /* Position and style the close button (top right corner) */
     .sidenav .closebtn{
         display: block;
-        padding-top: 3px;
-        padding-right: 18px;
+        padding-top: 0px;
     }
     .sidenav .closebtn:hover{
         margin: 33px 6px 0px 30px;
@@ -753,139 +787,101 @@ td .dropdown-item{
         margin-top: 20px;
     }
     
+    
     .sidenav .notif,.sidenav .tab-resp,.sidenav .log-out,.sidenav hr{
         display: block;
     }
     
     .main{
-        margin-left: -12px; /* Same as the width of the sidenav */
+        margin-left: 0px; /* Same as the width of the sidenav */
+        margin-right: 5px;
+    }
+
+    .payments-head{
+        margin-top: -15px;
+    }
+    
+    .paym-sub{
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .box, .box-drop{
+        width: 50px;
+    }
+
+    .box-drop .fa-chevron-down{
+        margin-left: -8px;
+    }
+    
+    .show-entries .out-of{
+        width: 3em;
+    }
+    
+    .sear-pay{
+        margin-top: 12px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+    }
+    .sear-pay-icon{
+        width: 0.9em;
+    }
+    
+    .sear-pay input{
+        width: 89%;
+    }
+
+}
+
+
+@media screen and (max-width: 767px){
+    
+    .banks-row{
         width: 100%;
     }
     
-    .create-user{
-        margin-top: 30px;
+}
+
+@media screen and (max-width: 767px){
+    
+    .main{
+        margin-right: 0px;
     }
     
-    .table{
-        width: 120%;
-    }
 }
 
-
-@media (min-width: 685px) and (max-width: 767px){
-    .create-user{
-        margin-top: -40px;
-    }
-    .table{
-        width: 140%;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 684px){
-    .create-user{
-        margin-top: -40px;
-    }
-    .table{
-        width: 160%;
-    }
-}
-
-@media (min-width: 550px) and (max-width: 599px){
-    .create-user{
-        margin-top: -40px;
-    }
-    .table{
-        width: 180%;
-    }
-}
-
-@media screen and (max-width: 564px){
-    .modal{
-        width: 90%;
-        left: 5%;
-    }
-}
-
-@media screen and (max-width: 504px){
-    
-    .modal-body form{
-        display: block;
-        margin: 0;
-        padding: 0;
+@media screen and (max-width: 460px){
+    .main{
+        padding-right: 0px;
     }
     
-    .modal-footer{
-        display: inline-block;
-        padding-bottom: 50px;
+    .sear-pay input{
+        width: 80%;
+    }
+
+    .banks-row{
+        width: 102%;
+    }
+
+    .tab-foot{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        width: 105%;
+        margin-top: 15px;
     }
     
-    .btn-cre-user{
-        margin-left: 20px;
-    }
-    .btn-dismiss{
-        position: relative;
-        top: 30px;
-        right: -20px;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 549px){
-    .create-user{
-        margin-top: -40px;
-    }
-    .table{
-        width: 185%;
-    }
-}
-
-@media (min-width: 450px) and (max-width: 499px){
-    .create-user{
-        margin-top: -40px;
-    }
-    .table{
-        width: 220%;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 449px){
-    .create-user{
-        margin-top: -40px;
-    }
-    .table{
-        width: 240%;
-    }
-}
-
-@media (min-width: 350px) and (max-width: 399px){
-    .create-user{
-        margin-top: 10px;
+    .tab-footer .right{
         float: left;
+        margin-top: 15px;
     }
-    .table{
-        width: 275%;
-    }
-}
-
-@media screen and (max-width: 328px){
     
-    .btn-cre-user{
-        margin-left: 20px;
-        padding: 10px 50px;
-    }
-    .btn-dismiss{
-        position: relative;
-        top: 30px;
-        right: -20px;
-    }
 }
 
-@media (min-width: 300px) and (max-width: 349px){
-    .create-user{
-        margin-top: 10px;
-        float: left;
-    }
-    .table{
-        width: 340%;
+@media screen and (max-width: 349px){
+    
+    .tab-footer .right{
+        margin-top: 20px;
     }
 }
 

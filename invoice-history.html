@@ -77,12 +77,13 @@
                 <hr/>
 
                 <p class="head-tag">Main</p>
-                <a href="merchant-module.html"><img src="images/overview.png"><span>Overview</span></a>
+                <a href="merchant-module.html" ><img src="images/overview.png"><span>Overview</span></a>
             </div>
 
             <div class="tab-sect">
                 <p class="head-tag">Payments</p>
-                <a href="payments.html" class="active"><img src="images/all-pay.png"><span>All Payments</span></a>
+                <a href="payments.html"><img src="images/all-pay.png"><span>All Payments</span></a>
+                <a href="payments.html"class="active"><img src="images/invoice.png"><span>Invoice History</span></a>
                 <a href="settlements.html"><img src="images/manu-settle.png"><span>Manual Settlement</span></a>
             </div>
 
@@ -102,15 +103,13 @@
 
             <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
         </div>
-        <!-- Sidebar Navigation Ends Here -->
+        <!-- Sidebar Navigation Ends Here -->  
         
-
-        <!-- Main Page Content Starts Here -->
         <div class="main">
-                
-            <!-- Use fa-bar on mobile view to open the sidenav -->
-            <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
             
+            <!-- Use any element to open the sidenav -->
+            <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+
             <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
                 <div id="overlay"></div>
 
