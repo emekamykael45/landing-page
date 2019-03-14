@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TransMonitor | Merchant Module</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/vela-settings.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
+            <a class="navbar-brand logo" href="index.html">TRANSMONITOR</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jakePaul" aria-controls="jakePaul" aria-expanded="false" aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="jakePaul">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <ul class="navbar-nav mr-right">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">FAQ</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/bell.png" class="notif-nav-icon">
+                            <span class="circle">8</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="appleSauce" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="hello">Hello</span>
+                                <span class="user-name">Oluwaleke Ojo</span>
+                                <div class="user-img">
+                                    <img class="user-dis-pic" src="images/Bank-Icon.png">
+                                </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="appleSauce">
+                            <a class="dropdown-item" href="web-development.html">Web Development</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        </header>
+        
+         <!-- Sidebar Navigation (Desktop & Mobile View) Starts Here -->
+         <div class="sidenav" id="mySidenav">
+
+            <!-- Click on x in mobile view to close the sidenav -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="tab-sect">
+                <a href="" class="notif"><img src="images/bell.png"><span>Notification</span></a>
+                <hr/>
+
+                <p class="head-tag">Main</p>
+                <a href="vela-module.html"><img src="images/overview.png"><span>Overview</span></a>
+            </div>
+
+            <div class="tab-sect">
+                <p class="head-tag">Others</p>
+                <a href="vela-banks.html"><img src="images/Bank  Vec.png"><span>Banks</span></a>
+                <a href="vela-merchants.html"><img src="images/shop vec.png"><span>Merchants</span></a>
+                <br>
+                <a href="vela-user-manage.html"><img src="images/merc-prof.png"><span>User Management</span></a>
+                <a href="vela-settings.html" class="merc-prof active"><img src="images/settings.png" class="settings-img"><span>Settings</span></a>
+            </div>
+
+            <hr>
+            <div class="tab-sect tab-resp">
+                <p class="head-tag other-links">Other Links</p>
+                <a href=""><span>Support</span></a>
+                <a href=""><span>FAQ</span></a>
+            </div>
+
+            <a href="sign-in.html" class="log-out"><span>Log Out</span></a>
+        </div>
+        <!-- Sidebar Navigation Ends Here --> 
+            
+            <div class="main">
+                
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="open-sidenav"><i class="fas fa-bars"></i></span>
+
+                <div onclick="closeOverlay()"><!-- Click anywhere in body to close the sidenav -->
+                    <div id="overlay"></div>
+
+                <h3 class="profile-head">Settings</h3>
+                <br>
+
+                <div class="prof-content">
+                
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="true">Personal Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Business Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Bank Details</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+                            <div class="personal-info-edit">
+                                <div class="first-tab-fir">
+                                    <img id="personal-prof-img" src="images/user-img.png" alt="your logo" />
+                                    <label for="files" class="upload-txt">Upload</label>
+                                    <input id="files" style="visibility: hidden;" type='file' onchange="readURL(this);" />
+                                    <a href="" class="edit-per-prof">Edit Profile</a>
+                                </div>
+                                <hr>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputText">First Name</label>
+                                                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter First Name">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputText">Last Name</label>
+                                                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Last Name">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputText">Phone Number</label>
+                                                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Mobile Number">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-primary change-pass">Change Password</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="passwordedit" class="password-edit">
+                                <div class="row password-div">
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Old Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">New Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Confirm Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="password-buttons">
+                                    <button type="button" class="btn btn-primary save-new-pass">Save New Password</button>
+                                    <button type="button" class="btn btn-primary save-new-pass discard-changes">Discard Changes</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="first-tab-fir">
+                                <img id="business-prof-img" src="images/first-bank.png" alt="your logo" />
+                                <label for="files" class="upload-txt">Upload</label>
+                                <input id="files" style="visibility: hidden;" type='file' onchange="changeURL(this);" />
+                                <a href="" class="edit-bus-prof">Edit Profile</a>
+                            </div>
+                            <hr>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Business Name</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Shoprite">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Support Email</label>
+                                            <input type="email" class="form-control" id="exampleInputText" placeholder="help@shoprite.com">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Phone Number</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="08032655767">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-8">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Business Address</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Address">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Website</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Website">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row first-tab-sec">
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Facebook</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Facebook Username">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Twitter</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Twitter Username">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputText">LinkedIn</label>
+                                            <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Linkedin Username">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div id="targetOne" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Select Bank</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>Select</option>
+                                                    <option>United Bank for Africa</option>
+                                                    <option>Diamond Bank</option>
+                                                    <option>Fidelity Bank</option>
+                                                    <option>Access Bank</option>
+                                                    <option>United Bank for Africa</option>
+                                                    <option>Diamond Bank</option>
+                                                    <option>Fidelity Bank</option>
+                                                    <option>Access Bank</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputText">Bank Account Name</label>
+                                                <input type="text" class="form-control bank-acc-name-field" id="exampleInputText" placeholder="Enter Account Name">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputText">Bank Account Number</label>
+                                                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Account Number">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetOne rem-bank-btn" data-toggle="modal" data-target="#targetOneModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetOneModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next" data-toggle="modal" data-target="#targetOneModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetOneModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetone" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetOne add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetTwo" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Select Bank</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>Select</option>
+                                                    <option>United Bank for Africa</option>
+                                                    <option>Diamond Bank</option>
+                                                    <option>Fidelity Bank</option>
+                                                    <option>Access Bank</option>
+                                                    <option>United Bank for Africa</option>
+                                                    <option>Diamond Bank</option>
+                                                    <option>Fidelity Bank</option>
+                                                    <option>Access Bank</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputText">Bank Account Name</label>
+                                                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Account Name">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputText">Bank Account Number</label>
+                                                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Account Number">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetTwo rem-bank-btn" data-toggle="modal" data-target="#targetTwoModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetTwoModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">UBA Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-2" data-toggle="modal" data-target="#targetTwoModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetTwoModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargettwo" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetTwo add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetThree" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetThree rem-bank-btn" data-toggle="modal" data-target="#targetThreeModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetThreeModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-3" data-toggle="modal" data-target="#targetThreeModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetThreeModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetthree" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetThree add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetFour" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetFour rem-bank-btn" data-toggle="modal" data-target="#targetFourModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetFourModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-4" data-toggle="modal" data-target="#targetFourModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetFourModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetfour" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetFour add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetFive" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetFive rem-bank-btn" data-toggle="modal" data-target="#targetFiveModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetFiveModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-5" data-toggle="modal" data-target="#targetFiveModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetFiveModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetfive" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetFive add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetSix" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetSix rem-bank-btn" data-toggle="modal" data-target="#targetSixModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetSixModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-6" data-toggle="modal" data-target="#targetSixModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetSixModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetsix" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetSix add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetSeven" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetSeven rem-bank-btn" data-toggle="modal" data-target="#targetSevenModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetSevenModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-7" data-toggle="modal" data-target="#targetSevenModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetSevenModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetseven" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetSeven add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetEight" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetEight rem-bank-btn" data-toggle="modal" data-target="#targetEightModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetEightModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-8" data-toggle="modal" data-target="#targetEightModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetEightModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargeteight" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetEight add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetNine" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetNine rem-bank-btn" data-toggle="modal" data-target="#targetNineModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetNineModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-9" data-toggle="modal" data-target="#targetNineModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetNineModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetnine" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetNine add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+
+                            <div id="targetTen" class="tab-wrapper">
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Select Bank: <br>
+                                            <div class="box">
+                                                <select class="js-example-basic-single" name="state" style="width: 95%">
+                                                    <option value="AL">Select</option>
+                                                    <option value="WY">Zenith Bank Plc</option>
+                                                    <option value="WY">United Bank for Africa</option>
+                                                    <option value="WY">Fidelity Bank Plc</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Name: <br><input type="text" name="supname" placeholder="Enter Account Name">
+                                        </form>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row first-tab-sec">
+                                    <div class="col-md-4">
+                                        <form>
+                                            Bank Account Number: <br><input type="text" name="busname" placeholder="Enter Account Number">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="save-det">SAVE DETAILS</a>
+                                    </div>
+                                </div>
+                                <button class="HideRBAtargetTen rem-bank-btn" data-toggle="modal" data-target="#targetTenModalOne">
+                                    <i class="fas fa-minus-circle"></i>
+                                    <span>Remove Bank Account</span>
+                                </button>
+
+                                <!-- Remove Bank Modal Starts -->
+                                    <!-- Modal 1 -->
+                                    <div class="modal fade" id="targetTenModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title" id="exampleModalLongTitle">Remove Bank Account</p>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>Are you sure you want to remove <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="delete-btn" id="next-10" data-toggle="modal" data-target="#targetTenModalTwo">YES, DELETE BANK</button>
+                                            <button type="button" class="cancel-btn" data-dismiss="modal">CANCEL</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Modal 2 -->
+                                    <div class="modal fade" id="targetTenModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <p class="modal-title bank-removed-title" id="exampleModalLongTitle">Bank Successfully Removed</p>
+                                            <button type="button" class="close Hidetargetten" id="" data-dismiss="modal" aria-label="Close">
+                                              <p aria-hidden="true" class="times-btn">&times;</p>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <p>You have successfully removed <span class="remove-bank-name">Zenith Bank Account</span></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                <!-- Remove Bank Modal Ends -->
+
+                                <hr>
+                                <button class="ShowABAtargetTen add-bank-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>Add a Bank Account</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        <script>
+            $('.ShowABAtargetOne').click(function() {
+                $('#targetTwo').show(0);
+                $('.ShowABAtargetOne').hide(0);
+                $('.HideRBAtargetOne').show(0);
+            });
+            $('.Hidetargetone').click(function() {
+                $('#targetOne').hide(0);
+                $('.ShowABAtargetOne').show(0);
+                $('.HideRBAtargetOne').hide(0);
+            });
+            
+            $('.ShowABAtargetTwo').click(function() {
+                $('#targetThree').show(0);
+                $('.ShowABAtargetTwo').hide(0);
+                $('.HideRBAtargetTwo').show(0);
+            });
+            $('.Hidetargettwo').click(function() {
+                $('#targetTwo').hide(0);
+                $('.ShowABAtargetTwo').show(0);
+                $('.HideRBAtargetTwo').hide(0);
+            });
+            
+            $('.ShowABAtargetThree').click(function() {
+                $('#targetFour').show(0);
+                $('.ShowABAtargetThree').hide(0);
+                $('.HideRBAtargetThree').show(0);
+            });
+            $('.Hidetargetthree').click(function() {
+                $('#targetThree').hide(0);
+                $('.ShowABAtargetThree').show(0);
+                $('.HideRBAtargetThree').hide(0);
+            });
+            
+            $('.ShowABAtargetFour').click(function() {
+                $('#targetFive').show(0);
+                $('.ShowABAtargetFour').hide(0);
+                $('.HideRBAtargetFour').show(0);
+            });
+            $('.Hidetargetfour').click(function() {
+                $('#targetFour').hide(0);
+                $('.ShowABAtargetFour').show(0);
+                $('.HideRBAtargetFour').hide(0);
+            });
+            
+            $('.ShowABAtargetFive').click(function() {
+                $('#targetSix').show(0);
+                $('.ShowABAtargetFive').hide(0);
+                $('.HideRBAtargetFive').show(0);
+            });
+            $('.Hidetargetfive').click(function() {
+                $('#targetFive').hide(0);
+                $('.ShowABAtargetFive').show(0);
+                $('.HideRBAtargetFive').hide(0);
+            });
+            
+            $('.ShowABAtargetSix').click(function() {
+                $('#targetSeven').show(0);
+                $('.ShowABAtargetSix').hide(0);
+                $('.HideRBAtargetSix').show(0);
+            });
+            $('.Hidetargetsix').click(function() {
+                $('#targetSix').hide(0);
+                $('.ShowABAtargetSix').show(0);
+                $('.HideRBAtargetSix').hide(0);
+            });
+            
+            $('.ShowABAtargetSeven').click(function() {
+                $('#targetEight').show(0);
+                $('.ShowABAtargetSeven').hide(0);
+                $('.HideRBAtargetSeven').show(0);
+            });
+            $('.Hidetargetseven').click(function() {
+                $('#targetSeven').hide(0);
+                $('.ShowABAtargetSeven').show(0);
+                $('.HideRBAtargetSeven').hide(0);
+            });
+            
+            $('.ShowABAtargetEight').click(function() {
+                $('#targetNine').show(0);
+                $('.ShowABAtargetEight').hide(0);
+                $('.HideRBAtargetEight').show(0);
+            });
+            $('.Hidetargeteight').click(function() {
+                $('#targetEight').hide(0);
+                $('.ShowABAtargetEight').show(0);
+                $('.HideRBAtargetEight').hide(0);
+            });
+            
+            $('.ShowABAtargetNine').click(function() {
+                $('#targetTen').show(0);
+                $('.ShowABAtargetNine').hide(0);
+                $('.HideRBAtargetNine').show(0);
+            });
+            $('.Hidetargetnine').click(function() {
+                $('#targetNine').hide(0);
+                $('.ShowABAtargetNine').show(0);
+                $('.HideRBAtargetNine').hide(0);
+            });
+            
+            $('.ShowABAtargetTen').click(function() {
+                $('#targetOne').show(0);
+                $('.ShowABAtargetTen').hide(0);
+                $('.HideRBAtargetTen').show(0);
+            });
+            $('.Hidetargetten').click(function() {
+                $('#targetTen').hide(0);
+                $('.ShowABAtargetTen').show(0);
+                $('.HideRBAtargetTen').hide(0);
+            });
+        </script>
+        
+        <script>
+            // In your Javascript (external .js resource or <script> tag)
+            $(document).ready(function() {
+                $('.js-example-basic-single').select2({
+                    width: 'resolve' // need to override the changed default
+                });
+            });
+        </script>
+        
+        <!-- Modal Control -->
+        <script>
+
+            //set button id on click to hide first modal
+            $("#next").on( "click", function() {
+                    $('#targetOneModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next").on( "click", function() {
+                    $('#targetOneModalTwo').modal('show');  
+            });
+
+            //set button id on click to hide 2nd modal
+            $("#next-2").on( "click", function() {
+                    $('#targetTwoModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-2").on( "click", function() {
+                    $('#targetTwoModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-3").on( "click", function() {
+                    $('#targetThreeModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-3").on( "click", function() {
+                    $('#targetThreeModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-4").on( "click", function() {
+                    $('#targetFourModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-4").on( "click", function() {
+                    $('#targetFourModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-5").on( "click", function() {
+                    $('#targetFiveModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-5").on( "click", function() {
+                    $('#targetFiveModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-6").on( "click", function() {
+                    $('#targetSixModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-6").on( "click", function() {
+                    $('#targetSixModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-7").on( "click", function() {
+                    $('#targetSevenModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-7").on( "click", function() {
+                    $('#targetSevenModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-8").on( "click", function() {
+                    $('#targetEightModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-8").on( "click", function() {
+                    $('#targetEightModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-9").on( "click", function() {
+                    $('#targetNineModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-9").on( "click", function() {
+                    $('#targetNineModalTwo').modal('show');  
+            });
+            
+            //set button id on click to hide 2nd modal
+            $("#next-10").on( "click", function() {
+                    $('#targetTenModalOne').modal('hide');  
+            });
+            //trigger next modal
+            $("#next-10").on( "click", function() {
+                    $('#targetTenModalTwo').modal('show');  
+            });
+
+        </script>
+        
+        <script>
+            $('.change-pass').click(function() {
+                $('#passwordEdit').show(500);
+                $('.personal-info-edit').hide(0);
+                $('.password-edit').show(0);
+            });
+            $('.save-new-pass').click(function() {
+                $('#passwordEdit').hide(500);
+                $('.personal-info-edit').show(0);
+                $('.password-edit').hide(0);
+            });
+        </script>
+        
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#personal-prof-img')
+                            .attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+        
+        <script>
+            function changeURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#business-prof-img')
+                            .attr('src', e.target.result);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+        
+        <!-- Side Navigation JS -->
+        <script>
+
+            /* Set the width of the side navigation to 212px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "70%";
+                document.getElementById("overlay").style.display = "block";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("overlay").style.display = "none";
+            }
+            
+            /* Set the width of the side navigation to 0 & removes Overlay*/
+            function closeOverlay() {
+                if (window.innerWidth < 769) {
+                    document.getElementById("mySidenav").style.width = "0";
+                    document.getElementById("overlay").style.display = "none";
+                }   
+            }
+
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
