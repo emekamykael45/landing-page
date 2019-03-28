@@ -125,46 +125,46 @@
                     
                     <!-- Modal 1-->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Create New User</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Create New User</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="left-side">
+                                        <input type="text" name="" class="first-name" placeholder="First Name" required>
+                                        <p>Default Username: <strong>USER0180</strong></p>
+                                    </div>
+                                    <div class="right-side">
+                                        <input type="text" name="" class="last-name" placeholder="Last Name" required>
+                                        <p>Default Password: <strong>00000</strong></p>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalTwo" data-dismiss="modal">CREATE USER</button>
+                                <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                            </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="left-side">
-                                    <input type="text" name="" class="first-name" placeholder="First Name" required>
-                                    <p>Default Username: <strong>USER0180</strong></p>
-                                </div>
-                                <div class="right-side">
-                                    <input type="text" name="" class="last-name" placeholder="Last Name" required>
-                                    <p>Default Password: <strong>00000</strong></p>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalTwo" data-dismiss="modal">CREATE USER</button>
-                            <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
-                        </div>
-                        </div>
-                    </div>
                     </div>
                     
                     <!-- Modal 2-->
                     <div class="modal fade" id="modalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">New User Created</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">New User Created</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                     
                     
@@ -188,28 +188,94 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
-                                    </div>
-                                    <!--
-                                    <div class="drop">
-                                        <ul>
-                                            <li class="dot"><a href="#"><i class="fas fa-ellipsis-v"></i></a>
-                                                <ul>
-                                                    <li><a href="#">Reset User</a></li>
-                                                    <li><a href="#">Block User</a></li>
-                                                </ul>        
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    -->
                                 </td>
                             </tr>
                             <tr>
@@ -219,15 +285,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">30000</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -238,15 +382,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">2000</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -257,15 +479,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -276,15 +576,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -295,15 +673,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -314,15 +770,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -333,15 +867,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -352,15 +964,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -371,15 +1061,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -390,15 +1158,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -409,15 +1255,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>
@@ -428,72 +1352,93 @@
                                 <td>08099876765</td>
                                 <td>25-10-2018</td>
                                 <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
+                                <td><a href="vela-users-activity.html" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
                                 <td>
                                     <!-- Default dropleft button -->
                                     <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
-                                </th>
-                                <td>08099876765</td>
-                                <td>25-10-2018</td>
-                                <td class="number">200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                                <td>
-                                    <!-- Default dropleft button -->
-                                    <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
-                                </th>
-                                <td>08099876765</td>
-                                <td>25-10-2018</td>
-                                <td>200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                                <td>
-                                    <!-- Default dropleft button -->
-                                    <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <img src="images/user-img.png" class="table-user-img">Dino Mark
-                                </th>
-                                <td>08099876765</td>
-                                <td>25-10-2018</td>
-                                <td>200</td>
-                                <td><a href="" class="view-act">VIEW ACTIVITY<i class="fas fa-chevron-right"></i></a></td>
-                                <td>
-                                    <!-- Default dropleft button -->
-                                    <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Reset User</a>
-                                        <a class="dropdown-item" href="#">Block User</a>
-                                    </div>
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                        <div class="dropdown-menu">
+                                            <a class="reset-user dropdown-item" data-toggle="modal" data-target="#exampleModalReset" href="">Reset User</a>
+                                            <a class="block-user dropdown-item" data-toggle="modal" data-target="#exampleModalBlock" href="">Block User</a>
+                                        </div>
+
+                                        <!-- Modal Starts-->
+                
+                                        <!-- Modal 1-->
+                                        <div class="modal fade" id="exampleModalReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Reset User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>What would you like to reset in this user?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-cre-user" data-toggle="modal" data-target="#modalOneSub" data-dismiss="modal">YES, RESET USER</button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 1sub-->
+                                        <div class="modal fade" id="modalOneSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title pass-res-suc" id="exampleModalLabel">User Reset Successful</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You have successfully reset this user</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2-->
+                                        <div class="modal fade" id="exampleModalBlock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Block User</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Confirm to block <strong><span class="user-id">Dino Mark</span></strong> from acessing this account on Transmonitor</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-confirm" data-toggle="modal" data-target="#modalTwoSub" data-dismiss="modal">YES, CONFIRM  </button>
+                                                    <button type="button" class="btn btn-dismiss" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal 2sub-->
+                                        <div class="modal fade" id="modalTwoSub" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">User Blocked</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Ends-->
+
                                     </div>
                                 </td>
                             </tr>

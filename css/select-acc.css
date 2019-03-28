@@ -165,7 +165,7 @@ input:focus, textarea:focus{
     margin-top: -24px !important;
     margin-right: -30px !important;
     padding-top: 6px !important;
-    padding-bottom: 11px !important;
+    padding-bottom: 7px !important;
     padding-left: 8px;
     padding-right: 8px;
     color: #fff;
@@ -249,16 +249,12 @@ input:focus, textarea:focus{
     padding-right: 200px;
     border: 1px solid #E0E0E0;
     font-size: 1em;
-    -webkit-appearance: button;
-    appearance: button;
     outline: none;
     border-radius: 5px;
 }
 
 .box .fa-chevron-down{
-    z-index: 0;
-    margin-left: -30px;
-    color: #999999;
+    display: none;
 }
 
 .modal-footer{
@@ -433,7 +429,7 @@ input:focus, textarea:focus{
 }
 
 .secured i{
-    font-size: 1.2em;
+    font-size: 1em;
     padding-top: 3.5px;
     margin-right: 10px;
 }
@@ -447,8 +443,263 @@ button:focus {
 
 
 /*Responsiveness Starts Here*/
-@media screen and (max-width: 1208px){
-    .main{
-        margin-left: 23.2%;
+@media screen and (max-width: 575px){
+    .modal{
+        margin: 0 auto;
+        width: 85%;
     }
+
+    .modal-header .close{
+        margin-top: -13px !important;
+        margin-right: -19px !important;
+    }
+
+    .pay-part{
+        left: 42%;
+        margin-bottom: 0px;
+    }
+    
+    .pay-exac-fig{
+        font-size: 1.6em;
+    }
+
+    .modal-body .sel-bank-acc{
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .modal-body .acc-tag{
+        margin-left: 9px;
+    }
+    
+    .modal-body .acc-tag span{
+        display: block;
+        margin-top: -23px;
+        margin-left: 150px;
+    }
+    
+    .box{
+        left: 8px;
+    }
+    
+    .box select {
+        width: 96% !important;
+        padding-right: 0px;
+    }
+    
+    .modal-footer{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: -40px;
+        left: 0%;
+    }
+    
+    .modal-footer .action-button{
+        padding: 15px 15px;
+        margin: 0 auto;
+        width: 96%;
+        left: 8px;
+    }
+
+    #myModal1 .modal-footer .action-button{
+        margin-top: 130px;
+        margin-bottom: -130px;
+    }
+    
+    #myModal2 .modal-footer{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        left: 0%;
+        margin-top: 0px;
+        margin-bottom: -200px;
+    }
+    
+    #myModal2 .modal-footer .you-can-pay{
+        text-align: center;
+    }
+    
+    #myModal2 .modal-footer .action-button{
+        padding: 15px 15px;
+        margin: 0 auto;
+        width: 96%;
+        left: 8px;
+    }
+    
+    #myModal3 .modal-body img{
+        width: 50px;
+        margin-left: 43%;
+    }
+    
+    #myModal3 .modal-body .line-tag{
+        display: flex;
+        margin-left: 9%;
+    }
+    
+    #myModal3 .modal-footer .action-button{
+        padding: 15px 15px !important;
+        left: 8px;
+    }
+    
+    #myModal4 .modal-body img{
+        width: 50px;
+        margin-left: 43%;
+    }
+    
+    #myModal4 .modal-footer{
+        display: block;
+    }
+    
+    .secured{
+        margin-left: 31%;
+    }
+    
+    .secured i{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 522px){
+
+    .pay-part{
+        left: 39%;
+    }
+
+}
+
+@media screen and (max-width: 498px){
+
+    .pay-part{
+        left: 36%;
+    }
+
+    .secured{
+        margin-left: 28%;
+    }
+
+}
+
+@media screen and (max-width: 477px){
+
+    .pay-part{
+        left: 32%;
+    }
+
+}
+
+@media screen and (max-width: 460px){
+
+    #myModal3 .modal-body .we-wer-una{
+        text-align: left;
+    }
+    
+    #myModal3 .modal-body .line-tag{
+        margin-left: 0px;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+
+    .pay-part{
+        left: 27%;
+    }
+
+    .secured{
+        margin-left: 25%;
+    }
+
+}
+
+@media screen and (max-width: 420px){
+
+    .pay-part{
+        left: 22%;
+    }
+
+}
+
+@media screen and (max-width: 398px){
+
+    .pay-part{
+        left: 16%;
+    }
+
+    .secured{
+        margin-left: 20%;
+    }
+
+}
+
+@media screen and (max-width: 375px){
+
+    .modal{
+        margin: 0 auto;
+        width: 98%;
+    }
+
+    .modal-header img{
+        margin-bottom: 35px;
+    }
+
+    .pay-part{
+        display: flex;
+        position: absolute;
+        left: 23px;
+        margin-top: 90px;
+    }
+
+    .pay-exac{
+        margin-right: 10px;
+    }
+    
+    .pay-exac-fig{
+        margin-top: -7px;
+    }
+
+    .secured{
+        margin-left: 25%;
+    }
+
+}
+
+@media screen and (max-width: 346px){
+
+    .modal-header img{
+        margin-left: -10px;
+    }
+
+    .pay-part{
+        left: 13px;
+    }
+
+    .modal-body .sel-bank-acc{
+        margin-left: -3px;
+    }
+    
+    .modal-body .acc-tag{
+        margin-left: -1px;
+    }
+    
+    .box{
+        left: -3px;
+    }
+
+    #myModal3 .modal-body img, #myModal4 .modal-body img{
+        width: 50px;
+        margin-left: 40%;
+    }
+
+    .modal-footer .action-button, #myModal2 .modal-footer .action-button, #myModal3 .modal-footer .action-button, #myModal4 .modal-footer .action-button{
+        width: 102%;
+        left: -3px;
+    }
+
+    .secured{
+        margin-left: 22%;
+    }
+
 }

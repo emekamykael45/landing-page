@@ -133,6 +133,8 @@ input:focus, textarea:focus{
 }
 
 /* Navbar Ends Here */
+
+
 /* Overlay */
 #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -147,7 +149,6 @@ input:focus, textarea:focus{
     z-index: 2000; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
-
 
 
 /*Side Menu Starts Here*/
@@ -197,17 +198,19 @@ input:focus, textarea:focus{
 }
 
 .tab-sect{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 .tab-sect .head-tag{
     padding-left: 15px;
     font-size: 0.9rem;
     color: #647787;
+    margin-top: 0px;
 }
 .tab-sect p{
     margin-bottom: 10px;
     margin-top: 30px;
 }
+
 .tab-sect hr, .sidenav hr{
     margin-top: 0px;
     margin-bottom: 15px;
@@ -1610,7 +1613,7 @@ button:focus {
     }
     
     .table{
-        width: 160%;
+        width: 180%;
     }
     
     .paym-sub{
@@ -1676,7 +1679,7 @@ button:focus {
     }
     
     .table{
-        width: 160%;
+        width: 180%;
     }
     
     .paym-sub{
@@ -1768,10 +1771,6 @@ button:focus {
         margin-left: -5px;
     }
     
-    .table{
-        width: 160%;
-    }
-    
     .paym-sub{
         display: inline-block;
     }
@@ -1856,6 +1855,10 @@ button:focus {
         margin-top: 60px !important;
         margin-left: -10px; 
     }
+
+    .table{
+        width: 200%;
+    }
     
 }
 
@@ -1890,7 +1893,7 @@ button:focus {
     }
     
     .table{
-        width: 160%;
+        width: 210%;
     }
     
     .paym-sub{
@@ -1956,7 +1959,7 @@ button:focus {
     }
     
     .table{
-        width: 160%;
+        width: 220%;
     }
     
     .paym-sub{
@@ -2024,7 +2027,7 @@ button:focus {
     }
     
     .table{
-        width: 160%;
+        width: 230%;
     }
     
     .paym-sub{
@@ -2091,7 +2094,7 @@ button:focus {
     }
     
     .table{
-        width: 160%;
+        width: 240%;
     }
     
     .paym-sub{

@@ -646,7 +646,141 @@ td .dropdown-menu{
 td .dropdown-item{
     padding-left: 10px;
     padding-right: 0px;
+    border: none !important;
 }
+
+.reset-user:focus{
+    background: none !important;
+    color: #4c4c4c;
+}
+
+.block-user:hover{
+    color: red;
+}
+.block-user:focus{
+    background: none !important;
+    color: red;
+}
+
+/* Modal Starts Here */
+
+.dropdown .modal{
+    top: 80px !important;
+    width: 35% !important;
+    left: 33% !important;
+}
+
+.dropdown .modal .modal-content{
+    border-radius: 0px 0px 5px 5px !important;
+    border: none !important;
+}
+
+.dropdown .modal .modal-header{
+    border: none !important;
+    background: #FAFBFC !important;
+    padding: 10px 15px !important;
+}
+
+.dropdown .modal .modal-header .close{
+    background: rgba(196, 196, 196, 0.12) !important;
+    border-radius: 50px !important;
+    line-height: 15px !important;
+    margin-top: -5px !important;
+    margin-right: -10px !important;
+    padding-top: 6px !important;
+    padding-bottom: 7px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.dropdown .modal .modal-title{
+    color: #262626 !important;
+    font-weight: 500 !important;
+    font-size: 1.1em !important
+}
+
+.dropdown .modal .modal-body{
+    display: flex !important;
+}
+
+.dropdown .modal .modal-body p{
+    color: #4F4F4F !important;
+}
+
+.dropdown .modal .modal-footer{
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    top: -5px;
+    left: -7%;
+    border: none !important;
+}
+
+.dropdown .modal button:focus {
+  box-shadow: none !important;
+}
+
+.dropdown .modal .btn-cre-user{
+    background: #1860EC !important;
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 10px 35px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 1.03em !important;
+}
+
+.dropdown .modal .btn-confirm{
+    background: #1860EC !important;
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 10px 35px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 1.03em !important;
+}
+
+.dropdown .modal .btn-dismiss{
+    position: relative;
+    right: -20px;
+    background: #fff;
+    border: 1px solid #1860EC !important;
+    border-radius: 5px !important;
+    padding: 10px 40px !important;
+    color: #1860EC !important;
+    font-weight: 700 !important;
+    font-size: 1.03em !important;
+}
+
+.dropdown #modalTwoSub .modal-content{
+    border-radius: 5px!important;
+}
+
+.dropdown #modalTwoSub .modal-header{
+    border: none !important;
+    background: #fff !important;
+    padding: 20px 25px !important;
+    border-radius: 5px !important;
+}
+
+.dropdown #modalOneSub .modal-header .modal-title,.pass-res-suc{
+    color: #27AE60 !important;
+}
+.dropdown #modalTwoSub .modal-header .modal-title,.pass-res-suc{
+    color: #27AE60 !important;
+}
+
+.dropdown #modalTwoSub .modal-header .close{
+    background: rgba(196, 196, 196, 0.12) !important;
+    border-radius: 50px !important;
+    line-height: 15px !important;
+    margin-top: -12px !important;
+    padding: 15px !important;
+    padding-top: 14px !important;
+    padding-bottom: 13px !important;
+}
+
+/* Modal Stops Here */
 
 /*Section 2 Ends Here*/
 
@@ -671,19 +805,26 @@ td .dropdown-item{
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1160px){
+@media screen and (max-width: 1160px){
     .table{
         width: 120%;
     }
+
+    .dropdown .modal{
+        margin: 0 auto;
+        margin-left: -5%;
+        width: 45% !important;
+    }
+
 }
 
-@media (min-width: 900px) and (max-width: 999px){
+@media screen and (max-width: 999px){
     .table{
         width: 140%;
     }
 }
 
-@media (min-width: 820px) and (max-width: 899px){
+@media screen and (max-width: 899px){
     .table{
         width: 160%;
     }
@@ -693,6 +834,12 @@ td .dropdown-item{
     .modal{
         width: 80%;
         left: 10%;
+    }
+
+    .dropdown .modal{
+        margin: 0 auto;
+        margin-left: -13%;
+        width: 60% !important;
     }
 }
 
@@ -774,16 +921,21 @@ td .dropdown-item{
 }
 
 
-@media (min-width: 685px) and (max-width: 767px){
+@media screen and (max-width: 767px){
     .create-user{
         margin-top: -40px;
     }
     .table{
         width: 140%;
     }
+
+    .dropdown .modal{
+        margin-left: -14%;
+        width: 60% !important;
+    }
 }
 
-@media (min-width: 600px) and (max-width: 684px){
+@media screen and (max-width: 684px){
     .create-user{
         margin-top: -40px;
     }
@@ -792,7 +944,14 @@ td .dropdown-item{
     }
 }
 
-@media (min-width: 550px) and (max-width: 599px){
+@media screen and (max-width: 662px){
+    .dropdown .modal{
+        margin-left: -18%;
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 599px){
     .create-user{
         margin-top: -40px;
     }
@@ -801,10 +960,24 @@ td .dropdown-item{
     }
 }
 
+@media screen and (max-width: 575px){
+    .dropdown .modal{
+        margin-left: -23%;
+        width: 80% !important;
+    }
+}
+
 @media screen and (max-width: 564px){
     .modal{
         width: 90%;
         left: 5%;
+    }
+}
+
+@media screen and (max-width: 513px){
+    .dropdown .modal{
+        margin-left: -28%;
+        width: 90% !important;
     }
 }
 
@@ -829,9 +1002,23 @@ td .dropdown-item{
         top: 30px;
         right: -20px;
     }
+
+    .dropdown .modal{
+        margin-left: -28%;
+        width: 90% !important;
+    }
+
+    .dropdown .modal .modal-footer{
+        left: -4%;
+        margin-bottom: -20px;
+    }
+    
+    .dropdown .modal .btn-dismiss{
+        top: 0px;
+    }
 }
 
-@media (min-width: 500px) and (max-width: 549px){
+@media screen and (max-width: 549px){
     .create-user{
         margin-top: -40px;
     }
@@ -840,7 +1027,15 @@ td .dropdown-item{
     }
 }
 
-@media (min-width: 450px) and (max-width: 499px){
+@media screen and (max-width: 504px){
+
+    .dropdown #exampleModalBlock .modal-footer{
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 499px){
     .create-user{
         margin-top: -40px;
     }
@@ -849,7 +1044,37 @@ td .dropdown-item{
     }
 }
 
-@media (min-width: 400px) and (max-width: 449px){
+@media screen and (max-width: 459px){
+
+    .dropdown .modal .modal-footer{
+        margin-top: -70px;
+    }
+
+    .dropdown .modal .btn-cre-user{
+        padding: 10px 34px !important;
+    }
+    
+    .dropdown .modal .btn-dismiss{
+        left: -194px;
+        margin-top: 120px;
+    }
+
+    .dropdown .modal .btn-confirm{
+        padding: 10px 34px !important;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer{
+        margin-left: 25px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: -180px;
+        margin-top: 120px;
+    }
+
+}
+
+@media screen and (max-width: 449px){
     .create-user{
         margin-top: -40px;
     }
@@ -858,7 +1083,39 @@ td .dropdown-item{
     }
 }
 
-@media (min-width: 350px) and (max-width: 399px){
+@media screen and (max-width: 448px){
+
+    .dropdown .modal .modal-footer{
+        margin-top: -10px;
+    }
+
+    .dropdown .modal .btn-cre-user{
+        padding: 10px 34px !important;
+    }
+    
+    .dropdown .modal .btn-confirm{
+        padding: 10px 34px !important;
+        margin-left: 20px !important;
+    }
+    
+    .dropdown .modal .btn-dismiss{
+        left: 17px;
+        margin-top: 20px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer{
+        margin-left: 0px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: 17px;
+        margin-left: 29px;
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 399px){
     .create-user{
         margin-top: 10px;
         float: left;

@@ -479,6 +479,141 @@ input:focus, textarea:focus{
     padding-right: 0px;
 }
 
+
+.reset-user:focus{
+    background: none !important;
+    color: #4c4c4c;
+}
+
+.block-user:hover{
+    color: red;
+}
+.block-user:focus{
+    background: none !important;
+    color: red;
+}
+
+/* Modal Starts Here */
+
+.dropdown .modal{
+    top: 80px !important;
+    width: 35% !important;
+    left: 33% !important;
+}
+
+.dropdown .modal .modal-content{
+    border-radius: 0px 0px 5px 5px !important;
+    border: none !important;
+}
+
+.dropdown .modal .modal-header{
+    border: none !important;
+    background: #FAFBFC !important;
+    padding: 10px 15px !important;
+}
+
+.dropdown .modal .modal-header .close{
+    background: rgba(196, 196, 196, 0.12) !important;
+    border-radius: 50px !important;
+    line-height: 15px !important;
+    margin-top: -5px !important;
+    margin-right: -10px !important;
+    padding-top: 6px !important;
+    padding-bottom: 7px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.dropdown .modal .modal-title{
+    color: #262626 !important;
+    font-weight: 500 !important;
+    font-size: 1.1em !important
+}
+
+.dropdown .modal .modal-body{
+    display: flex !important;
+}
+
+.dropdown .modal .modal-body p{
+    color: #4F4F4F !important;
+}
+
+.dropdown .modal .modal-footer{
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: 15px;
+    top: -5px;
+    left: -7%;
+    border: none !important;
+}
+
+.dropdown .modal button:focus {
+  box-shadow: none !important;
+}
+
+.dropdown .modal .btn-cre-user{
+    background: #1860EC !important;
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 10px 35px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 1.03em !important;
+}
+
+.dropdown .modal .btn-confirm{
+    background: #1860EC !important;
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 10px 35px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 1.03em !important;
+}
+
+.dropdown .modal .btn-dismiss{
+    position: relative;
+    right: -20px;
+    background: #fff;
+    border: 1px solid #1860EC !important;
+    border-radius: 5px !important;
+    padding: 10px 40px !important;
+    color: #1860EC !important;
+    font-weight: 700 !important;
+    font-size: 1.03em !important;
+}
+
+.dropdown #modalTwoSub .modal-content{
+    border-radius: 5px!important;
+}
+
+.dropdown #modalTwoSub .modal-header{
+    border: none !important;
+    background: #fff !important;
+    padding: 20px 25px !important;
+    border-radius: 5px !important;
+}
+
+.dropdown #modalOneSub .modal-header .modal-title,.pass-res-suc{
+    color: #27AE60 !important;
+}
+.dropdown #modalTwoSub .modal-header .modal-title,.pass-res-suc{
+    color: #27AE60 !important;
+}
+
+.dropdown #modalTwoSub .modal-header .close{
+    background: rgba(196, 196, 196, 0.12) !important;
+    border-radius: 50px !important;
+    line-height: 15px !important;
+    margin-top: -12px !important;
+    padding: 15px !important;
+    padding-top: 14px !important;
+    padding-bottom: 13px !important;
+}
+
+/* Modal Stops Here */
+
+
 .tab-foot{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -559,6 +694,16 @@ input:focus, textarea:focus{
 
 }
 
+@media screen and (max-width: 1160px){
+
+    .dropdown .modal{
+        margin: 0 auto;
+        margin-left: -5%;
+        width: 45% !important;
+    }
+
+}
+
 @media screen and (max-width: 1096px) {
     .banks-row{
         grid-template-columns: repeat(1, 1fr);
@@ -612,7 +757,7 @@ input:focus, textarea:focus{
 
 }
 
-@media (min-width: 993px) and (max-width: 1008px){
+@media screen and (max-width: 1008px){
     
     .paym-sub{
         display: block;
@@ -648,7 +793,7 @@ input:focus, textarea:focus{
 }
 
 
-@media (min-width: 953px) and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     
     .paym-sub{
         display: block;
@@ -693,7 +838,7 @@ input:focus, textarea:focus{
     }
 }
 
-@media (min-width: 819px) and (max-width: 952px){
+@media screen and (max-width: 952px){
     
     .paym-sub{
         display: block;
@@ -726,7 +871,23 @@ input:focus, textarea:focus{
         width: 89%;
         font-size: 1.1em;
     }
+
+    .dropdown .modal{
+        margin: 0 auto;
+        margin-left: -13%;
+        width: 60% !important;
+    }
     
+}
+
+@media screen and (max-width: 876px){
+
+    .dropdown .modal{
+        margin: 0 auto;
+        margin-left: -13%;
+        width: 60% !important;
+    }
+
 }
 
 @media screen and (max-width: 874px){
@@ -835,19 +996,57 @@ input:focus, textarea:focus{
 
 
 @media screen and (max-width: 767px){
-    
-    .banks-row{
-        width: 100%;
-    }
-    
-}
 
-@media screen and (max-width: 767px){
-    
     .main{
         margin-right: 0px;
     }
     
+    .banks-row{
+        width: 100%;
+    }
+
+    .dropdown .modal{
+        margin-left: -14%;
+        width: 60% !important;
+    }
+    
+}
+
+@media screen and (max-width: 662px){
+    .dropdown .modal{
+        margin-left: -18%;
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .dropdown .modal{
+        margin-left: -25%;
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 513px){
+    .dropdown .modal{
+        margin-left: -28%;
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 504px){
+
+    .dropdown .modal .modal-footer{
+        left: -4%;
+        margin-bottom: 10px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer{
+        margin-left: 20px;
+    }
+    
+    .dropdown .modal .btn-dismiss{
+        top: 0px;
+    }
 }
 
 @media screen and (max-width: 460px){
@@ -861,6 +1060,34 @@ input:focus, textarea:focus{
 
     .banks-row{
         width: 102%;
+    }
+
+    .dropdown .modal .modal-footer{
+        margin-top: -70px;
+    }
+
+    .dropdown .modal .btn-cre-user{
+        position: relative;
+        left: -15px !important;
+    }
+    
+    .dropdown .modal .btn-dismiss{
+        right: 222px !important;
+        margin-top: 120px;
+    }
+
+    .dropdown .modal .btn-confirm{
+        padding: 10px 34px !important;
+        left: -250px !important;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer{
+        left: 15px !important;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: -250px;
+        margin-top: 120px;
     }
 
     .tab-foot{
@@ -878,11 +1105,73 @@ input:focus, textarea:focus{
     
 }
 
+@media screen and (max-width: 448px){
+
+    .dropdown .modal .modal-footer{
+        margin-top: -70px;
+    }
+
+    .dropdown .modal .btn-cre-user{
+        position: absolute;
+        left: 40px !important;
+        padding: 10px 34px !important;
+    }
+    
+    .dropdown .modal .btn-confirm{
+        padding: 10px 34px !important;
+        margin-left: 20px !important;
+    }
+    
+    .dropdown .modal .btn-dismiss{
+        position: relative;
+        margin-right: -70px;
+        margin-top: 120px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer{
+        margin-left: 0px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: 17px;
+        margin-left: 29px;
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 377px){
+
+    .dropdown .modal .btn-dismiss{
+        margin-right: -122px;
+    }
+
+}
+
 @media screen and (max-width: 349px){
     
     .tab-footer .right{
         margin-top: 20px;
     }
+}
+
+@media screen and (max-width: 328px){
+    
+    .btn-dismiss{
+        position: relative;
+        top: 30px;
+        right: -20px;
+    }
+
+}
+
+
+@media screen and (max-width: 321px){
+
+    .dropdown .modal .btn-dismiss{
+        margin-right: -175px;
+    }
+
 }
 
 /* Responsive Page Endss Here*/

@@ -109,7 +109,7 @@ body{
     background: #FFFFFF;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.14);
     border-radius: 10px;
-    margin-top: 70px;
+    margin-top: 30px;
     padding: 15px 20px;
 }
 
@@ -195,6 +195,18 @@ body{
     }
 }
 
+@media screen and (max-width: 991px){
+
+    header .navbar-nav{
+        margin-top: 10px;
+    }
+
+    #nav-signin{
+        margin-top: 15px;
+    }
+
+}
+
 @media screen and (max-width: 864px){
     
     .fast-bank-text{
@@ -207,7 +219,7 @@ body{
     }
     
     .marchants-nav, .banks-nav{
-        margin-top: 30px;
+        margin-top: 70px;
     }
 
     .shop-icon img, .bank-icon img{
@@ -242,6 +254,19 @@ body{
         margin-top: 0px;
     }
     
+}
+
+@media screen and (max-width: 788px){
+
+    .banks-nav{
+        margin-top: 30px;
+    }
+
+    .footer{
+        position: relative;
+        bottom: 0;
+    }
+
 }
 
 @media screen and (max-width: 767px){

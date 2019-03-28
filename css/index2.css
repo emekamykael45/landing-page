@@ -273,7 +273,7 @@ body{
 /* Page Footer Starts */
 
 .footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
     background-color: #1875F0;
     padding: 1.31em 7em;
@@ -454,7 +454,7 @@ body{
     }
 
     .marchants-nav, .banks-nav{
-        margin-top: 40px;
+        margin-top: 65px;
         padding: 15px 15px;
     }
     
@@ -483,7 +483,7 @@ body{
 
 @media screen and (max-width: 864px){
     .footer{
-        position: fixed;
+        position: relative;
         bottom: 0;
         margin-bottom: 0px;
         padding: 1em 3em;
@@ -495,6 +495,11 @@ body{
 }
 
 @media screen and (max-width: 779px){
+
+    .banks-nav{
+        margin-top: 30px;
+    }
+
     .footer{
         position: relative;
         bottom: 0;
@@ -587,6 +592,10 @@ body{
 }
 
 @media screen and (max-width: 344px){
+    .for-merch-text, .for-banks-text{
+        font-size: 2em;
+    }
+
     .justify-content-center{
         margin-left: 3px !important;
     }
