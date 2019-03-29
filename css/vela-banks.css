@@ -1077,8 +1077,9 @@ input:focus, textarea:focus{
     }
 
     .dropdown .modal .btn-confirm{
+        position: absolute;
         padding: 10px 34px !important;
-        left: -250px !important;
+        left: -5px !important;
     }
 
     .dropdown #exampleModalBlock .modal-footer{
@@ -1108,24 +1109,25 @@ input:focus, textarea:focus{
 @media screen and (max-width: 448px){
 
     .dropdown .modal .modal-footer{
-        margin-top: -70px;
+        margin-top: -90px;
     }
 
     .dropdown .modal .btn-cre-user{
         position: absolute;
-        left: 40px !important;
+        left: 41px !important;
+        margin-top: 10px;
         padding: 10px 34px !important;
     }
     
     .dropdown .modal .btn-confirm{
         padding: 10px 34px !important;
-        margin-left: 20px !important;
+        margin-left: 15px !important;
     }
     
     .dropdown .modal .btn-dismiss{
         position: relative;
         margin-right: -70px;
-        margin-top: 120px;
+        margin-top: 150px;
     }
 
     .dropdown #exampleModalBlock .modal-footer{
@@ -1133,9 +1135,24 @@ input:focus, textarea:focus{
     }
 
     .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
-        left: 17px;
-        margin-left: 29px;
-        margin-top: 20px;
+        left: -287px;
+        margin-top: 120px;
+    }
+
+}
+
+@media screen and (max-width: 413px){
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: -256px;
+    }
+
+}
+
+@media screen and (max-width: 381px){
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: -226px;
     }
 
 }
@@ -1146,12 +1163,20 @@ input:focus, textarea:focus{
         margin-right: -122px;
     }
 
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: -276px !important;
+    }
+
 }
 
 @media screen and (max-width: 349px){
     
     .tab-footer .right{
         margin-top: 20px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: -246px !important;
     }
 }
 
@@ -1170,6 +1195,10 @@ input:focus, textarea:focus{
 
     .dropdown .modal .btn-dismiss{
         margin-right: -175px;
+    }
+
+    .dropdown #exampleModalBlock .modal-footer .btn-dismiss{
+        left: -276px !important;
     }
 
 }
